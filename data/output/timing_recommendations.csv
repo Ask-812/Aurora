@@ -1,0 +1,17 @@
+segment_id,segment_name,lifecycle_stage,time_window,priority,expected_ctr,rationale
+4,Balanced Learners,all,evening,1,0.12,Based on 33 users preferring this window
+4,Balanced Learners,all,afternoon,2,0.08,Based on 32 users preferring this window
+0,Balanced Learners 0,all,late_afternoon,1,0.12,Based on 46 users preferring this window
+0,Balanced Learners 0,all,evening,2,0.08,Based on 36 users preferring this window
+6,Social Competitors,all,mid_morning,1,0.12,Based on 27 users preferring this window
+6,Social Competitors,all,early_morning,2,0.08,Based on 27 users preferring this window
+5,Social Competitors 5,all,afternoon,1,0.12,Based on 23 users preferring this window
+5,Social Competitors 5,all,evening,2,0.08,Based on 20 users preferring this window
+3,Independent Learners,all,mid_morning,1,0.12,Based on 22 users preferring this window
+3,Independent Learners,all,late_afternoon,2,0.08,Based on 21 users preferring this window
+7,Casual Learners,all,mid_morning,1,0.12,Based on 28 users preferring this window
+7,Casual Learners,all,evening,2,0.08,Based on 25 users preferring this window
+1,Social Competitors 1,all,early_morning,1,0.12,Based on 25 users preferring this window
+1,Social Competitors 1,all,late_afternoon,2,0.08,Based on 25 users preferring this window
+2,At-Risk Churners,all,afternoon,1,0.12,Based on 10 users preferring this window
+2,At-Risk Churners,all,evening,2,0.08,Based on 8 users preferring this window

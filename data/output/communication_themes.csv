@@ -1,0 +1,33 @@
+segment_id,segment_name,lifecycle_stage,primary_theme,secondary_theme,theme_rationale
+0,Balanced Learners 0,trial,curiosity,accomplishment,Low activeness (0.44) needs discovery and exploration; Secondary theme 'accomplishment' provides complementary motivation
+0,Balanced Learners 0,paid,accomplishment,ownership,High gamification propensity (0.61) indicates strong response to achievement; Secondary theme 'ownership' provides complementary motivation
+0,Balanced Learners 0,churned,loss_avoidance,curiosity,High churn risk (0.50) requires urgency and retention focus; Secondary theme 'curiosity' provides complementary motivation
+0,Balanced Learners 0,inactive,curiosity,epic_meaning,Low activeness (0.44) needs discovery and exploration; Secondary theme 'epic_meaning' provides complementary motivation
+1,Social Competitors 1,trial,social_influence,accomplishment,High social propensity (0.73) indicates competitive motivation; Secondary theme 'accomplishment' provides complementary motivation
+1,Social Competitors 1,paid,social_influence,accomplishment,High social propensity (0.73) indicates competitive motivation; Secondary theme 'accomplishment' provides complementary motivation
+1,Social Competitors 1,churned,social_influence,accomplishment,High social propensity (0.73) indicates competitive motivation; Secondary theme 'accomplishment' provides complementary motivation
+1,Social Competitors 1,inactive,social_influence,accomplishment,High social propensity (0.73) indicates competitive motivation; Secondary theme 'accomplishment' provides complementary motivation
+2,At-Risk Churners,trial,loss_avoidance,scarcity,High churn risk (0.81) requires urgency and retention focus; Secondary theme 'scarcity' provides complementary motivation
+2,At-Risk Churners,paid,loss_avoidance,social_influence,High churn risk (0.81) requires urgency and retention focus; Secondary theme 'social_influence' provides complementary motivation
+2,At-Risk Churners,churned,loss_avoidance,social_influence,High churn risk (0.81) requires urgency and retention focus; Secondary theme 'social_influence' provides complementary motivation
+2,At-Risk Churners,inactive,loss_avoidance,social_influence,High churn risk (0.81) requires urgency and retention focus; Secondary theme 'social_influence' provides complementary motivation
+3,Independent Learners,trial,curiosity,accomplishment,Low activeness (0.55) needs discovery and exploration; Secondary theme 'accomplishment' provides complementary motivation
+3,Independent Learners,paid,accomplishment,ownership,High gamification propensity (0.50) indicates strong response to achievement; Secondary theme 'ownership' provides complementary motivation
+3,Independent Learners,churned,loss_avoidance,curiosity,High churn risk (0.38) requires urgency and retention focus; Secondary theme 'curiosity' provides complementary motivation
+3,Independent Learners,inactive,curiosity,epic_meaning,Low activeness (0.55) needs discovery and exploration; Secondary theme 'epic_meaning' provides complementary motivation
+4,Balanced Learners,trial,curiosity,accomplishment,Low activeness (0.39) needs discovery and exploration; Secondary theme 'accomplishment' provides complementary motivation
+4,Balanced Learners,paid,accomplishment,ownership,High gamification propensity (0.32) indicates strong response to achievement; Secondary theme 'ownership' provides complementary motivation
+4,Balanced Learners,churned,loss_avoidance,curiosity,High churn risk (0.56) requires urgency and retention focus; Secondary theme 'curiosity' provides complementary motivation
+4,Balanced Learners,inactive,curiosity,epic_meaning,Low activeness (0.39) needs discovery and exploration; Secondary theme 'epic_meaning' provides complementary motivation
+5,Social Competitors 5,trial,social_influence,accomplishment,High social propensity (0.78) indicates competitive motivation; Secondary theme 'accomplishment' provides complementary motivation
+5,Social Competitors 5,paid,social_influence,accomplishment,High social propensity (0.78) indicates competitive motivation; Secondary theme 'accomplishment' provides complementary motivation
+5,Social Competitors 5,churned,social_influence,accomplishment,High social propensity (0.78) indicates competitive motivation; Secondary theme 'accomplishment' provides complementary motivation
+5,Social Competitors 5,inactive,social_influence,accomplishment,High social propensity (0.78) indicates competitive motivation; Secondary theme 'accomplishment' provides complementary motivation
+6,Social Competitors,trial,social_influence,accomplishment,High social propensity (0.71) indicates competitive motivation; Secondary theme 'accomplishment' provides complementary motivation
+6,Social Competitors,paid,social_influence,accomplishment,High social propensity (0.71) indicates competitive motivation; Secondary theme 'accomplishment' provides complementary motivation
+6,Social Competitors,churned,social_influence,accomplishment,High social propensity (0.71) indicates competitive motivation; Secondary theme 'accomplishment' provides complementary motivation
+6,Social Competitors,inactive,social_influence,accomplishment,High social propensity (0.71) indicates competitive motivation; Secondary theme 'accomplishment' provides complementary motivation
+7,Casual Learners,trial,curiosity,accomplishment,Low activeness (0.49) needs discovery and exploration; Secondary theme 'accomplishment' provides complementary motivation
+7,Casual Learners,paid,accomplishment,ownership,High gamification propensity (0.24) indicates strong response to achievement; Secondary theme 'ownership' provides complementary motivation
+7,Casual Learners,churned,loss_avoidance,curiosity,High churn risk (0.46) requires urgency and retention focus; Secondary theme 'curiosity' provides complementary motivation
+7,Casual Learners,inactive,curiosity,epic_meaning,Low activeness (0.49) needs discovery and exploration; Secondary theme 'epic_meaning' provides complementary motivation

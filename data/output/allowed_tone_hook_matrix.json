@@ -1,0 +1,169 @@
+{
+  "allowed_tones": [
+    "encouraging",
+    "friendly",
+    "aspirational",
+    "urgent",
+    "celebratory",
+    "motivational",
+    "supportive"
+  ],
+  "forbidden_tones": [
+    "aggressive",
+    "desperate",
+    "salesy",
+    "guilt-tripping",
+    "condescending",
+    "pushy"
+  ],
+  "tone_by_lifecycle": {
+    "trial": [
+      "encouraging",
+      "friendly",
+      "aspirational",
+      "supportive"
+    ],
+    "paid": [
+      "celebratory",
+      "friendly",
+      "aspirational",
+      "motivational"
+    ],
+    "churned": [
+      "friendly",
+      "urgent",
+      "aspirational",
+      "curious"
+    ],
+    "inactive": [
+      "curious",
+      "friendly",
+      "inviting"
+    ]
+  },
+  "octalysis_hooks": {
+    "epic_meaning": {
+      "description": "Be part of something bigger",
+      "examples": [
+        "Join 1M+ Indians",
+        "Transform your career",
+        "Unlock your potential"
+      ],
+      "best_for_segments": [
+        "aspirational_learners",
+        "career_focused"
+      ]
+    },
+    "accomplishment": {
+      "description": "Make progress and achieve",
+      "examples": [
+        "Complete 10 exercises",
+        "Reach 7-day streak",
+        "Earn 100 coins"
+      ],
+      "best_for_segments": [
+        "achievers",
+        "consistent_learners"
+      ]
+    },
+    "empowerment": {
+      "description": "Have control and experiment",
+      "examples": [
+        "Choose your topic",
+        "Practice at your pace",
+        "Customize your learning"
+      ],
+      "best_for_segments": [
+        "casual_learners",
+        "explorers"
+      ]
+    },
+    "ownership": {
+      "description": "Build something valuable",
+      "examples": [
+        "Your 500 coins",
+        "Your 30-day streak",
+        "Your progress"
+      ],
+      "best_for_segments": [
+        "achievers",
+        "collectors"
+      ]
+    },
+    "social_influence": {
+      "description": "Others are doing it",
+      "examples": [
+        "Rahul is #1",
+        "Join top learners",
+        "Beat your friends"
+      ],
+      "best_for_segments": [
+        "social_competitors",
+        "community_driven"
+      ]
+    },
+    "scarcity": {
+      "description": "Limited time or availability",
+      "examples": [
+        "Only 3 hours left",
+        "Last chance today",
+        "Limited spots"
+      ],
+      "best_for_segments": [
+        "achievers",
+        "fomo_driven"
+      ]
+    },
+    "curiosity": {
+      "description": "What will happen next",
+      "examples": [
+        "Unlock surprise reward",
+        "Discover new feature",
+        "See what's next"
+      ],
+      "best_for_segments": [
+        "explorers",
+        "casual_learners"
+      ]
+    },
+    "loss_avoidance": {
+      "description": "Don't lose what you have",
+      "examples": [
+        "Streak will break",
+        "Don't lose progress",
+        "Maintain your rank"
+      ],
+      "best_for_segments": [
+        "achievers",
+        "at_risk_churners"
+      ]
+    }
+  },
+  "hooks_by_segment": {
+    "achievers": [
+      "accomplishment",
+      "ownership",
+      "loss_avoidance"
+    ],
+    "social_competitors": [
+      "social_influence",
+      "accomplishment",
+      "scarcity"
+    ],
+    "casual_learners": [
+      "curiosity",
+      "empowerment",
+      "epic_meaning"
+    ],
+    "at_risk_churners": [
+      "loss_avoidance",
+      "scarcity",
+      "social_influence"
+    ],
+    "dormant_users": [
+      "curiosity",
+      "epic_meaning",
+      "empowerment"
+    ]
+  }
+}

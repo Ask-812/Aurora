@@ -1,0 +1,206 @@
+"""
+Schedule Generator - Creates user-wise notification schedules
+"""
+
+import pandas as pd
+import numpy as np
+from pathlib import Path
+from typing import Dict, List
+import random
+import yaml
+
+
+class ScheduleGenerator:
+    """Generates user-wise notification schedules"""
+    
+    def __init__(self, config_path: str = 'config/config.yaml'):
+        with open(config_path, 'r') as f:
+            self.config = yaml.safe_load(f)
+        
+        self.schedules = None
+    
+    def generate_schedules(self, user_data: pd.DataFrame, segments: pd.DataFrame = None,
+                          templates: pd.DataFrame = None, timing_recs: pd.DataFrame = None,
+                          segment_goals: pd.DataFrame = None, max_users: int = 100) -> pd.DataFrame:
+        """
+        Generate notification schedules for users
+        
+        Args:
+            user_data: User data with behavioral features
+            segments: Segment assignments (optional if already in user_data)
+            templates: Message templates
+            timing_recs: Timing recommendations
+            segment_goals: Goal definitions
+            max_users: Maximum users to generate schedules for (for demo)
+            
+        Returns:
+            pd.DataFrame: User notification schedules
+        """
+        print(f"\n📅 Generating notification schedules for {min(max_users, len(user_data))} users...")
+        
+        # Check if segment info already in user_data
+        if 'segment_id' not in user_data.columns and segments is not None:
+            df = user_data.merge(segments[['user_id', 'segment_id', 'segment_name', 'activeness', 'churn_risk']], 
+                                on='user_id', how='left')
+        else:
+            df = user_data.copy()
+        
+        # Limit to max_users for demo
+        df = df.head(max_users)
+        
+        schedules = []
+        
+        for _, user in df.iterrows():
+            # Calculate frequency
+            frequency = self._calculate_frequency(user)
+            
+            # Generate schedule for next 7 days
+            for day in range(7):
+                lifecycle_day = f"D{user.get('days_since_signup', 0) + day}"
+                
+                # Get goal for this day
+                goal = self._get_goal_for_day(user, day, segment_goals)
+                
+                # Get templates for this segment/lifecycle/goal
+                available_templates = templates[
+                    (templates['segment_id'] == user['segment_id']) &
+                    (templates['lifecycle_stage'] == user['lifecycle_stage']) &
+                    (templates['goal'] == goal) &
+                    (templates['language'] == 'en')  # Use English for schedule
+                ]
+                
+                if available_templates.empty:
+                    # Fallback to any templates for this segment
+                    available_templates = templates[
+                        (templates['segment_id'] == user['segment_id']) &
+                        (templates['language'] == 'en')
+                    ]
+                
+                if available_templates.empty:
+                    continue
+                
+                # Select templates based on frequency
+                num_notifs = min(frequency, len(available_templates))
+                selected = available_templates.sample(n=num_notifs, replace=False)
+                
+                # Get timing windows
+                timing = timing_recs[timing_recs['segment_id'] == user['segment_id']]
+                
+                # Build schedule row
+                schedule_row = {
+                    'user_id': user['user_id'],
+                    'segment_id': user['segment_id'],
+                    'segment_name': user['segment_name'],
+                    'lifecycle_stage': user['lifecycle_stage'],
+                    'lifecycle_day': lifecycle_day,
+                    'day_offset': day
+                }
+                
+                # Add notifications
+                for i, (_, template) in enumerate(selected.iterrows()):
+                    # Select time window
+                    if not timing.empty:
+                        window_row = timing.iloc[i % len(timing)]
+                        window = window_row['time_window']
+                    else:
+                        window = 'evening'
+                    
+                    # Generate time within window
+                    time = self._generate_time(window)
+                    
+                    schedule_row[f'notif_{i+1}_template_id'] = template['template_id']
+                    schedule_row[f'notif_{i+1}_time'] = time
+                    schedule_row[f'notif_{i+1}_channel'] = 'push'
+                
+                schedules.append(schedule_row)
+        
+        self.schedules = pd.DataFrame(schedules)
+        
+        print(f"   ✓ Generated {len(schedules)} schedule entries")
+        print(f"   ✓ Covering {df['user_id'].nunique()} users × 7 days")
+        
+        return self.schedules
+    
+    def _calculate_frequency(self, user: pd.Series) -> int:
+        """Calculate notification frequency for user"""
+        activeness = user.get('activeness', 0.5)
+        churn_risk = user.get('churn_risk', 0.5)
+        lifecycle = user.get('lifecycle_stage', 'trial')
+        
+        # Base frequency by activeness
+        if activeness > 0.7:
+            base_freq = 8
+        elif activeness > 0.4:
+            base_freq = 6
+        else:
+            base_freq = 4
+        
+        # Lifecycle adjustment
+        if lifecycle == 'trial':
+            base_freq += 1
+        elif lifecycle == 'churned':
+            base_freq = 2
+        
+        # Churn risk adjustment
+        if churn_risk > 0.7:
+            base_freq = max(3, base_freq - 2)
+        
+        return base_freq
+    
+    def _get_goal_for_day(self, user: pd.Series, day: int, 
+                         segment_goals: pd.DataFrame) -> str:
+        """Get goal for specific day"""
+        lifecycle = user.get('lifecycle_stage', 'trial')
+        seg_id = user['segment_id']
+        
+        # Get goals for this segment and lifecycle
+        goals = segment_goals[
+            (segment_goals['segment_id'] == seg_id) &
+            (segment_goals['lifecycle_stage'] == lifecycle)
+        ]
+        
+        if goals.empty:
+            return 'activation'
+        
+        # Map day to goal
+        if lifecycle == 'trial':
+            if day == 0:
+                return 'activation'
+            elif day <= 2:
+                return 'habit_formation'
+            elif day <= 5:
+                return 'feature_discovery'
+            else:
+                return 'conversion_readiness'
+        elif lifecycle == 'paid':
+            return 'retention'
+        elif lifecycle == 'churned':
+            return 're_engagement'
+        else:
+            return 'activation'
+    
+    def _generate_time(self, window: str) -> str:
+        """Generate random time within window"""
+        window_ranges = {
+            'early_morning': (6, 9),
+            'mid_morning': (9, 12),
+            'afternoon': (12, 15),
+            'late_afternoon': (15, 18),
+            'evening': (18, 21),
+            'night': (21, 24)
+        }
+        
+        start, end = window_ranges.get(window, (18, 21))
+        hour = random.randint(start, end - 1)
+        minute = random.choice([0, 15, 30, 45])
+        
+        return f"{hour:02d}:{minute:02d}"
+    
+    def save_schedules(self, output_dir: str):
+        """Save schedules to CSV"""
+        output_path = Path(output_dir)
+        output_path.mkdir(parents=True, exist_ok=True)
+        
+        self.schedules.to_csv(output_path / 'user_notification_schedule.csv', index=False)
+        
+        print(f"✓ Schedules saved to {output_dir}/user_notification_schedule.csv")

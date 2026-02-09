@@ -1,0 +1,11 @@
+{
+  "north_star_metric": "Daily Active Engaged Users",
+  "definition": "Users who complete at least 1 exercise per day",
+  "why_it_matters": "Daily engagement drives habit formation, which leads to retention and word-of-mouth growth",
+  "measurement": "COUNT(DISTINCT user_id WHERE exercises_completed > 0 AND date = today)",
+  "key_drivers": [
+    "Exercise completion rate",
+    "Streak maintenance",
+    "Feature engagement (AI tutor, leaderboard)"
+  ]
+}

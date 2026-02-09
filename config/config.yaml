@@ -1,0 +1,42 @@
+# Project Aurora Configuration
+
+# Segmentation Settings
+segmentation:
+  n_clusters: 8
+  min_segment_size: 0.05  # 5% of total users
+  random_state: 42
+
+# Performance Thresholds
+performance:
+  good_ctr: 0.15
+  good_engagement: 0.40
+  bad_ctr: 0.05
+  bad_engagement: 0.20
+  min_sends_significance: 100
+
+# Frequency Settings
+frequency:
+  high_activeness_threshold: 0.7
+  medium_activeness_threshold: 0.4
+  high_activeness_freq: 8
+  medium_activeness_freq: 6
+  low_activeness_freq: 4
+  trial_bonus: 1
+  churned_freq: 2
+  uninstall_threshold: 0.02
+  uninstall_reduction: 2
+
+# Time Windows
+time_windows:
+  early_morning: [6, 9]
+  mid_morning: [9, 12]
+  afternoon: [12, 15]
+  late_afternoon: [15, 18]
+  evening: [18, 21]
+  night: [21, 24]
+
+# Paths
+paths:
+  input_dir: "data/input"
+  output_dir: "data/output"
+  sample_dir: "data/sample"

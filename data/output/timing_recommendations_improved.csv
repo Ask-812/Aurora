@@ -1,0 +1,17 @@
+segment_id,segment_name,lifecycle_stage,time_window,priority,expected_ctr,rationale
+0,Segment 0,all,afternoon,1,0.11597161269458657,Learned: 11.6% CTR from 3265 sends
+0,Segment 0,all,night,2,0.0991724069622697,Learned: 9.9% CTR from 1977 sends
+1,Segment 1,all,night,1,0.12159548096903736,Learned: 12.2% CTR from 2126 sends
+1,Segment 1,all,evening,2,0.11054148101785069,Learned: 11.1% CTR from 2572 sends
+2,Segment 2,all,early_morning,1,0.15419578312530954,Learned: 15.4% CTR from 3271 sends
+2,Segment 2,all,afternoon,2,0.09925688185413213,Learned: 9.9% CTR from 6251 sends
+3,Segment 3,all,evening,1,0.1039930745572978,Learned: 10.4% CTR from 3158 sends
+3,Segment 3,all,night,2,0.100513537455307,Learned: 10.1% CTR from 3177 sends
+4,Segment 4,all,afternoon,1,0.1439558199084571,Learned: 14.4% CTR from 2652 sends
+4,Segment 4,all,night,2,0.1038960314319257,Learned: 10.4% CTR from 1603 sends
+5,Segment 5,all,early_morning,1,0.0856204860696855,Learned: 8.6% CTR from 1249 sends
+5,Segment 5,all,night,2,0.0650709099174946,Learned: 6.5% CTR from 4384 sends
+6,Segment 6,all,afternoon,1,0.14321956296558094,Learned: 14.3% CTR from 4194 sends
+6,Segment 6,all,early_morning,2,0.1285616693287108,Learned: 12.9% CTR from 1024 sends
+7,Segment 7,all,evening,1,0.0747305504019382,Learned: 7.5% CTR from 3249 sends
+7,Segment 7,all,night,2,0.06375654121107943,Learned: 6.4% CTR from 3645 sends
