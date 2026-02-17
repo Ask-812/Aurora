@@ -1,4 +1,4 @@
-"""
+﻿"""
 Learning Engine - Applies learning from experiment results
 """
 
@@ -30,7 +30,7 @@ class LearningEngine:
         Returns:
             tuple: (improved_templates, improved_timing, improved_themes, changes_log)
         """
-        print("\n🧠 Learning from experiment results...")
+        print("\n[AI] Learning from experiment results...")
         
         self.changes_log = []
         
@@ -46,7 +46,7 @@ class LearningEngine:
         # 4. Frequency Learning
         frequency_changes = self._learn_frequency(experiment_results)
         
-        print(f"\n   ✓ Applied {len(self.changes_log)} learning actions")
+        print(f"\n   [OK] Applied {len(self.changes_log)} learning actions")
         
         return improved_templates, improved_timing, improved_themes, self.changes_log
     
@@ -127,7 +127,7 @@ class LearningEngine:
     def _learn_timing(self, timing_recs: pd.DataFrame,
                      experiment_results: pd.DataFrame) -> pd.DataFrame:
         """Learn optimal timing windows"""
-        print("   ⏰ Learning timing patterns...")
+        print("   [Time] Learning timing patterns...")
         
         # Analyze window performance by segment
         window_perf = experiment_results.groupby(
@@ -185,7 +185,7 @@ class LearningEngine:
     def _learn_themes(self, themes: pd.DataFrame,
                      experiment_results: pd.DataFrame) -> pd.DataFrame:
         """Learn which themes perform best"""
-        print("   🎨 Learning theme effectiveness...")
+        print("   [Theme] Learning theme effectiveness...")
         
         # Analyze theme performance
         theme_perf = experiment_results.groupby(
@@ -230,7 +230,7 @@ class LearningEngine:
     
     def _learn_frequency(self, experiment_results: pd.DataFrame) -> List[Dict]:
         """Learn frequency adjustments based on uninstall rate"""
-        print("   📊 Learning frequency adjustments...")
+        print("   [Stats] Learning frequency adjustments...")
         
         if 'uninstall_rate' not in experiment_results.columns:
             print("      ⚠️  No uninstall_rate data available")
@@ -263,3 +263,4 @@ class LearningEngine:
         print(f"      • Reduced frequency for {len(frequency_changes)} segments")
         
         return frequency_changes
+

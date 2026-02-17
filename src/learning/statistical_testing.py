@@ -1,4 +1,4 @@
-"""
+﻿"""
 Statistical Experimentation Framework
 - Bayesian A/B Testing
 - Sequential analysis with early stopping
@@ -259,8 +259,8 @@ class StatisticalTestingFramework:
         
         df_results = pd.DataFrame(results)
         
-        print(f"   ✓ Performed {n_comparisons} pairwise comparisons")
-        print(f"   ✓ Bonferroni-adjusted α: {adjusted_alpha:.4f}")
+        print(f"   [OK] Performed {n_comparisons} pairwise comparisons")
+        print(f"   [OK] Bonferroni-adjusted α: {adjusted_alpha:.4f}")
         
         return df_results
     
@@ -312,7 +312,7 @@ class StatisticalTestingFramework:
         Returns:
             DataFrame with statistical test results
         """
-        print("\n📊 Statistical Analysis of Template Experiments...")
+        print("\n[Stats] Statistical Analysis of Template Experiments...")
         
         analysis_results = []
         
@@ -357,8 +357,8 @@ class StatisticalTestingFramework:
         
         df_analysis = pd.DataFrame(analysis_results)
         
-        print(f"   ✓ Analyzed {len(df_analysis)} template comparisons")
-        print(f"   ✓ Significant improvements: {df_analysis['is_significant'].sum()}")
+        print(f"   [OK] Analyzed {len(df_analysis)} template comparisons")
+        print(f"   [OK] Significant improvements: {df_analysis['is_significant'].sum()}")
         
         return df_analysis
     
@@ -386,7 +386,7 @@ class StatisticalTestingFramework:
         Returns:
             Dictionary with summary statistics and insights
         """
-        print("\n📋 Generating Experiment Report...")
+        print("\n[List] Generating Experiment Report...")
         
         # Overall statistics
         total_sends = experiment_results['total_sends'].sum()
@@ -414,7 +414,8 @@ class StatisticalTestingFramework:
             'bayesian_strong_winners': int((statistical_analysis['bayesian_decision'] == 'TREATMENT WINS').sum())
         }
         
-        print(f"   ✓ Overall CTR: {overall_ctr:.2%}")
-        print(f"   ✓ Statistically significant winners: {report['statistically_significant_winners']}")
+        print(f"   [OK] Overall CTR: {overall_ctr:.2%}")
+        print(f"   [OK] Statistically significant winners: {report['statistically_significant_winners']}")
         
         return report
+

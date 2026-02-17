@@ -1,4 +1,4 @@
-"""
+﻿"""
 Schedule Generator - Creates user-wise notification schedules
 """
 
@@ -116,8 +116,8 @@ class ScheduleGenerator:
         
         self.schedules = pd.DataFrame(schedules)
         
-        print(f"   ✓ Generated {len(schedules)} schedule entries")
-        print(f"   ✓ Covering {df['user_id'].nunique()} users × 7 days")
+        print(f"   [OK] Generated {len(schedules)} schedule entries")
+        print(f"   [OK] Covering {df['user_id'].nunique()} users × 7 days")
         
         return self.schedules
     
@@ -203,4 +203,5 @@ class ScheduleGenerator:
         
         self.schedules.to_csv(output_path / 'user_notification_schedule.csv', index=False)
         
-        print(f"✓ Schedules saved to {output_dir}/user_notification_schedule.csv")
+        print(f"[OK] Schedules saved to {output_dir}/user_notification_schedule.csv")
+

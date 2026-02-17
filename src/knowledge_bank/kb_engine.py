@@ -1,4 +1,4 @@
-"""
+﻿"""
 Knowledge Bank Engine - Extracts company intelligence from documents
 """
 
@@ -418,4 +418,5 @@ class KnowledgeBankEngine:
         with open(output_path / 'allowed_tone_hook_matrix.json', 'w', encoding='utf-8') as f:
             json.dump(self.tone_hook_matrix, f, indent=2, ensure_ascii=False)
         
-        print(f"✓ Knowledge Bank outputs saved to {output_dir}")
+        print(f"[OK] Knowledge Bank outputs saved to {output_dir}")
+

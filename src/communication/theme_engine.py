@@ -1,4 +1,4 @@
-"""
+﻿"""
 Theme Engine - Maps Octalysis themes to segments
 """
 
@@ -24,7 +24,7 @@ class ThemeEngine:
         Returns:
             pd.DataFrame: Theme mappings
         """
-        print("\n🎨 Generating communication themes...")
+        print("\n[Theme] Generating communication themes...")
         
         themes = []
         lifecycle_stages = ['trial', 'paid', 'churned', 'inactive']
@@ -48,8 +48,8 @@ class ThemeEngine:
         
         self.themes = pd.DataFrame(themes)
         
-        print(f"   ✓ Generated {len(themes)} theme mappings")
-        print(f"   ✓ Covering {len(segment_profiles)} segments × {len(lifecycle_stages)} lifecycle stages")
+        print(f"   [OK] Generated {len(themes)} theme mappings")
+        print(f"   [OK] Covering {len(segment_profiles)} segments × {len(lifecycle_stages)} lifecycle stages")
         
         return self.themes
     
@@ -140,4 +140,5 @@ class ThemeEngine:
         
         self.themes.to_csv(output_path / 'communication_themes.csv', index=False)
         
-        print(f"✓ Themes saved to {output_dir}/communication_themes.csv")
+        print(f"[OK] Themes saved to {output_dir}/communication_themes.csv")
+

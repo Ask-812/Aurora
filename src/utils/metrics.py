@@ -1,4 +1,4 @@
-"""
+﻿"""
 Metrics calculation utilities
 """
 
@@ -125,3 +125,4 @@ class MetricsCalculator:
             return 'BAD'
         else:
             return 'NEUTRAL'
+

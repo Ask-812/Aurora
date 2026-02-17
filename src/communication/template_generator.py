@@ -1,4 +1,4 @@
-"""
+﻿"""
 Template Generator - Creates personalized, bilingual message templates
 """
 
@@ -46,7 +46,7 @@ class TemplateGenerator:
         Returns:
             pd.DataFrame: Message templates
         """
-        print("\n✍️  Generating message templates...")
+        print("\n[Edit]  Generating message templates...")
         
         templates = []
         template_id = 1
@@ -118,8 +118,8 @@ class TemplateGenerator:
         
         self.templates = pd.DataFrame(templates)
         
-        print(f"   ✓ Generated {len(templates)} templates ({len(templates)//2} English + {len(templates)//2} Hindi)")
-        print(f"   ✓ Covering {template_id-1} unique message variants")
+        print(f"   [OK] Generated {len(templates)} templates ({len(templates)//2} English + {len(templates)//2} Hindi)")
+        print(f"   [OK] Covering {template_id-1} unique message variants")
         
         return self.templates
     
@@ -276,4 +276,5 @@ class TemplateGenerator:
         
         self.templates.to_csv(output_path / 'message_templates.csv', index=False)
         
-        print(f"✓ Templates saved to {output_dir}/message_templates.csv")
+        print(f"[OK] Templates saved to {output_dir}/message_templates.csv")
+

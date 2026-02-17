@@ -1,4 +1,4 @@
-"""
+﻿"""
 ML-Powered Propensity Models
 - Churn Prediction (XGBoost)
 - Engagement Propensity (LightGBM)
@@ -46,7 +46,7 @@ class PropensityModelEngine:
         Returns:
             Trained model and metrics
         """
-        print("\n🎯 Training Churn Prediction Model (XGBoost)...")
+        print("\n[*] Training Churn Prediction Model (XGBoost)...")
         
         # Define churn target (simplified for demo)
         df['churn_target'] = (df['churn_risk'] > 0.7).astype(int)
@@ -123,9 +123,9 @@ class PropensityModelEngine:
             self.churn_model.feature_importances_
         ))
         
-        print(f"   ✓ AUC Score: {auc_score:.4f}")
-        print(f"   ✓ Cross-Val AUC: {cv_scores.mean():.4f} (±{cv_scores.std():.4f})")
-        print(f"   ✓ Top Features: {self._get_top_features('churn', 3)}")
+        print(f"   [OK] AUC Score: {auc_score:.4f}")
+        print(f"   [OK] Cross-Val AUC: {cv_scores.mean():.4f} (±{cv_scores.std():.4f})")
+        print(f"   [OK] Top Features: {self._get_top_features('churn', 3)}")
         
         return self.churn_model, metrics
     
@@ -140,7 +140,7 @@ class PropensityModelEngine:
         Returns:
             Trained model and metrics
         """
-        print("\n🎯 Training Engagement Propensity Model (LightGBM)...")
+        print("\n[*] Training Engagement Propensity Model (LightGBM)...")
         
         # Target: future engagement (combined metric)
         df['engagement_target'] = (
@@ -219,9 +219,9 @@ class PropensityModelEngine:
             self.engagement_model.feature_importances_
         ))
         
-        print(f"   ✓ RMSE: {rmse:.4f}")
-        print(f"   ✓ R² Score: {r2:.4f}")
-        print(f"   ✓ Top Features: {self._get_top_features('engagement', 3)}")
+        print(f"   [OK] RMSE: {rmse:.4f}")
+        print(f"   [OK] R² Score: {r2:.4f}")
+        print(f"   [OK] Top Features: {self._get_top_features('engagement', 3)}")
         
         return self.engagement_model, metrics
     
@@ -235,7 +235,7 @@ class PropensityModelEngine:
         Returns:
             DataFrame with propensity scores
         """
-        print("\n📊 Generating Propensity Scores...")
+        print("\n[Stats] Generating Propensity Scores...")
         
         df = df.copy()
         
@@ -279,9 +279,9 @@ class PropensityModelEngine:
                 (df['ml_engagement_propensity'].max() - df['ml_engagement_propensity'].min())
             )
         
-        print(f"   ✓ Generated propensity scores for {len(df)} users")
-        print(f"   ✓ Avg Churn Propensity: {df['ml_churn_propensity'].mean():.3f}")
-        print(f"   ✓ Avg Engagement Propensity: {df['ml_engagement_propensity'].mean():.3f}")
+        print(f"   [OK] Generated propensity scores for {len(df)} users")
+        print(f"   [OK] Avg Churn Propensity: {df['ml_churn_propensity'].mean():.3f}")
+        print(f"   [OK] Avg Engagement Propensity: {df['ml_engagement_propensity'].mean():.3f}")
         
         return df
     
@@ -317,14 +317,15 @@ class PropensityModelEngine:
         if self.churn_model:
             with open(f"{output_dir}/models/churn_model.pkl", 'wb') as f:
                 pickle.dump(self.churn_model, f)
-            print(f"   ✓ Saved: {output_dir}/models/churn_model.pkl")
+            print(f"   [OK] Saved: {output_dir}/models/churn_model.pkl")
         
         if self.engagement_model:
             with open(f"{output_dir}/models/engagement_model.pkl", 'wb') as f:
                 pickle.dump(self.engagement_model, f)
-            print(f"   ✓ Saved: {output_dir}/models/engagement_model.pkl")
+            print(f"   [OK] Saved: {output_dir}/models/engagement_model.pkl")
         
         # Save metrics
         summary = self.get_model_summary()
         summary.to_csv(f"{output_dir}/ml_model_performance.csv", index=False)
-        print(f"   ✓ Saved: {output_dir}/ml_model_performance.csv")
+        print(f"   [OK] Saved: {output_dir}/ml_model_performance.csv")
+

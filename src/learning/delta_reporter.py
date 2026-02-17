@@ -1,4 +1,4 @@
-"""
+﻿"""
 Delta Reporter - Documents learning improvements with causal reasoning
 """
 
@@ -27,7 +27,7 @@ class DeltaReporter:
         Returns:
             pd.DataFrame: Delta report
         """
-        print("\n📈 Generating delta report...")
+        print("\n[+] Generating delta report...")
         
         # Convert changes log to DataFrame
         if changes_log:
@@ -41,8 +41,8 @@ class DeltaReporter:
         # Add summary metrics
         summary = self._calculate_summary_delta(iteration0_stats, iteration1_stats)
         
-        print(f"   ✓ Documented {len(changes_log)} changes")
-        print(f"\n   📊 Summary Improvements:")
+        print(f"   [OK] Documented {len(changes_log)} changes")
+        print(f"\n   [Stats] Summary Improvements:")
         for metric, value in summary.items():
             if 'improvement' in metric or 'reduction' in metric:
                 print(f"      • {metric}: {value:+.2%}" if isinstance(value, float) else f"      • {metric}: {value}")
@@ -82,7 +82,7 @@ class DeltaReporter:
         
         self.delta_report.to_csv(output_path / 'learning_delta_report.csv', index=False)
         
-        print(f"\n✓ Delta report saved to {output_dir}/learning_delta_report.csv")
+        print(f"\n[OK] Delta report saved to {output_dir}/learning_delta_report.csv")
     
     def print_detailed_summary(self, iteration0_stats: Dict, iteration1_stats: Dict):
         """Print detailed comparison"""
@@ -90,7 +90,7 @@ class DeltaReporter:
         print("ITERATION 0 vs ITERATION 1 - DETAILED COMPARISON")
         print("=" * 80)
         
-        print("\n📊 ITERATION 0 (Before Learning):")
+        print("\n[Stats] ITERATION 0 (Before Learning):")
         print(f"   Total Templates: {iteration0_stats.get('total_templates', 'N/A')}")
         print(f"   GOOD Templates: {iteration0_stats.get('good_count', 'N/A')}")
         print(f"   BAD Templates: {iteration0_stats.get('bad_count', 'N/A')}")
@@ -98,7 +98,7 @@ class DeltaReporter:
         print(f"   Average Engagement: {iteration0_stats.get('avg_engagement', 0):.2%}")
         print(f"   Average Uninstall Rate: {iteration0_stats.get('avg_uninstall_rate', 0):.2%}")
         
-        print("\n📊 ITERATION 1 (After Learning):")
+        print("\n[Stats] ITERATION 1 (After Learning):")
         print(f"   Total Templates: {iteration1_stats.get('total_templates', 'N/A')}")
         print(f"   GOOD Templates: {iteration1_stats.get('good_count', 'N/A')}")
         print(f"   BAD Templates: {iteration1_stats.get('bad_count', 'N/A')}")
@@ -106,7 +106,7 @@ class DeltaReporter:
         print(f"   Average Engagement: {iteration1_stats.get('avg_engagement', 0):.2%}")
         print(f"   Average Uninstall Rate: {iteration1_stats.get('avg_uninstall_rate', 0):.2%}")
         
-        print("\n📈 IMPROVEMENTS:")
+        print("\n[+] IMPROVEMENTS:")
         ctr_delta = iteration1_stats.get('avg_ctr', 0) - iteration0_stats.get('avg_ctr', 0)
         eng_delta = iteration1_stats.get('avg_engagement', 0) - iteration0_stats.get('avg_engagement', 0)
         uninstall_delta = iteration0_stats.get('avg_uninstall_rate', 0) - iteration1_stats.get('avg_uninstall_rate', 0)
@@ -119,3 +119,4 @@ class DeltaReporter:
         print(f"   Templates: {iteration0_stats.get('total_templates', 0)} → {iteration1_stats.get('total_templates', 0)} ({template_delta:+d})")
         
         print("\n" + "=" * 80)
+

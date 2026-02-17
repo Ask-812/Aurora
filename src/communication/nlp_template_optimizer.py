@@ -1,4 +1,4 @@
-"""
+﻿"""
 NLP-Based Template Optimization
 - TF-IDF and semantic similarity analysis
 - Sentiment scoring
@@ -131,9 +131,9 @@ class NLPTemplateOptimizer:
         if experiment_results is not None:
             templates = self._analyze_performance_correlation(templates, experiment_results)
         
-        print(f"   ✓ Analyzed {len(templates)} templates")
-        print(f"   ✓ Avg sentiment: {templates['sentiment_score'].mean():.3f}")
-        print(f"   ✓ Avg engagement score: {templates['engagement_score'].mean():.3f}")
+        print(f"   [OK] Analyzed {len(templates)} templates")
+        print(f"   [OK] Avg sentiment: {templates['sentiment_score'].mean():.3f}")
+        print(f"   [OK] Avg engagement score: {templates['engagement_score'].mean():.3f}")
         
         return templates
     
@@ -291,7 +291,7 @@ class NLPTemplateOptimizer:
                 corr = merged[[feature, 'ctr']].corr().iloc[0, 1]
                 correlations[feature] = corr if not np.isnan(corr) else 0
         
-        print(f"\n   📊 Feature-Performance Correlations:")
+        print(f"\n   [Stats] Feature-Performance Correlations:")
         for feature, corr in sorted(correlations.items(), key=lambda x: abs(x[1]), reverse=True):
             print(f"      {feature}: {corr:.3f}")
         
@@ -395,6 +395,7 @@ class NLPTemplateOptimizer:
         
         df_recs = pd.DataFrame(recommendations)
         
-        print(f"   ✓ Generated recommendations for {len(df_recs)} templates")
+        print(f"   [OK] Generated recommendations for {len(df_recs)} templates")
         
         return df_recs
+

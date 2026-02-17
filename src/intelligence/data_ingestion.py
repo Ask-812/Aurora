@@ -1,4 +1,4 @@
-"""
+﻿"""
 Data Ingestion Engine - Validates and prepares user data
 """
 
@@ -27,14 +27,14 @@ class DataIngestionEngine:
         Returns:
             pd.DataFrame: Validated and cleaned user data
         """
-        print(f"\n📊 Loading user data from {csv_path}...")
+        print(f"\n[Stats] Loading user data from {csv_path}...")
         
         # Load CSV
         df = pd.read_csv(csv_path)
         print(f"   Loaded {len(df)} users")
         
         # Validate
-        print("\n🔍 Validating data...")
+        print("\n[Find] Validating data...")
         validation_result = self.validator.validate_user_data(df)
         
         if not validation_result['valid']:
@@ -53,7 +53,7 @@ class DataIngestionEngine:
         print("\n🧹 Cleaning data...")
         df = self.validator.clean_user_data(df)
         
-        print("✓ Data validation and cleaning complete")
+        print("[OK] Data validation and cleaning complete")
         
         self.user_data = df
         return df
@@ -68,7 +68,7 @@ class DataIngestionEngine:
         Returns:
             pd.DataFrame: Data with engineered features
         """
-        print("\n🔧 Engineering features...")
+        print("\n[Tool] Engineering features...")
         
         df = df.copy()
         
@@ -78,10 +78,10 @@ class DataIngestionEngine:
         df['social_propensity'] = self.metrics_calc.calculate_social_propensity(df)
         df['churn_risk'] = self.metrics_calc.calculate_churn_risk(df)
         
-        print(f"   ✓ Activeness score (mean: {df['activeness'].mean():.2f})")
-        print(f"   ✓ Gamification propensity (mean: {df['gamification_propensity'].mean():.2f})")
-        print(f"   ✓ Social propensity (mean: {df['social_propensity'].mean():.2f})")
-        print(f"   ✓ Churn risk (mean: {df['churn_risk'].mean():.2f})")
+        print(f"   [OK] Activeness score (mean: {df['activeness'].mean():.2f})")
+        print(f"   [OK] Gamification propensity (mean: {df['gamification_propensity'].mean():.2f})")
+        print(f"   [OK] Social propensity (mean: {df['social_propensity'].mean():.2f})")
+        print(f"   [OK] Churn risk (mean: {df['churn_risk'].mean():.2f})")
         
         self.user_data = df
         return df
@@ -97,3 +97,4 @@ class DataIngestionEngine:
             'avg_churn_risk': df['churn_risk'].mean() if 'churn_risk' in df.columns else None
         }
         return stats
+

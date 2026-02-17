@@ -1,4 +1,4 @@
-"""
+﻿"""
 Data validation utilities
 """
 
@@ -154,3 +154,4 @@ class DataValidator:
             df.loc[df['exercises_completed_7d'] > 100, 'exercises_completed_7d'] = 100
         
         return df
+

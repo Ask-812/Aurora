@@ -1,4 +1,4 @@
-"""
+﻿"""
 Segmentation Engine with ML-Powered Insights
 - RFM Analysis
 - Hierarchical Clustering with Optimal K
@@ -53,34 +53,34 @@ class SegmentationEngine:
         Returns:
             pd.DataFrame: Data with segment assignments and enriched features
         """
-        print("\n🎯 ML-Powered Segmentation...")
+        print("\n[*] ML-Powered Segmentation...")
         print(f"   Users: {len(df)} | Features: {df.shape[1]}")
         
         df = df.copy()
         
         # Step 1: RFM Analysis
-        print("\n   📊 Step 1: RFM Analysis")
+        print("\n   [Stats] Step 1: RFM Analysis")
         df = self._calculate_rfm_scores(df)
         
         # Step 2: Feature Engineering for Clustering
-        print("   🔧 Step 2: Feature Engineering")
+        print("   [Tool] Step 2: Feature Engineering")
         df, feature_matrix = self._engineer_clustering_features(df)
         
         # Step 3: Optimal K Selection
-        print("   🔍 Step 3: Optimal Cluster Count Selection")
+        print("   [Find] Step 3: Optimal Cluster Count Selection")
         optimal_k = self._find_optimal_k(feature_matrix)
-        print(f"      ✓ Optimal K: {optimal_k}")
+        print(f"      [OK] Optimal K: {optimal_k}")
         
         # Step 4: Hierarchical Clustering
-        print("   🌲 Step 4: Hierarchical Clustering")
+        print("   [Tree] Step 4: Hierarchical Clustering")
         df = self._hierarchical_clustering(df, feature_matrix, optimal_k)
         
         # Step 5: Segment Profiling
-        print("   📋 Step 5: Segment Profiling")
+        print("   [List] Step 5: Segment Profiling")
         self.segment_profiles = self._create_profiles(df)
         
         # Step 6: Segment Naming
-        print("   🏷️  Step 6: Intelligent Segment Naming")
+        print("   [Tag]  Step 6: Intelligent Segment Naming")
         df = self._name_segments(df)
         
         # Display results
@@ -135,7 +135,7 @@ class SegmentationEngine:
         self.rfm_scores = df[['user_id', 'rfm_recency', 'rfm_frequency', 
                               'rfm_monetary', 'rfm_score', 'rfm_segment']].copy()
         
-        print(f"      ✓ RFM Distribution:")
+        print(f"      [OK] RFM Distribution:")
         print(df['rfm_segment'].value_counts().to_string())
         
         return df
@@ -239,9 +239,9 @@ class SegmentationEngine:
         # Elbow method: find elbow point
         elbow_k = self._find_elbow(k_range, inertias)
         
-        print(f"      📊 Silhouette optimal K: {best_silhouette_k} (score: {max(silhouette_scores):.3f})")
-        print(f"      📊 Davies-Bouldin optimal K: {best_db_k} (score: {min(davies_bouldin_scores):.3f})")
-        print(f"      📊 Elbow optimal K: {elbow_k}")
+        print(f"      [Stats] Silhouette optimal K: {best_silhouette_k} (score: {max(silhouette_scores):.3f})")
+        print(f"      [Stats] Davies-Bouldin optimal K: {best_db_k} (score: {min(davies_bouldin_scores):.3f})")
+        print(f"      [Stats] Elbow optimal K: {elbow_k}")
         
         # Use silhouette as primary metric
         return best_silhouette_k
@@ -282,7 +282,7 @@ class SegmentationEngine:
         self.best_model = hierarchical
         self.best_k = k
         
-        print(f"      ✓ Created {k} segments using hierarchical clustering")
+        print(f"      [OK] Created {k} segments using hierarchical clustering")
         
         return df
     
@@ -391,7 +391,7 @@ class SegmentationEngine:
             seg_id = profile['segment_id']
             seg_name = df[df['segment_id'] == seg_id]['segment_name'].iloc[0]
             
-            print(f"\n🎯 Segment {seg_id}: {seg_name}")
+            print(f"\n[*] Segment {seg_id}: {seg_name}")
             print(f"   Size: {profile['segment_size']} users ({profile['segment_percentage']:.1f}%)")
             print(f"   RFM: {profile['avg_rfm_score']:.2f} ({profile['rfm_segment_mode']})")
             print(f"   Activeness: {profile['avg_activeness']:.2f} | Churn Risk: {profile['avg_churn_risk']:.2f}")
@@ -413,3 +413,4 @@ class SegmentationEngine:
         
         segment_output.to_csv(f"{output_dir}/user_segments.csv", index=False)
         print(f"\n✅ Saved: {output_dir}/user_segments.csv")
+

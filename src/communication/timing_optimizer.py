@@ -1,4 +1,4 @@
-"""
+﻿"""
 Timing Optimization with Survival Analysis
 - Survival analysis for optimal send times
 - Time-to-event modeling
@@ -52,7 +52,7 @@ class TimingOptimizer:
         Returns:
             DataFrame with optimal timing recommendations
         """
-        print("\n⏰ Advanced Timing Optimization with Survival Analysis...")
+        print("\n[Time] Advanced Timing Optimization with Survival Analysis...")
         
         if experiment_results is not None and LIFELINES_AVAILABLE:
             return self._optimize_from_experiments(user_data, experiment_results)
@@ -65,7 +65,7 @@ class TimingOptimizer:
         """
         Learn optimal timing from experiment results using survival analysis
         """
-        print("   📊 Learning from experiment results...")
+        print("   [Stats] Learning from experiment results...")
         
         timing_recs = []
         
@@ -118,7 +118,7 @@ class TimingOptimizer:
         
         self.optimal_timings = pd.DataFrame(timing_recs)
         
-        print(f"   ✓ Generated {len(timing_recs)} timing recommendations")
+        print(f"   [OK] Generated {len(timing_recs)} timing recommendations")
         
         return self.optimal_timings
     
@@ -126,7 +126,7 @@ class TimingOptimizer:
         """
         Optimize timing based on user behavioral patterns
         """
-        print("   📊 Analyzing user behavioral patterns...")
+        print("   [Stats] Analyzing user behavioral patterns...")
         
         timing_recs = []
         
@@ -182,7 +182,7 @@ class TimingOptimizer:
         
         self.optimal_timings = pd.DataFrame(timing_recs)
         
-        print(f"   ✓ Generated {len(timing_recs)} timing recommendations")
+        print(f"   [OK] Generated {len(timing_recs)} timing recommendations")
         
         return self.optimal_timings
     
@@ -200,7 +200,7 @@ class TimingOptimizer:
         Returns:
             DataFrame with frequency recommendations
         """
-        print("\n📈 Optimizing Notification Frequency...")
+        print("\n[+] Optimizing Notification Frequency...")
         
         frequency_recs = []
         
@@ -258,8 +258,8 @@ class TimingOptimizer:
         
         df_freq = pd.DataFrame(frequency_recs)
         
-        print(f"   ✓ Generated frequency recommendations for {len(frequency_recs)} segments")
-        print(f"   ✓ Avg daily notifications: {df_freq['daily_notifications'].mean():.1f}")
+        print(f"   [OK] Generated frequency recommendations for {len(frequency_recs)} segments")
+        print(f"   [OK] Avg daily notifications: {df_freq['daily_notifications'].mean():.1f}")
         
         return df_freq
     
@@ -274,7 +274,7 @@ class TimingOptimizer:
         Returns:
             DataFrame with decay analysis
         """
-        print("\n📉 Analyzing Engagement Time Decay...")
+        print("\n[-] Analyzing Engagement Time Decay...")
         
         # This would typically analyze how engagement changes
         # throughout the day, week, or campaign duration
@@ -315,3 +315,4 @@ class TimingOptimizer:
                 index=False
             )
             print(f"\n✅ Saved: {output_dir}/timing_recommendations_improved.csv")
+

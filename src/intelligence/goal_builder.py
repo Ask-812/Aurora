@@ -1,4 +1,4 @@
-"""
+﻿"""
 Goal Builder - Defines goals and journeys for each segment
 """
 
@@ -23,7 +23,7 @@ class GoalBuilder:
         Returns:
             pd.DataFrame: Segment goals mapping
         """
-        print("\n🎯 Building goals and journeys...")
+        print("\n[*] Building goals and journeys...")
         
         goals = []
         
@@ -45,8 +45,8 @@ class GoalBuilder:
         
         self.segment_goals = pd.DataFrame(goals)
         
-        print(f"   ✓ Created {len(goals)} goal definitions")
-        print(f"   ✓ Covering {len(segment_profiles)} segments × 4 lifecycle stages")
+        print(f"   [OK] Created {len(goals)} goal definitions")
+        print(f"   [OK] Covering {len(segment_profiles)} segments × 4 lifecycle stages")
         
         return self.segment_goals
     
@@ -183,4 +183,5 @@ class GoalBuilder:
         
         self.segment_goals.to_csv(output_path / 'segment_goals.csv', index=False)
         
-        print(f"✓ Goals saved to {output_dir}/segment_goals.csv")
+        print(f"[OK] Goals saved to {output_dir}/segment_goals.csv")
+

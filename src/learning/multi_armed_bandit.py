@@ -1,4 +1,4 @@
-"""
+﻿"""
 Multi-Armed Bandit Learning Engine
 - Thompson Sampling for template selection
 - Contextual Bandits for personalization
@@ -53,7 +53,7 @@ class MultiArmedBanditEngine:
                 'confidence_interval': (0.0, 1.0)
             }
         
-        print(f"   ✓ Initialized {len(self.template_bandits)} bandit arms")
+        print(f"   [OK] Initialized {len(self.template_bandits)} bandit arms")
     
     def update_from_experiments(self, experiment_results: pd.DataFrame):
         """
@@ -96,7 +96,7 @@ class MultiArmedBanditEngine:
             
             updates_count += 1
         
-        print(f"   ✓ Updated {updates_count} bandit arms")
+        print(f"   [OK] Updated {updates_count} bandit arms")
         
         # Display top performers
         self._display_top_performers(top_n=5)
@@ -276,7 +276,7 @@ class MultiArmedBanditEngine:
         """Display top performing templates"""
         rankings = self.get_template_rankings()
         
-        print(f"\n   📊 Top {top_n} Templates (by Estimated CTR):")
+        print(f"\n   [Stats] Top {top_n} Templates (by Estimated CTR):")
         
         for i, (_, row) in enumerate(rankings.head(top_n).iterrows(), 1):
             print(f"      {i}. {row['template_id']}: "
@@ -348,3 +348,4 @@ class MultiArmedBanditEngine:
             json.dump(state, f, indent=2)
         
         print(f"\n✅ Saved bandit state: {output_dir}/bandit_state.json")
+
