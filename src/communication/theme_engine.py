@@ -79,8 +79,8 @@ class ThemeEngine:
             secondary = 'accomplishment'
         
         elif activeness < 0.3:
-            # Low activeness → Curiosity
-            primary = 'curiosity'
+            # Low activeness → Unpredictability (discovery)
+            primary = 'unpredictability'
             secondary = 'empowerment'
         
         elif activeness > 0.6 and gamification < 0.4:
@@ -91,16 +91,16 @@ class ThemeEngine:
         else:
             # Balanced users
             if lifecycle == 'trial':
-                primary = 'curiosity'
+                primary = 'unpredictability'
                 secondary = 'accomplishment'
             elif lifecycle == 'paid':
                 primary = 'accomplishment'
                 secondary = 'ownership'
             elif lifecycle == 'churned':
                 primary = 'loss_avoidance'
-                secondary = 'curiosity'
+                secondary = 'unpredictability'
             else:  # inactive
-                primary = 'curiosity'
+                primary = 'unpredictability'
                 secondary = 'epic_meaning'
         
         return primary, secondary
@@ -123,7 +123,7 @@ class ThemeEngine:
             rationale_parts.append(f"High social propensity ({social:.2f}) indicates competitive motivation")
         elif primary == 'loss_avoidance':
             rationale_parts.append(f"High churn risk ({churn_risk:.2f}) requires urgency and retention focus")
-        elif primary == 'curiosity':
+        elif primary == 'unpredictability':
             rationale_parts.append(f"Low activeness ({activeness:.2f}) needs discovery and exploration")
         elif primary == 'empowerment':
             rationale_parts.append(f"Active ({activeness:.2f}) but low gamification ({gamification:.2f}) prefers autonomy")

@@ -3,3 +3,21 @@ numpy>=1.24.0
 scikit-learn>=1.3.0
 pyyaml>=6.0
 python-dateutil>=2.8.0
+
+# Advanced ML & Optimization
+xgboost>=2.0.0
+lightgbm>=4.0.0
+scipy>=1.11.0
+
+# NLP & Text Processing
+nltk>=3.8.0
+
+# Statistical Analysis
+lifelines>=0.27.0
+statsmodels>=0.14.0
+
+# Bayesian Methods
+pymc>=5.0.0
+
+# Optimization
+optuna>=3.0.0

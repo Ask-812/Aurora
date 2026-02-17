@@ -39,30 +39,51 @@ class KnowledgeBankEngine:
     def _extract_north_star(self, text: str) -> Dict[str, Any]:
         """Extract North Star metric from KB using pattern matching"""
         
-        # Try to extract from text using patterns
-        patterns = [
-            r"north star.*?(?:is|:)\s*([^.\n]+)",
-            r"key metric.*?(?:is|:)\s*([^.\n]+)",
-            r"we measure success by\s*([^.\n]+)",
-            r"primary metric.*?(?:is|:)\s*([^.\n]+)"
-        ]
-        
         metric_name = None
-        for pattern in patterns:
-            match = re.search(pattern, text, re.IGNORECASE | re.DOTALL)
-            if match:
-                metric_name = match.group(1).strip()
-                break
         
-        # If not found in text, use default based on common patterns
+        # Look for explicit "Key Metrics" or "North Star" sections
+        key_metrics_match = re.search(r"(?:key metrics?|north star)[\s\S]{0,500}?([A-Z][^.\n]{10,80}(?:retention|conversion|engagement|revenue|growth|active users))", text, re.IGNORECASE)
+        
+        if key_metrics_match:
+            # Clean up the extracted metric name
+            candidate = key_metrics_match.group(1).strip()
+            # Remove common prefixes/artifacts
+            candidate = re.sub(r'^[*•\-\d\.\s]+', '', candidate)
+            candidate = re.sub(r'\s+', ' ', candidate)
+            if len(candidate) > 10 and len(candidate) < 100:
+                metric_name = candidate
+        
+        # Try additional targeted patterns
         if not metric_name:
-            # Check for domain indicators
-            if any(word in text.lower() for word in ['learn', 'education', 'practice', 'exercise']):
+            patterns = [
+                r"north star(?:\s+metric)?(?:\s+is)?:\s*([A-Z][^.\n]{10,80})",
+                r"primary metric:\s*([A-Z][^.\n]{10,80})",
+                r"goal:\s*\*?\*?([^*\n]{10,80}(?:retention|conversion|engagement))\*?\*?",
+            ]
+            
+            for pattern in patterns:
+                match = re.search(pattern, text, re.IGNORECASE)
+                if match:
+                    candidate = match.group(1).strip()
+                    candidate = re.sub(r'^[*•\-\s]+', '', candidate)
+                    if len(candidate) > 10 and len(candidate) < 100:
+                        metric_name = candidate
+                        break
+        
+        # If still not found, infer from domain
+        if not metric_name or len(metric_name) < 10:
+            # Check for domain indicators and common metrics
+            text_lower = text.lower()
+            if 'retention' in text_lower and ('monthly' in text_lower or 'week' in text_lower):
+                metric_name = "Monthly Active Retention"
+            elif any(word in text_lower for word in ['daily engagement', 'habit formation']):
                 metric_name = "Daily Active Engaged Users"
-            elif any(word in text.lower() for word in ['transaction', 'payment', 'wallet']):
+            elif any(word in text_lower for word in ['learn', 'education', 'practice', 'exercise']):
+                metric_name = "Weekly Active Learners"
+            elif any(word in text_lower for word in ['transaction', 'payment', 'wallet']):
                 metric_name = "Transaction Volume"
-            elif any(word in text.lower() for word in ['watch', 'stream', 'content', 'video']):
-                metric_name = "Hours Watched"
+            elif any(word in text_lower for word in ['watch', 'stream', 'content', 'video']):
+                metric_name = "Content Engagement Hours"
             else:
                 metric_name = "Daily Active Users"
         
@@ -82,73 +103,129 @@ class KnowledgeBankEngine:
     
     def _extract_definition(self, text: str, metric: str) -> str:
         """Extract definition of the metric"""
-        # Try to find definition near the metric mention
-        definition_patterns = [
-            rf"{re.escape(metric)}.*?(?:defined as|means|is)\s*([^.\n]+)",
-            r"definition.*?:\s*([^.\n]+)"
-        ]
+        # Look in the metrics section for the specific metric
+        metrics_section = re.search(r"(?:key metrics?)([\s\S]{0,800}?)(?:\n#{1,3}\s|\Z)", text, re.IGNORECASE)
         
-        for pattern in definition_patterns:
-            match = re.search(pattern, text, re.IGNORECASE | re.DOTALL)
+        if metrics_section:
+            section = metrics_section.group(1)
+            # Try to find the metric and its definition
+            metric_pattern = rf"{re.escape(metric[:20])}[^\n]*?\n\s*[*•\-]?\s*([A-Z][^.\n]{{20,150}})"
+            match = re.search(metric_pattern, section, re.IGNORECASE)
             if match:
-                return match.group(1).strip()
+                defn = match.group(1).strip('* \t')
+                if len(defn) > 20:
+                    return defn
         
-        return f"Users who actively engage with the platform"
+        # Fallback based on metric type
+        if 'retention' in metric.lower():
+            return "Percentage of users who remain active and engaged over time"
+        elif 'conversion' in metric.lower():
+            return "Rate at which trial users convert to paying customers"
+        elif 'engagement' in metric.lower():
+            return "Users who actively interact with core features daily"
+        else:
+            return "Primary success metric measuring product-market fit"
     
     def _extract_rationale(self, text: str, metric: str) -> str:
         """Extract why the metric matters"""
-        rationale_patterns = [
-            r"(?:why|because|matters).*?:\s*([^.\n]+)",
-            r"important because\s*([^.\n]+)"
-        ]
+        # Look for goals or value propositions
+        goal_match = re.search(r"goal:?\s*\*?\*?([^*\n]{15,100})\*?\*?", text, re.IGNORECASE)
+        if goal_match:
+            return f"Drives {goal_match.group(1).strip().lower()}"
         
-        for pattern in rationale_patterns:
-            match = re.search(pattern, text, re.IGNORECASE | re.DOTALL)
-            if match:
-                return match.group(1).strip()
-        
-        return "Indicates product stickiness and user value realization"
+        # Fallback based on metric type
+        if 'retention' in metric.lower():
+            return "Indicates product stickiness and long-term value creation"
+        elif 'conversion' in metric.lower():
+            return "Validates product-market fit and monetization effectiveness"
+        elif 'engagement' in metric.lower():
+            return "Measures active usage and habit formation, leading to retention"
+        elif 'revenue' in metric.lower():
+            return "Direct indicator of business sustainability and growth"
+        else:
+            return "Core indicator of product success and user satisfaction"
     
     def _extract_key_drivers(self, text: str) -> List[str]:
         """Extract key drivers from text"""
         drivers = []
         
-        # Look for bullet points or numbered lists
-        driver_patterns = [
-            r"[-•]\s*([^.\n]+)",
-            r"\d+\.\s*([^.\n]+)"
-        ]
+        # Look specifically for Key Metrics or metrics section
+        metrics_section = re.search(r"(?:key metrics?|metrics?|kpis?)[\s:]*\n([\s\S]{0,500}?)(?:\n#{1,3}\s|\n\*\*[A-Z]|\Z)", text, re.IGNORECASE)
         
-        for pattern in driver_patterns:
-            matches = re.findall(pattern, text)
-            drivers.extend([m.strip() for m in matches if len(m.strip()) > 10])
+        if metrics_section:
+            section_text = metrics_section.group(1)
+            
+            # Extract bullet points or numbered items from metrics section
+            driver_patterns = [
+                r"[*•\-]\s+\*?\*?([^*\n]{15,}?)(?:\*?\*?\s*$|\*?\*?\n)",  # Bullet with bold handling
+                r"^\d+\.\s+([^.\n]{15,})$"  # Numbered items
+            ]
+            
+            for pattern in driver_patterns:
+                matches = re.findall(pattern, section_text, re.MULTILINE)
+                for match in matches:
+                    cleaned = match.strip().strip('*').strip()
+                    if len(cleaned) > 15 and len(cleaned) < 100:
+                        drivers.append(cleaned)
         
-        # If no drivers found, return generic ones
+        # If no drivers found in metrics section, look for goals
+        if not drivers:
+            goal_match = re.search(r"goal:?\s*\*?\*?([^*\n]{15,})\*?\*?", text, re.IGNORECASE)
+            if goal_match:
+                drivers.append(goal_match.group(1).strip())
+        
+        # Fallback to generic drivers
+        if not drivers:
+            text_lower = text.lower()
+            if 'retention' in text_lower:
+                drivers.append("User retention and engagement")
+            if 'conversion' in text_lower:
+                drivers.append("Trial to paid conversion")
+            if 'engagement' in text_lower:
+                drivers.append("Daily active engagement")
+                
+        # Final fallback
         if not drivers:
             drivers = ["User engagement", "Feature adoption", "Retention"]
         
-        return drivers[:5]  # Limit to top 5
+        # Remove duplicates and limit
+        drivers = list(dict.fromkeys(drivers))[:5]
+        
+        return drivers
     
     def _extract_feature_goal_map(self, text: str) -> Dict[str, List[Dict]]:
         """Extract feature-to-goal mappings from KB text"""
         features = []
         
-        # Extract features mentioned in text
-        feature_keywords = [
-            'feature', 'tool', 'capability', 'functionality', 
-            'module', 'component', 'service'
-        ]
+        # Look for explicit features section or product description
+        features_section = re.search(r"(?:features?|achieved through|capabilities)[\s:]*\n([\s\S]{0,800}?)(?:\n#{1,3}\s|\n\*\*[A-Z]|\Z)", text, re.IGNORECASE)
         
-        # Look for feature mentions
-        feature_pattern = r"(?:feature|tool|capability).*?:\s*([A-Z][^.\n]+)"
-        feature_matches = re.findall(feature_pattern, text, re.IGNORECASE)
+        feature_names = []
         
-        # If no features found, try to infer from domain
-        if not feature_matches:
-            feature_matches = self._infer_features_from_domain(text)
+        if features_section:
+            section_text = features_section.group(1)
+            
+            # Extract bullet points (features)
+            bullet_pattern = r"[*•\-]\s+([A-Z][^*\n]{5,60}(?:practice|tutor|leaderboard|streak|coin|gamification|report|scenario|wallet|payment|content|video|feature|tool)[^*\n]{0,30})"
+            matches = re.findall(bullet_pattern, section_text, re.IGNORECASE)
+            
+            for match in matches:
+                cleaned = match.strip().strip('*').strip()
+                if len(cleaned) > 5:
+                    feature_names.append(cleaned)
         
-        for idx, feature_name in enumerate(feature_matches[:5]):  # Limit to 5 features
-            feature_id = feature_name.lower().replace(' ', '_').replace('&', 'and')
+        # If no features found, try pattern matching
+        if not feature_names:
+            feature_pattern = r"(?:feature|tool|capability)s?:\s*([A-Z][^.\n]{5,60})"
+            feature_names = re.findall(feature_pattern, text, re.IGNORECASE)
+        
+        # If still no features, infer from domain
+        if not feature_names:
+            feature_names = self._infer_features_from_domain(text)
+        
+        # Create feature objects
+        for idx, feature_name in enumerate(feature_names[:5]):  # Limit to 5 features
+            feature_id = re.sub(r'[^a-z0-9_]', '', feature_name.lower().replace(' ', '_'))
             
             features.append({
                 "feature_name": feature_name.strip(),
@@ -240,7 +317,13 @@ class KnowledgeBankEngine:
         ]
     
     def _extract_tone_hook_matrix(self, text: str) -> Dict[str, Any]:
-        """Extract allowed tones and behavioral hooks"""
+        """
+        Extract allowed tones and behavioral hooks
+        
+        Note: Octalysis 8 Core Drives are universal behavioral psychology principles
+        (Yu-kai Chou, 2015) and are intentionally standardized here as they apply 
+        across all domains. The system is domain-agnostic at the orchestration level.
+        """
         matrix = {
             "allowed_tones": [
                 "encouraging",
@@ -296,7 +379,7 @@ class KnowledgeBankEngine:
                     "examples": ["Only 3 hours left", "Last chance today", "Limited spots"],
                     "best_for_segments": ["achievers", "fomo_driven"]
                 },
-                "curiosity": {
+                "unpredictability": {
                     "description": "What will happen next",
                     "examples": ["Unlock surprise reward", "Discover new feature", "See what's next"],
                     "best_for_segments": ["explorers", "casual_learners"]
@@ -310,9 +393,9 @@ class KnowledgeBankEngine:
             "hooks_by_segment": {
                 "achievers": ["accomplishment", "ownership", "loss_avoidance"],
                 "social_competitors": ["social_influence", "accomplishment", "scarcity"],
-                "casual_learners": ["curiosity", "empowerment", "epic_meaning"],
+                "casual_learners": ["unpredictability", "empowerment", "epic_meaning"],
                 "at_risk_churners": ["loss_avoidance", "scarcity", "social_influence"],
-                "dormant_users": ["curiosity", "epic_meaning", "empowerment"]
+                "dormant_users": ["unpredictability", "epic_meaning", "empowerment"]
             }
         }
         

@@ -3,82 +3,77 @@
     {
       "feature_name": "AI Tutor",
       "feature_id": "ai_tutor",
-      "primary_goal": "speaking_confidence",
+      "primary_goal": "skill_development",
       "secondary_goals": [
-        "pronunciation_improvement",
-        "conversation_practice",
-        "real_time_feedback"
+        "engagement",
+        "retention",
+        "satisfaction"
       ],
       "user_segments_most_relevant": [
-        "casual_learners",
-        "ai_enthusiasts",
-        "achievers"
+        "all"
       ],
-      "engagement_driver_score": 0.85,
-      "description": "AI-powered conversation practice for building speaking confidence"
+      "engagement_driver_score": 0.7,
+      "description": "Feature for ai tutor"
     },
     {
       "feature_name": "Leaderboard",
       "feature_id": "leaderboard",
       "primary_goal": "competitive_engagement",
       "secondary_goals": [
-        "social_motivation",
-        "consistency",
-        "peer_comparison"
+        "engagement",
+        "retention",
+        "satisfaction"
       ],
       "user_segments_most_relevant": [
-        "achievers",
-        "social_competitors"
+        "all"
       ],
-      "engagement_driver_score": 0.72,
-      "description": "Competitive rankings to drive social motivation"
+      "engagement_driver_score": 0.75,
+      "description": "Feature for leaderboard"
     },
     {
       "feature_name": "Streak System",
-      "feature_id": "streak",
+      "feature_id": "streak_system",
       "primary_goal": "habit_formation",
       "secondary_goals": [
-        "consistency",
-        "daily_engagement",
-        "loss_avoidance"
+        "engagement",
+        "retention",
+        "satisfaction"
       ],
       "user_segments_most_relevant": [
-        "achievers",
-        "consistent_learners"
+        "all"
       ],
-      "engagement_driver_score": 0.9,
-      "description": "Daily streak tracking to build learning habits"
+      "engagement_driver_score": 0.7999999999999999,
+      "description": "Feature for streak system"
     },
     {
-      "feature_name": "Coins & Rewards",
-      "feature_id": "coins",
-      "primary_goal": "gamification_engagement",
+      "feature_name": "Rewards",
+      "feature_id": "rewards",
+      "primary_goal": "motivation",
       "secondary_goals": [
-        "achievement_unlocking",
-        "progress_tracking",
-        "ownership"
+        "engagement",
+        "retention",
+        "satisfaction"
       ],
       "user_segments_most_relevant": [
-        "achievers",
-        "gamification_lovers"
+        "all"
       ],
-      "engagement_driver_score": 0.78,
-      "description": "Virtual currency system for rewarding progress"
+      "engagement_driver_score": 0.85,
+      "description": "Feature for rewards"
     },
     {
       "feature_name": "Exercises",
       "feature_id": "exercises",
       "primary_goal": "skill_development",
       "secondary_goals": [
-        "practice",
-        "improvement",
-        "confidence_building"
+        "engagement",
+        "retention",
+        "satisfaction"
       ],
       "user_segments_most_relevant": [
         "all"
       ],
-      "engagement_driver_score": 0.95,
-      "description": "Core learning exercises for English speaking practice"
+      "engagement_driver_score": 0.8999999999999999,
+      "description": "Feature for exercises"
     }
   ]
 }

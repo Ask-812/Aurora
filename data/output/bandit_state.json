@@ -1,0 +1,8102 @@
+{
+  "T0001": {
+    "alpha": 86,
+    "beta": 537,
+    "total_sends": 621,
+    "total_clicks": 85,
+    "total_engagements": 29,
+    "estimated_ctr": 0.13804173354735153,
+    "ci_lower": 0.11210297556004205,
+    "ci_upper": 0.16618072096918957
+  },
+  "T0001_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0002": {
+    "alpha": 56,
+    "beta": 1215,
+    "total_sends": 1269,
+    "total_clicks": 55,
+    "total_engagements": 10,
+    "estimated_ctr": 0.044059795436664044,
+    "ci_lower": 0.03347753094824307,
+    "ci_upper": 0.0559996635037312
+  },
+  "T0002_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0003": {
+    "alpha": 210,
+    "beta": 1039,
+    "total_sends": 1247,
+    "total_clicks": 209,
+    "total_engagements": 96,
+    "estimated_ctr": 0.16813450760608487,
+    "ci_lower": 0.14791351404797487,
+    "ci_upper": 0.18936201768272487
+  },
+  "T0003_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0004": {
+    "alpha": 121,
+    "beta": 1338,
+    "total_sends": 1457,
+    "total_clicks": 120,
+    "total_engagements": 45,
+    "estimated_ctr": 0.08293351610692255,
+    "ci_lower": 0.06933848678089628,
+    "ci_upper": 0.0976111021943801
+  },
+  "T0004_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0005": {
+    "alpha": 61,
+    "beta": 461,
+    "total_sends": 520,
+    "total_clicks": 60,
+    "total_engagements": 15,
+    "estimated_ctr": 0.11685823754789272,
+    "ci_lower": 0.09075272745441462,
+    "ci_upper": 0.1457426453322451
+  },
+  "T0005_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0006": {
+    "alpha": 60,
+    "beta": 1339,
+    "total_sends": 1397,
+    "total_clicks": 59,
+    "total_engagements": 8,
+    "estimated_ctr": 0.04288777698355969,
+    "ci_lower": 0.03290833550627624,
+    "ci_upper": 0.0541038635537145
+  },
+  "T0006_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0007": {
+    "alpha": 249,
+    "beta": 1664,
+    "total_sends": 1911,
+    "total_clicks": 248,
+    "total_engagements": 67,
+    "estimated_ctr": 0.1301620491374804,
+    "ci_lower": 0.11545886662433383,
+    "ci_upper": 0.1455975682544855
+  },
+  "T0007_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0008": {
+    "alpha": 61,
+    "beta": 602,
+    "total_sends": 661,
+    "total_clicks": 60,
+    "total_engagements": 22,
+    "estimated_ctr": 0.09200603318250378,
+    "ci_lower": 0.07121653636398494,
+    "ci_upper": 0.11512511659511608
+  },
+  "T0008_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0009": {
+    "alpha": 27,
+    "beta": 770,
+    "total_sends": 795,
+    "total_clicks": 26,
+    "total_engagements": 4,
+    "estimated_ctr": 0.033877038895859475,
+    "ci_lower": 0.02246989953154704,
+    "ci_upper": 0.04749470178437223
+  },
+  "T0009_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0010": {
+    "alpha": 54,
+    "beta": 1512,
+    "total_sends": 1564,
+    "total_clicks": 53,
+    "total_engagements": 7,
+    "estimated_ctr": 0.034482758620689655,
+    "ci_lower": 0.026025242929985575,
+    "ci_upper": 0.044065181174326694
+  },
+  "T0010_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0011": {
+    "alpha": 306,
+    "beta": 1282,
+    "total_sends": 1586,
+    "total_clicks": 305,
+    "total_engagements": 146,
+    "estimated_ctr": 0.19269521410579346,
+    "ci_lower": 0.17367414436110948,
+    "ci_upper": 0.21244939017200928
+  },
+  "T0011_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0012": {
+    "alpha": 28,
+    "beta": 514,
+    "total_sends": 540,
+    "total_clicks": 27,
+    "total_engagements": 2,
+    "estimated_ctr": 0.05166051660516605,
+    "ci_lower": 0.03466341305667768,
+    "ci_upper": 0.07178492904046276
+  },
+  "T0012_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0013": {
+    "alpha": 112,
+    "beta": 1194,
+    "total_sends": 1304,
+    "total_clicks": 111,
+    "total_engagements": 33,
+    "estimated_ctr": 0.08575803981623277,
+    "ci_lower": 0.07118974261351048,
+    "ci_upper": 0.10152749439797651
+  },
+  "T0013_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0014": {
+    "alpha": 152,
+    "beta": 1591,
+    "total_sends": 1741,
+    "total_clicks": 151,
+    "total_engagements": 51,
+    "estimated_ctr": 0.08720596672403902,
+    "ci_lower": 0.07442033245473821,
+    "ci_upper": 0.10088856836118335
+  },
+  "T0014_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0015": {
+    "alpha": 302,
+    "beta": 1063,
+    "total_sends": 1363,
+    "total_clicks": 301,
+    "total_engagements": 127,
+    "estimated_ctr": 0.22124542124542124,
+    "ci_lower": 0.19962615918920856,
+    "ci_upper": 0.2436383369105107
+  },
+  "T0015_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0016": {
+    "alpha": 228,
+    "beta": 1468,
+    "total_sends": 1694,
+    "total_clicks": 227,
+    "total_engagements": 64,
+    "estimated_ctr": 0.13443396226415094,
+    "ci_lower": 0.11861832504649646,
+    "ci_upper": 0.15106608815914302
+  },
+  "T0016_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0017": {
+    "alpha": 136,
+    "beta": 1378,
+    "total_sends": 1512,
+    "total_clicks": 135,
+    "total_engagements": 50,
+    "estimated_ctr": 0.08982826948480846,
+    "ci_lower": 0.07595188851143063,
+    "ci_upper": 0.1047306948025755
+  },
+  "T0017_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0018": {
+    "alpha": 167,
+    "beta": 1743,
+    "total_sends": 1908,
+    "total_clicks": 166,
+    "total_engagements": 49,
+    "estimated_ctr": 0.08743455497382199,
+    "ci_lower": 0.07518536711027281,
+    "ci_upper": 0.1005018549894159
+  },
+  "T0018_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0019": {
+    "alpha": 63,
+    "beta": 1087,
+    "total_sends": 1148,
+    "total_clicks": 62,
+    "total_engagements": 6,
+    "estimated_ctr": 0.05478260869565217,
+    "ci_lower": 0.04238688858992499,
+    "ci_upper": 0.06864373189667047
+  },
+  "T0019_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0020": {
+    "alpha": 189,
+    "beta": 1808,
+    "total_sends": 1995,
+    "total_clicks": 188,
+    "total_engagements": 51,
+    "estimated_ctr": 0.09464196294441662,
+    "ci_lower": 0.08219685924284671,
+    "ci_upper": 0.1078559017049604
+  },
+  "T0020_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0021": {
+    "alpha": 138,
+    "beta": 1315,
+    "total_sends": 1451,
+    "total_clicks": 137,
+    "total_engagements": 46,
+    "estimated_ctr": 0.09497591190640055,
+    "ci_lower": 0.0804432525055551,
+    "ci_upper": 0.11056428933987504
+  },
+  "T0021_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0022": {
+    "alpha": 161,
+    "beta": 1767,
+    "total_sends": 1926,
+    "total_clicks": 160,
+    "total_engagements": 45,
+    "estimated_ctr": 0.08350622406639004,
+    "ci_lower": 0.07157631652214769,
+    "ci_upper": 0.09625430877022696
+  },
+  "T0022_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0023": {
+    "alpha": 194,
+    "beta": 1515,
+    "total_sends": 1707,
+    "total_clicks": 193,
+    "total_engagements": 63,
+    "estimated_ctr": 0.11351667641895846,
+    "ci_lower": 0.09891599515555441,
+    "ci_upper": 0.12897395113374058
+  },
+  "T0023_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0024": {
+    "alpha": 148,
+    "beta": 1105,
+    "total_sends": 1251,
+    "total_clicks": 147,
+    "total_engagements": 48,
+    "estimated_ctr": 0.11811652035115722,
+    "ci_lower": 0.10084044998849283,
+    "ci_upper": 0.13654694691072441
+  },
+  "T0024_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0025": {
+    "alpha": 110,
+    "beta": 794,
+    "total_sends": 902,
+    "total_clicks": 109,
+    "total_engagements": 39,
+    "estimated_ctr": 0.12168141592920353,
+    "ci_lower": 0.10119075288505383,
+    "ci_upper": 0.14375701213135794
+  },
+  "T0025_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0026": {
+    "alpha": 91,
+    "beta": 961,
+    "total_sends": 1050,
+    "total_clicks": 90,
+    "total_engagements": 33,
+    "estimated_ctr": 0.08650190114068441,
+    "ci_lower": 0.0702831401128966,
+    "ci_upper": 0.10420900583378033
+  },
+  "T0026_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0027": {
+    "alpha": 22,
+    "beta": 742,
+    "total_sends": 762,
+    "total_clicks": 21,
+    "total_engagements": 3,
+    "estimated_ctr": 0.028795811518324606,
+    "ci_lower": 0.018156166425161987,
+    "ci_upper": 0.04176517502724004
+  },
+  "T0027_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0028": {
+    "alpha": 92,
+    "beta": 862,
+    "total_sends": 952,
+    "total_clicks": 91,
+    "total_engagements": 34,
+    "estimated_ctr": 0.09643605870020965,
+    "ci_lower": 0.07853223945495422,
+    "ci_upper": 0.11594173616634103
+  },
+  "T0028_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0029": {
+    "alpha": 68,
+    "beta": 487,
+    "total_sends": 553,
+    "total_clicks": 67,
+    "total_engagements": 24,
+    "estimated_ctr": 0.12252252252252252,
+    "ci_lower": 0.09658884296733043,
+    "ci_upper": 0.15103146571689552
+  },
+  "T0029_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0030": {
+    "alpha": 291,
+    "beta": 1461,
+    "total_sends": 1750,
+    "total_clicks": 290,
+    "total_engagements": 168,
+    "estimated_ctr": 0.1660958904109589,
+    "ci_lower": 0.14903991501363922,
+    "ci_upper": 0.18387384497110804
+  },
+  "T0030_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0031": {
+    "alpha": 53,
+    "beta": 1635,
+    "total_sends": 1686,
+    "total_clicks": 52,
+    "total_engagements": 7,
+    "estimated_ctr": 0.03139810426540284,
+    "ci_lower": 0.02361998315616655,
+    "ci_upper": 0.040226705219135295
+  },
+  "T0031_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0032": {
+    "alpha": 57,
+    "beta": 1860,
+    "total_sends": 1915,
+    "total_clicks": 56,
+    "total_engagements": 7,
+    "estimated_ctr": 0.0297339593114241,
+    "ci_lower": 0.022608156407842472,
+    "ci_upper": 0.03778811130889351
+  },
+  "T0032_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0033": {
+    "alpha": 107,
+    "beta": 1144,
+    "total_sends": 1249,
+    "total_clicks": 106,
+    "total_engagements": 31,
+    "estimated_ctr": 0.08553157474020784,
+    "ci_lower": 0.07067951188864204,
+    "ci_upper": 0.101638262517341
+  },
+  "T0033_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0034": {
+    "alpha": 106,
+    "beta": 679,
+    "total_sends": 783,
+    "total_clicks": 105,
+    "total_engagements": 32,
+    "estimated_ctr": 0.13503184713375796,
+    "ci_lower": 0.11203867886009572,
+    "ci_upper": 0.15978583412897815
+  },
+  "T0034_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0035": {
+    "alpha": 17,
+    "beta": 501,
+    "total_sends": 516,
+    "total_clicks": 16,
+    "total_engagements": 1,
+    "estimated_ctr": 0.032818532818532815,
+    "ci_lower": 0.019269367064529683,
+    "ci_upper": 0.0497716216490459
+  },
+  "T0035_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0036": {
+    "alpha": 35,
+    "beta": 963,
+    "total_sends": 996,
+    "total_clicks": 34,
+    "total_engagements": 3,
+    "estimated_ctr": 0.03507014028056112,
+    "ci_lower": 0.024571604531968116,
+    "ci_upper": 0.047330456989421454
+  },
+  "T0036_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0037": {
+    "alpha": 39,
+    "beta": 1647,
+    "total_sends": 1684,
+    "total_clicks": 38,
+    "total_engagements": 5,
+    "estimated_ctr": 0.023131672597864767,
+    "ci_lower": 0.01650919383033009,
+    "ci_upper": 0.030823900442140457
+  },
+  "T0037_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0038": {
+    "alpha": 154,
+    "beta": 973,
+    "total_sends": 1125,
+    "total_clicks": 153,
+    "total_engagements": 52,
+    "estimated_ctr": 0.13664596273291926,
+    "ci_lower": 0.11722318251561889,
+    "ci_upper": 0.15728993486438078
+  },
+  "T0038_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0039": {
+    "alpha": 387,
+    "beta": 1531,
+    "total_sends": 1916,
+    "total_clicks": 386,
+    "total_engagements": 222,
+    "estimated_ctr": 0.20177267987486966,
+    "ci_lower": 0.18411517810298222,
+    "ci_upper": 0.22001923696607503
+  },
+  "T0039_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0040": {
+    "alpha": 132,
+    "beta": 894,
+    "total_sends": 1024,
+    "total_clicks": 131,
+    "total_engagements": 46,
+    "estimated_ctr": 0.1286549707602339,
+    "ci_lower": 0.10887595507603197,
+    "ci_upper": 0.14980481877002627
+  },
+  "T0040_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0041": {
+    "alpha": 106,
+    "beta": 1049,
+    "total_sends": 1153,
+    "total_clicks": 105,
+    "total_engagements": 27,
+    "estimated_ctr": 0.09177489177489177,
+    "ci_lower": 0.07581437712250436,
+    "ci_upper": 0.10907385658211688
+  },
+  "T0041_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0042": {
+    "alpha": 92,
+    "beta": 984,
+    "total_sends": 1074,
+    "total_clicks": 91,
+    "total_engagements": 29,
+    "estimated_ctr": 0.08550185873605948,
+    "ci_lower": 0.06954627917515536,
+    "ci_upper": 0.10291610850631726
+  },
+  "T0042_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0043": {
+    "alpha": 46,
+    "beta": 1458,
+    "total_sends": 1502,
+    "total_clicks": 45,
+    "total_engagements": 4,
+    "estimated_ctr": 0.030585106382978722,
+    "ci_lower": 0.022492332169582678,
+    "ci_upper": 0.03985869737370106
+  },
+  "T0043_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0044": {
+    "alpha": 40,
+    "beta": 1338,
+    "total_sends": 1376,
+    "total_clicks": 39,
+    "total_engagements": 6,
+    "estimated_ctr": 0.02902757619738752,
+    "ci_lower": 0.020832133750991914,
+    "ci_upper": 0.03851579418195609
+  },
+  "T0044_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0045": {
+    "alpha": 143,
+    "beta": 1015,
+    "total_sends": 1156,
+    "total_clicks": 142,
+    "total_engagements": 53,
+    "estimated_ctr": 0.1234887737478411,
+    "ci_lower": 0.1051746394214323,
+    "ci_upper": 0.14303439354304603
+  },
+  "T0045_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0046": {
+    "alpha": 50,
+    "beta": 1602,
+    "total_sends": 1650,
+    "total_clicks": 49,
+    "total_engagements": 5,
+    "estimated_ctr": 0.03026634382566586,
+    "ci_lower": 0.022559644632178508,
+    "ci_upper": 0.039048921897874116
+  },
+  "T0046_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0047": {
+    "alpha": 38,
+    "beta": 951,
+    "total_sends": 987,
+    "total_clicks": 37,
+    "total_engagements": 4,
+    "estimated_ctr": 0.03842264914054601,
+    "ci_lower": 0.027358817937827108,
+    "ci_upper": 0.051251770933590714
+  },
+  "T0047_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0048": {
+    "alpha": 191,
+    "beta": 1410,
+    "total_sends": 1599,
+    "total_clicks": 190,
+    "total_engagements": 58,
+    "estimated_ctr": 0.1193004372267333,
+    "ci_lower": 0.10388493079926002,
+    "ci_upper": 0.1356166411295494
+  },
+  "T0048_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0049": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0049_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0050": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0050_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0051": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0051_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0052": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0052_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0053": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0053_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0054": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0054_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0055": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0055_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0056": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0056_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0057": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0057_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0058": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0058_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0059": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0059_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0060": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0060_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0061": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0061_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0062": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0062_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0063": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0063_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0064": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0064_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0065": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0065_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0066": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0066_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0067": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0067_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0068": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0068_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0069": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0069_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0070": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0070_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0071": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0071_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0072": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0072_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0073": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0073_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0074": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0074_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0075": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0075_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0076": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0076_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0077": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0077_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0078": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0078_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0079": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0079_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0080": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0080_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0081": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0081_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0082": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0082_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0083": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0083_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0084": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0084_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0085": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0085_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0086": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0086_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0087": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0087_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0088": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0088_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0089": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0089_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0090": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0090_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0091": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0091_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0092": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0092_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0093": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0093_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0094": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0094_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0095": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0095_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0096": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0096_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0097": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0097_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0098": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0098_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0099": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0099_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0100": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0100_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0101": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0101_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0102": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0102_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0103": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0103_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0104": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0104_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0105": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0105_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0106": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0106_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0107": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0107_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0108": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0108_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0109": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0109_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0110": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0110_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0111": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0111_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0112": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0112_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0113": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0113_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0114": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0114_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0115": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0115_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0116": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0116_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0117": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0117_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0118": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0118_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0119": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0119_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0120": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0120_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0121": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0121_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0122": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0122_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0123": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0123_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0124": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0124_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0125": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0125_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0126": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0126_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0127": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0127_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0128": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0128_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0129": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0129_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0130": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0130_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0131": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0131_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0132": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0132_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0133": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0133_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0134": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0134_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0135": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0135_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0136": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0136_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0137": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0137_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0138": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0138_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0139": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0139_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0140": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0140_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0141": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0141_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0142": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0142_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0143": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0143_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0144": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0144_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0145": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0145_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0146": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0146_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0147": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0147_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0148": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0148_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0149": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0149_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0150": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0150_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0151": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0151_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0152": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0152_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0153": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0153_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0154": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0154_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0155": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0155_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0156": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0156_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0157": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0157_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0158": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0158_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0159": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0159_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0160": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0160_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0161": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0161_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0162": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0162_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0163": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0163_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0164": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0164_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0165": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0165_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0166": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0166_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0167": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0167_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0168": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0168_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0169": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0169_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0170": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0170_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0171": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0171_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0172": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0172_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0173": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0173_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0174": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0174_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0175": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0175_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0176": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0176_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0177": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0177_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0178": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0178_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0179": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0179_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0180": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0180_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0181": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0181_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0182": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0182_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0183": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0183_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0184": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0184_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0185": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0185_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0186": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0186_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0187": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0187_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0188": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0188_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0189": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0189_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0190": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0190_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0191": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0191_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0192": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0192_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0193": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0193_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0194": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0194_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0195": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0195_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0196": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0196_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0197": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0197_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0198": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0198_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0199": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0199_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0200": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0200_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0201": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0201_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0202": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0202_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0203": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0203_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0204": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0204_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0205": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0205_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0206": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0206_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0207": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0207_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0208": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0208_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0209": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0209_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0210": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0210_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0211": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0211_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0212": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0212_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0213": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0213_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0214": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0214_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0215": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0215_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0216": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0216_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0217": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0217_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0218": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0218_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0219": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0219_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0220": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0220_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0221": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0221_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0222": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0222_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0223": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0223_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0224": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0224_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0225": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0225_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0226": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0226_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0227": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0227_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0228": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0228_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0229": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0229_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0230": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0230_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0231": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0231_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0232": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0232_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0233": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0233_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0234": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0234_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0235": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0235_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0236": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0236_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0237": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0237_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0238": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0238_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0239": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0239_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0240": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0240_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0241": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0241_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0242": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0242_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0243": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0243_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0244": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0244_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0245": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0245_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0246": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0246_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0247": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0247_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0248": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0248_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0249": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0249_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0250": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0250_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0251": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0251_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0252": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0252_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0253": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0253_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0254": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0254_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0255": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0255_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0256": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0256_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0257": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0257_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0258": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0258_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0259": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0259_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0260": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0260_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0261": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0261_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0262": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0262_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0263": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0263_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0264": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0264_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0265": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0265_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0266": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0266_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0267": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0267_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0268": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0268_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0269": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0269_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0270": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0270_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0271": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0271_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0272": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0272_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0273": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0273_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0274": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0274_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0275": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0275_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0276": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0276_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0277": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0277_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0278": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0278_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0279": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0279_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0280": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0280_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0281": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0281_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0282": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0282_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0283": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0283_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0284": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0284_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0285": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0285_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0286": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0286_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0287": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0287_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0288": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0288_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0289": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0289_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0290": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0290_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0291": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0291_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0292": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0292_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0293": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0293_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0294": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0294_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0295": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0295_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0296": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0296_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0297": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0297_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0298": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0298_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0299": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0299_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0300": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0300_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0301": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0301_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0302": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0302_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0303": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0303_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0304": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0304_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0305": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0305_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0306": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0306_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0307": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0307_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0308": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0308_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0309": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0309_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0310": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0310_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0311": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0311_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0312": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0312_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0313": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0313_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0314": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0314_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0315": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0315_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0316": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0316_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0317": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0317_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0318": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0318_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0319": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0319_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0320": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0320_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0321": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0321_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0322": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0322_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0323": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0323_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0324": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0324_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0325": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0325_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0326": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0326_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0327": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0327_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0328": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0328_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0329": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0329_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0330": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0330_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0331": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0331_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0332": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0332_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0333": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0333_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0334": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0334_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0335": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0335_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0336": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0336_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0337": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0337_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0338": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0338_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0339": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0339_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0340": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0340_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0341": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0341_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0342": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0342_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0343": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0343_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0344": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0344_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0345": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0345_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0346": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0346_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0347": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0347_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0348": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0348_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0349": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0349_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0350": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0350_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0351": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0351_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0352": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0352_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0353": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0353_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0354": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0354_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0355": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0355_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0356": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0356_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0357": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0357_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0358": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0358_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0359": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0359_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0360": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0360_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0361": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0361_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0362": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0362_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0363": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0363_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0364": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0364_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0365": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0365_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0366": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0366_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0367": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0367_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0368": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0368_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0369": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0369_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0370": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0370_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0371": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0371_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0372": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0372_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0373": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0373_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0374": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0374_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0375": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0375_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0376": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0376_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0377": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0377_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0378": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0378_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0379": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0379_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0380": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0380_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0381": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0381_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0382": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0382_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0383": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0383_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0384": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0384_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0385": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0385_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0386": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0386_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0387": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0387_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0388": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0388_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0389": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0389_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0390": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0390_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0391": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0391_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0392": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0392_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0393": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0393_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0394": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0394_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0395": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0395_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0396": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0396_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0397": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0397_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0398": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0398_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0399": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0399_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0400": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0400_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0401": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0401_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0402": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0402_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0403": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0403_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0404": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0404_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0405": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  },
+  "T0405_hi": {
+    "alpha": 1,
+    "beta": 1,
+    "total_sends": 0,
+    "total_clicks": 0,
+    "total_engagements": 0,
+    "estimated_ctr": 0.5,
+    "ci_lower": 0.0,
+    "ci_upper": 1.0
+  }
+}

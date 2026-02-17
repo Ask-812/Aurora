@@ -1,11 +1,13 @@
 {
-  "north_star_metric": "Daily Active Engaged Users",
-  "definition": "Users who complete at least 1 exercise per day",
-  "why_it_matters": "Daily engagement drives habit formation, which leads to retention and word-of-mouth growth",
-  "measurement": "COUNT(DISTINCT user_id WHERE exercises_completed > 0 AND date = today)",
+  "north_star_metric": "-inspired hooks",
+  "definition": "sing data",
+  "why_it_matters": "* **WHO** to talk to",
+  "measurement": "Metric tracking for -inspired hooks",
   "key_drivers": [
-    "Exercise completion rate",
-    "Streak maintenance",
-    "Feature engagement (AI tutor, leaderboard)"
+    "based, so tools can’t “select text”",
+    "learning notification orchestrator** that can extend to any **B2C or B2B** application",
+    "agnostic** — swap the Knowledge Bank and user data, keep the same orchestrator core",
+    "powered English speaking and communication learning app** that helps Hindi and regional-language speakers in India transform from:",
+    "based practice scenarios"
   ]
 }
