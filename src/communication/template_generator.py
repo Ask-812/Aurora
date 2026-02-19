@@ -67,54 +67,62 @@ class TemplateGenerator:
                 continue
             
             primary_theme = theme_row['primary_theme'].iloc[0]
-            
-            # Generate 5 variants
-            for variant in range(5):
-                # Generate English template
-                content_en = self._generate_content(
-                    seg_name, lifecycle, goal, primary_theme, variant
-                )
-                
-                # Translate to Hindi
-                content_hi = self._translate_to_hindi(content_en)
-                
-                # Determine tone
-                tone = self._select_tone(lifecycle, primary_theme)
-                
-                # Determine feature reference
-                feature = self._select_feature(goal, primary_theme)
-                
-                # English template
-                templates.append({
-                    'template_id': f'T{template_id:04d}',
-                    'segment_id': seg_id,
-                    'segment_name': seg_name,
-                    'lifecycle_stage': lifecycle,
-                    'goal': goal,
-                    'theme': primary_theme,
-                    'language': 'en',
-                    'content': content_en,
-                    'tone': tone,
-                    'hook': primary_theme,
-                    'feature_reference': feature
-                })
-                
-                # Hindi template
-                templates.append({
-                    'template_id': f'T{template_id:04d}_hi',
-                    'segment_id': seg_id,
-                    'segment_name': seg_name,
-                    'lifecycle_stage': lifecycle,
-                    'goal': goal,
-                    'theme': primary_theme,
-                    'language': 'hi',
-                    'content': content_hi,
-                    'tone': tone,
-                    'hook': primary_theme,
-                    'feature_reference': feature
-                })
-                
-                template_id += 1
+            secondary_theme = None
+            if 'secondary_theme' in theme_row.columns:
+                secondary_theme = theme_row['secondary_theme'].iloc[0]
+
+            theme_values = [primary_theme]
+            if pd.notna(secondary_theme) and secondary_theme != primary_theme:
+                theme_values.append(secondary_theme)
+
+            # Generate 5 variants per theme
+            for theme in theme_values:
+                for variant in range(5):
+                    # Generate English template
+                    content_en = self._generate_content(
+                        seg_name, lifecycle, goal, theme, variant
+                    )
+                    
+                    # Translate to Hindi
+                    content_hi = self._translate_to_hindi(content_en)
+                    
+                    # Determine tone
+                    tone = self._select_tone(lifecycle, theme)
+                    
+                    # Determine feature reference
+                    feature = self._select_feature(goal, theme)
+                    
+                    # English template
+                    templates.append({
+                        'template_id': f'T{template_id:04d}',
+                        'segment_id': seg_id,
+                        'segment_name': seg_name,
+                        'lifecycle_stage': lifecycle,
+                        'goal': goal,
+                        'theme': theme,
+                        'language': 'en',
+                        'content': content_en,
+                        'tone': tone,
+                        'hook': theme,
+                        'feature_reference': feature
+                    })
+                    
+                    # Hindi template
+                    templates.append({
+                        'template_id': f'T{template_id:04d}_hi',
+                        'segment_id': seg_id,
+                        'segment_name': seg_name,
+                        'lifecycle_stage': lifecycle,
+                        'goal': goal,
+                        'theme': theme,
+                        'language': 'hi',
+                        'content': content_hi,
+                        'tone': tone,
+                        'hook': theme,
+                        'feature_reference': feature
+                    })
+                    
+                    template_id += 1
         
         self.templates = pd.DataFrame(templates)
         

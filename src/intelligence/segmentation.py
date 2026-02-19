@@ -33,9 +33,10 @@ class SegmentationEngine:
         with open(config_path, 'r') as f:
             self.config = yaml.safe_load(f)
         
-        self.min_clusters = 6
-        self.max_clusters = 12
-        self.random_state = 42
+        seg_config = self.config.get('segmentation', {})
+        self.min_clusters = seg_config.get('min_clusters', 6)
+        self.max_clusters = seg_config.get('max_clusters', 12)
+        self.random_state = seg_config.get('random_state', 42)
         
         self.scaler = StandardScaler()
         self.best_model = None

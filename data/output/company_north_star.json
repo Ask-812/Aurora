@@ -1,13 +1,10 @@
 {
-  "north_star_metric": "-inspired hooks",
-  "definition": "sing data",
-  "why_it_matters": "* **WHO** to talk to",
-  "measurement": "Metric tracking for -inspired hooks",
+  "north_star_metric": "Trial → Monthly Conversion",
+  "definition": "Rate at which trial users convert to paying customers",
+  "why_it_matters": "Drives daily engagement and habit formation",
+  "measurement": "Metric tracking for Trial → Monthly Conversion",
   "key_drivers": [
-    "based, so tools can’t “select text”",
-    "learning notification orchestrator** that can extend to any **B2C or B2B** application",
-    "agnostic** — swap the Knowledge Bank and user data, keep the same orchestrator core",
-    "powered English speaking and communication learning app** that helps Hindi and regional-language speakers in India transform from:",
-    "based practice scenarios"
+    "Feature → goal mappings",
+    "Octalysis-inspired hooks"
   ]
 }

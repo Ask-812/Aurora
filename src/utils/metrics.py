@@ -46,11 +46,18 @@ class MetricsCalculator:
         """
         Calculate gamification propensity score (0-1)
         
-        Formula: 0.4*streak + 0.3*coins + 0.3*feature_usage
+        Formula: 0.4*streak + 0.3*coins + 0.3*avg_feature_usage
+        Uses any feature_*_used columns dynamically
         """
         streak_norm = MetricsCalculator.normalize(df.get('streak_current', pd.Series([0] * len(df))))
         coins_norm = MetricsCalculator.normalize(df.get('coins_balance', pd.Series([0] * len(df))))
-        feature_usage = df.get('feature_ai_tutor_used', pd.Series([False] * len(df))).astype(float)
+        
+        # Find all feature_*_used columns dynamically
+        feature_cols = [c for c in df.columns if c.startswith('feature_') and c.endswith('_used')]
+        if feature_cols:
+            feature_usage = df[feature_cols].astype(float).mean(axis=1)
+        else:
+            feature_usage = pd.Series([0.0] * len(df), index=df.index)
         
         gamification = (
             0.4 * streak_norm +
@@ -65,14 +72,22 @@ class MetricsCalculator:
         """
         Calculate social propensity score (0-1)
         
-        Formula: 0.6*leaderboard_viewed + 0.4*sessions
+        Formula: 0.5*social_features + 0.5*sessions
+        Detects leaderboard/social features dynamically
         """
-        leaderboard = df.get('feature_leaderboard_viewed', pd.Series([False] * len(df))).astype(float)
+        # Find social-related feature columns dynamically
+        social_feature_cols = [c for c in df.columns if c.startswith('feature_') and 
+                               any(kw in c.lower() for kw in ['leaderboard', 'social', 'share'])]
+        if social_feature_cols:
+            social_features = df[social_feature_cols].astype(float).mean(axis=1)
+        else:
+            social_features = pd.Series([0.0] * len(df), index=df.index)
+        
         sessions_norm = MetricsCalculator.normalize(df['sessions_last_7d'])
         
         social = (
-            0.6 * leaderboard +
-            0.4 * sessions_norm
+            0.5 * social_features +
+            0.5 * sessions_norm
         )
         
         return social

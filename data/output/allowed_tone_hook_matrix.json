@@ -41,40 +41,41 @@
       "inviting"
     ]
   },
+  "detected_domain": "edtech",
   "octalysis_hooks": {
     "epic_meaning": {
       "description": "Be part of something bigger",
       "examples": [
-        "Join 1M+ Indians",
-        "Transform your career",
+        "Join 1M+ learners",
+        "Transform your skills",
         "Unlock your potential"
       ],
       "best_for_segments": [
-        "aspirational_learners",
-        "career_focused"
+        "aspirational",
+        "purpose_driven"
       ]
     },
     "accomplishment": {
       "description": "Make progress and achieve",
       "examples": [
-        "Complete 10 exercises",
+        "Complete 10 lessons",
         "Reach 7-day streak",
         "Earn 100 coins"
       ],
       "best_for_segments": [
         "achievers",
-        "consistent_learners"
+        "goal_oriented"
       ]
     },
     "empowerment": {
       "description": "Have control and experiment",
       "examples": [
         "Choose your topic",
-        "Practice at your pace",
-        "Customize your learning"
+        "Learn at your pace",
+        "Customize your path"
       ],
       "best_for_segments": [
-        "casual_learners",
+        "casual",
         "explorers"
       ]
     },
@@ -83,7 +84,7 @@
       "examples": [
         "Your 500 coins",
         "Your 30-day streak",
-        "Your progress"
+        "Your certificates"
       ],
       "best_for_segments": [
         "achievers",
@@ -93,12 +94,12 @@
     "social_influence": {
       "description": "Others are doing it",
       "examples": [
-        "Rahul is #1",
+        "Beat the leaderboard",
         "Join top learners",
-        "Beat your friends"
+        "Compete with friends"
       ],
       "best_for_segments": [
-        "social_competitors",
+        "social",
         "community_driven"
       ]
     },
@@ -106,24 +107,24 @@
       "description": "Limited time or availability",
       "examples": [
         "Only 3 hours left",
-        "Last chance today",
-        "Limited spots"
+        "Limited seats",
+        "Today's bonus expires"
       ],
       "best_for_segments": [
         "achievers",
         "fomo_driven"
       ]
     },
-    "curiosity": {
+    "unpredictability": {
       "description": "What will happen next",
       "examples": [
         "Unlock surprise reward",
-        "Discover new feature",
-        "See what's next"
+        "Daily bonus waiting",
+        "New content unlocked"
       ],
       "best_for_segments": [
         "explorers",
-        "casual_learners"
+        "casual"
       ]
     },
     "loss_avoidance": {
@@ -135,7 +136,7 @@
       ],
       "best_for_segments": [
         "achievers",
-        "at_risk_churners"
+        "at_risk"
       ]
     }
   },
@@ -151,7 +152,7 @@
       "scarcity"
     ],
     "casual_learners": [
-      "curiosity",
+      "unpredictability",
       "empowerment",
       "epic_meaning"
     ],
@@ -161,7 +162,7 @@
       "social_influence"
     ],
     "dormant_users": [
-      "curiosity",
+      "unpredictability",
       "epic_meaning",
       "empowerment"
     ]

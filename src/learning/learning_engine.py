@@ -148,8 +148,9 @@ class LearningEngine:
             
             # Find worst performing window
             worst = seg_data.loc[seg_data['ctr'].idxmin()]
-            
-            if worst['ctr'] < 0.05:
+
+            bad_ctr_threshold = self.config['performance'].get('bad_ctr', 0.05)
+            if worst['ctr'] < bad_ctr_threshold:
                 # Log suppression
                 self.changes_log.append({
                     'entity_type': 'timing',
@@ -158,7 +159,7 @@ class LearningEngine:
                     'metric_trigger': f"{worst['notification_window']}_ctr={worst['ctr']:.3f}",
                     'before_value': worst['notification_window'],
                     'after_value': 'suppressed',
-                    'explanation': f"Window '{worst['notification_window']}' had {worst['ctr']:.1%} CTR (threshold: 5%) for segment {seg_id}. Suppressed to reallocate sends to better-performing windows."
+                    'explanation': f"Window '{worst['notification_window']}' had {worst['ctr']:.1%} CTR (threshold: {bad_ctr_threshold:.0%}) for segment {seg_id}. Suppressed to reallocate sends to better-performing windows."
                 })
                 changes_count += 1
                 

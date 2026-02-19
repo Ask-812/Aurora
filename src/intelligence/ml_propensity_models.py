@@ -13,6 +13,7 @@ from sklearn.metrics import roc_auc_score, mean_squared_error, r2_score
 import xgboost as xgb
 import lightgbm as lgb
 from typing import Dict, Tuple
+import yaml
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -22,8 +23,14 @@ class PropensityModelEngine:
     Machine Learning models for user propensity prediction
     """
     
-    def __init__(self, random_state: int = 42):
+    def __init__(self, random_state: int = 42, config_path: str = 'config/config.yaml'):
         self.random_state = random_state
+        
+        with open(config_path, 'r') as f:
+            self.config = yaml.safe_load(f)
+        
+        perf_config = self.config.get('performance', {})
+        self.churn_risk_threshold = perf_config.get('churn_risk_threshold', 0.7)
         
         # Models
         self.churn_model = None
@@ -48,8 +55,8 @@ class PropensityModelEngine:
         """
         print("\n[*] Training Churn Prediction Model (XGBoost)...")
         
-        # Define churn target (simplified for demo)
-        df['churn_target'] = (df['churn_risk'] > 0.7).astype(int)
+        # Define churn target using config threshold
+        df['churn_target'] = (df['churn_risk'] > self.churn_risk_threshold).astype(int)
         
         # Features for training
         feature_cols = [

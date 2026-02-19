@@ -3,6 +3,8 @@
 # Segmentation Settings
 segmentation:
   n_clusters: 8
+  min_clusters: 6
+  max_clusters: 12
   min_segment_size: 0.05  # 5% of total users
   random_state: 42
 
@@ -13,6 +15,7 @@ performance:
   bad_ctr: 0.05
   bad_engagement: 0.20
   min_sends_significance: 100
+  churn_risk_threshold: 0.7
 
 # Frequency Settings
 frequency:
@@ -34,6 +37,29 @@ time_windows:
   late_afternoon: [15, 18]
   evening: [18, 21]
   night: [21, 24]
+
+# Communication Tones (configurable per domain)
+communication:
+  allowed_tones:
+    - encouraging
+    - friendly
+    - aspirational
+    - urgent
+    - celebratory
+    - motivational
+    - supportive
+  forbidden_tones:
+    - aggressive
+    - desperate
+    - salesy
+    - guilt-tripping
+    - condescending
+    - pushy
+  tone_by_lifecycle:
+    trial: [encouraging, friendly, aspirational, supportive]
+    paid: [celebratory, friendly, aspirational, motivational]
+    churned: [friendly, urgent, aspirational, curious]
+    inactive: [curious, friendly, inviting]
 
 # Paths
 paths:

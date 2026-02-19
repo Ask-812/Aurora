@@ -112,7 +112,7 @@ def run_iteration_0(user_data_path: str, kb_text: str = None):
     print("STEP 2:  DATA INGESTION")
     print("=" * 80)
     
-    ingestion_engine = DataIngestionEngine()
+    ingestion_engine = DataIngestionEngine(knowledge_bank=kb_data)
     user_data = ingestion_engine.load_and_validate(user_data_path)
     user_data = ingestion_engine.engineer_features(user_data)
     
@@ -206,10 +206,11 @@ def run_iteration_0(user_data_path: str, kb_text: str = None):
     schedule_gen.themes = themes
     
     schedule = schedule_gen.generate_schedules(
-        user_data, 
+        user_data,
         templates=templates,
-        timing_recs=timing_recs, 
+        timing_recs=timing_recs,
         segment_goals=segment_goals,
+        frequency_recs=frequency_recs,
         max_users=100
     )
     schedule_gen.save_schedules(output_dir)
@@ -251,6 +252,12 @@ def run_iteration_1(user_data_path: str, experiment_results_path: str):
     timing_recs = pd.read_csv(f"{output_dir}/timing_recommendations_improved.csv")
     themes = pd.read_csv(f"{output_dir}/communication_themes.csv")
     user_data = pd.read_csv(f"{output_dir}/user_segments.csv")
+
+    # Load Knowledge Bank from saved outputs
+    import json
+    with open(f"{output_dir}/feature_goal_map.json", 'r') as f:
+        feature_goal_map = json.load(f)
+    kb_data = {'feature_goal_map': feature_goal_map}
     
     # Load experiment results
     print(f"\nLoading experiment results from: {experiment_results_path}")
@@ -320,7 +327,7 @@ def run_iteration_1(user_data_path: str, experiment_results_path: str):
     timing_optimizer = TimingOptimizer()
     
     # Load full user data for timing optimization
-    ingestion_engine = DataIngestionEngine()
+    ingestion_engine = DataIngestionEngine(knowledge_bank=kb_data)
     user_data_full = ingestion_engine.load_and_validate(user_data_path)
     user_data_full = ingestion_engine.engineer_features(user_data_full)
     
@@ -440,6 +447,7 @@ def run_iteration_1(user_data_path: str, experiment_results_path: str):
         templates=templates_improved,
         timing_recs=improved_timing,
         segment_goals=segment_goals,
+        frequency_recs=improved_frequency,
         max_users=100
     )
     

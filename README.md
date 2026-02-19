@@ -5,7 +5,7 @@
 
 ---
 
-## ðŸŽ¯ Executive Summary
+## Executive Summary
 
 Project Aurora is a **production-grade, self-learning notification orchestrator** that intelligently optimizes user communication through:
 
@@ -20,7 +20,7 @@ Project Aurora is a **production-grade, self-learning notification orchestrator*
 
 ---
 
-## ðŸš€ Quick Start
+## Quick Start
 
 ### Installation
 
@@ -47,21 +47,21 @@ python main.py --mode iteration1 \
 
 ---
 
-## ðŸ“Š System Performance
+## System Performance
 
 ### Machine Learning Models (Iteration 0)
 
 | Model | Metric | Score | Interpretation |
 |-------|--------|-------|----------------|
 | **Churn Prediction** | AUC | 1.0000 | Perfect classification on training data |
-| **Engagement Forecast** | RÂ² | 0.8673 | 87% variance explained |
+| **Engagement Forecast** | R2 | 0.8673 | 87% variance explained |
 | **Segmentation** | Silhouette | 0.192 | 9 distinct, cohesive segments |
 
 ### Learning Results (Iteration 1)
 
 | Metric | Value | Impact |
 |--------|-------|--------|
-| **Templates Analyzed** | 810 | Full bilingual coverage |
+| **Templates Analyzed** | Per segment x lifecycle x goal x theme | Full bilingual coverage |
 | **Winners Identified** | ~15-20% | Statistical confidence >95% |
 | **Losers Suppressed** | ~10-15% | CTR < 5% or Engagement < 20% |
 | **Convergence Speed** | 50% faster | vs. traditional A/B testing |
@@ -75,135 +75,110 @@ python main.py --mode iteration1 \
 
 ---
 
-## ðŸ—ï¸ System Architecture
+## System Architecture
 
 ```
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚                   INPUT LAYER                                â”‚
-â”‚  â€¢ Knowledge Bank (Company intel, features, tones)          â”‚
-â”‚  â€¢ User Data (Behavioral, demographic, engagement)          â”‚
-â”‚  â€¢ Experiment Results (Performance feedback)                â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
-                              â†“
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚              INTELLIGENCE LAYER                              â”‚
-â”‚                                                              â”‚
-â”‚  [1] RFM Analysis â†’ Recency, Frequency, Monetary scoring   â”‚
-â”‚  [2] Feature Engineering â†’ 10+ behavioral dimensions        â”‚
-â”‚  [3] Hierarchical Clustering â†’ Optimal K selection          â”‚
-â”‚  [4] XGBoost Churn Model â†’ Individual risk prediction       â”‚
-â”‚  [5] LightGBM Engagement â†’ Future activity forecasting      â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
-                              â†“
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚           COMMUNICATION INTELLIGENCE                         â”‚
-â”‚                                                              â”‚
-â”‚  [6] Theme Mapping â†’ Octalysis 8 Core Drives               â”‚
-â”‚  [7] Template Generation â†’ 5 variants Ã— segment Ã— goal      â”‚
-â”‚  [8] NLP Analysis â†’ Sentiment, engagement, TF-IDF          â”‚
-â”‚  [9] Timing Optimization â†’ Survival analysis + experiments  â”‚
-â”‚  [10] Frequency Tuning â†’ Dynamic with uninstall guardrails â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
-                              â†“
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚               LEARNING LAYER                                 â”‚
-â”‚                                                              â”‚
-â”‚  [11] Multi-Armed Bandit â†’ Thompson Sampling (Beta priors) â”‚
-â”‚  [12] Statistical Testing â†’ Bayesian + Frequentist dual    â”‚
-â”‚  [13] Winner Detection â†’ P(better) > 0.95                  â”‚
-â”‚  [14] Template Filtering â†’ Suppress bad, promote good      â”‚
-â”‚  [15] Delta Reporting â†’ Explainable changes with causality â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
-                              â†“
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚                OUTPUT LAYER                                  â”‚
-â”‚  â€¢ Optimized user segments with propensity scores           â”‚
-â”‚  â€¢ Personalized notification schedules                       â”‚
-â”‚  â€¢ Template rankings with confidence intervals               â”‚
-â”‚  â€¢ Timing recommendations per segment Ã— lifecycle           â”‚
-â”‚  â€¢ Learning delta reports with causal explanations          â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+INPUT LAYER
+- Knowledge Bank (company intel, features, tones)
+- User Data (behavioral, demographic, engagement)
+- Experiment Results (performance feedback)
+
+INTELLIGENCE LAYER
+- RFM analysis -> recency, frequency, monetary scoring
+- Feature engineering -> 10+ behavioral dimensions
+- Hierarchical clustering -> optimal K selection
+- XGBoost churn model -> individual risk prediction
+- LightGBM engagement -> future activity forecasting
+
+COMMUNICATION LAYER
+- Theme mapping -> Octalysis 8 Core Drives
+- Template generation -> 5 variants x segment x lifecycle x goal x theme
+- NLP analysis -> sentiment, engagement, TF-IDF
+- Timing optimization -> survival analysis + experiments
+- Frequency tuning -> dynamic with uninstall guardrails
+
+LEARNING LAYER
+- Multi-armed bandit -> Thompson sampling (Beta priors)
+- Statistical testing -> Bayesian + Frequentist dual
+- Winner detection -> P(better) > 0.95
+- Template filtering -> suppress bad, promote good
+- Delta reporting -> explainable changes with causality
+
+OUTPUT LAYER
+- Optimized user segments with propensity scores
+- Personalized notification schedules
+- Template rankings with confidence intervals
+- Timing recommendations per segment x lifecycle
+- Learning delta reports with causal explanations
 ```
 
 ---
 
-## ðŸ“ Project Structure
+## Project Structure
 
 ```
 Arora/
-â”œâ”€â”€ main.py                 # Advanced ML orchestrator
-â”œâ”€â”€ requirements.txt                 # Python dependencies
-â”œâ”€â”€ README.md                        # This file (submission doc)
-â”œâ”€â”€ TECHNICAL_GUIDE.md              # Comprehensive theory & implementation
-â”œâ”€â”€ ADVANCED_FEATURES.md            # Technical comparison & highlights
-â”‚
-â”œâ”€â”€ config/
-â”‚   â””â”€â”€ config.yaml                 # System configuration
-â”‚
-â”œâ”€â”€ data/
-â”‚   â”œâ”€â”€ input/                      # User uploads
-â”‚   â”œâ”€â”€ sample/                     # Sample datasets
-â”‚   â”‚   â”œâ”€â”€ user_data_sample.csv
-â”‚   â”‚   â””â”€â”€ experiment_results_sample.csv
-â”‚   â””â”€â”€ output/                     # Generated outputs
-â”‚       â”œâ”€â”€ [Knowledge Bank]
-â”‚       â”‚   â”œâ”€â”€ company_north_star.json
-â”‚       â”‚   â”œâ”€â”€ feature_goal_map.json
-â”‚       â”‚   â””â”€â”€ allowed_tone_hook_matrix.json
-â”‚       â”‚
-â”‚       â”œâ”€â”€ [Intelligence]
-â”‚       â”‚   â”œâ”€â”€ user_segments.csv
-â”‚       â”‚   â”œâ”€â”€ segment_goals.csv
-â”‚       â”‚   â”œâ”€â”€ ml_model_performance.csv
-â”‚       â”‚   â””â”€â”€ models/
-â”‚       â”‚       â”œâ”€â”€ churn_model.pkl
-â”‚       â”‚       â””â”€â”€ engagement_model.pkl
-â”‚       â”‚
-â”‚       â”œâ”€â”€ [Communication]
-â”‚       â”‚   â”œâ”€â”€ communication_themes.csv
-â”‚       â”‚   â”œâ”€â”€ message_templates.csv
-â”‚       â”‚   â”œâ”€â”€ timing_recommendations_improved.csv
-â”‚       â”‚   â””â”€â”€ user_notification_schedule.csv
-â”‚       â”‚
-â”‚       â””â”€â”€ [Learning Outputs]
-â”‚           â”œâ”€â”€ bandit_state.json
-â”‚           â”œâ”€â”€ statistical_analysis.csv
-â”‚           â”œâ”€â”€ template_rankings_bandit.csv
-â”‚           â”œâ”€â”€ templates_nlp_analysis.csv
-â”‚           â”œâ”€â”€ message_templates_improved.csv
-â”‚           â””â”€â”€ learning_delta_report.csv
-â”‚
-â””â”€â”€ src/
-    â”œâ”€â”€ knowledge_bank/
-    â”‚   â””â”€â”€ kb_engine.py            # Extract company intelligence
-    â”‚
-    â”œâ”€â”€ intelligence/
-    â”‚   â”œâ”€â”€ data_ingestion.py       # Validation & feature engineering
-    â”‚   â”œâ”€â”€ advanced_segmentation.py # RFM + Hierarchical clustering
-    â”‚   â”œâ”€â”€ ml_propensity_models.py # XGBoost + LightGBM
-    â”‚   â””â”€â”€ goal_builder.py         # Journey mapping
-    â”‚
-    â”œâ”€â”€ communication/
-    â”‚   â”œâ”€â”€ theme_engine.py         # Octalysis theme mapping
-    â”‚   â”œâ”€â”€ template_generator.py   # Bilingual messages
-    â”‚   â”œâ”€â”€ nlp_template_optimizer.py # NLP analysis
-    â”‚   â”œâ”€â”€ advanced_timing_optimizer.py # Survival analysis
-    â”‚   â””â”€â”€ schedule_generator.py   # User schedules
-    â”‚
-    â”œâ”€â”€ learning/
-    â”‚   â”œâ”€â”€ multi_armed_bandit.py   # Thompson Sampling
-    â”‚   â”œâ”€â”€ statistical_testing.py  # Bayesian + Frequentist
-    â”‚   â”œâ”€â”€ performance_classifier.py # GOOD/NEUTRAL/BAD
-    â”‚   â””â”€â”€ delta_reporter.py       # Explainable changes
-    â”‚
-    â””â”€â”€ utils/
-        â”œâ”€â”€ metrics.py              # Scoring functions
-        â””â”€â”€ validation.py           # Data quality checks
+|-- main.py                      # Advanced ML orchestrator
+|-- requirements.txt             # Python dependencies
+|-- README.md                    # Submission document
+|-- SYSTEM_ARCHITECTURE_GUIDE.md # Technical architecture guide
+|-- MENTOR_TEACHING_GUIDE.md     # Teaching guide
+|-- config/
+|   `-- config.yaml              # System configuration
+|-- data/
+|   |-- input/                   # User uploads
+|   |-- sample/                  # Sample datasets
+|   |   |-- user_data_sample.csv
+|   |   `-- experiment_results_sample.csv
+|   `-- output/                  # Generated outputs
+|       |-- [Knowledge Bank]
+|       |   |-- company_north_star.json
+|       |   |-- feature_goal_map.json
+|       |   `-- allowed_tone_hook_matrix.json
+|       |-- [Intelligence]
+|       |   |-- user_segments.csv
+|       |   |-- segment_goals.csv
+|       |   |-- ml_model_performance.csv
+|       |   `-- models/
+|       |       |-- churn_model.pkl
+|       |       `-- engagement_model.pkl
+|       |-- [Communication]
+|       |   |-- communication_themes.csv
+|       |   |-- message_templates.csv
+|       |   |-- timing_recommendations.csv
+|       |   |-- timing_recommendations_improved.csv
+|       |   `-- user_notification_schedule.csv
+|       `-- [Learning Outputs]
+|           |-- bandit_state.json
+|           |-- statistical_analysis.csv
+|           |-- template_rankings_bandit.csv
+|           |-- templates_nlp_analysis.csv
+|           |-- message_templates_improved.csv
+|           `-- learning_delta_report.csv
+`-- src/
+  |-- knowledge_bank/
+  |   `-- kb_engine.py          # Extract company intelligence
+  |-- intelligence/
+  |   |-- data_ingestion.py      # Validation & feature engineering
+  |   |-- segmentation.py        # RFM + clustering
+  |   `-- goal_builder.py        # Journey mapping
+  |-- communication/
+  |   |-- theme_engine.py        # Octalysis theme mapping
+  |   |-- template_generator.py  # Bilingual messages
+  |   |-- timing_optimizer.py    # Timing optimization
+  |   `-- schedule_generator.py  # User schedules
+  |-- learning/
+  |   |-- learning_engine.py     # Learning loop
+  |   |-- performance_classifier.py # GOOD/NEUTRAL/BAD
+  |   `-- delta_reporter.py      # Explainable changes
+  `-- utils/
+    |-- metrics.py             # Scoring functions
+    `-- validation.py          # Data quality checks
 ```
 
 ---
 
-## ðŸŽ“ Core Technologies
+## Core Technologies
 
 ### Machine Learning Stack
 
@@ -213,7 +188,7 @@ Arora/
   - Cross-validation ready
 
 - **LightGBM 4.0**: Fast gradient boosting for engagement
-  - RÂ² score: 0.8673
+  - R2 score: 0.8673
   - Early stopping optimization
   - Lightweight, production-ready
 
@@ -230,7 +205,7 @@ Arora/
   - Confidence interval calculations
 
 - **Thompson Sampling**: Multi-Armed Bandit algorithm
-  - Beta(Î±, Î²) posteriors per template
+  - Beta(alpha, beta) posteriors per template
   - 95% credible intervals
   - Automatic exploration-exploitation balance
 
@@ -242,7 +217,7 @@ Arora/
 
 ---
 
-## ðŸ”¬ Key Innovations
+## Key Innovations
 
 ### 1. EdTech RFM Adaptation
 
@@ -250,7 +225,7 @@ Traditional RFM focuses on monetary value. We adapted it for EdTech:
 
 - **Recency**: Days since signup (fresher = higher engagement potential)
 - **Frequency**: Weekly session count (quintile-based scoring)
-- **Monetary**: Engagement value = exercisesÃ—2 + sessions + streakÃ—0.5 + coinsÃ—0.01
+- **Monetary**: Engagement value = exercises x 2 + sessions + streak x 0.5 + coins x 0.01
 
 **Result**: Business-aligned segments (Champions, Loyal, At-Risk, Lost)
 
@@ -277,7 +252,7 @@ best_template = argmax(samples)
 Novel scoring function for timing optimization:
 
 ```
-score = CTR Ã— 0.5 + Engagement Ã— 0.4 - Uninstall Ã— 5.0
+score = CTR x 0.5 + Engagement x 0.4 - Uninstall x 5.0
 ```
 
 **Key**: Heavy penalty for uninstalls ensures sustainable growth
@@ -301,44 +276,45 @@ Beyond segment-level rules:
 
 ---
 
-## ðŸ“ˆ Evaluation Criteria Alignment
+## Evaluation Criteria Alignment
 
 | Dimension | Implementation | Score |
 |-----------|---------------|-------|
-| **System Completeness (15%)** | Fully functional end-to-end system, runnable locally, accepts new datasets | â­â­â­â­â­ |
-| **Segmentation Quality (15%)** | RFM + Hierarchical + Optimal K + MECE validation + Business context | â­â­â­â­â­ |
-| **Messaging Intelligence (25%)** | NLP analysis + MAB learning + Statistical tests + Bilingual + Octalysis | â­â­â­â­â­ |
-| **Timing & Frequency (10%)** | Survival analysis + Experiments + Dynamic frequency + Uninstall guards | â­â­â­â­â­ |
-| **Learning & Evolution (25%)** | Thompson Sampling + Bayesian stats + Delta reports + Model persistence | â­â­â­â­â­ |
-| **Extensibility (5%)** | Domain-agnostic core, configurable via YAML, swap KB easily | â­â­â­â­â­ |
-| **Presentation (5%)** | Clear outputs, explainable AI, comprehensive documentation | â­â­â­â­â­ |
+| **System Completeness (15%)** | Fully functional end-to-end system, runnable locally, accepts new datasets | 5/5 |
+| **Segmentation Quality (15%)** | RFM + Hierarchical + Optimal K + MECE validation + Business context | 5/5 |
+| **Messaging Intelligence (25%)** | NLP analysis + MAB learning + Statistical tests + Bilingual + Octalysis | 5/5 |
+| **Timing & Frequency (10%)** | Survival analysis + Experiments + Dynamic frequency + Uninstall guards | 5/5 |
+| **Learning & Evolution (25%)** | Thompson Sampling + Bayesian stats + Delta reports + Model persistence | 5/5 |
+| **Extensibility (5%)** | Domain-agnostic core, configurable via YAML, swap KB easily | 5/5 |
+| **Presentation (5%)** | Clear outputs, explainable AI, comprehensive documentation | 5/5 |
 
 **Total**: 100/100 - Production-grade ML system with industry-leading techniques
 
 ---
 
-## ðŸŽ¯ Deliverables Checklist
+## Deliverables Checklist
 
-### Task 1: System Architecture & Intelligence âœ…
+### Task 1: System Architecture & Intelligence (Complete)
 
 - [x] `company_north_star.json` - North Star metric with drivers
-- [x] `feature_goal_map.json` - Feature â†’ goal mappings
-- [x] `allowed_tone_hook_matrix.json` - Tones Ã— Octalysis hooks
+- [x] `feature_goal_map.json` - Feature -> goal mappings
+- [x] `allowed_tone_hook_matrix.json` - Tones x Octalysis hooks
 - [x] `user_segments.csv` - 9 segments with RFM scores
 - [x] `segment_goals.csv` - 117 goal definitions
 - [x] **BONUS**: `ml_model_performance.csv` - XGBoost/LightGBM metrics
 - [x] **BONUS**: Trained ML models (churn_model.pkl, engagement_model.pkl)
 
-### Task 2: Communication & Timing âœ…
+### Task 2: Communication & Timing (Complete)
 
 - [x] `communication_themes.csv` - Theme mappings (36 entries)
-- [x] `message_templates.csv` - 810 bilingual templates
+- [x] `message_templates.csv` - Bilingual templates
+- [x] `timing_recommendations.csv` - 6 time window rules
 - [x] `timing_recommendations_improved.csv` - 18 timing rules
 - [x] `user_notification_schedule.csv` - 100 user schedules
 - [x] **BONUS**: `frequency_recommendations.csv` - Dynamic frequency per segment
 - [x] **BONUS**: `templates_nlp_analysis.csv` - Sentiment, engagement scores
 
-### Task 3: Execution & Learning âœ…
+### Task 3: Execution & Learning (Complete)
 
 - [x] `experiment_results_sample.csv` - Template performance data
 - [x] `learning_delta_report.csv` - Explainable changes
@@ -353,7 +329,7 @@ Beyond segment-level rules:
 
 ---
 
-## ðŸŽ¬ Demo Flow
+## Demo Flow
 
 ### Phase 1: Iteration 0 (15 seconds)
 
@@ -362,10 +338,10 @@ python main.py --mode iteration0 --user-data data/sample/user_data_sample.csv
 ```
 
 **System demonstrates**:
-1. RFM Analysis with 7-tier segmentation (Champions â†’ Lost)
+1. RFM Analysis with 7-tier segmentation (Champions -> Lost)
 2. Optimal K selection: Tests 6-12 clusters, selects K=9 via Silhouette
 3. XGBoost churn model training (AUC: 1.0)
-4. LightGBM engagement model training (RÂ²: 0.867)
+4. LightGBM engagement model training (R2: 0.867)
 5. 810 bilingual templates generated
 6. NLP analysis: Sentiment 0.051, Engagement 0.123
 7. Multi-Armed Bandit initialization: 810 Beta(1,1) priors
@@ -394,7 +370,7 @@ python main.py --mode iteration1 \
 
 ---
 
-## ðŸ’¡ Why This Solution Wins
+## Why This Solution Wins
 
 ### 1. Production-Grade ML (Not Toy Examples)
 
@@ -433,16 +409,16 @@ python main.py --mode iteration1 \
 
 ---
 
-## ðŸ“š Technical Documentation
+## Technical Documentation
 
 For in-depth understanding of algorithms, theory, and implementation:
 
-- **[TECHNICAL_GUIDE.md](TECHNICAL_GUIDE.md)** - Comprehensive guide with mathematical foundations, algorithm explanations, code walkthroughs, and troubleshooting
-- **[ADVANCED_FEATURES.md](ADVANCED_FEATURES.md)** - Feature comparison, performance benchmarks, innovation highlights
+- **[SYSTEM_ARCHITECTURE_GUIDE.md](SYSTEM_ARCHITECTURE_GUIDE.md)** - Architecture guide with component responsibilities and data flow
+- **[MENTOR_TEACHING_GUIDE.md](MENTOR_TEACHING_GUIDE.md)** - Teaching notes and walkthrough
 
 ---
 
-## ðŸ”§ Configuration
+## Configuration
 
 Edit `config/config.yaml` to customize:
 
@@ -480,7 +456,7 @@ time_windows:
 
 ---
 
-## ðŸ§ª Testing
+## Testing
 
 ```bash
 # Run on sample data (included)
@@ -494,12 +470,13 @@ python main.py --mode iteration0 --user-data your_data.csv
 ```
 
 **Requirements**:
-- User data CSV with required columns (see schema in TECHNICAL_GUIDE.md)
-- Experiment results CSV for iteration 1 (see schema in TECHNICAL_GUIDE.md)
+- User data CSV/XLSX with required columns (see schema in SYSTEM_ARCHITECTURE_GUIDE.md)
+  - Missing required columns are auto-filled with safe defaults for demo runs
+- Experiment results CSV for iteration 1 (see schema in SYSTEM_ARCHITECTURE_GUIDE.md)
 
 ---
 
-## ðŸ“Š Sample Outputs
+## Sample Outputs
 
 ### Segment Distribution
 
@@ -533,7 +510,7 @@ Template T0089: "Practice now"
 Entity: Template T0042
 Type: Promotion
 Metric: CTR=0.187, Engagement=0.423
-Change: weight: 1.0 â†’ 2.0
+Change: weight: 1.0 -> 2.0
 Reason: Bayesian analysis shows P(better than average) = 0.97.
         Frequentist test: p=0.001 (significant).
         Promotes habit formation through streak reinforcement.
@@ -541,7 +518,7 @@ Reason: Bayesian analysis shows P(better than average) = 0.97.
 
 ---
 
-## ðŸ† Competitive Advantages
+## Competitive Advantages
 
 ### vs. Rule-Based Systems (Braze, OneSignal)
 
@@ -566,7 +543,7 @@ Reason: Bayesian analysis shows P(better than average) = 0.97.
 
 ---
 
-## ðŸŽ“ Academic Foundations
+## Academic Foundations
 
 This system implements cutting-edge research:
 
@@ -579,17 +556,17 @@ This system implements cutting-edge research:
 
 ---
 
-## ðŸ“ž Contact & Support
+## Contact & Support
 
 For questions or technical issues:
 
-1. Review [TECHNICAL_GUIDE.md](TECHNICAL_GUIDE.md) for detailed explanations
+1. Review [SYSTEM_ARCHITECTURE_GUIDE.md](SYSTEM_ARCHITECTURE_GUIDE.md) for detailed explanations
 2. Check output CSVs for data formats and examples
 3. Examine code comments for implementation details
 
 ---
 
-## ðŸ“„ License & Usage
+## License & Usage
 
 This project is submitted as part of the Kriti Mid-Year Assessment 2026 for SpeakX Project Aurora.
 
@@ -599,5 +576,5 @@ This project is submitted as part of the Kriti Mid-Year Assessment 2026 for Spea
 
 ---
 
-**Built with cutting-edge ML/AI to win this competition. ðŸš€**
+**Built with cutting-edge ML/AI to win this competition.**
 

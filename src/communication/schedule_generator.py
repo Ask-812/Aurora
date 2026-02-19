@@ -21,7 +21,8 @@ class ScheduleGenerator:
     
     def generate_schedules(self, user_data: pd.DataFrame, segments: pd.DataFrame = None,
                           templates: pd.DataFrame = None, timing_recs: pd.DataFrame = None,
-                          segment_goals: pd.DataFrame = None, max_users: int = 100) -> pd.DataFrame:
+                          segment_goals: pd.DataFrame = None, frequency_recs: pd.DataFrame = None,
+                          max_users: int = 100) -> pd.DataFrame:
         """
         Generate notification schedules for users
         
@@ -52,7 +53,7 @@ class ScheduleGenerator:
         
         for _, user in df.iterrows():
             # Calculate frequency
-            frequency = self._calculate_frequency(user)
+            frequency = self._calculate_frequency(user, frequency_recs)
             
             # Generate schedule for next 7 days
             for day in range(7):
@@ -121,31 +122,28 @@ class ScheduleGenerator:
         
         return self.schedules
     
-    def _calculate_frequency(self, user: pd.Series) -> int:
+    def _calculate_frequency(self, user: pd.Series, frequency_recs: pd.DataFrame = None) -> int:
         """Calculate notification frequency for user"""
+        # Prefer segment-level frequency recommendations when provided
+        if frequency_recs is not None and 'segment_id' in user:
+            match = frequency_recs[frequency_recs['segment_id'] == user['segment_id']]
+            if not match.empty:
+                return int(match['daily_notifications'].iloc[0])
+        
+        # Fallback: PS table based on activeness using config thresholds
+        freq_config = self.config.get('frequency', {})
+        high_thresh = freq_config.get('high_activeness_threshold', 0.7)
+        med_thresh = freq_config.get('medium_activeness_threshold', 0.4)
+        high_freq = freq_config.get('high_activeness_freq', 8)
+        med_freq = freq_config.get('medium_activeness_freq', 6)
+        low_freq = freq_config.get('low_activeness_freq', 4)
+
         activeness = user.get('activeness', 0.5)
-        churn_risk = user.get('churn_risk', 0.5)
-        lifecycle = user.get('lifecycle_stage', 'trial')
-        
-        # Base frequency by activeness
-        if activeness > 0.7:
-            base_freq = 8
-        elif activeness > 0.4:
-            base_freq = 6
-        else:
-            base_freq = 4
-        
-        # Lifecycle adjustment
-        if lifecycle == 'trial':
-            base_freq += 1
-        elif lifecycle == 'churned':
-            base_freq = 2
-        
-        # Churn risk adjustment
-        if churn_risk > 0.7:
-            base_freq = max(3, base_freq - 2)
-        
-        return base_freq
+        if activeness > high_thresh:
+            return high_freq
+        if activeness >= med_thresh:
+            return med_freq
+        return low_freq
     
     def _get_goal_for_day(self, user: pd.Series, day: int, 
                          segment_goals: pd.DataFrame) -> str:

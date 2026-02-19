@@ -9,6 +9,7 @@ Timing Optimization with Survival Analysis
 import pandas as pd
 import numpy as np
 from typing import Dict, List, Tuple
+import yaml
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -25,15 +26,30 @@ class TimingOptimizer:
     Timing optimization using survival analysis and predictive models
     """
     
-    def __init__(self):
+    def __init__(self, config_path: str = 'config/config.yaml'):
+        with open(config_path, 'r') as f:
+            self.config = yaml.safe_load(f)
+        
+        # Load time windows from config or use defaults
+        tw_config = self.config.get('time_windows', {})
         self.time_windows = {
-            'early_morning': (6, 9),
-            'mid_morning': (9, 12),
-            'afternoon': (12, 15),
-            'late_afternoon': (15, 18),
-            'evening': (18, 21),
-            'night': (21, 24)
+            'early_morning': tuple(tw_config.get('early_morning', [6, 9])),
+            'mid_morning': tuple(tw_config.get('mid_morning', [9, 12])),
+            'afternoon': tuple(tw_config.get('afternoon', [12, 15])),
+            'late_afternoon': tuple(tw_config.get('late_afternoon', [15, 18])),
+            'evening': tuple(tw_config.get('evening', [18, 21])),
+            'night': tuple(tw_config.get('night', [21, 24]))
         }
+        
+        # Load frequency thresholds from config
+        freq_config = self.config.get('frequency', {})
+        self.high_activeness_threshold = freq_config.get('high_activeness_threshold', 0.7)
+        self.medium_activeness_threshold = freq_config.get('medium_activeness_threshold', 0.4)
+        self.high_activeness_freq = freq_config.get('high_activeness_freq', 8)
+        self.medium_activeness_freq = freq_config.get('medium_activeness_freq', 6)
+        self.low_activeness_freq = freq_config.get('low_activeness_freq', 4)
+        self.uninstall_threshold = freq_config.get('uninstall_threshold', 0.02)
+        self.uninstall_reduction = freq_config.get('uninstall_reduction', 2)
         
         self.survival_models = {}
         self.optimal_timings = None
@@ -223,26 +239,26 @@ class TimingOptimizer:
             
             # Frequency optimization logic per PS specification
             # Base frequency based on activeness score (PS Table)
-            if avg_activeness > 0.7:
+            if avg_activeness > self.high_activeness_threshold:
                 # High activeness: 7-9 notifications/day
-                daily_notifs = 8  # Using middle-high value
+                daily_notifs = self.high_activeness_freq
                 churn_risk_category = 'Low'
                 strategy = 'Max Engagement'
-            elif avg_activeness >= 0.4:
+            elif avg_activeness >= self.medium_activeness_threshold:
                 # Medium activeness: 5-6 notifications/day
-                daily_notifs = 6  # Using middle-high value
+                daily_notifs = self.medium_activeness_freq
                 churn_risk_category = 'Medium'
                 strategy = 'Balanced'
             else:
-                # Low activeness (<0.4): 3-4 notifications/day
-                daily_notifs = 4  # Using middle-high value
+                # Low activeness: 3-4 notifications/day
+                daily_notifs = self.low_activeness_freq
                 churn_risk_category = 'High'
                 strategy = 'Conservative'
             
             # Guardrail Override (PS Specification)
-            # If uninstall_rate > 2% → reduce frequency by 2/day
-            if uninstall_risk > 0.02:
-                daily_notifs = max(daily_notifs - 2, 2)  # Reduce by 2, minimum 2
+            # If uninstall_rate > threshold -> reduce frequency
+            if uninstall_risk > self.uninstall_threshold:
+                daily_notifs = max(daily_notifs - self.uninstall_reduction, 2)
                 strategy = f'{strategy} - Uninstall Guardrail Applied'
             
             frequency_recs.append({
@@ -311,8 +327,13 @@ class TimingOptimizer:
         
         if self.optimal_timings is not None:
             self.optimal_timings.to_csv(
+                f"{output_dir}/timing_recommendations.csv",
+                index=False
+            )
+            self.optimal_timings.to_csv(
                 f"{output_dir}/timing_recommendations_improved.csv",
                 index=False
             )
-            print(f"\n✅ Saved: {output_dir}/timing_recommendations_improved.csv")
+            print(f"\n[OK] Saved: {output_dir}/timing_recommendations.csv")
+            print(f"[OK] Saved: {output_dir}/timing_recommendations_improved.csv")
 

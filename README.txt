@@ -28,6 +28,8 @@ Iteration 0 (Training):
 Iteration 1 (Learning):
   python main.py --mode iteration1 --user-data data/sample/user_data_sample.csv --experiment-results data/sample/experiment_results_sample.csv
 
+Note: User data can be CSV or XLSX. Missing required columns are auto-filled with safe defaults.
+
 SYSTEM ARCHITECTURE
 -------------------
 Task 1 - Intelligence:
@@ -38,7 +40,7 @@ Task 1 - Intelligence:
 
 Task 2 - Communication:
   - Theme Engine: Maps Octalysis 8 Core Drives to segments
-  - Templates: 810 bilingual messages (5 per segment×lifecycle×goal)
+  - Templates: bilingual messages (5 per segment×lifecycle×goal×theme)
   - Timing: 6 windows with behavioral pattern learning
   - Frequency: 3-8 notifications/day based on activeness (uninstall guardrails)
 
@@ -76,6 +78,7 @@ COMPLIANCE
 ----------
 ✓ Fully working end-to-end
 ✓ Accepts new datasets at runtime
+✓ Auto-fills missing required columns with safe defaults
 ✓ Demonstrates real learning with measurable delta
 ✓ Strict CSV/JSON formats
 ✓ Explainable via delta reports

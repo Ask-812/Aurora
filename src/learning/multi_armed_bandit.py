@@ -10,6 +10,7 @@ import pandas as pd
 import numpy as np
 from typing import Dict, List, Tuple
 from scipy import stats
+import yaml
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -19,8 +20,15 @@ class MultiArmedBanditEngine:
     Intelligent learning using Multi-Armed Bandit algorithms
     """
     
-    def __init__(self, exploration_factor: float = 1.0):
+    def __init__(self, exploration_factor: float = 1.0, config_path: str = 'config/config.yaml'):
         self.exploration_factor = exploration_factor
+        
+        with open(config_path, 'r') as f:
+            self.config = yaml.safe_load(f)
+        
+        perf_config = self.config.get('performance', {})
+        self.good_ctr_threshold = perf_config.get('good_ctr', 0.15)
+        self.bad_ctr_threshold = perf_config.get('bad_ctr', 0.05)
         
         # Bandit state for each template
         self.template_bandits = {}  # {template_id: {'alpha': int, 'beta': int}}
@@ -219,9 +227,9 @@ class MultiArmedBanditEngine:
         """
         rankings = self.get_template_rankings()
         
-        # Statistical thresholds
-        good_threshold = 0.15  # 15% CTR
-        bad_threshold = 0.05   # 5% CTR
+        # Statistical thresholds from config
+        good_threshold = self.good_ctr_threshold
+        bad_threshold = self.bad_ctr_threshold
         
         winners = []
         losers = []

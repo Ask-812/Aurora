@@ -1,17 +1,17 @@
-segment_id,segment_name,lifecycle_stage,time_window,priority,expected_ctr,rationale
-4,Balanced Learners,all,evening,1,0.12,Based on 33 users preferring this window
-4,Balanced Learners,all,afternoon,2,0.08,Based on 32 users preferring this window
-0,Balanced Learners 0,all,late_afternoon,1,0.12,Based on 46 users preferring this window
-0,Balanced Learners 0,all,evening,2,0.08,Based on 36 users preferring this window
-6,Social Competitors,all,mid_morning,1,0.12,Based on 27 users preferring this window
-6,Social Competitors,all,early_morning,2,0.08,Based on 27 users preferring this window
-5,Social Competitors 5,all,afternoon,1,0.12,Based on 23 users preferring this window
-5,Social Competitors 5,all,evening,2,0.08,Based on 20 users preferring this window
-3,Independent Learners,all,mid_morning,1,0.12,Based on 22 users preferring this window
-3,Independent Learners,all,late_afternoon,2,0.08,Based on 21 users preferring this window
-7,Casual Learners,all,mid_morning,1,0.12,Based on 28 users preferring this window
-7,Casual Learners,all,evening,2,0.08,Based on 25 users preferring this window
-1,Social Competitors 1,all,early_morning,1,0.12,Based on 25 users preferring this window
-1,Social Competitors 1,all,late_afternoon,2,0.08,Based on 25 users preferring this window
-2,At-Risk Churners,all,afternoon,1,0.12,Based on 10 users preferring this window
-2,At-Risk Churners,all,evening,2,0.08,Based on 8 users preferring this window
+segment_id,lifecycle_stage,time_window,priority,expected_ctr,expected_engagement,uninstall_risk,composite_score,confidence,total_samples,optimization_method
+2,all,evening,1,0.1406535047833953,0.3516337619584883,0,0.12671222270149182,MEDIUM,231,behavioral_pattern
+2,all,afternoon,2,0.1406535047833953,0.3516337619584883,0,0.11615287080970084,MEDIUM,231,behavioral_pattern
+0,all,late_afternoon,1,0.1474319135912302,0.3685797839780755,0,0.14180675197378098,MEDIUM,291,behavioral_pattern
+0,all,afternoon,2,0.1474319135912302,0.3685797839780755,0,0.13691686397468505,MEDIUM,291,behavioral_pattern
+1,all,early_morning,1,0.14318158425957217,0.3579539606489304,0,0.13856777038519427,MEDIUM,201,behavioral_pattern
+1,all,mid_morning,2,0.14318158425957217,0.3579539606489304,0,0.1321227578091387,MEDIUM,201,behavioral_pattern
+6,all,afternoon,1,0.15329595862105522,0.383239896552638,0,0.17466742741354227,MEDIUM,119,behavioral_pattern
+6,all,early_morning,2,0.15329595862105522,0.383239896552638,0,0.14779551550376654,MEDIUM,119,behavioral_pattern
+5,all,mid_morning,1,0.15395045025292847,0.3848761256323212,0,0.17983483417642818,MEDIUM,81,behavioral_pattern
+5,all,late_afternoon,2,0.15395045025292847,0.3848761256323212,0,0.14986236181369014,MEDIUM,81,behavioral_pattern
+4,all,afternoon,1,0.12583075485264889,0.31457688713162224,0,0.09686533069743325,MEDIUM,52,behavioral_pattern
+4,all,evening,2,0.12583075485264889,0.31457688713162224,0,0.08196297212859736,MEDIUM,52,behavioral_pattern
+3,all,night,1,0.1480786676485356,0.37019666912133903,0,0.2622472780829214,MEDIUM,22,behavioral_pattern
+3,all,late_afternoon,2,0.1480786676485356,0.37019666912133903,0,0.2622472780829214,MEDIUM,22,behavioral_pattern
+7,all,early_morning,1,0.15874493714481727,0.3968623428620432,0,0.5874493714481726,MEDIUM,3,behavioral_pattern
+7,all,afternoon,2,0.15874493714481727,0.3968623428620432,0,0.2937246857240863,MEDIUM,3,behavioral_pattern

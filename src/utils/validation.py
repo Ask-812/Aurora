@@ -10,15 +10,15 @@ from typing import List, Dict, Any
 class DataValidator:
     """Validates input data schemas and quality"""
     
-    REQUIRED_USER_COLUMNS = [
-        'user_id', 'lifecycle_stage', 'days_since_signup',
-        'sessions_last_7d', 'exercises_completed_7d'
-    ]
+    # Minimal required - just user_id; everything else is optional with defaults
+    REQUIRED_USER_COLUMNS = ['user_id']
     
-    OPTIONAL_USER_COLUMNS = [
-        'age_band_region', 'streak_current', 'coins_balance',
-        'feature_ai_tutor_used', 'feature_leaderboard_viewed',
-        'preferred_hour', 'notif_open_rate_30d', 'motivation_score'
+    # Standard behavioral columns (auto-filled if missing)
+    STANDARD_COLUMNS = [
+        'lifecycle_stage', 'days_since_signup', 'sessions_last_7d',
+        'exercises_completed_7d', 'streak_current', 'coins_balance',
+        'preferred_hour', 'notif_open_rate_30d', 'motivation_score',
+        'age_band_region'
     ]
     
     VALID_LIFECYCLE_STAGES = ['trial', 'paid', 'churned', 'inactive']
