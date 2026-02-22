@@ -122,7 +122,6 @@ Arora/
 |-- requirements.txt             # Python dependencies
 |-- README.md                    # Submission document
 |-- SYSTEM_ARCHITECTURE_GUIDE.md # Technical architecture guide
-|-- MENTOR_TEACHING_GUIDE.md     # Teaching guide
 |-- config/
 |   `-- config.yaml              # System configuration
 |-- data/
@@ -413,8 +412,6 @@ python main.py --mode iteration1 \
 
 For in-depth understanding of algorithms, theory, and implementation:
 
-- **[SYSTEM_ARCHITECTURE_GUIDE.md](SYSTEM_ARCHITECTURE_GUIDE.md)** - Architecture guide with component responsibilities and data flow
-- **[MENTOR_TEACHING_GUIDE.md](MENTOR_TEACHING_GUIDE.md)** - Teaching notes and walkthrough
 
 ---
 
