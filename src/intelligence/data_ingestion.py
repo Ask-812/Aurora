@@ -178,11 +178,15 @@ class DataIngestionEngine:
         df['activeness'] = self.metrics_calc.calculate_activeness(df)
         df['gamification_propensity'] = self.metrics_calc.calculate_gamification_propensity(df)
         df['social_propensity'] = self.metrics_calc.calculate_social_propensity(df)
+        df['ai_tutor_propensity'] = self.metrics_calc.calculate_ai_tutor_propensity(df)
+        df['leaderboard_propensity'] = self.metrics_calc.calculate_leaderboard_propensity(df)
         df['churn_risk'] = self.metrics_calc.calculate_churn_risk(df)
         
         print(f"   [OK] Activeness score (mean: {df['activeness'].mean():.2f})")
         print(f"   [OK] Gamification propensity (mean: {df['gamification_propensity'].mean():.2f})")
         print(f"   [OK] Social propensity (mean: {df['social_propensity'].mean():.2f})")
+        print(f"   [OK] AI tutor propensity (mean: {df['ai_tutor_propensity'].mean():.2f})")
+        print(f"   [OK] Leaderboard propensity (mean: {df['leaderboard_propensity'].mean():.2f})")
         print(f"   [OK] Churn risk (mean: {df['churn_risk'].mean():.2f})")
         
         self.user_data = df

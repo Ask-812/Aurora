@@ -307,6 +307,8 @@ class SegmentationEngine:
                 'avg_activeness': seg_data['activeness'].mean(),
                 'avg_gamification_propensity': seg_data['gamification_propensity'].mean(),
                 'avg_social_propensity': seg_data['social_propensity'].mean(),
+                'avg_ai_tutor_propensity': seg_data['ai_tutor_propensity'].mean(),
+                'avg_leaderboard_propensity': seg_data['leaderboard_propensity'].mean(),
                 'avg_churn_risk': seg_data['churn_risk'].mean(),
                 
                 # RFM
@@ -404,10 +406,11 @@ class SegmentationEngine:
         from pathlib import Path
         Path(output_dir).mkdir(parents=True, exist_ok=True)
         
-        # Save user segments
+        # Save user segments with all propensity scores (per PS: gamification, AI tutor, leaderboard, social)
         segment_output = df[[
             'user_id', 'segment_id', 'segment_name',
-            'activeness', 'gamification_propensity', 'social_propensity', 'churn_risk',
+            'activeness', 'gamification_propensity', 'social_propensity', 
+            'ai_tutor_propensity', 'leaderboard_propensity', 'churn_risk',
             'rfm_score', 'rfm_segment',
             'engagement_intensity', 'streak_consistency', 'feature_diversity'
         ]].copy()

@@ -63,18 +63,17 @@ class ScheduleGenerator:
                 goal = self._get_goal_for_day(user, day, segment_goals)
                 
                 # Get templates for this segment/lifecycle/goal
+                # Note: Templates are now bilingual (same row has both en/hi columns)
                 available_templates = templates[
                     (templates['segment_id'] == user['segment_id']) &
                     (templates['lifecycle_stage'] == user['lifecycle_stage']) &
-                    (templates['goal'] == goal) &
-                    (templates['language'] == 'en')  # Use English for schedule
+                    (templates['goal'] == goal)
                 ]
                 
                 if available_templates.empty:
                     # Fallback to any templates for this segment
                     available_templates = templates[
-                        (templates['segment_id'] == user['segment_id']) &
-                        (templates['language'] == 'en')
+                        templates['segment_id'] == user['segment_id']
                     ]
                 
                 if available_templates.empty:

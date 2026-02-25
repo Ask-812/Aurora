@@ -93,6 +93,60 @@ class MetricsCalculator:
         return social
     
     @staticmethod
+    def calculate_ai_tutor_propensity(df: pd.DataFrame) -> pd.Series:
+        """
+        Calculate AI tutor propensity score (0-1)
+        
+        Users with high AI tutor usage + high conversation engagement
+        Formula: 0.6*ai_tutor_features + 0.2*exercises + 0.2*activeness
+        """
+        # Find AI tutor related feature columns dynamically
+        ai_tutor_cols = [c for c in df.columns if c.startswith('feature_') and 
+                         any(kw in c.lower() for kw in ['ai_tutor', 'tutor', 'conversation', 'ai'])]
+        if ai_tutor_cols:
+            ai_tutor_features = df[ai_tutor_cols].astype(float).mean(axis=1)
+        else:
+            ai_tutor_features = pd.Series([0.0] * len(df), index=df.index)
+        
+        exercises_norm = MetricsCalculator.normalize(df['exercises_completed_7d'])
+        activeness = MetricsCalculator.calculate_activeness(df)
+        
+        ai_tutor_propensity = (
+            0.6 * ai_tutor_features +
+            0.2 * exercises_norm +
+            0.2 * activeness
+        )
+        
+        return ai_tutor_propensity
+    
+    @staticmethod
+    def calculate_leaderboard_propensity(df: pd.DataFrame) -> pd.Series:
+        """
+        Calculate leaderboard propensity score (0-1)
+        
+        Users who are competitive and engage with leaderboards
+        Formula: 0.5*leaderboard_features + 0.3*streak + 0.2*gamification
+        """
+        # Find leaderboard related feature columns dynamically
+        leaderboard_cols = [c for c in df.columns if c.startswith('feature_') and 
+                            any(kw in c.lower() for kw in ['leaderboard', 'rank', 'compete', 'score'])]
+        if leaderboard_cols:
+            leaderboard_features = df[leaderboard_cols].astype(float).mean(axis=1)
+        else:
+            leaderboard_features = pd.Series([0.0] * len(df), index=df.index)
+        
+        streak_norm = MetricsCalculator.normalize(df.get('streak_current', pd.Series([0] * len(df))))
+        gamification = MetricsCalculator.calculate_gamification_propensity(df)
+        
+        leaderboard_propensity = (
+            0.5 * leaderboard_features +
+            0.3 * streak_norm +
+            0.2 * gamification
+        )
+        
+        return leaderboard_propensity
+    
+    @staticmethod
     def calculate_churn_risk(df: pd.DataFrame) -> pd.Series:
         """
         Calculate churn risk score (0-1, higher = more risk)

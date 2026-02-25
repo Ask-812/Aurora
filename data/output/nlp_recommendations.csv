@@ -1,1261 +1,721 @@
 template_id,current_ctr,recommendations,priority
-T0001,0.1370428583845949,Increase positive sentiment,LOW
-T0001_hi,,"Increase positive sentiment; Add engagement keywords (streak, coins, etc.)",LOW
-T0002,0.0440446004697283,Add more context,HIGH
-T0002_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0003,0.1683404509853433,Add more context,LOW
-T0003_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0004,0.0827999397928169,Add more context,LOW
-T0004_hi,,"Add more context; Add personalization (your, you)",LOW
-T0005,0.1155448741317225,Template is well-optimized,LOW
-T0005_hi,,"Increase positive sentiment; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0006,0.0425315287138215,Add urgency elements,HIGH
-T0006_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0007,0.1299916947041698,"Add more context; Add personalization (your, you)",LOW
-T0007_hi,,"Add more context; Add personalization (your, you)",LOW
-T0008,0.0910912673315316,"Add more context; Add personalization (your, you)",LOW
-T0008_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0009,0.0330616307522334,Add more context; Add urgency elements,HIGH
-T0009_hi,,Add more context,LOW
-T0010,0.0342701330677435,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",HIGH
-T0010_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0011,0.1923401480706369,Increase positive sentiment,LOW
-T0011_hi,,"Increase positive sentiment; Add engagement keywords (streak, coins, etc.)",LOW
-T0012,0.0508508138674378,Add more context,HIGH
-T0012_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0013,0.0857246069894246,Add more context,LOW
-T0013_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0014,0.0871756547562981,Add more context,LOW
-T0014_hi,,"Add more context; Add personalization (your, you)",LOW
-T0015,0.2210662889685787,Template is well-optimized,LOW
-T0015_hi,,"Increase positive sentiment; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0016,0.1344539884355656,Template is well-optimized,LOW
-T0016_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0017,0.0896732772352402,"Add more context; Add personalization (your, you)",LOW
-T0017_hi,,"Add more context; Add personalization (your, you)",LOW
-T0018,0.0873252772820404,"Add more context; Add personalization (your, you)",LOW
-T0018_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0019,0.0544292233302537,Add more context; Add urgency elements,HIGH
-T0019_hi,,Add more context,LOW
-T0020,0.0946475313348664,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0020_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0021,0.094812563770316,Increase positive sentiment,LOW
-T0021_hi,,"Increase positive sentiment; Add engagement keywords (streak, coins, etc.)",LOW
-T0022,0.0830887250749993,Add more context,LOW
-T0022_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0023,0.1131735853442796,Add more context,LOW
-T0023_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0024,0.1179383498356147,Add more context,LOW
-T0024_hi,,"Add more context; Add personalization (your, you)",LOW
-T0025,0.1217487684074529,Template is well-optimized,LOW
-T0025_hi,,"Increase positive sentiment; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0026,0.0857705930654852,Template is well-optimized,LOW
-T0026_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0027,0.0283628648295085,"Add more context; Add personalization (your, you)",HIGH
-T0027_hi,,"Add more context; Add personalization (your, you)",LOW
-T0028,0.0956497504898245,"Add more context; Add personalization (your, you)",LOW
-T0028_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0029,0.1220214697983662,Add more context,LOW
-T0029_hi,,Add more context,LOW
-T0030,0.1661628714094613,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0030_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0031,0.0313568389894986,Increase positive sentiment,HIGH
-T0031_hi,,"Increase positive sentiment; Add engagement keywords (streak, coins, etc.)",LOW
-T0032,0.029489963499872,Add more context,HIGH
-T0032_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0033,0.0856204860696855,Add more context,LOW
-T0033_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0034,0.1343659272631132,Add more context,LOW
-T0034_hi,,"Add more context; Add personalization (your, you)",LOW
-T0035,0.0312308944976342,Template is well-optimized,HIGH
-T0035_hi,,"Increase positive sentiment; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0036,0.0348063480102177,Add urgency elements,HIGH
-T0036_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0037,0.0230138502402451,"Add more context; Add personalization (your, you)",HIGH
-T0037_hi,,"Add more context; Add personalization (your, you)",LOW
-T0038,0.1361692864496468,"Add more context; Add personalization (your, you)",LOW
-T0038_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0039,0.2018329652363736,Add more context,LOW
-T0039_hi,,Add more context,LOW
-T0040,0.1285616693287108,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0040_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0041,0.0916564372107225,Increase positive sentiment,LOW
-T0041_hi,,"Increase positive sentiment; Add engagement keywords (streak, coins, etc.)",LOW
-T0042,0.0856389163904521,Add more context,LOW
-T0042_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0043,0.0300100544206345,Add more context,HIGH
-T0043_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0044,0.0286328410998737,Add more context,HIGH
-T0044_hi,,"Add more context; Add personalization (your, you)",LOW
-T0045,0.1235654800233597,Template is well-optimized,LOW
-T0045_hi,,"Increase positive sentiment; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0046,0.0300344210938664,Add urgency elements,HIGH
-T0046_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0047,0.0376940891892441,"Add more context; Add personalization (your, you)",HIGH
-T0047_hi,,"Add more context; Add personalization (your, you)",LOW
-T0048,0.11942667971001,"Add more context; Add personalization (your, you)",LOW
-T0048_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0049,,Add more context,LOW
-T0049_hi,,Add more context,LOW
-T0050,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0050_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0051,,Increase positive sentiment,LOW
-T0051_hi,,"Increase positive sentiment; Add engagement keywords (streak, coins, etc.)",LOW
-T0052,,Add more context,LOW
-T0052_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0053,,Add more context,LOW
-T0053_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0054,,Add more context,LOW
-T0054_hi,,"Add more context; Add personalization (your, you)",LOW
-T0055,,Template is well-optimized,LOW
-T0055_hi,,"Increase positive sentiment; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0056,,"Add personalization (your, you)",LOW
-T0056_hi,,"Increase positive sentiment; Add personalization (your, you)",LOW
-T0057,,"Add more context; Add personalization (your, you)",LOW
-T0057_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0058,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0058_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0059,,Add more context,LOW
-T0059_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0060,,"Add more context; Add personalization (your, you)",LOW
-T0060_hi,,"Add more context; Increase positive sentiment; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0061,,Increase positive sentiment,LOW
-T0061_hi,,"Increase positive sentiment; Add engagement keywords (streak, coins, etc.)",LOW
-T0062,,Add more context,LOW
-T0062_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0063,,Add more context,LOW
-T0063_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0064,,Add more context,LOW
-T0064_hi,,"Add more context; Add personalization (your, you)",LOW
-T0065,,Template is well-optimized,LOW
-T0065_hi,,"Increase positive sentiment; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0066,,"Add personalization (your, you)",LOW
-T0066_hi,,"Increase positive sentiment; Add personalization (your, you)",LOW
-T0067,,"Add more context; Add personalization (your, you)",LOW
-T0067_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0068,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0068_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0069,,Add more context,LOW
-T0069_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0070,,"Add more context; Add personalization (your, you)",LOW
-T0070_hi,,"Add more context; Increase positive sentiment; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0071,,Increase positive sentiment,LOW
-T0071_hi,,"Increase positive sentiment; Add engagement keywords (streak, coins, etc.)",LOW
-T0072,,Add more context,LOW
-T0072_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0073,,Add more context,LOW
-T0073_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0074,,Add more context,LOW
-T0074_hi,,"Add more context; Add personalization (your, you)",LOW
-T0075,,Template is well-optimized,LOW
-T0075_hi,,"Increase positive sentiment; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0076,,"Add personalization (your, you)",LOW
-T0076_hi,,"Increase positive sentiment; Add personalization (your, you)",LOW
-T0077,,"Add more context; Add personalization (your, you)",LOW
-T0077_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0078,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0078_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0079,,Add more context,LOW
-T0079_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0080,,"Add more context; Add personalization (your, you)",LOW
-T0080_hi,,"Add more context; Increase positive sentiment; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0081,,Increase positive sentiment,LOW
-T0081_hi,,"Increase positive sentiment; Add engagement keywords (streak, coins, etc.)",LOW
-T0082,,Add more context,LOW
-T0082_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0083,,Add more context,LOW
-T0083_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0084,,Add more context,LOW
-T0084_hi,,"Add more context; Add personalization (your, you)",LOW
-T0085,,Template is well-optimized,LOW
-T0085_hi,,"Increase positive sentiment; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0086,,"Add personalization (your, you)",LOW
-T0086_hi,,"Increase positive sentiment; Add personalization (your, you)",LOW
-T0087,,"Add more context; Add personalization (your, you)",LOW
-T0087_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0088,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0088_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0089,,Add more context,LOW
-T0089_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0090,,"Add more context; Add personalization (your, you)",LOW
-T0090_hi,,"Add more context; Increase positive sentiment; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0091,,Template is well-optimized,LOW
-T0091_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0092,,"Add more context; Add personalization (your, you)",LOW
-T0092_hi,,"Add more context; Add personalization (your, you)",LOW
-T0093,,"Add more context; Add personalization (your, you)",LOW
-T0093_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0094,,Add more context,LOW
-T0094_hi,,Add more context,LOW
-T0095,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0095_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0096,,Add more context,LOW
-T0096_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0097,,Template is well-optimized,LOW
-T0097_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0098,,"Add more context; Add personalization (your, you)",LOW
-T0098_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0099,,Add more context,LOW
-T0099_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0100,,Add more context,LOW
-T0100_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0101,,Template is well-optimized,LOW
-T0101_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0102,,"Add more context; Add personalization (your, you)",LOW
-T0102_hi,,"Add more context; Add personalization (your, you)",LOW
-T0103,,"Add more context; Add personalization (your, you)",LOW
-T0103_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0104,,Add more context,LOW
-T0104_hi,,Add more context,LOW
-T0105,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0105_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0106,,Add more context,LOW
-T0106_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0107,,Template is well-optimized,LOW
-T0107_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0108,,"Add more context; Add personalization (your, you)",LOW
-T0108_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0109,,Add more context,LOW
-T0109_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0110,,Add more context,LOW
-T0110_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0111,,Template is well-optimized,LOW
-T0111_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0112,,"Add more context; Add personalization (your, you)",LOW
-T0112_hi,,"Add more context; Add personalization (your, you)",LOW
-T0113,,"Add more context; Add personalization (your, you)",LOW
-T0113_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0114,,Add more context,LOW
-T0114_hi,,Add more context,LOW
-T0115,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0115_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0116,,Add more context,LOW
-T0116_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0117,,Template is well-optimized,LOW
-T0117_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0118,,"Add more context; Add personalization (your, you)",LOW
-T0118_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0119,,Add more context,LOW
-T0119_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0120,,Add more context,LOW
-T0120_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0121,,Template is well-optimized,LOW
-T0121_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0122,,"Add more context; Add personalization (your, you)",LOW
-T0122_hi,,"Add more context; Add personalization (your, you)",LOW
-T0123,,"Add more context; Add personalization (your, you)",LOW
-T0123_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0124,,Add more context,LOW
-T0124_hi,,Add more context,LOW
-T0125,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0125_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0126,,Add more context,LOW
-T0126_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0127,,Template is well-optimized,LOW
-T0127_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0128,,"Add more context; Add personalization (your, you)",LOW
-T0128_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0129,,Add more context,LOW
-T0129_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0130,,Add more context,LOW
-T0130_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0131,,Template is well-optimized,LOW
-T0131_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0132,,"Add more context; Add personalization (your, you)",LOW
-T0132_hi,,"Add more context; Add personalization (your, you)",LOW
-T0133,,"Add more context; Add personalization (your, you)",LOW
-T0133_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0134,,Add more context,LOW
-T0134_hi,,Add more context,LOW
-T0135,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0135_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0136,,Add more context,LOW
-T0136_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0137,,Template is well-optimized,LOW
-T0137_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0138,,"Add more context; Add personalization (your, you)",LOW
-T0138_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0139,,Add more context,LOW
-T0139_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0140,,Add more context,LOW
-T0140_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0141,,Template is well-optimized,LOW
-T0141_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0142,,"Add more context; Add personalization (your, you)",LOW
-T0142_hi,,"Add more context; Add personalization (your, you)",LOW
-T0143,,"Add more context; Add personalization (your, you)",LOW
-T0143_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0144,,Add more context,LOW
-T0144_hi,,Add more context,LOW
-T0145,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0145_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0146,,Add more context,LOW
-T0146_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0147,,Template is well-optimized,LOW
-T0147_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0148,,"Add more context; Add personalization (your, you)",LOW
-T0148_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0149,,Add more context,LOW
-T0149_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0150,,Add more context,LOW
-T0150_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0151,,Template is well-optimized,LOW
-T0151_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0152,,"Add more context; Add personalization (your, you)",LOW
-T0152_hi,,"Add more context; Add personalization (your, you)",LOW
-T0153,,"Add more context; Add personalization (your, you)",LOW
-T0153_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0154,,Add more context,LOW
-T0154_hi,,Add more context,LOW
-T0155,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0155_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0156,,Add more context,LOW
-T0156_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0157,,Template is well-optimized,LOW
-T0157_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0158,,"Add more context; Add personalization (your, you)",LOW
-T0158_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0159,,Add more context,LOW
-T0159_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0160,,Add more context,LOW
-T0160_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0161,,Template is well-optimized,LOW
-T0161_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0162,,"Add more context; Add personalization (your, you)",LOW
-T0162_hi,,"Add more context; Add personalization (your, you)",LOW
-T0163,,"Add more context; Add personalization (your, you)",LOW
-T0163_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0164,,Add more context,LOW
-T0164_hi,,Add more context,LOW
-T0165,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0165_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0166,,Add more context,LOW
-T0166_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0167,,Template is well-optimized,LOW
-T0167_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0168,,"Add more context; Add personalization (your, you)",LOW
-T0168_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0169,,Add more context,LOW
-T0169_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0170,,Add more context,LOW
-T0170_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0171,,Template is well-optimized,LOW
-T0171_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0172,,"Add more context; Add personalization (your, you)",LOW
-T0172_hi,,"Add more context; Add personalization (your, you)",LOW
-T0173,,"Add more context; Add personalization (your, you)",LOW
-T0173_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0174,,Add more context,LOW
-T0174_hi,,Add more context,LOW
-T0175,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0175_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0176,,Add more context,LOW
-T0176_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0177,,Template is well-optimized,LOW
-T0177_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0178,,"Add more context; Add personalization (your, you)",LOW
-T0178_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0179,,Add more context,LOW
-T0179_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0180,,Add more context,LOW
-T0180_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0181,,Increase positive sentiment,LOW
-T0181_hi,,"Increase positive sentiment; Add engagement keywords (streak, coins, etc.)",LOW
-T0182,,Add more context,LOW
-T0182_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0183,,Add more context,LOW
-T0183_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0184,,Add more context,LOW
-T0184_hi,,"Add more context; Add personalization (your, you)",LOW
-T0185,,Template is well-optimized,LOW
-T0185_hi,,"Increase positive sentiment; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0186,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0186_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0187,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0187_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0188,,Template is well-optimized,LOW
-T0188_hi,,"Add personalization (your, you)",LOW
-T0189,,Add more context,LOW
-T0189_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0190,,"Add more context; Add personalization (your, you)",LOW
-T0190_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0191,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0191_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0192,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0192_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0193,,Template is well-optimized,LOW
-T0193_hi,,"Add personalization (your, you)",LOW
-T0194,,Add more context,LOW
-T0194_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0195,,"Add more context; Add personalization (your, you)",LOW
-T0195_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0196,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0196_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0197,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0197_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0198,,Add more context,LOW
-T0198_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0199,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0199_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0200,,Add more context,LOW
-T0200_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0201,,Add more context,LOW
-T0201_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0202,,Template is well-optimized,LOW
-T0202_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0203,,"Add more context; Add personalization (your, you)",LOW
-T0203_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0204,,Add more context,LOW
-T0204_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0205,,Add more context,LOW
-T0205_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0206,,Add more context,LOW
-T0206_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0207,,Add more context,LOW
-T0207_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0208,,Add more context,LOW
-T0208_hi,,Add more context,LOW
-T0209,,Add more context,LOW
-T0209_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0210,,Add more context,LOW
-T0210_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0211,,Add more context,LOW
-T0211_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0212,,Template is well-optimized,LOW
-T0212_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0213,,"Add more context; Add personalization (your, you)",LOW
-T0213_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0214,,Add more context,LOW
-T0214_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0215,,Add more context,LOW
-T0215_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0216,,Add more context,LOW
-T0216_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0217,,Add more context,LOW
-T0217_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0218,,Add more context,LOW
-T0218_hi,,Add more context,LOW
-T0219,,Add more context,LOW
-T0219_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0220,,Add more context,LOW
-T0220_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0221,,Add more context,LOW
-T0221_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0222,,Template is well-optimized,LOW
-T0222_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0223,,"Add more context; Add personalization (your, you)",LOW
-T0223_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0224,,Add more context,LOW
-T0224_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0225,,Add more context,LOW
-T0225_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0226,,Add more context,LOW
-T0226_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0227,,Add more context,LOW
-T0227_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0228,,Add more context,LOW
-T0228_hi,,Add more context,LOW
-T0229,,Add more context,LOW
-T0229_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0230,,Add more context,LOW
-T0230_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0231,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0231_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0232,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0232_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0233,,Template is well-optimized,LOW
-T0233_hi,,"Add personalization (your, you)",LOW
-T0234,,Add more context,LOW
-T0234_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0235,,"Add more context; Add personalization (your, you)",LOW
-T0235_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0236,,Add more context,LOW
-T0236_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0237,,Template is well-optimized,LOW
-T0237_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0238,,"Add more context; Add personalization (your, you)",LOW
-T0238_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0239,,Add more context,LOW
-T0239_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0240,,Add more context,LOW
-T0240_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0241,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0241_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0242,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0242_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0243,,Template is well-optimized,LOW
-T0243_hi,,"Add personalization (your, you)",LOW
-T0244,,Add more context,LOW
-T0244_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0245,,"Add more context; Add personalization (your, you)",LOW
-T0245_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0246,,Add more context,LOW
-T0246_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0247,,Template is well-optimized,LOW
-T0247_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0248,,"Add more context; Add personalization (your, you)",LOW
-T0248_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0249,,Add more context,LOW
-T0249_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0250,,Add more context,LOW
-T0250_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0251,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0251_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0252,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0252_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0253,,Template is well-optimized,LOW
-T0253_hi,,"Add personalization (your, you)",LOW
-T0254,,Add more context,LOW
-T0254_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0255,,"Add more context; Add personalization (your, you)",LOW
-T0255_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0256,,Add more context,LOW
-T0256_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0257,,Template is well-optimized,LOW
-T0257_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0258,,"Add more context; Add personalization (your, you)",LOW
-T0258_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0259,,Add more context,LOW
-T0259_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0260,,Add more context,LOW
-T0260_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0261,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0261_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0262,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0262_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0263,,Template is well-optimized,LOW
-T0263_hi,,"Add personalization (your, you)",LOW
-T0264,,Add more context,LOW
-T0264_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0265,,"Add more context; Add personalization (your, you)",LOW
-T0265_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0266,,Add more context,LOW
-T0266_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0267,,Template is well-optimized,LOW
-T0267_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0268,,"Add more context; Add personalization (your, you)",LOW
-T0268_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0269,,Add more context,LOW
-T0269_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0270,,Add more context,LOW
-T0270_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0271,,Increase positive sentiment,LOW
-T0271_hi,,"Increase positive sentiment; Add engagement keywords (streak, coins, etc.)",LOW
-T0272,,Add more context,LOW
-T0272_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0273,,Add more context,LOW
-T0273_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0274,,Add more context,LOW
-T0274_hi,,"Add more context; Add personalization (your, you)",LOW
-T0275,,Template is well-optimized,LOW
-T0275_hi,,"Increase positive sentiment; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0276,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0276_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0277,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0277_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0278,,Template is well-optimized,LOW
-T0278_hi,,"Add personalization (your, you)",LOW
-T0279,,Add more context,LOW
-T0279_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0280,,"Add more context; Add personalization (your, you)",LOW
-T0280_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0281,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0281_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0282,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0282_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0283,,Template is well-optimized,LOW
-T0283_hi,,"Add personalization (your, you)",LOW
-T0284,,Add more context,LOW
-T0284_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0285,,"Add more context; Add personalization (your, you)",LOW
-T0285_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0286,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0286_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0287,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0287_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0288,,Add more context,LOW
-T0288_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0289,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0289_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0290,,Add more context,LOW
-T0290_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0291,,Add more context,LOW
-T0291_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0292,,Template is well-optimized,LOW
-T0292_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0293,,"Add more context; Add personalization (your, you)",LOW
-T0293_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0294,,Add more context,LOW
-T0294_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0295,,Add more context,LOW
-T0295_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0296,,Add more context,LOW
-T0296_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0297,,Add more context,LOW
-T0297_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0298,,Add more context,LOW
-T0298_hi,,Add more context,LOW
-T0299,,Add more context,LOW
-T0299_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0300,,Add more context,LOW
-T0300_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0301,,Add more context,LOW
-T0301_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0302,,Template is well-optimized,LOW
-T0302_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0303,,"Add more context; Add personalization (your, you)",LOW
-T0303_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0304,,Add more context,LOW
-T0304_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0305,,Add more context,LOW
-T0305_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0306,,Add more context,LOW
-T0306_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0307,,Add more context,LOW
-T0307_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0308,,Add more context,LOW
-T0308_hi,,Add more context,LOW
-T0309,,Add more context,LOW
-T0309_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0310,,Add more context,LOW
-T0310_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0311,,Add more context,LOW
-T0311_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0312,,Template is well-optimized,LOW
-T0312_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0313,,"Add more context; Add personalization (your, you)",LOW
-T0313_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0314,,Add more context,LOW
-T0314_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0315,,Add more context,LOW
-T0315_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0316,,Add more context,LOW
-T0316_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0317,,Add more context,LOW
-T0317_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0318,,Add more context,LOW
-T0318_hi,,Add more context,LOW
-T0319,,Add more context,LOW
-T0319_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0320,,Add more context,LOW
-T0320_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0321,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0321_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0322,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0322_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0323,,Template is well-optimized,LOW
-T0323_hi,,"Add personalization (your, you)",LOW
-T0324,,Add more context,LOW
-T0324_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0325,,"Add more context; Add personalization (your, you)",LOW
-T0325_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0326,,Add more context,LOW
-T0326_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0327,,Template is well-optimized,LOW
-T0327_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0328,,"Add more context; Add personalization (your, you)",LOW
-T0328_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0329,,Add more context,LOW
-T0329_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0330,,Add more context,LOW
-T0330_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0331,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0331_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0332,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0332_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0333,,Template is well-optimized,LOW
-T0333_hi,,"Add personalization (your, you)",LOW
-T0334,,Add more context,LOW
-T0334_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0335,,"Add more context; Add personalization (your, you)",LOW
-T0335_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0336,,Add more context,LOW
-T0336_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0337,,Template is well-optimized,LOW
-T0337_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0338,,"Add more context; Add personalization (your, you)",LOW
-T0338_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0339,,Add more context,LOW
-T0339_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0340,,Add more context,LOW
-T0340_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0341,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0341_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0342,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0342_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0343,,Template is well-optimized,LOW
-T0343_hi,,"Add personalization (your, you)",LOW
-T0344,,Add more context,LOW
-T0344_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0345,,"Add more context; Add personalization (your, you)",LOW
-T0345_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0346,,Add more context,LOW
-T0346_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0347,,Template is well-optimized,LOW
-T0347_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0348,,"Add more context; Add personalization (your, you)",LOW
-T0348_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0349,,Add more context,LOW
-T0349_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0350,,Add more context,LOW
-T0350_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0351,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0351_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0352,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0352_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0353,,Template is well-optimized,LOW
-T0353_hi,,"Add personalization (your, you)",LOW
-T0354,,Add more context,LOW
-T0354_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0355,,"Add more context; Add personalization (your, you)",LOW
-T0355_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0356,,Add more context,LOW
-T0356_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0357,,Template is well-optimized,LOW
-T0357_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0358,,"Add more context; Add personalization (your, you)",LOW
-T0358_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0359,,Add more context,LOW
-T0359_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0360,,Add more context,LOW
-T0360_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0361,,Template is well-optimized,LOW
-T0361_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0362,,"Add more context; Add personalization (your, you)",LOW
-T0362_hi,,"Add more context; Add personalization (your, you)",LOW
-T0363,,"Add more context; Add personalization (your, you)",LOW
-T0363_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0364,,Add more context,LOW
-T0364_hi,,Add more context,LOW
-T0365,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0365_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0366,,Add more context,LOW
-T0366_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0367,,Template is well-optimized,LOW
-T0367_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0368,,"Add more context; Add personalization (your, you)",LOW
-T0368_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0369,,Add more context,LOW
-T0369_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0370,,Add more context,LOW
-T0370_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0371,,Template is well-optimized,LOW
-T0371_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0372,,"Add more context; Add personalization (your, you)",LOW
-T0372_hi,,"Add more context; Add personalization (your, you)",LOW
-T0373,,"Add more context; Add personalization (your, you)",LOW
-T0373_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0374,,Add more context,LOW
-T0374_hi,,Add more context,LOW
-T0375,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0375_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0376,,Add more context,LOW
-T0376_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0377,,Template is well-optimized,LOW
-T0377_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0378,,"Add more context; Add personalization (your, you)",LOW
-T0378_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0379,,Add more context,LOW
-T0379_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0380,,Add more context,LOW
-T0380_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0381,,Template is well-optimized,LOW
-T0381_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0382,,"Add more context; Add personalization (your, you)",LOW
-T0382_hi,,"Add more context; Add personalization (your, you)",LOW
-T0383,,"Add more context; Add personalization (your, you)",LOW
-T0383_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0384,,Add more context,LOW
-T0384_hi,,Add more context,LOW
-T0385,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0385_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0386,,Add more context,LOW
-T0386_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0387,,Template is well-optimized,LOW
-T0387_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0388,,"Add more context; Add personalization (your, you)",LOW
-T0388_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0389,,Add more context,LOW
-T0389_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0390,,Add more context,LOW
-T0390_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0391,,Template is well-optimized,LOW
-T0391_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0392,,"Add more context; Add personalization (your, you)",LOW
-T0392_hi,,"Add more context; Add personalization (your, you)",LOW
-T0393,,"Add more context; Add personalization (your, you)",LOW
-T0393_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0394,,Add more context,LOW
-T0394_hi,,Add more context,LOW
-T0395,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0395_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0396,,Add more context,LOW
-T0396_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0397,,Template is well-optimized,LOW
-T0397_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0398,,"Add more context; Add personalization (your, you)",LOW
-T0398_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0399,,Add more context,LOW
-T0399_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0400,,Add more context,LOW
-T0400_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0401,,Template is well-optimized,LOW
-T0401_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0402,,"Add more context; Add personalization (your, you)",LOW
-T0402_hi,,"Add more context; Add personalization (your, you)",LOW
-T0403,,"Add more context; Add personalization (your, you)",LOW
-T0403_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0404,,Add more context,LOW
-T0404_hi,,Add more context,LOW
-T0405,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0405_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0406,,Add more context,LOW
-T0406_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0407,,Template is well-optimized,LOW
-T0407_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0408,,"Add more context; Add personalization (your, you)",LOW
-T0408_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0409,,Add more context,LOW
-T0409_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0410,,Add more context,LOW
-T0410_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0411,,Template is well-optimized,LOW
-T0411_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0412,,"Add more context; Add personalization (your, you)",LOW
-T0412_hi,,"Add more context; Add personalization (your, you)",LOW
-T0413,,"Add more context; Add personalization (your, you)",LOW
-T0413_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0414,,Add more context,LOW
-T0414_hi,,Add more context,LOW
-T0415,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0415_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0416,,Add more context,LOW
-T0416_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0417,,Template is well-optimized,LOW
-T0417_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0418,,"Add more context; Add personalization (your, you)",LOW
-T0418_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0419,,Add more context,LOW
-T0419_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0420,,Add more context,LOW
-T0420_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0421,,Template is well-optimized,LOW
-T0421_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0422,,"Add more context; Add personalization (your, you)",LOW
-T0422_hi,,"Add more context; Add personalization (your, you)",LOW
-T0423,,"Add more context; Add personalization (your, you)",LOW
-T0423_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0424,,Add more context,LOW
-T0424_hi,,Add more context,LOW
-T0425,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0425_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0426,,Add more context,LOW
-T0426_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0427,,Template is well-optimized,LOW
-T0427_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0428,,"Add more context; Add personalization (your, you)",LOW
-T0428_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0429,,Add more context,LOW
-T0429_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0430,,Add more context,LOW
-T0430_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0431,,Template is well-optimized,LOW
-T0431_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0432,,"Add more context; Add personalization (your, you)",LOW
-T0432_hi,,"Add more context; Add personalization (your, you)",LOW
-T0433,,"Add more context; Add personalization (your, you)",LOW
-T0433_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0434,,Add more context,LOW
-T0434_hi,,Add more context,LOW
-T0435,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0435_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0436,,Add more context,LOW
-T0436_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0437,,Template is well-optimized,LOW
-T0437_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0438,,"Add more context; Add personalization (your, you)",LOW
-T0438_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0439,,Add more context,LOW
-T0439_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0440,,Add more context,LOW
-T0440_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0441,,Template is well-optimized,LOW
-T0441_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0442,,"Add more context; Add personalization (your, you)",LOW
-T0442_hi,,"Add more context; Add personalization (your, you)",LOW
-T0443,,"Add more context; Add personalization (your, you)",LOW
-T0443_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0444,,Add more context,LOW
-T0444_hi,,Add more context,LOW
-T0445,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0445_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0446,,Add more context,LOW
-T0446_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0447,,Template is well-optimized,LOW
-T0447_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0448,,"Add more context; Add personalization (your, you)",LOW
-T0448_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0449,,Add more context,LOW
-T0449_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0450,,Add more context,LOW
-T0450_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0451,,Increase positive sentiment,LOW
-T0451_hi,,"Increase positive sentiment; Add engagement keywords (streak, coins, etc.)",LOW
-T0452,,Add more context,LOW
-T0452_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0453,,Add more context,LOW
-T0453_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0454,,Add more context,LOW
-T0454_hi,,"Add more context; Add personalization (your, you)",LOW
-T0455,,Template is well-optimized,LOW
-T0455_hi,,"Increase positive sentiment; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0456,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0456_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0457,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0457_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0458,,Template is well-optimized,LOW
-T0458_hi,,"Add personalization (your, you)",LOW
-T0459,,Add more context,LOW
-T0459_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0460,,"Add more context; Add personalization (your, you)",LOW
-T0460_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0461,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0461_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0462,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0462_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0463,,Template is well-optimized,LOW
-T0463_hi,,"Add personalization (your, you)",LOW
-T0464,,Add more context,LOW
-T0464_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0465,,"Add more context; Add personalization (your, you)",LOW
-T0465_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0466,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0466_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0467,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0467_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0468,,Add more context,LOW
-T0468_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0469,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0469_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0470,,Add more context,LOW
-T0470_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0471,,Add more context,LOW
-T0471_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0472,,Template is well-optimized,LOW
-T0472_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0473,,"Add more context; Add personalization (your, you)",LOW
-T0473_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0474,,Add more context,LOW
-T0474_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0475,,Add more context,LOW
-T0475_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0476,,Add more context,LOW
-T0476_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0477,,Add more context,LOW
-T0477_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0478,,Add more context,LOW
-T0478_hi,,Add more context,LOW
-T0479,,Add more context,LOW
-T0479_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0480,,Add more context,LOW
-T0480_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0481,,Add more context,LOW
-T0481_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0482,,Template is well-optimized,LOW
-T0482_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0483,,"Add more context; Add personalization (your, you)",LOW
-T0483_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0484,,Add more context,LOW
-T0484_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0485,,Add more context,LOW
-T0485_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0486,,Add more context,LOW
-T0486_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0487,,Add more context,LOW
-T0487_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0488,,Add more context,LOW
-T0488_hi,,Add more context,LOW
-T0489,,Add more context,LOW
-T0489_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0490,,Add more context,LOW
-T0490_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0491,,Add more context,LOW
-T0491_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0492,,Template is well-optimized,LOW
-T0492_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0493,,"Add more context; Add personalization (your, you)",LOW
-T0493_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0494,,Add more context,LOW
-T0494_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0495,,Add more context,LOW
-T0495_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0496,,Add more context,LOW
-T0496_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0497,,Add more context,LOW
-T0497_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0498,,Add more context,LOW
-T0498_hi,,Add more context,LOW
-T0499,,Add more context,LOW
-T0499_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0500,,Add more context,LOW
-T0500_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0501,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0501_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0502,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0502_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0503,,Template is well-optimized,LOW
-T0503_hi,,"Add personalization (your, you)",LOW
-T0504,,Add more context,LOW
-T0504_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0505,,"Add more context; Add personalization (your, you)",LOW
-T0505_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0506,,Add more context,LOW
-T0506_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0507,,Template is well-optimized,LOW
-T0507_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0508,,"Add more context; Add personalization (your, you)",LOW
-T0508_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0509,,Add more context,LOW
-T0509_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0510,,Add more context,LOW
-T0510_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0511,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0511_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0512,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0512_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0513,,Template is well-optimized,LOW
-T0513_hi,,"Add personalization (your, you)",LOW
-T0514,,Add more context,LOW
-T0514_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0515,,"Add more context; Add personalization (your, you)",LOW
-T0515_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0516,,Add more context,LOW
-T0516_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0517,,Template is well-optimized,LOW
-T0517_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0518,,"Add more context; Add personalization (your, you)",LOW
-T0518_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0519,,Add more context,LOW
-T0519_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0520,,Add more context,LOW
-T0520_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0521,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0521_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0522,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0522_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0523,,Template is well-optimized,LOW
-T0523_hi,,"Add personalization (your, you)",LOW
-T0524,,Add more context,LOW
-T0524_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0525,,"Add more context; Add personalization (your, you)",LOW
-T0525_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0526,,Add more context,LOW
-T0526_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0527,,Template is well-optimized,LOW
-T0527_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0528,,"Add more context; Add personalization (your, you)",LOW
-T0528_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0529,,Add more context,LOW
-T0529_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0530,,Add more context,LOW
-T0530_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0531,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0531_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0532,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0532_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0533,,Template is well-optimized,LOW
-T0533_hi,,"Add personalization (your, you)",LOW
-T0534,,Add more context,LOW
-T0534_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0535,,"Add more context; Add personalization (your, you)",LOW
-T0535_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0536,,Add more context,LOW
-T0536_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0537,,Template is well-optimized,LOW
-T0537_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0538,,"Add more context; Add personalization (your, you)",LOW
-T0538_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0539,,Add more context,LOW
-T0539_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0540,,Add more context,LOW
-T0540_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0541,,Template is well-optimized,LOW
-T0541_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0542,,"Add more context; Add personalization (your, you)",LOW
-T0542_hi,,"Add more context; Add personalization (your, you)",LOW
-T0543,,"Add more context; Add personalization (your, you)",LOW
-T0543_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0544,,Add more context,LOW
-T0544_hi,,Add more context,LOW
-T0545,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0545_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0546,,Add more context,LOW
-T0546_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0547,,Template is well-optimized,LOW
-T0547_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0548,,"Add more context; Add personalization (your, you)",LOW
-T0548_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0549,,Add more context,LOW
-T0549_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0550,,Add more context,LOW
-T0550_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0551,,Template is well-optimized,LOW
-T0551_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0552,,"Add more context; Add personalization (your, you)",LOW
-T0552_hi,,"Add more context; Add personalization (your, you)",LOW
-T0553,,"Add more context; Add personalization (your, you)",LOW
-T0553_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0554,,Add more context,LOW
-T0554_hi,,Add more context,LOW
-T0555,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0555_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0556,,Add more context,LOW
-T0556_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0557,,Template is well-optimized,LOW
-T0557_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0558,,"Add more context; Add personalization (your, you)",LOW
-T0558_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0559,,Add more context,LOW
-T0559_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0560,,Add more context,LOW
-T0560_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0561,,Template is well-optimized,LOW
-T0561_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0562,,"Add more context; Add personalization (your, you)",LOW
-T0562_hi,,"Add more context; Add personalization (your, you)",LOW
-T0563,,"Add more context; Add personalization (your, you)",LOW
-T0563_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0564,,Add more context,LOW
-T0564_hi,,Add more context,LOW
-T0565,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0565_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0566,,Add more context,LOW
-T0566_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0567,,Template is well-optimized,LOW
-T0567_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0568,,"Add more context; Add personalization (your, you)",LOW
-T0568_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0569,,Add more context,LOW
-T0569_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0570,,Add more context,LOW
-T0570_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0571,,Template is well-optimized,LOW
-T0571_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0572,,"Add more context; Add personalization (your, you)",LOW
-T0572_hi,,"Add more context; Add personalization (your, you)",LOW
-T0573,,"Add more context; Add personalization (your, you)",LOW
-T0573_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0574,,Add more context,LOW
-T0574_hi,,Add more context,LOW
-T0575,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0575_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0576,,Add more context,LOW
-T0576_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0577,,Template is well-optimized,LOW
-T0577_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0578,,"Add more context; Add personalization (your, you)",LOW
-T0578_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0579,,Add more context,LOW
-T0579_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0580,,Add more context,LOW
-T0580_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0581,,Template is well-optimized,LOW
-T0581_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0582,,"Add more context; Add personalization (your, you)",LOW
-T0582_hi,,"Add more context; Add personalization (your, you)",LOW
-T0583,,"Add more context; Add personalization (your, you)",LOW
-T0583_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0584,,Add more context,LOW
-T0584_hi,,Add more context,LOW
-T0585,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0585_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0586,,Add more context,LOW
-T0586_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0587,,Template is well-optimized,LOW
-T0587_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0588,,"Add more context; Add personalization (your, you)",LOW
-T0588_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0589,,Add more context,LOW
-T0589_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0590,,Add more context,LOW
-T0590_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0591,,Template is well-optimized,LOW
-T0591_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0592,,"Add more context; Add personalization (your, you)",LOW
-T0592_hi,,"Add more context; Add personalization (your, you)",LOW
-T0593,,"Add more context; Add personalization (your, you)",LOW
-T0593_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0594,,Add more context,LOW
-T0594_hi,,Add more context,LOW
-T0595,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0595_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0596,,Add more context,LOW
-T0596_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0597,,Template is well-optimized,LOW
-T0597_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0598,,"Add more context; Add personalization (your, you)",LOW
-T0598_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0599,,Add more context,LOW
-T0599_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0600,,Add more context,LOW
-T0600_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0601,,Template is well-optimized,LOW
-T0601_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0602,,"Add more context; Add personalization (your, you)",LOW
-T0602_hi,,"Add more context; Add personalization (your, you)",LOW
-T0603,,"Add more context; Add personalization (your, you)",LOW
-T0603_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0604,,Add more context,LOW
-T0604_hi,,Add more context,LOW
-T0605,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0605_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0606,,Add more context,LOW
-T0606_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0607,,Template is well-optimized,LOW
-T0607_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0608,,"Add more context; Add personalization (your, you)",LOW
-T0608_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0609,,Add more context,LOW
-T0609_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0610,,Add more context,LOW
-T0610_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0611,,Template is well-optimized,LOW
-T0611_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0612,,"Add more context; Add personalization (your, you)",LOW
-T0612_hi,,"Add more context; Add personalization (your, you)",LOW
-T0613,,"Add more context; Add personalization (your, you)",LOW
-T0613_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0614,,Add more context,LOW
-T0614_hi,,Add more context,LOW
-T0615,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0615_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0616,,Add more context,LOW
-T0616_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0617,,Template is well-optimized,LOW
-T0617_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0618,,"Add more context; Add personalization (your, you)",LOW
-T0618_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0619,,Add more context,LOW
-T0619_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0620,,Add more context,LOW
-T0620_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0621,,Template is well-optimized,LOW
-T0621_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0622,,"Add more context; Add personalization (your, you)",LOW
-T0622_hi,,"Add more context; Add personalization (your, you)",LOW
-T0623,,"Add more context; Add personalization (your, you)",LOW
-T0623_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0624,,Add more context,LOW
-T0624_hi,,Add more context,LOW
-T0625,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0625_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0626,,Add more context,LOW
-T0626_hi,,"Add engagement keywords (streak, coins, etc.)",LOW
-T0627,,Template is well-optimized,LOW
-T0627_hi,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0628,,"Add more context; Add personalization (your, you)",LOW
-T0628_hi,,"Add more context; Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
-T0629,,Add more context,LOW
-T0629_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
-T0630,,Add more context,LOW
-T0630_hi,,"Add more context; Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0001,,Shorten message (< 15 words); Increase positive sentiment,LOW
+TPL_0002,,Increase positive sentiment,LOW
+TPL_0003,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0004,,Increase positive sentiment,LOW
+TPL_0005,,Template is well-optimized,LOW
+TPL_0006,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0007,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0008,,Template is well-optimized,LOW
+TPL_0009,,Template is well-optimized,LOW
+TPL_0010,,"Add personalization (your, you)",LOW
+TPL_0011,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0012,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0013,,Template is well-optimized,LOW
+TPL_0014,,Template is well-optimized,LOW
+TPL_0015,,"Add personalization (your, you)",LOW
+TPL_0016,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0017,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0018,,Template is well-optimized,LOW
+TPL_0019,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0020,,Template is well-optimized,LOW
+TPL_0021,,Template is well-optimized,LOW
+TPL_0022,,Template is well-optimized,LOW
+TPL_0023,,"Add personalization (your, you)",LOW
+TPL_0024,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0025,,Template is well-optimized,LOW
+TPL_0026,,Template is well-optimized,LOW
+TPL_0027,,Template is well-optimized,LOW
+TPL_0028,,Template is well-optimized,LOW
+TPL_0029,,Template is well-optimized,LOW
+TPL_0030,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0031,,Template is well-optimized,LOW
+TPL_0032,,Template is well-optimized,LOW
+TPL_0033,,"Add personalization (your, you)",LOW
+TPL_0034,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0035,,Template is well-optimized,LOW
+TPL_0036,,Template is well-optimized,LOW
+TPL_0037,,Template is well-optimized,LOW
+TPL_0038,,Template is well-optimized,LOW
+TPL_0039,,Template is well-optimized,LOW
+TPL_0040,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0041,,Template is well-optimized,LOW
+TPL_0042,,Template is well-optimized,LOW
+TPL_0043,,"Add personalization (your, you)",LOW
+TPL_0044,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0045,,Template is well-optimized,LOW
+TPL_0046,,Template is well-optimized,LOW
+TPL_0047,,Template is well-optimized,LOW
+TPL_0048,,Template is well-optimized,LOW
+TPL_0049,,Template is well-optimized,LOW
+TPL_0050,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0051,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0052,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0053,,Template is well-optimized,LOW
+TPL_0054,,Template is well-optimized,LOW
+TPL_0055,,"Add personalization (your, you)",LOW
+TPL_0056,,Template is well-optimized,LOW
+TPL_0057,,Template is well-optimized,LOW
+TPL_0058,,"Add personalization (your, you)",LOW
+TPL_0059,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0060,,Template is well-optimized,LOW
+TPL_0061,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0062,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0063,,Template is well-optimized,LOW
+TPL_0064,,Template is well-optimized,LOW
+TPL_0065,,"Add personalization (your, you)",LOW
+TPL_0066,,Template is well-optimized,LOW
+TPL_0067,,Template is well-optimized,LOW
+TPL_0068,,"Add personalization (your, you)",LOW
+TPL_0069,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0070,,Template is well-optimized,LOW
+TPL_0071,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0072,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0073,,Template is well-optimized,LOW
+TPL_0074,,Template is well-optimized,LOW
+TPL_0075,,"Add personalization (your, you)",LOW
+TPL_0076,,Template is well-optimized,LOW
+TPL_0077,,Template is well-optimized,LOW
+TPL_0078,,"Add personalization (your, you)",LOW
+TPL_0079,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0080,,Template is well-optimized,LOW
+TPL_0081,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0082,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0083,,Template is well-optimized,LOW
+TPL_0084,,Template is well-optimized,LOW
+TPL_0085,,"Add personalization (your, you)",LOW
+TPL_0086,,Template is well-optimized,LOW
+TPL_0087,,Template is well-optimized,LOW
+TPL_0088,,"Add personalization (your, you)",LOW
+TPL_0089,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0090,,Template is well-optimized,LOW
+TPL_0091,,Shorten message (< 15 words); Increase positive sentiment,LOW
+TPL_0092,,Increase positive sentiment,LOW
+TPL_0093,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0094,,Increase positive sentiment,LOW
+TPL_0095,,Template is well-optimized,LOW
+TPL_0096,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0097,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0098,,Template is well-optimized,LOW
+TPL_0099,,Template is well-optimized,LOW
+TPL_0100,,"Add personalization (your, you)",LOW
+TPL_0101,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0102,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0103,,Template is well-optimized,LOW
+TPL_0104,,Template is well-optimized,LOW
+TPL_0105,,"Add personalization (your, you)",LOW
+TPL_0106,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0107,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0108,,Template is well-optimized,LOW
+TPL_0109,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0110,,Template is well-optimized,LOW
+TPL_0111,,Template is well-optimized,LOW
+TPL_0112,,Template is well-optimized,LOW
+TPL_0113,,"Add personalization (your, you)",LOW
+TPL_0114,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0115,,Template is well-optimized,LOW
+TPL_0116,,Template is well-optimized,LOW
+TPL_0117,,Template is well-optimized,LOW
+TPL_0118,,Template is well-optimized,LOW
+TPL_0119,,Template is well-optimized,LOW
+TPL_0120,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0121,,Template is well-optimized,LOW
+TPL_0122,,Template is well-optimized,LOW
+TPL_0123,,"Add personalization (your, you)",LOW
+TPL_0124,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0125,,Template is well-optimized,LOW
+TPL_0126,,Template is well-optimized,LOW
+TPL_0127,,Template is well-optimized,LOW
+TPL_0128,,Template is well-optimized,LOW
+TPL_0129,,Template is well-optimized,LOW
+TPL_0130,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0131,,Template is well-optimized,LOW
+TPL_0132,,Template is well-optimized,LOW
+TPL_0133,,"Add personalization (your, you)",LOW
+TPL_0134,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0135,,Template is well-optimized,LOW
+TPL_0136,,Template is well-optimized,LOW
+TPL_0137,,Template is well-optimized,LOW
+TPL_0138,,Template is well-optimized,LOW
+TPL_0139,,Template is well-optimized,LOW
+TPL_0140,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0141,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0142,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0143,,Template is well-optimized,LOW
+TPL_0144,,Template is well-optimized,LOW
+TPL_0145,,"Add personalization (your, you)",LOW
+TPL_0146,,Template is well-optimized,LOW
+TPL_0147,,Template is well-optimized,LOW
+TPL_0148,,"Add personalization (your, you)",LOW
+TPL_0149,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0150,,Template is well-optimized,LOW
+TPL_0151,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0152,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0153,,Template is well-optimized,LOW
+TPL_0154,,Template is well-optimized,LOW
+TPL_0155,,"Add personalization (your, you)",LOW
+TPL_0156,,Template is well-optimized,LOW
+TPL_0157,,Template is well-optimized,LOW
+TPL_0158,,"Add personalization (your, you)",LOW
+TPL_0159,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0160,,Template is well-optimized,LOW
+TPL_0161,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0162,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0163,,Template is well-optimized,LOW
+TPL_0164,,Template is well-optimized,LOW
+TPL_0165,,"Add personalization (your, you)",LOW
+TPL_0166,,Template is well-optimized,LOW
+TPL_0167,,Template is well-optimized,LOW
+TPL_0168,,"Add personalization (your, you)",LOW
+TPL_0169,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0170,,Template is well-optimized,LOW
+TPL_0171,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0172,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0173,,Template is well-optimized,LOW
+TPL_0174,,Template is well-optimized,LOW
+TPL_0175,,"Add personalization (your, you)",LOW
+TPL_0176,,Template is well-optimized,LOW
+TPL_0177,,Template is well-optimized,LOW
+TPL_0178,,"Add personalization (your, you)",LOW
+TPL_0179,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0180,,Template is well-optimized,LOW
+TPL_0181,,Shorten message (< 15 words); Increase positive sentiment,LOW
+TPL_0182,,Increase positive sentiment,LOW
+TPL_0183,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0184,,Increase positive sentiment,LOW
+TPL_0185,,Template is well-optimized,LOW
+TPL_0186,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0187,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0188,,Template is well-optimized,LOW
+TPL_0189,,Template is well-optimized,LOW
+TPL_0190,,"Add personalization (your, you)",LOW
+TPL_0191,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0192,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0193,,Template is well-optimized,LOW
+TPL_0194,,Template is well-optimized,LOW
+TPL_0195,,"Add personalization (your, you)",LOW
+TPL_0196,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0197,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0198,,Template is well-optimized,LOW
+TPL_0199,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0200,,Template is well-optimized,LOW
+TPL_0201,,Template is well-optimized,LOW
+TPL_0202,,Template is well-optimized,LOW
+TPL_0203,,"Add personalization (your, you)",LOW
+TPL_0204,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0205,,Template is well-optimized,LOW
+TPL_0206,,Template is well-optimized,LOW
+TPL_0207,,Template is well-optimized,LOW
+TPL_0208,,Template is well-optimized,LOW
+TPL_0209,,Template is well-optimized,LOW
+TPL_0210,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0211,,Template is well-optimized,LOW
+TPL_0212,,Template is well-optimized,LOW
+TPL_0213,,"Add personalization (your, you)",LOW
+TPL_0214,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0215,,Template is well-optimized,LOW
+TPL_0216,,Template is well-optimized,LOW
+TPL_0217,,Template is well-optimized,LOW
+TPL_0218,,Template is well-optimized,LOW
+TPL_0219,,Template is well-optimized,LOW
+TPL_0220,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0221,,Template is well-optimized,LOW
+TPL_0222,,Template is well-optimized,LOW
+TPL_0223,,"Add personalization (your, you)",LOW
+TPL_0224,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0225,,Template is well-optimized,LOW
+TPL_0226,,Template is well-optimized,LOW
+TPL_0227,,Template is well-optimized,LOW
+TPL_0228,,Template is well-optimized,LOW
+TPL_0229,,Template is well-optimized,LOW
+TPL_0230,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0231,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0232,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0233,,Template is well-optimized,LOW
+TPL_0234,,Template is well-optimized,LOW
+TPL_0235,,"Add personalization (your, you)",LOW
+TPL_0236,,Template is well-optimized,LOW
+TPL_0237,,Template is well-optimized,LOW
+TPL_0238,,"Add personalization (your, you)",LOW
+TPL_0239,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0240,,Template is well-optimized,LOW
+TPL_0241,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0242,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0243,,Template is well-optimized,LOW
+TPL_0244,,Template is well-optimized,LOW
+TPL_0245,,"Add personalization (your, you)",LOW
+TPL_0246,,Template is well-optimized,LOW
+TPL_0247,,Template is well-optimized,LOW
+TPL_0248,,"Add personalization (your, you)",LOW
+TPL_0249,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0250,,Template is well-optimized,LOW
+TPL_0251,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0252,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0253,,Template is well-optimized,LOW
+TPL_0254,,Template is well-optimized,LOW
+TPL_0255,,"Add personalization (your, you)",LOW
+TPL_0256,,Template is well-optimized,LOW
+TPL_0257,,Template is well-optimized,LOW
+TPL_0258,,"Add personalization (your, you)",LOW
+TPL_0259,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0260,,Template is well-optimized,LOW
+TPL_0261,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0262,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0263,,Template is well-optimized,LOW
+TPL_0264,,Template is well-optimized,LOW
+TPL_0265,,"Add personalization (your, you)",LOW
+TPL_0266,,Template is well-optimized,LOW
+TPL_0267,,Template is well-optimized,LOW
+TPL_0268,,"Add personalization (your, you)",LOW
+TPL_0269,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0270,,Template is well-optimized,LOW
+TPL_0271,,Shorten message (< 15 words); Increase positive sentiment,LOW
+TPL_0272,,Increase positive sentiment,LOW
+TPL_0273,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0274,,Increase positive sentiment,LOW
+TPL_0275,,Template is well-optimized,LOW
+TPL_0276,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0277,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0278,,Template is well-optimized,LOW
+TPL_0279,,Template is well-optimized,LOW
+TPL_0280,,"Add personalization (your, you)",LOW
+TPL_0281,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0282,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0283,,Template is well-optimized,LOW
+TPL_0284,,Template is well-optimized,LOW
+TPL_0285,,"Add personalization (your, you)",LOW
+TPL_0286,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0287,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0288,,Template is well-optimized,LOW
+TPL_0289,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0290,,Template is well-optimized,LOW
+TPL_0291,,Template is well-optimized,LOW
+TPL_0292,,Template is well-optimized,LOW
+TPL_0293,,"Add personalization (your, you)",LOW
+TPL_0294,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0295,,Template is well-optimized,LOW
+TPL_0296,,Template is well-optimized,LOW
+TPL_0297,,Template is well-optimized,LOW
+TPL_0298,,Template is well-optimized,LOW
+TPL_0299,,Template is well-optimized,LOW
+TPL_0300,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0301,,Template is well-optimized,LOW
+TPL_0302,,Template is well-optimized,LOW
+TPL_0303,,"Add personalization (your, you)",LOW
+TPL_0304,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0305,,Template is well-optimized,LOW
+TPL_0306,,Template is well-optimized,LOW
+TPL_0307,,Template is well-optimized,LOW
+TPL_0308,,Template is well-optimized,LOW
+TPL_0309,,Template is well-optimized,LOW
+TPL_0310,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0311,,Template is well-optimized,LOW
+TPL_0312,,Template is well-optimized,LOW
+TPL_0313,,"Add personalization (your, you)",LOW
+TPL_0314,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0315,,Template is well-optimized,LOW
+TPL_0316,,Template is well-optimized,LOW
+TPL_0317,,Template is well-optimized,LOW
+TPL_0318,,Template is well-optimized,LOW
+TPL_0319,,Template is well-optimized,LOW
+TPL_0320,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0321,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0322,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0323,,Template is well-optimized,LOW
+TPL_0324,,Template is well-optimized,LOW
+TPL_0325,,"Add personalization (your, you)",LOW
+TPL_0326,,Template is well-optimized,LOW
+TPL_0327,,Template is well-optimized,LOW
+TPL_0328,,"Add personalization (your, you)",LOW
+TPL_0329,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0330,,Template is well-optimized,LOW
+TPL_0331,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0332,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0333,,Template is well-optimized,LOW
+TPL_0334,,Template is well-optimized,LOW
+TPL_0335,,"Add personalization (your, you)",LOW
+TPL_0336,,Template is well-optimized,LOW
+TPL_0337,,Template is well-optimized,LOW
+TPL_0338,,"Add personalization (your, you)",LOW
+TPL_0339,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0340,,Template is well-optimized,LOW
+TPL_0341,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0342,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0343,,Template is well-optimized,LOW
+TPL_0344,,Template is well-optimized,LOW
+TPL_0345,,"Add personalization (your, you)",LOW
+TPL_0346,,Template is well-optimized,LOW
+TPL_0347,,Template is well-optimized,LOW
+TPL_0348,,"Add personalization (your, you)",LOW
+TPL_0349,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0350,,Template is well-optimized,LOW
+TPL_0351,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0352,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0353,,Template is well-optimized,LOW
+TPL_0354,,Template is well-optimized,LOW
+TPL_0355,,"Add personalization (your, you)",LOW
+TPL_0356,,Template is well-optimized,LOW
+TPL_0357,,Template is well-optimized,LOW
+TPL_0358,,"Add personalization (your, you)",LOW
+TPL_0359,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0360,,Template is well-optimized,LOW
+TPL_0361,,Shorten message (< 15 words); Increase positive sentiment,LOW
+TPL_0362,,Increase positive sentiment,LOW
+TPL_0363,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0364,,Increase positive sentiment,LOW
+TPL_0365,,Template is well-optimized,LOW
+TPL_0366,,Template is well-optimized,LOW
+TPL_0367,,"Add personalization (your, you)",LOW
+TPL_0368,,Template is well-optimized,LOW
+TPL_0369,,Template is well-optimized,LOW
+TPL_0370,,"Increase positive sentiment; Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0371,,Shorten message (< 15 words); Increase positive sentiment,LOW
+TPL_0372,,Increase positive sentiment,LOW
+TPL_0373,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0374,,Increase positive sentiment,LOW
+TPL_0375,,Template is well-optimized,LOW
+TPL_0376,,Template is well-optimized,LOW
+TPL_0377,,"Add personalization (your, you)",LOW
+TPL_0378,,Template is well-optimized,LOW
+TPL_0379,,Template is well-optimized,LOW
+TPL_0380,,"Increase positive sentiment; Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0381,,Shorten message (< 15 words); Increase positive sentiment,LOW
+TPL_0382,,Increase positive sentiment,LOW
+TPL_0383,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0384,,Increase positive sentiment,LOW
+TPL_0385,,Template is well-optimized,LOW
+TPL_0386,,Template is well-optimized,LOW
+TPL_0387,,"Add personalization (your, you)",LOW
+TPL_0388,,Template is well-optimized,LOW
+TPL_0389,,Template is well-optimized,LOW
+TPL_0390,,"Increase positive sentiment; Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0391,,Shorten message (< 15 words); Increase positive sentiment,LOW
+TPL_0392,,Increase positive sentiment,LOW
+TPL_0393,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0394,,Increase positive sentiment,LOW
+TPL_0395,,Template is well-optimized,LOW
+TPL_0396,,Template is well-optimized,LOW
+TPL_0397,,"Add personalization (your, you)",LOW
+TPL_0398,,Template is well-optimized,LOW
+TPL_0399,,Template is well-optimized,LOW
+TPL_0400,,"Increase positive sentiment; Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0401,,Shorten message (< 15 words); Increase positive sentiment,LOW
+TPL_0402,,Increase positive sentiment,LOW
+TPL_0403,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0404,,Increase positive sentiment,LOW
+TPL_0405,,Template is well-optimized,LOW
+TPL_0406,,Template is well-optimized,LOW
+TPL_0407,,"Add personalization (your, you)",LOW
+TPL_0408,,Template is well-optimized,LOW
+TPL_0409,,Template is well-optimized,LOW
+TPL_0410,,"Increase positive sentiment; Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0411,,Shorten message (< 15 words); Increase positive sentiment,LOW
+TPL_0412,,Increase positive sentiment,LOW
+TPL_0413,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0414,,Increase positive sentiment,LOW
+TPL_0415,,Template is well-optimized,LOW
+TPL_0416,,"Add personalization (your, you)",LOW
+TPL_0417,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0418,,"Add personalization (your, you)",LOW
+TPL_0419,,Template is well-optimized,LOW
+TPL_0420,,"Increase positive sentiment; Add personalization (your, you)",LOW
+TPL_0421,,Shorten message (< 15 words); Increase positive sentiment,LOW
+TPL_0422,,Increase positive sentiment,LOW
+TPL_0423,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0424,,Increase positive sentiment,LOW
+TPL_0425,,Template is well-optimized,LOW
+TPL_0426,,"Add personalization (your, you)",LOW
+TPL_0427,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0428,,"Add personalization (your, you)",LOW
+TPL_0429,,Template is well-optimized,LOW
+TPL_0430,,"Increase positive sentiment; Add personalization (your, you)",LOW
+TPL_0431,,Shorten message (< 15 words); Increase positive sentiment,LOW
+TPL_0432,,Increase positive sentiment,LOW
+TPL_0433,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0434,,Increase positive sentiment,LOW
+TPL_0435,,Template is well-optimized,LOW
+TPL_0436,,"Add personalization (your, you)",LOW
+TPL_0437,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0438,,"Add personalization (your, you)",LOW
+TPL_0439,,Template is well-optimized,LOW
+TPL_0440,,"Increase positive sentiment; Add personalization (your, you)",LOW
+TPL_0441,,Shorten message (< 15 words); Increase positive sentiment,LOW
+TPL_0442,,Increase positive sentiment,LOW
+TPL_0443,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0444,,Increase positive sentiment,LOW
+TPL_0445,,Template is well-optimized,LOW
+TPL_0446,,"Add personalization (your, you)",LOW
+TPL_0447,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0448,,"Add personalization (your, you)",LOW
+TPL_0449,,Template is well-optimized,LOW
+TPL_0450,,"Increase positive sentiment; Add personalization (your, you)",LOW
+TPL_0451,,Shorten message (< 15 words); Increase positive sentiment,LOW
+TPL_0452,,Increase positive sentiment,LOW
+TPL_0453,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0454,,Increase positive sentiment,LOW
+TPL_0455,,Template is well-optimized,LOW
+TPL_0456,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0457,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0458,,Template is well-optimized,LOW
+TPL_0459,,Template is well-optimized,LOW
+TPL_0460,,"Add personalization (your, you)",LOW
+TPL_0461,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0462,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0463,,Template is well-optimized,LOW
+TPL_0464,,Template is well-optimized,LOW
+TPL_0465,,"Add personalization (your, you)",LOW
+TPL_0466,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0467,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0468,,Template is well-optimized,LOW
+TPL_0469,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0470,,Template is well-optimized,LOW
+TPL_0471,,Template is well-optimized,LOW
+TPL_0472,,Template is well-optimized,LOW
+TPL_0473,,"Add personalization (your, you)",LOW
+TPL_0474,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0475,,Template is well-optimized,LOW
+TPL_0476,,Template is well-optimized,LOW
+TPL_0477,,Template is well-optimized,LOW
+TPL_0478,,Template is well-optimized,LOW
+TPL_0479,,Template is well-optimized,LOW
+TPL_0480,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0481,,Template is well-optimized,LOW
+TPL_0482,,Template is well-optimized,LOW
+TPL_0483,,"Add personalization (your, you)",LOW
+TPL_0484,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0485,,Template is well-optimized,LOW
+TPL_0486,,Template is well-optimized,LOW
+TPL_0487,,Template is well-optimized,LOW
+TPL_0488,,Template is well-optimized,LOW
+TPL_0489,,Template is well-optimized,LOW
+TPL_0490,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0491,,Template is well-optimized,LOW
+TPL_0492,,Template is well-optimized,LOW
+TPL_0493,,"Add personalization (your, you)",LOW
+TPL_0494,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0495,,Template is well-optimized,LOW
+TPL_0496,,Template is well-optimized,LOW
+TPL_0497,,Template is well-optimized,LOW
+TPL_0498,,Template is well-optimized,LOW
+TPL_0499,,Template is well-optimized,LOW
+TPL_0500,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0501,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0502,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0503,,Template is well-optimized,LOW
+TPL_0504,,Template is well-optimized,LOW
+TPL_0505,,"Add personalization (your, you)",LOW
+TPL_0506,,Template is well-optimized,LOW
+TPL_0507,,Template is well-optimized,LOW
+TPL_0508,,"Add personalization (your, you)",LOW
+TPL_0509,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0510,,Template is well-optimized,LOW
+TPL_0511,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0512,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0513,,Template is well-optimized,LOW
+TPL_0514,,Template is well-optimized,LOW
+TPL_0515,,"Add personalization (your, you)",LOW
+TPL_0516,,Template is well-optimized,LOW
+TPL_0517,,Template is well-optimized,LOW
+TPL_0518,,"Add personalization (your, you)",LOW
+TPL_0519,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0520,,Template is well-optimized,LOW
+TPL_0521,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0522,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0523,,Template is well-optimized,LOW
+TPL_0524,,Template is well-optimized,LOW
+TPL_0525,,"Add personalization (your, you)",LOW
+TPL_0526,,Template is well-optimized,LOW
+TPL_0527,,Template is well-optimized,LOW
+TPL_0528,,"Add personalization (your, you)",LOW
+TPL_0529,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0530,,Template is well-optimized,LOW
+TPL_0531,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0532,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0533,,Template is well-optimized,LOW
+TPL_0534,,Template is well-optimized,LOW
+TPL_0535,,"Add personalization (your, you)",LOW
+TPL_0536,,Template is well-optimized,LOW
+TPL_0537,,Template is well-optimized,LOW
+TPL_0538,,"Add personalization (your, you)",LOW
+TPL_0539,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0540,,Template is well-optimized,LOW
+TPL_0541,,Shorten message (< 15 words); Increase positive sentiment,LOW
+TPL_0542,,Increase positive sentiment,LOW
+TPL_0543,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0544,,Increase positive sentiment,LOW
+TPL_0545,,Template is well-optimized,LOW
+TPL_0546,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0547,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0548,,Template is well-optimized,LOW
+TPL_0549,,Template is well-optimized,LOW
+TPL_0550,,"Add personalization (your, you)",LOW
+TPL_0551,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0552,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0553,,Template is well-optimized,LOW
+TPL_0554,,Template is well-optimized,LOW
+TPL_0555,,"Add personalization (your, you)",LOW
+TPL_0556,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0557,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0558,,Template is well-optimized,LOW
+TPL_0559,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0560,,Template is well-optimized,LOW
+TPL_0561,,Template is well-optimized,LOW
+TPL_0562,,Template is well-optimized,LOW
+TPL_0563,,"Add personalization (your, you)",LOW
+TPL_0564,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0565,,Template is well-optimized,LOW
+TPL_0566,,Template is well-optimized,LOW
+TPL_0567,,Template is well-optimized,LOW
+TPL_0568,,Template is well-optimized,LOW
+TPL_0569,,Template is well-optimized,LOW
+TPL_0570,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0571,,Template is well-optimized,LOW
+TPL_0572,,Template is well-optimized,LOW
+TPL_0573,,"Add personalization (your, you)",LOW
+TPL_0574,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0575,,Template is well-optimized,LOW
+TPL_0576,,Template is well-optimized,LOW
+TPL_0577,,Template is well-optimized,LOW
+TPL_0578,,Template is well-optimized,LOW
+TPL_0579,,Template is well-optimized,LOW
+TPL_0580,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0581,,Template is well-optimized,LOW
+TPL_0582,,Template is well-optimized,LOW
+TPL_0583,,"Add personalization (your, you)",LOW
+TPL_0584,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0585,,Template is well-optimized,LOW
+TPL_0586,,Template is well-optimized,LOW
+TPL_0587,,Template is well-optimized,LOW
+TPL_0588,,Template is well-optimized,LOW
+TPL_0589,,Template is well-optimized,LOW
+TPL_0590,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0591,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0592,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0593,,Template is well-optimized,LOW
+TPL_0594,,Template is well-optimized,LOW
+TPL_0595,,"Add personalization (your, you)",LOW
+TPL_0596,,Template is well-optimized,LOW
+TPL_0597,,Template is well-optimized,LOW
+TPL_0598,,"Add personalization (your, you)",LOW
+TPL_0599,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0600,,Template is well-optimized,LOW
+TPL_0601,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0602,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0603,,Template is well-optimized,LOW
+TPL_0604,,Template is well-optimized,LOW
+TPL_0605,,"Add personalization (your, you)",LOW
+TPL_0606,,Template is well-optimized,LOW
+TPL_0607,,Template is well-optimized,LOW
+TPL_0608,,"Add personalization (your, you)",LOW
+TPL_0609,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0610,,Template is well-optimized,LOW
+TPL_0611,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0612,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0613,,Template is well-optimized,LOW
+TPL_0614,,Template is well-optimized,LOW
+TPL_0615,,"Add personalization (your, you)",LOW
+TPL_0616,,Template is well-optimized,LOW
+TPL_0617,,Template is well-optimized,LOW
+TPL_0618,,"Add personalization (your, you)",LOW
+TPL_0619,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0620,,Template is well-optimized,LOW
+TPL_0621,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0622,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0623,,Template is well-optimized,LOW
+TPL_0624,,Template is well-optimized,LOW
+TPL_0625,,"Add personalization (your, you)",LOW
+TPL_0626,,Template is well-optimized,LOW
+TPL_0627,,Template is well-optimized,LOW
+TPL_0628,,"Add personalization (your, you)",LOW
+TPL_0629,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0630,,Template is well-optimized,LOW
+TPL_0631,,Shorten message (< 15 words); Increase positive sentiment,LOW
+TPL_0632,,Increase positive sentiment,LOW
+TPL_0633,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0634,,Increase positive sentiment,LOW
+TPL_0635,,Template is well-optimized,LOW
+TPL_0636,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0637,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0638,,Template is well-optimized,LOW
+TPL_0639,,Template is well-optimized,LOW
+TPL_0640,,"Add personalization (your, you)",LOW
+TPL_0641,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0642,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0643,,Template is well-optimized,LOW
+TPL_0644,,Template is well-optimized,LOW
+TPL_0645,,"Add personalization (your, you)",LOW
+TPL_0646,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0647,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0648,,Template is well-optimized,LOW
+TPL_0649,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0650,,Template is well-optimized,LOW
+TPL_0651,,Template is well-optimized,LOW
+TPL_0652,,Template is well-optimized,LOW
+TPL_0653,,"Add personalization (your, you)",LOW
+TPL_0654,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0655,,Template is well-optimized,LOW
+TPL_0656,,Template is well-optimized,LOW
+TPL_0657,,Template is well-optimized,LOW
+TPL_0658,,Template is well-optimized,LOW
+TPL_0659,,Template is well-optimized,LOW
+TPL_0660,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0661,,Template is well-optimized,LOW
+TPL_0662,,Template is well-optimized,LOW
+TPL_0663,,"Add personalization (your, you)",LOW
+TPL_0664,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0665,,Template is well-optimized,LOW
+TPL_0666,,Template is well-optimized,LOW
+TPL_0667,,Template is well-optimized,LOW
+TPL_0668,,Template is well-optimized,LOW
+TPL_0669,,Template is well-optimized,LOW
+TPL_0670,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0671,,Template is well-optimized,LOW
+TPL_0672,,Template is well-optimized,LOW
+TPL_0673,,"Add personalization (your, you)",LOW
+TPL_0674,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0675,,Template is well-optimized,LOW
+TPL_0676,,Template is well-optimized,LOW
+TPL_0677,,Template is well-optimized,LOW
+TPL_0678,,Template is well-optimized,LOW
+TPL_0679,,Template is well-optimized,LOW
+TPL_0680,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0681,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0682,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0683,,Template is well-optimized,LOW
+TPL_0684,,Template is well-optimized,LOW
+TPL_0685,,"Add personalization (your, you)",LOW
+TPL_0686,,Template is well-optimized,LOW
+TPL_0687,,Template is well-optimized,LOW
+TPL_0688,,"Add personalization (your, you)",LOW
+TPL_0689,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0690,,Template is well-optimized,LOW
+TPL_0691,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0692,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0693,,Template is well-optimized,LOW
+TPL_0694,,Template is well-optimized,LOW
+TPL_0695,,"Add personalization (your, you)",LOW
+TPL_0696,,Template is well-optimized,LOW
+TPL_0697,,Template is well-optimized,LOW
+TPL_0698,,"Add personalization (your, you)",LOW
+TPL_0699,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0700,,Template is well-optimized,LOW
+TPL_0701,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0702,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0703,,Template is well-optimized,LOW
+TPL_0704,,Template is well-optimized,LOW
+TPL_0705,,"Add personalization (your, you)",LOW
+TPL_0706,,Template is well-optimized,LOW
+TPL_0707,,Template is well-optimized,LOW
+TPL_0708,,"Add personalization (your, you)",LOW
+TPL_0709,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0710,,Template is well-optimized,LOW
+TPL_0711,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0712,,"Add engagement keywords (streak, coins, etc.); Add personalization (your, you)",LOW
+TPL_0713,,Template is well-optimized,LOW
+TPL_0714,,Template is well-optimized,LOW
+TPL_0715,,"Add personalization (your, you)",LOW
+TPL_0716,,Template is well-optimized,LOW
+TPL_0717,,Template is well-optimized,LOW
+TPL_0718,,"Add personalization (your, you)",LOW
+TPL_0719,,"Add engagement keywords (streak, coins, etc.)",LOW
+TPL_0720,,Template is well-optimized,LOW
