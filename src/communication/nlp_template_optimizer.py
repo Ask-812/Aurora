@@ -102,6 +102,16 @@ class NLPTemplateOptimizer:
         
         templates = templates.copy()
         
+        # Create combined content column for analysis (use English columns)
+        # Support both old 'content' column and new bilingual columns
+        if 'content' not in templates.columns:
+            # New schema: combine title + body + CTA
+            templates['content'] = (
+                templates.get('message_title_en', '').fillna('') + ' ' +
+                templates.get('message_body_en', '').fillna('') + ' ' +
+                templates.get('cta_text_en', '').fillna('')
+            ).str.strip()
+        
         # Basic text features
         templates['word_count'] = templates['content'].apply(self._count_words)
         templates['char_count'] = templates['content'].apply(len)
