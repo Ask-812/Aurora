@@ -1,7 +1,7 @@
-﻿﻿# Project Aurora - Self-Learning Notification Orchestrator
+﻿# Project Aurora - Self-Learning Notification Orchestrator
 
 **Advanced ML-Powered Communication System**  
-*SpeakX EdTech Case Study - Kriti Mid-Year Assessment 2026*
+*SpeakX EdTech Case Study*
 
 ---
 
