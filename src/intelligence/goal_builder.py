@@ -10,8 +10,16 @@ from typing import Dict, List
 class GoalBuilder:
     """Builds goal hierarchies and user journeys"""
     
-    def __init__(self):
+    def __init__(self, kb_data: dict = None):
         self.segment_goals = None
+        self.kb_data = kb_data or {}
+        self.domain = self.kb_data.get('detected_domain', 'generic')
+        
+        # Extract feature names from KB for domain-aware goals
+        fgm = self.kb_data.get('feature_goal_map', {})
+        features = fgm.get('features', [])
+        self.feature_names = [f.get('feature_name', 'core_feature') for f in features] if features else ['core_feature']
+        self.feature_goals = {f.get('feature_name', 'core_feature'): f.get('goal', 'engagement') for f in features} if features else {}
     
     def build_goals(self, segment_profiles: pd.DataFrame) -> pd.DataFrame:
         """
@@ -46,13 +54,15 @@ class GoalBuilder:
         self.segment_goals = pd.DataFrame(goals)
         
         print(f"   [OK] Created {len(goals)} goal definitions")
-        print(f"   [OK] Covering {len(segment_profiles)} segments × 4 lifecycle stages")
+        print(f"   [OK] Covering {len(segment_profiles)} segments x 4 lifecycle stages")
         
         return self.segment_goals
     
     def _build_trial_goals(self, seg_id: int, seg_name: str, segment: pd.Series) -> List[Dict]:
-        """Build goals for trial period (D0-D7)"""
+        """Build goals for trial period (D0-D7) — domain-aware via KB features"""
         goals = []
+        primary_feature = self.feature_names[0] if self.feature_names else 'core_feature'
+        secondary_feature = self.feature_names[1] if len(self.feature_names) > 1 else primary_feature
         
         # D0: Activation
         goals.append({
@@ -61,8 +71,8 @@ class GoalBuilder:
             'lifecycle_stage': 'trial',
             'lifecycle_day': 'D0',
             'primary_goal': 'activation',
-            'sub_goals': 'onboarding_complete,first_exercise',
-            'success_metric': 'exercises_completed >= 1',
+            'sub_goals': f'onboarding_complete,first_{primary_feature}_usage',
+            'success_metric': 'primary_action_completed >= 1',
             'priority': 'critical'
         })
         
@@ -74,14 +84,14 @@ class GoalBuilder:
                 'lifecycle_stage': 'trial',
                 'lifecycle_day': f'D{day}',
                 'primary_goal': 'habit_formation',
-                'sub_goals': 'daily_exercise,streak_building',
-                'success_metric': f'streak_current >= {day+1}',
+                'sub_goals': f'daily_{primary_feature}_usage,streak_building',
+                'success_metric': f'engagement_streak >= {day+1}',
                 'priority': 'high'
             })
         
-        # D3-D5: Feature Discovery
+        # D3-D5: Feature Discovery — pick feature based on segment profile
         for day in [3, 4, 5]:
-            feature = 'ai_tutor' if segment['avg_gamification_propensity'] < 0.5 else 'coins_rewards'
+            feature = secondary_feature if segment.get('avg_gamification_propensity', 0.5) < 0.5 else primary_feature
             goals.append({
                 'segment_id': seg_id,
                 'segment_name': seg_name,
@@ -109,45 +119,63 @@ class GoalBuilder:
         return goals
     
     def _build_paid_goals(self, seg_id: int, seg_name: str, segment: pd.Series) -> List[Dict]:
-        """Build goals for paid period (D8-D30)"""
+        """Build goals for paid period (D8-D30) — day-on-day progression"""
         goals = []
-        
-        # D8-D14: Retention
-        goals.append({
-            'segment_id': seg_id,
-            'segment_name': seg_name,
-            'lifecycle_stage': 'paid',
-            'lifecycle_day': 'D8-D14',
-            'primary_goal': 'retention',
-            'sub_goals': 'continued_engagement,habit_maintenance',
-            'success_metric': 'exercises_completed >= 1',
-            'priority': 'critical'
-        })
-        
-        # D15-D21: Expansion
-        goals.append({
-            'segment_id': seg_id,
-            'segment_name': seg_name,
-            'lifecycle_stage': 'paid',
-            'lifecycle_day': 'D15-D21',
-            'primary_goal': 'expansion',
-            'sub_goals': 'feature_exploration,advanced_usage',
-            'success_metric': 'features_used >= 2',
-            'priority': 'medium'
-        })
-        
-        # D22-D30: Advocacy
-        goals.append({
-            'segment_id': seg_id,
-            'segment_name': seg_name,
-            'lifecycle_stage': 'paid',
-            'lifecycle_day': 'D22-D30',
-            'primary_goal': 'advocacy',
-            'sub_goals': 'high_engagement,potential_referral',
-            'success_metric': 'sessions_last_7d >= 7',
-            'priority': 'low'
-        })
-        
+        primary_feature = self.feature_names[0] if self.feature_names else 'core_feature'
+        secondary_feature = self.feature_names[1] if len(self.feature_names) > 1 else primary_feature
+
+        # D8-D10: Early Retention — solidify post-conversion habit
+        for day in [8, 9, 10]:
+            goals.append({
+                'segment_id': seg_id,
+                'segment_name': seg_name,
+                'lifecycle_stage': 'paid',
+                'lifecycle_day': f'D{day}',
+                'primary_goal': 'retention',
+                'sub_goals': f'continued_{primary_feature}_engagement,habit_maintenance',
+                'success_metric': f'engagement_streak >= {day - 7}',
+                'priority': 'critical'
+            })
+
+        # D11-D14: Deepening — explore more features
+        for day in [11, 12, 13, 14]:
+            goals.append({
+                'segment_id': seg_id,
+                'segment_name': seg_name,
+                'lifecycle_stage': 'paid',
+                'lifecycle_day': f'D{day}',
+                'primary_goal': 'deepening',
+                'sub_goals': f'{secondary_feature}_usage,feature_exploration',
+                'success_metric': 'features_used >= 2',
+                'priority': 'high'
+            })
+
+        # D15-D21: Expansion — advanced usage and social hooks
+        for day in range(15, 22):
+            goals.append({
+                'segment_id': seg_id,
+                'segment_name': seg_name,
+                'lifecycle_stage': 'paid',
+                'lifecycle_day': f'D{day}',
+                'primary_goal': 'expansion',
+                'sub_goals': 'advanced_usage,social_sharing',
+                'success_metric': 'weekly_active_days >= 5',
+                'priority': 'medium'
+            })
+
+        # D22-D30: Advocacy — turn power users into promoters
+        for day in range(22, 31):
+            goals.append({
+                'segment_id': seg_id,
+                'segment_name': seg_name,
+                'lifecycle_stage': 'paid',
+                'lifecycle_day': f'D{day}',
+                'primary_goal': 'advocacy',
+                'sub_goals': 'high_engagement,referral_potential',
+                'success_metric': 'sessions_last_7d >= 7',
+                'priority': 'low'
+            })
+
         return goals
     
     def _build_churned_goals(self, seg_id: int, seg_name: str, segment: pd.Series) -> List[Dict]:
@@ -172,7 +200,7 @@ class GoalBuilder:
             'lifecycle_day': 'any',
             'primary_goal': 'activation',
             'sub_goals': 'first_engagement,value_discovery',
-            'success_metric': 'exercises_completed >= 1',
+            'success_metric': 'primary_action_completed >= 1',
             'priority': 'medium'
         }]
     

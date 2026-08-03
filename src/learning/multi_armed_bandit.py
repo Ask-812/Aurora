@@ -1,4 +1,4 @@
-﻿"""
+﻿﻿"""
 Multi-Armed Bandit Learning Engine
 - Thompson Sampling for template selection
 - Contextual Bandits for personalization
@@ -47,7 +47,7 @@ class MultiArmedBanditEngine:
         Args:
             templates: DataFrame with template information
         """
-        print("\n🎰 Initializing Multi-Armed Bandit System...")
+        print("\n[MAB] Initializing Multi-Armed Bandit System...")
         
         for template_id in templates['template_id'].unique():
             # Start with uniform prior: Beta(1, 1)
@@ -70,7 +70,7 @@ class MultiArmedBanditEngine:
         Args:
             experiment_results: Results with CTR and engagement data
         """
-        print("\n🔄 Updating Bandit State from Experiments...")
+        print("\n[MAB] Updating Bandit State from Experiments...")
         
         updates_count = 0
         
@@ -355,5 +355,5 @@ class MultiArmedBanditEngine:
         with open(f"{output_dir}/bandit_state.json", 'w') as f:
             json.dump(state, f, indent=2)
         
-        print(f"\n✅ Saved bandit state: {output_dir}/bandit_state.json")
+        print(f"\n[OK] Saved bandit state: {output_dir}/bandit_state.json")
 

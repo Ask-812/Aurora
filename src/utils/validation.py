@@ -118,40 +118,39 @@ class DataValidator:
         }
     
     @staticmethod
-    def clean_user_data(df: pd.DataFrame) -> pd.DataFrame:
-        """Clean and handle missing data in user DataFrame"""
+    def clean_user_data(df: pd.DataFrame, schema_map: Dict[str, Any] = None) -> pd.DataFrame:
+        """Clean and handle missing data in user DataFrame using dynamic schema if available"""
         df = df.copy()
         
-        # Handle missing numeric values with median
-        numeric_cols = ['sessions_last_7d', 'exercises_completed_7d', 'streak_current', 
-                       'coins_balance', 'notif_open_rate_30d', 'motivation_score']
+        # Determine cols to clean
+        if schema_map:
+            numeric_cols = (
+                (schema_map.get('activeness_metrics') or []) +
+                (schema_map.get('value_metrics') or []) +
+                (schema_map.get('retention_metrics') or [])
+            )
+        else:
+            numeric_cols = ['sessions_last_7d', 'exercises_completed_7d', 'streak_current', 
+                           'coins_balance', 'notif_open_rate_30d', 'motivation_score']
         
         for col in numeric_cols:
             if col in df.columns and df[col].isna().any():
                 median_val = df[col].median()
                 df[col].fillna(median_val, inplace=True)
         
-        # Handle missing boolean values with False (conservative)
-        bool_cols = ['feature_ai_tutor_used', 'feature_leaderboard_viewed']
+        # Handle features (booleans)
+        if schema_map:
+            bool_cols = schema_map.get('feature_flags') or []
+        else:
+            bool_cols = [c for c in df.columns if c.startswith('feature_')]
+            
         for col in bool_cols:
             if col in df.columns and df[col].isna().any():
                 df[col].fillna(False, inplace=True)
         
-        # Handle missing categorical with mode
+        # Categorical defaults
         if 'lifecycle_stage' in df.columns and df['lifecycle_stage'].isna().any():
-            mode_val = df['lifecycle_stage'].mode()[0]
-            df['lifecycle_stage'].fillna(mode_val, inplace=True)
-        
-        # Handle missing preferred_hour with 19 (evening, common time)
-        if 'preferred_hour' in df.columns and df['preferred_hour'].isna().any():
-            df['preferred_hour'].fillna(19, inplace=True)
-        
-        # Cap outliers
-        if 'sessions_last_7d' in df.columns:
-            df.loc[df['sessions_last_7d'] > 50, 'sessions_last_7d'] = 50
-        
-        if 'exercises_completed_7d' in df.columns:
-            df.loc[df['exercises_completed_7d'] > 100, 'exercises_completed_7d'] = 100
+            df['lifecycle_stage'].fillna('trial', inplace=True)
         
         return df
 

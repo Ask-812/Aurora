@@ -1,0 +1,11 @@
+﻿user_id,customer_segment,orders_30d,avg_order_val,searches_weekly,gold_status,last_order_days_ago,churn_risk_label
+U001,Regular,12,450.5,15,1,2,Active
+U002,New,1,120.0,3,0,15,At Risk
+U003,Whale,45,1200.0,60,1,1,Champion
+U004,Inactive,0,0,1,0,45,Churned
+U005,Regular,8,300.0,10,0,5,Active
+U006,Regular,15,550.0,20,1,3,Active
+U007,New,2,150.0,5,0,10,Trial
+U008,Whale,38,950.0,50,1,2,Champion
+U009,Inactive,1,50.0,2,0,30,Churned
+U010,Regular,10,400.0,12,0,4,Active

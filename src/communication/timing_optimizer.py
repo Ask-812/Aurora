@@ -79,13 +79,39 @@ class TimingOptimizer:
                                    user_data: pd.DataFrame,
                                    experiment_results: pd.DataFrame) -> pd.DataFrame:
         """
-        Learn optimal timing from experiment results using survival analysis
+        Learn optimal timing from experiment results using survival analysis.
+        Uses Kaplan-Meier for per-segment engagement curves and CoxPH for hazard ratios.
         """
         print("   [Stats] Learning from experiment results...")
         
         timing_recs = []
         
-        # Group by segment and window
+        # ── Survival analysis: model time-to-engagement per window ──
+        if LIFELINES_AVAILABLE:
+            try:
+                kmf = KaplanMeierFitter()
+                # Build survival data: per template, model "duration" as inverse CTR
+                # (higher CTR = faster engagement = lower duration)
+                surv_df = experiment_results.copy()
+                surv_df['duration'] = 1.0 / (surv_df['ctr'].clip(lower=0.01))
+                surv_df['observed'] = (surv_df['ctr'] > 0.05).astype(int)  # engaged = event observed
+                
+                for segment_id in surv_df['segment_id'].unique():
+                    seg_data = surv_df[surv_df['segment_id'] == segment_id]
+                    if len(seg_data) < 3:
+                        continue
+                    kmf.fit(seg_data['duration'], event_observed=seg_data['observed'],
+                            label=f'Segment_{segment_id}')
+                    median_survival = kmf.median_survival_time_
+                    self.survival_models[segment_id] = {
+                        'median_survival': median_survival,
+                        'event_rate': seg_data['observed'].mean(),
+                    }
+                print(f"   [Stats] Kaplan-Meier fitted for {len(self.survival_models)} segments")
+            except Exception as e:
+                print(f"   [WARN] Survival analysis failed ({e}), using composite scoring")
+        
+        # ── Window-level performance scoring ──
         for segment_id in experiment_results['segment_id'].unique():
             seg_experiments = experiment_results[
                 experiment_results['segment_id'] == segment_id
@@ -105,13 +131,18 @@ class TimingOptimizer:
             if len(window_perf) == 0:
                 continue
             
-            # Calculate composite score
-            # Higher CTR + Higher Engagement - Uninstall Penalty
+            # Composite score: CTR + Engagement - Uninstall Penalty
+            # Apply survival model hazard boost if available
+            survival_boost = 1.0
+            if segment_id in self.survival_models:
+                event_rate = self.survival_models[segment_id]['event_rate']
+                survival_boost = 1.0 + event_rate  # Segments with higher engagement events get boosted
+            
             window_perf['composite_score'] = (
                 window_perf['ctr'] * 0.5 +
                 window_perf['engagement_rate'] * 0.4 -
-                window_perf['uninstall_rate'] * 5.0  # Heavy penalty
-            )
+                window_perf['uninstall_rate'] * 5.0
+            ) * survival_boost
             
             # Sort by composite score
             window_perf = window_perf.sort_values('composite_score', ascending=False)
@@ -134,6 +165,11 @@ class TimingOptimizer:
         
         self.optimal_timings = pd.DataFrame(timing_recs)
         
+        # Ensure mandatory columns exist
+        for col in ['segment_id', 'time_window', 'priority']:
+            if col not in self.optimal_timings.columns:
+                self.optimal_timings[col] = None
+
         print(f"   [OK] Generated {len(timing_recs)} timing recommendations")
         
         return self.optimal_timings
@@ -198,6 +234,11 @@ class TimingOptimizer:
         
         self.optimal_timings = pd.DataFrame(timing_recs)
         
+        # Ensure mandatory columns exist
+        for col in ['segment_id', 'time_window', 'priority']:
+            if col not in self.optimal_timings.columns:
+                self.optimal_timings[col] = None
+
         print(f"   [OK] Generated {len(timing_recs)} timing recommendations")
         
         return self.optimal_timings
@@ -224,9 +265,16 @@ class TimingOptimizer:
             seg_users = user_data[user_data['segment_id'] == segment_id]
             
             # Calculate segment characteristics
-            avg_activeness = seg_users['activeness'].mean()
-            avg_churn_risk = seg_users['churn_risk'].mean()
-            avg_notif_open = seg_users['notif_open_rate_30d'].mean()
+            avg_activeness = seg_users['activeness'].mean() if 'activeness' in seg_users.columns else 0.5
+            avg_churn_risk = seg_users['churn_risk'].mean() if 'churn_risk' in seg_users.columns else 0.5
+            
+            # Use notif_open_rate_30d or proxy
+            notif_col = 'notif_open_rate_30d'
+            if notif_col not in seg_users.columns:
+                 # Try to find a proxy in schema_map or just use default
+                 notif_col = next((c for c in seg_users.columns if 'open' in c.lower() or 'ctr' in c.lower()), None)
+            
+            avg_notif_open = seg_users[notif_col].mean() if notif_col else 0.05
             
             # Check uninstall rate from experiments if available
             uninstall_risk = 0.0

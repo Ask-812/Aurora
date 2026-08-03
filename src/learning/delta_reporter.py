@@ -1,4 +1,4 @@
-﻿"""
+﻿﻿"""
 Delta Reporter - Documents learning improvements with causal reasoning
 """
 
@@ -45,7 +45,7 @@ class DeltaReporter:
         print(f"\n   [Stats] Summary Improvements:")
         for metric, value in summary.items():
             if 'improvement' in metric or 'reduction' in metric:
-                print(f"      • {metric}: {value:+.2%}" if isinstance(value, float) else f"      • {metric}: {value}")
+                print(f"      - {metric}: {value:+.2%}" if isinstance(value, float) else f"      - {metric}: {value}")
         
         return self.delta_report
     
@@ -111,12 +111,12 @@ class DeltaReporter:
         eng_delta = iteration1_stats.get('avg_engagement', 0) - iteration0_stats.get('avg_engagement', 0)
         uninstall_delta = iteration0_stats.get('avg_uninstall_rate', 0) - iteration1_stats.get('avg_uninstall_rate', 0)
         
-        print(f"   CTR: {iteration0_stats.get('avg_ctr', 0):.2%} → {iteration1_stats.get('avg_ctr', 0):.2%} ({ctr_delta:+.2%})")
-        print(f"   Engagement: {iteration0_stats.get('avg_engagement', 0):.2%} → {iteration1_stats.get('avg_engagement', 0):.2%} ({eng_delta:+.2%})")
-        print(f"   Uninstall Rate: {iteration0_stats.get('avg_uninstall_rate', 0):.2%} → {iteration1_stats.get('avg_uninstall_rate', 0):.2%} ({uninstall_delta:+.2%})")
+        print(f"   CTR: {iteration0_stats.get('avg_ctr', 0):.2%} -> {iteration1_stats.get('avg_ctr', 0):.2%} ({ctr_delta:+.2%})")
+        print(f"   Engagement: {iteration0_stats.get('avg_engagement', 0):.2%} -> {iteration1_stats.get('avg_engagement', 0):.2%} ({eng_delta:+.2%})")
+        print(f"   Uninstall Rate: {iteration0_stats.get('avg_uninstall_rate', 0):.2%} -> {iteration1_stats.get('avg_uninstall_rate', 0):.2%} ({uninstall_delta:+.2%})")
         
         template_delta = iteration1_stats.get('total_templates', 0) - iteration0_stats.get('total_templates', 0)
-        print(f"   Templates: {iteration0_stats.get('total_templates', 0)} → {iteration1_stats.get('total_templates', 0)} ({template_delta:+d})")
+        print(f"   Templates: {iteration0_stats.get('total_templates', 0)} -> {iteration1_stats.get('total_templates', 0)} ({template_delta:+d})")
         
         print("\n" + "=" * 80)
 

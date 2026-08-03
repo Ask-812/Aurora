@@ -1,4 +1,4 @@
-﻿"""
+﻿﻿"""
 Statistical Experimentation Framework
 - Bayesian A/B Testing
 - Sequential analysis with early stopping
@@ -222,7 +222,7 @@ class StatisticalTestingFramework:
         Returns:
             DataFrame with pairwise comparisons
         """
-        print("\n🔬 Multi-Variant Testing...")
+        print("\n[Test] Multi-Variant Testing...")
         
         n_variants = len(variants)
         n_comparisons = n_variants * (n_variants - 1) // 2
@@ -260,7 +260,7 @@ class StatisticalTestingFramework:
         df_results = pd.DataFrame(results)
         
         print(f"   [OK] Performed {n_comparisons} pairwise comparisons")
-        print(f"   [OK] Bonferroni-adjusted α: {adjusted_alpha:.4f}")
+        print(f"   [OK] Bonferroni-adjusted alpha: {adjusted_alpha:.4f}")
         
         return df_results
     

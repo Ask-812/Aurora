@@ -21,148 +21,133 @@ class MetricsCalculator:
     
     @staticmethod
     def calculate_activeness(df: pd.DataFrame) -> pd.Series:
-        """
-        Calculate activeness score (0-1)
-        
-        Formula: 0.3*sessions + 0.3*exercises + 0.2*notif_open + 0.2*has_streak
-        """
+        """Original edtech-specific activeness."""
         sessions_norm = MetricsCalculator.normalize(df['sessions_last_7d'])
         exercises_norm = MetricsCalculator.normalize(df['exercises_completed_7d'])
-        
         notif_open = df.get('notif_open_rate_30d', pd.Series([0.5] * len(df)))
         has_streak = (df.get('streak_current', pd.Series([0] * len(df))) > 0).astype(float)
         
-        activeness = (
-            0.3 * sessions_norm +
-            0.3 * exercises_norm +
-            0.2 * notif_open +
-            0.2 * has_streak
-        )
+        return 0.3 * sessions_norm + 0.3 * exercises_norm + 0.2 * notif_open + 0.2 * has_streak
+
+    @staticmethod
+    def calculate_activeness_dynamic(df: pd.DataFrame, schema_map: Dict[str, Any]) -> pd.Series:
+        """Calculate activeness using any number of identified activity columns."""
+        activity_cols = schema_map.get('activeness_metrics', []) or []
+        if not activity_cols:
+            return pd.Series([0.5] * len(df), index=df.index)
         
-        return activeness
+        scores = []
+        for col in activity_cols:
+            if col in df.columns:
+                scores.append(MetricsCalculator.normalize(df[col]))
+        
+        if not scores:
+            return pd.Series([0.5] * len(df), index=df.index)
+            
+        return pd.concat(scores, axis=1).mean(axis=1)
     
     @staticmethod
     def calculate_gamification_propensity(df: pd.DataFrame) -> pd.Series:
-        """
-        Calculate gamification propensity score (0-1)
-        
-        Formula: 0.4*streak + 0.3*coins + 0.3*avg_feature_usage
-        Uses any feature_*_used columns dynamically
-        """
+        """Original edtech gamification propensity."""
         streak_norm = MetricsCalculator.normalize(df.get('streak_current', pd.Series([0] * len(df))))
         coins_norm = MetricsCalculator.normalize(df.get('coins_balance', pd.Series([0] * len(df))))
-        
-        # Find all feature_*_used columns dynamically
         feature_cols = [c for c in df.columns if c.startswith('feature_') and c.endswith('_used')]
-        if feature_cols:
-            feature_usage = df[feature_cols].astype(float).mean(axis=1)
-        else:
-            feature_usage = pd.Series([0.0] * len(df), index=df.index)
+        feature_usage = df[feature_cols].astype(float).mean(axis=1) if feature_cols else 0.0
+        return 0.4 * streak_norm + 0.3 * coins_norm + 0.3 * feature_usage
+
+    @staticmethod
+    def calculate_gamification_propensity_dynamic(df: pd.DataFrame, schema_map: Dict[str, Any]) -> pd.Series:
+        """Propensity based on value and feature flags."""
+        val_cols = schema_map.get('value_metrics', []) or []
+        feat_cols = schema_map.get('feature_flags', []) or []
         
-        gamification = (
-            0.4 * streak_norm +
-            0.3 * coins_norm +
-            0.3 * feature_usage
-        )
+        scores = []
+        for col in list(val_cols or []) + list(feat_cols or []):
+            if col in df.columns:
+                scores.append(MetricsCalculator.normalize(df[col].astype(float)))
         
-        return gamification
+        if not scores:
+            return pd.Series([0.3] * len(df), index=df.index)
+        return pd.concat(scores, axis=1).mean(axis=1)
     
     @staticmethod
     def calculate_social_propensity(df: pd.DataFrame) -> pd.Series:
-        """
-        Calculate social propensity score (0-1)
-        
-        Formula: 0.5*social_features + 0.5*sessions
-        Detects leaderboard/social features dynamically
-        """
-        # Find social-related feature columns dynamically
+        """Original social propensity."""
         social_feature_cols = [c for c in df.columns if c.startswith('feature_') and 
                                any(kw in c.lower() for kw in ['leaderboard', 'social', 'share'])]
-        if social_feature_cols:
-            social_features = df[social_feature_cols].astype(float).mean(axis=1)
-        else:
-            social_features = pd.Series([0.0] * len(df), index=df.index)
-        
+        social_features = df[social_feature_cols].astype(float).mean(axis=1) if social_feature_cols else 0.0
         sessions_norm = MetricsCalculator.normalize(df['sessions_last_7d'])
+        return 0.5 * social_features + 0.5 * sessions_norm
+
+    @staticmethod
+    def calculate_social_propensity_dynamic(df: pd.DataFrame, schema_map: Dict[str, Any]) -> pd.Series:
+        """Map to features with social keywords in names or as defined in mapping."""
+        feat_cols = schema_map.get('feature_flags', []) or []
+        social_keywords = ['social', 'friend', 'share', 'leaderboard', 'group', 'community', 'gold']
+        social_cols = [c for c in feat_cols if any(kw in c.lower() for kw in social_keywords)]
         
-        social = (
-            0.5 * social_features +
-            0.5 * sessions_norm
-        )
-        
-        return social
+        if not social_cols:
+            return pd.Series([0.2] * len(df), index=df.index)
+            
+        return df[social_cols].astype(float).mean(axis=1)
     
     @staticmethod
-    def calculate_ai_tutor_propensity(df: pd.DataFrame) -> pd.Series:
-        """
-        Calculate AI tutor propensity score (0-1)
+    def calculate_ai_tutor_propensity_dynamic(df: pd.DataFrame, schema_map: Dict[str, Any]) -> pd.Series:
+        """Personalization/AI propensity."""
+        feat_cols = schema_map.get('feature_flags', []) or []
+        ai_keywords = ['ai', 'search', 'find', 'recommend', 'personal', 'tutor', 'gold']
+        ai_cols = [c for c in feat_cols if any(kw in c.lower() for kw in ai_keywords)]
         
-        Users with high AI tutor usage + high conversation engagement
-        Formula: 0.6*ai_tutor_features + 0.2*exercises + 0.2*activeness
-        """
-        # Find AI tutor related feature columns dynamically
-        ai_tutor_cols = [c for c in df.columns if c.startswith('feature_') and 
-                         any(kw in c.lower() for kw in ['ai_tutor', 'tutor', 'conversation', 'ai'])]
-        if ai_tutor_cols:
-            ai_tutor_features = df[ai_tutor_cols].astype(float).mean(axis=1)
-        else:
-            ai_tutor_features = pd.Series([0.0] * len(df), index=df.index)
+        if not ai_cols:
+            return pd.Series([0.2] * len(df), index=df.index)
+            
+        return df[ai_cols].astype(float).mean(axis=1)
+
+    @staticmethod
+    def calculate_leaderboard_propensity_dynamic(df: pd.DataFrame, schema_map: Dict[str, Any]) -> pd.Series:
+        """Competitiveness-based."""
+        ret_cols = schema_map.get('retention_metrics', []) or []
+        val_cols = schema_map.get('value_metrics', []) or []
         
-        exercises_norm = MetricsCalculator.normalize(df['exercises_completed_7d'])
-        activeness = MetricsCalculator.calculate_activeness(df)
+        scores = []
+        for col in list(ret_cols or []) + list(val_cols or []):
+            if col in df.columns:
+                scores.append(MetricsCalculator.normalize(df[col].astype(float)))
         
-        ai_tutor_propensity = (
-            0.6 * ai_tutor_features +
-            0.2 * exercises_norm +
-            0.2 * activeness
-        )
-        
-        return ai_tutor_propensity
+        if not scores:
+            return pd.Series([0.4] * len(df), index=df.index)
+        return pd.concat(scores, axis=1).mean(axis=1)
     
     @staticmethod
     def calculate_leaderboard_propensity(df: pd.DataFrame) -> pd.Series:
-        """
-        Calculate leaderboard propensity score (0-1)
-        
-        Users who are competitive and engage with leaderboards
-        Formula: 0.5*leaderboard_features + 0.3*streak + 0.2*gamification
-        """
-        # Find leaderboard related feature columns dynamically
+        """Original leaderboard propensity."""
         leaderboard_cols = [c for c in df.columns if c.startswith('feature_') and 
                             any(kw in c.lower() for kw in ['leaderboard', 'rank', 'compete', 'score'])]
-        if leaderboard_cols:
-            leaderboard_features = df[leaderboard_cols].astype(float).mean(axis=1)
-        else:
-            leaderboard_features = pd.Series([0.0] * len(df), index=df.index)
-        
+        leaderboard_features = df[leaderboard_cols].astype(float).mean(axis=1) if leaderboard_cols else 0.0
         streak_norm = MetricsCalculator.normalize(df.get('streak_current', pd.Series([0] * len(df))))
         gamification = MetricsCalculator.calculate_gamification_propensity(df)
-        
-        leaderboard_propensity = (
-            0.5 * leaderboard_features +
-            0.3 * streak_norm +
-            0.2 * gamification
-        )
-        
-        return leaderboard_propensity
+        return 0.5 * leaderboard_features + 0.3 * streak_norm + 0.2 * gamification
     
     @staticmethod
     def calculate_churn_risk(df: pd.DataFrame) -> pd.Series:
-        """
-        Calculate churn risk score (0-1, higher = more risk)
-        
-        Formula: 0.4*(1-sessions) + 0.3*(1-notif_open) + 0.3*no_streak
-        """
+        """Original churn risk."""
         sessions_norm = MetricsCalculator.normalize(df['sessions_last_7d'])
         notif_open = df.get('notif_open_rate_30d', pd.Series([0.5] * len(df)))
-        no_streak = (df.get('streak_current', pd.Series([0] * len(df))) == 0).astype(float)
-        
-        churn_risk = (
-            0.4 * (1 - sessions_norm) +
-            0.3 * (1 - notif_open) +
-            0.3 * no_streak
-        )
-        
+        no_streak = (df['streak_current'] == 0).astype(float) if 'streak_current' in df.columns else pd.Series([0.5] * len(df), index=df.index)
+        return 0.4 * (1 - sessions_norm) + 0.3 * (1 - notif_open) + 0.3 * no_streak
+
+    @staticmethod
+    def calculate_churn_risk_dynamic(df: pd.DataFrame, schema_map: Dict[str, Any]) -> pd.Series:
+        """Inversely related to activeness and retention."""
+        activeness = MetricsCalculator.calculate_activeness_dynamic(df, schema_map)
+        ret_cols = schema_map.get('retention_metrics', []) or []
+        if ret_cols:
+            retention = df[ret_cols].astype(float).mean(axis=1)
+            retention_norm = MetricsCalculator.normalize(retention)
+        else:
+            retention_norm = 0.5
+            
+        churn_risk = 0.6 * (1 - activeness) + 0.4 * (1 - retention_norm)
         return churn_risk
     
     @staticmethod

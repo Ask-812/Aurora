@@ -1,4 +1,4 @@
-# Project Aurora — Complete Solution Guide
+﻿# Project Aurora — Complete Solution Guide
 
 ## A Comprehensive Reference for Understanding Every Aspect of the System
 
@@ -23,9 +23,8 @@
    - 4.11 [Performance Classifier](#411-performance-classifier)
    - 4.12 [Multi-Armed Bandit Engine](#412-multi-armed-bandit-engine)
    - 4.13 [Statistical Testing Framework](#413-statistical-testing-framework)
-   - 4.14 [Learning Engine](#414-learning-engine)
-   - 4.15 [Delta Reporter](#415-delta-reporter)
-   - 4.16 [Utility Modules](#416-utility-modules-metrics--validation)
+   - 4.14 [Delta Reporter](#414-delta-reporter)
+   - 4.15 [Utility Modules](#415-utility-modules-metrics--validation)
 5. [Theories, Algorithms & Strategies Explained](#5-theories-algorithms--strategies-explained)
    - 5.1 [RFM Analysis](#51-rfm-analysis)
    - 5.2 [Hierarchical Clustering (Ward's Method)](#52-hierarchical-clustering-wards-method)
@@ -75,16 +74,18 @@ In 2025, user communication is the single most powerful growth lever in tech. Ye
 
 Aurora solves all four problems with ML, statistical testing, and behavioral psychology.
 
-### The SpeakX Context
+### The Domain-Agnostic Context
 
-SpeakX is an AI-powered English learning app targeting Tier 2/3 India (ages 20-45). Users practice speaking English through AI tutors, gamification (streaks, coins, leaderboards), and structured exercises. The goal is **daily habit formation** — users must come back every day to improve.
+While originally conceptualized for EdTech, Project Aurora is fully **domain-agnostic**. The core intelligence loop—Data Ingestion, Segmentation, Modeling, Theorem Mapping, and Optimization—is entirely independent of the product type. 
 
-Key business metrics:
-- **Trial → Monthly Conversion** (did the free trial user pay?)
-- **Monthly Retention** (did the paid user complete an exercise this month?)
-- **W1 Retention** (did the new paid user engage in their first week?)
+All domain-specific nuances (metrics, goals, tones, features) are derived dynamically via the **RAG-lite Knowledge Bank Engine**.
 
-Aurora is built for SpeakX but designed to be **domain-agnostic** — swap the Knowledge Bank and user data, and the same orchestrator works for fintech, healthtech, SaaS, etc.
+Key business metrics that the system adapts to automatically:
+- **Conversion** (did the free trial user pay / upgrade?)
+- **Engagement / Retention** (did the user perform the core action this month?)
+- **Early Activation** (did a new user engage in their first week?)
+
+Swap the `knowledge_bank.pdf` and the user data CSV, and the same orchestrator instantly reconfigures itself for fintech, healthtech, e-commerce, or SaaS.
 
 ---
 
@@ -113,7 +114,7 @@ Build the messaging layer:
 Build the feedback loop:
 1. **Schedule Generator** — Output user-wise notification schedules with gradual journey progression
 2. **Performance Classifier** — Classify templates as GOOD/NEUTRAL/BAD from experiment results
-3. **Learning Engine** — Suppress bad templates, promote good ones, learn better timing/themes/frequency
+3. **Intelligent Template Filtering** — Suppress bad templates, promote good ones, and learn better timing
 4. **Delta Reporter** — Document every change with causal reasoning
 
 ### The Two-Phase Demo
@@ -135,7 +136,7 @@ Build the feedback loop:
               │                                   │
     ┌─────────▼──────────┐              ┌─────────▼──────────┐
     │   ITERATION 0      │              │   ITERATION 1      │
-    │   (10 Steps)       │              │   (8 Steps)        │
+    │   (11 Steps)       │              │   (8 Steps)        │
     └────────────────────┘              └────────────────────┘
 
 ITERATION 0 PIPELINE:
@@ -161,13 +162,15 @@ Step 9: Schedule Generator
    ↓ (User-wise 7-day Notification Schedules)
 Step 10: Multi-Armed Bandit Initialization
    ↓ (Beta(1,1) priors for all templates)
+Step 11: Synthetic Experiment Results (for demo/testing)
+   ↓ (experiment_results_sample.csv — feeds iteration 1)
 
 ITERATION 1 PIPELINE:
 ═══════════════════════════════════════════════════════════════
 
 Step 1: Performance Classifier (GOOD/NEUTRAL/BAD)
    ↓
-Step 2: Bayesian Statistical Analysis
+Step 2: Bayesian + Frequentist Statistical Analysis
    ↓
 Step 3: Multi-Armed Bandit Learning (Thompson Sampling)
    ↓
@@ -205,12 +208,12 @@ Step 8: Generate Improved Schedule
 
 #### What It Does
 
-The Knowledge Bank Engine takes raw text (company documentation, product descriptions, PDFs) and automatically extracts three critical pieces of domain intelligence:
+The Knowledge Bank Engine takes unstructured company documentation (PDFs, text) and dynamically extracts critical domain intelligence via a **RAG-lite (Retrieval-Augmented Generation) pipeline**:
 
 1. **Company North Star** (`company_north_star.json`):
    - The single most important metric for the company
    - Definition, rationale, key drivers, and measurement formula
-   - Example: For SpeakX → "daily_active_engagement" (users completing exercises daily)
+   - Example: For an EdTech → "daily_active_engagement" (users completing exercises daily)
 
 2. **Feature-Goal Map** (`feature_goal_map.json`):
    - Maps every product feature to its business goals
@@ -223,25 +226,14 @@ The Knowledge Bank Engine takes raw text (company documentation, product descrip
 
 #### How It Works — Step by Step
 
-1. **Domain Detection**: Scans the input text for domain keywords (edtech, fintech, health, etc.) using frequency scoring. Whichever domain has the most keyword matches wins.
-
-2. **North Star Extraction**: Uses regex pattern matching to find explicit metric mentions (e.g., "north star metric is..."). Falls back to domain-specific defaults (edtech → "daily_active_engagement"). Extracts the definition, rationale, and key drivers.
-
-3. **Feature-Goal Map Extraction**: 
-   - First attempts to find explicit feature sections in the text
-   - Falls back to noun-phrase extraction to identify features
-   - Then infers goals from feature names using keyword matching (e.g., feature name contains "tutor" → goal is "engagement_deepening")
-   - Generates descriptions and secondary goals for each feature
-
-4. **Tone-Hook Matrix Generation**: 
-   - Reads allowed/forbidden tones from config
-   - Generates hook examples for each Octalysis core drive, customized to the detected domain
+1. **Document Ingestion**: Extracts raw text from `knowledge_bank.pdf` (using PyMuPDF) or a fallback text file.
+2. **Semantic Chunking**: Breaks the text into overlapping strategic chunks to preserve context.
+3. **LLM Extraction (Domain Modeling)**: Uses the Groq LLM API to process the text and generate a structured JSON representation of the domain logic (North Star Metric, key features, tones).
+4. **TF-IDF Fallback**: If no API key is present or network fails, gracefully falls back to a deterministic, regex+TF-IDF based approach to infer domains and map features.
 
 #### Why This Architecture?
 
-The KB engine uses a **multi-strategy extraction pattern**: try the explicit method first, then fall back progressively to heuristic-based, domain-inferred, and default strategies. This ensures the system always produces valid output regardless of input quality.
-
-The hardcoded defaults are intentional — in a real production system, these would be replaced by an LLM API call, but for this project, deterministic extraction ensures reproducibility (a non-negotiable PS requirement).
+The KB engine uses a **robust dual-strategy pattern**: It leverages modern LLM capabilities (RAG-lite) to genuinely understand the domain document, but relies on a deterministic fallback heuristic if external dependencies fail. This ensures maximum adaptability across domains (fintech, health, etc.) while fulfilling the requirement for a resilient, always-on engine.
 
 ---
 
@@ -294,18 +286,22 @@ If the Knowledge Bank identified features like "ai_tutor" or "leaderboard", the 
 We combine two techniques:
 
 **Step 1 — RFM Analysis** (adapted for engagement context):
-- **Recency**: How recently the user was active (proxied by `sessions_last_7d`)
-- **Frequency**: How often they engage (proxied by `exercises_completed_7d`)  
-- **Monetary**: How valuable their engagement is (proxied by `notif_open_rate_30d` × `motivation_score`)
+- **Recency**: How recently the user was active (dynamically resolved via schema mapping)
+- **Frequency**: How often they engage (dynamically resolved via schema mapping)  
+- **Monetary**: How valuable their engagement is (composite of engagement metrics)
+
+All RFM column mappings are resolved dynamically through the LLM schema mapper (with heuristic fallback), making this fully domain-agnostic.
 
 Each dimension is scored 1-5 using quantile binning, then combined into a composite RFM score. This creates a behavioral baseline.
 
 **Step 2 — Feature Engineering for Clustering**:
-The engine creates a rich feature matrix including:
+The engine dynamically creates a rich feature matrix using the schema_map to resolve column names:
 - Core behavioral: activeness, churn_risk
-- Propensity scores: gamification, social, AI tutor, leaderboard
+- Propensity scores: gamification, social, and other domain-relevant propensities
 - RFM components: rfm_score, rfm_segment encoding
-- Derived features: engagement_intensity, streak_consistency, feature_diversity
+- Derived features: engagement_intensity (dynamically resolved from activeness metrics), feature diversity
+
+No column names are hardcoded — all are resolved via `schema_map` from the Data Ingestion Engine.
 
 **Step 3 — Optimal K Selection**:
 Instead of guessing the number of segments, the engine tries K=6 through K=12 and picks the best using:
@@ -320,11 +316,14 @@ Uses **Agglomerative Clustering with Ward's linkage** instead of K-Means. Why?
 - Produces a dendrogram structure that's interpretable
 
 **Step 5 — Segment Naming**:
-Each segment gets a human-readable name based on its behavioral profile:
-- High activeness + high gamification → "Power Gamers"
-- Low activeness + high churn risk → "At-Risk Users"
-- High social propensity → "Social Learners"
-- etc.
+Each segment gets a human-readable `segment_name`. This is **generated dynamically**, so names vary by dataset and run:
+
+- **Primary (LLM)**: an LLM assigns domain-aware names from each cluster's behavioral profile. A recent sample run produced *Social Gamifiers*, *Engaged Socialites*, *Core Feature Fans*, *Passive Explorers*, *Casual Solo Users*, *Low Activity Risks*.
+- **Fallback (no LLM / circuit breaker open)**: a deterministic rule labels by profile — high activeness + gamification → "Power Users", consistent engagement → "Active Users", high social propensity → "Social Engagers", low activeness + high churn risk → "At-Risk Users", declining → "Needs Attention".
+
+Because names are data-dependent, the docs quote them only as examples — do not expect a fixed list.
+
+A separate `rfm_segment` column holds the classic RFM bucket derived from the composite RFM score (see §5.1).
 
 #### Output: `user_segments.csv`
 
@@ -334,26 +333,27 @@ Each user gets assigned a `segment_id` and `segment_name`, along with all their 
 
 ### 4.4 ML Propensity Models
 
-**File**: `src/intelligence/ml_propensity_models.py` (~247 lines)  
+**File**: `src/intelligence/ml_propensity_models.py` (~405 lines)  
 **Purpose**: Train gradient-boosted models for churn prediction and engagement forecasting
 
 #### Model 1: Churn Prediction (XGBoost Classifier)
 
 - **Algorithm**: XGBoost (eXtreme Gradient Boosting)
 - **Task**: Binary classification — will this user churn? (yes/no)
-- **Target**: Users with `churn_risk > 0.7` (from config) labeled as churned
-- **Features**: sessions, exercises, streak, coins, notif_open_rate, motivation_score, days_since_signup, activeness
-- **Evaluation**: AUC-ROC (for discrimination quality) + 5-fold cross-validation (for robustness)
-- **Hyperparameters**: max_depth=4, n_estimators=100, learning_rate=0.1, subsample=0.8
+- **Target**: Users whose `lifecycle_stage` is `'churned'` or `'inactive'` — a genuine behavioral signal. This avoids circular leakage (previous versions used a derived `churn_risk > threshold` which was computed from the same features, inflating AUC to artificial 1.0).
+- **Features**: Dynamically resolved via `schema_map` — activeness metrics, value metrics, and retention metrics from the dataset
+- **Evaluation**: AUC-ROC (for discrimination quality) + stratified cross-validation (up to 5 folds, capped at the minority-class count)
+- **AUC on sample data**: ≈0.5 (near chance — recent runs land around 0.43–0.48). The churn model shows essentially no usable signal on this small synthetic sample, so evaluation focuses on the engagement model and the learning loop. We fixed the earlier target leakage honestly; we do **not** claim predictive power the holdout doesn't support.
+- **Hyperparameters**: n_estimators=200, max_depth=5, learning_rate=0.05, subsample=0.8, colsample_bytree=0.8, min_child_weight=3, gamma=0.1, plus `scale_pos_weight` set automatically from the class ratio
 
 #### Model 2: Engagement Prediction (LightGBM Regressor)
 
 - **Algorithm**: LightGBM (Light Gradient Boosting Machine)
 - **Task**: Regression — predict the user's engagement level (0 to 1)
-- **Target**: `activeness` score
-- **Features**: Same as churn model
-- **Evaluation**: RMSE + R² + 5-fold cross-validation
-- **Hyperparameters**: num_leaves=31, learning_rate=0.05, n_estimators=200, early_stopping_rounds=10
+- **Target**: Primary activeness/value metric (dynamically resolved via `schema_map.value_metrics` or `schema_map.activeness_metrics`)
+- **Features**: Same dynamic feature set as churn model
+- **Evaluation**: RMSE + R² on a held-out split (R² ≈ 0.94 on the sample, likely a synthetic-data artifact — see README Limitations)
+- **Hyperparameters**: n_estimators=100, max_depth=4, learning_rate=0.1, num_leaves=31, early_stopping_rounds=10
 
 #### Why Two Different Frameworks?
 
@@ -377,10 +377,12 @@ For each segment, the Goal Builder creates a day-by-day progression:
 **Trial Stage (D0-D7):**
 | Day | Goal | Sub-Goals | Success Metric |
 |-----|------|-----------|---------------|
-| D0 | activation | onboarding_complete, first_exercise | exercises_completed >= 1 |
+| D0 | activation | onboarding_complete, first_core_action | core_metric >= 1 |
 | D1 | habit_formation | second_session, streak_start | streak_current >= 1 |
 | D3 | feature_discovery | explore_features | feature_usage >= 2 |
 | D7 | conversion_push | demonstrate_value | conversion_intent |
+
+Goal sub-goals and feature references are **derived from the Knowledge Bank** (`feature_goal_map.json`), not hardcoded. The builder injects KB-discovered product features into trial goals dynamically.
 
 **Paid Stage (D8-D30):**
 | Day | Goal | Purpose |
@@ -394,7 +396,7 @@ For each segment, the Goal Builder creates a day-by-day progression:
 - Churned → `re_engagement` goal (bring them back)
 - Inactive → `activation` goal (wake them up)
 
-The goals adapt based on segment characteristics — for example, if a segment has high `gamification_propensity > 0.6`, goals will reference gamification features like streaks and coins.
+The goals adapt based on segment characteristics — for example, if a segment has high `gamification_propensity > 0.6`, goals will reference the gamification features discovered by the KB Engine. All feature names come from `kb_data['feature_goal_map']`, making goals fully domain-generic.
 
 #### Output: `segment_goals.csv`
 
@@ -461,7 +463,7 @@ Each template has:
 |-------|-------------|---------|
 | `template_id` | Unique ID (TPL_0001 format) | TPL_0042 |
 | `segment_id` | Target segment | 3 |
-| `segment_name` | Human-readable segment | "Power Gamers" |
+| `segment_name` | Human-readable segment | "Power Users" |
 | `lifecycle_stage` | trial/paid/churned/inactive | trial |
 | `goal` | What this should achieve | activation |
 | `theme` | Octalysis core drive | accomplishment |
@@ -478,10 +480,11 @@ Each template has:
 
 #### Bilingual Strategy
 
-Templates are generated in **both English and Hinglish** (Hindi written in Roman script), in the **same row** — not separate rows. This is because:
-- SpeakX targets Tier 2/3 India where Hinglish is the primary digital language
-- The PS requires bilingual support
-- Same-row structure makes it easy for the schedule generator to pick either language
+Templates are generated in **both English and Hinglish** (Hindi written in Roman script) as the default secondary language. They are stored in the **same row** — not separate rows. This is because:
+- The system is configured by default for Indian markets where Hinglish is highly effective.
+- The PS requires bilingual support.
+- Same-row structure makes it easy for the schedule generator to pick the preferred language at send time.
+- The `secondary_language` can easily be changed via `config.yaml`.
 
 #### Personalization Tokens
 
@@ -710,8 +713,10 @@ This is much more rigorous than just looking at the raw CTR — a template with 
 
 ### 4.13 Statistical Testing Framework
 
-**File**: `src/learning/statistical_testing.py` (~277 lines)  
+**File**: `src/learning/statistical_testing.py` (~422 lines)  
 **Purpose**: Rigorous statistical validation of template performance differences
+
+> **What the iteration-1 pipeline actually runs**: `analyze_template_experiments()` and `generate_experiment_report()`, which exercise the **Bayesian A/B test**, the **frequentist two-proportion z-test**, **Cohen's h** effect size, and the **combined verdict**. The Sequential Testing and Multi-Variant (Bonferroni) methods below are implemented in this module and available, but are **not** called in the demo pipeline — don't present them as something the live run performs.
 
 #### Bayesian A/B Testing
 
@@ -763,55 +768,7 @@ When comparing more than 2 templates simultaneously, uses **Bonferroni correctio
 
 ---
 
-### 4.14 Learning Engine
-
-**File**: `src/learning/learning_engine.py` (~216 lines)  
-**Purpose**: Apply learnings from experiment results to improve all system outputs
-
-#### Four Learning Dimensions
-
-**1. Template Learning** (`_learn_templates`):
-- BAD templates → **suppressed** (filtered from active set)
-- GOOD templates → **promoted** (weight multiplied by 3×)
-- NEUTRAL templates → unchanged
-- Every suppression/promotion is logged with full causal reasoning
-
-**2. Timing Learning** (`_learn_timing`):
-- Computes composite score per (segment, time_window)
-- Suppresses windows with scores in the bottom quartile
-- Keeps top 2 windows per segment
-- Reports changes: "Removed 'early_morning' window for segment 3: composite score -0.05"
-
-**3. Theme Learning** (`_learn_themes`):
-- For each segment, finds the best-performing theme from experiment data
-- If that theme differs from the current primary theme AND has CTR > 12%, updates it
-- Example: "Changed primary theme for segment 2 from 'accomplishment' to 'social_influence' — experiment CTR 18.5%"
-
-**4. Frequency Learning** (`_learn_frequency`):
-- Groups experiment data by segment
-- If any segment has mean uninstall_rate > 2% → reduces frequency by 2/day
-- This is the same guardrail from the timing optimizer, but now applied based on actual experiment evidence
-
-#### Changes Log
-
-Every learning action is recorded in a `changes_log` list containing:
-```python
-{
-    'entity_type': 'template' | 'timing' | 'theme' | 'frequency',
-    'entity_id': <which specific entity changed>,
-    'change_type': 'suppression' | 'promotion' | 'optimization',
-    'metric_trigger': <the metric that caused the change>,
-    'before_value': <old state>,
-    'after_value': <new state>,
-    'explanation': <causal reasoning string>
-}
-```
-
-These are the exact 7 fields required by the PS for the Delta Reporter.
-
----
-
-### 4.15 Delta Reporter
+### 4.14 Delta Reporter
 
 **File**: `src/learning/delta_reporter.py` (~100 lines)  
 **Purpose**: Document all changes between Iteration 0 and Iteration 1
@@ -840,7 +797,7 @@ This is the **proof that learning happened** — evaluators will read this file 
 
 ---
 
-### 4.16 Utility Modules (Metrics & Validation)
+### 4.15 Utility Modules (Metrics & Validation)
 
 #### MetricsCalculator (`src/utils/metrics.py`, ~168 lines)
 
@@ -865,18 +822,25 @@ Handles schema validation, type coercion, outlier capping, and missing value imp
 - Frequency: How often do they purchase? (frequent = loyal)
 - Monetary: How much do they spend? (high spenders = valuable)
 
-**Our Adaptation (EdTech Engagement):**
-- Recency → `sessions_last_7d` (how recently active?)
-- Frequency → `exercises_completed_7d` (how often do they engage?)
-- Monetary → `notif_open_rate_30d × motivation_score` (how valuable is their engagement?)
+**Our Adaptation (Domain-Generic Engagement):**
+- Recency → dynamically resolved recency/activeness column (e.g., `sessions_last_7d`)
+- Frequency → dynamically resolved frequency/engagement column (e.g., `exercises_completed_7d`)
+- Monetary → composite of engagement value metrics (e.g., `notif_open_rate_30d × motivation_score`)
+
+All column mappings are resolved through the LLM schema mapper or heuristic fallback — no hardcoded column names.
 
 **Scoring**: Each dimension is scored 1-5 using **quantile binning** (pd.qcut). This maps any distribution to a uniform 1-5 scale. The composite score (average of R, F, M) gives a 1.0-5.0 engagement quality score.
 
-**RFM Segment Labels**: Based on composite score:
-- Score > 4.0 → "Champions" (best users)
-- Score > 3.0 → "Loyal" (solid users)
-- Score > 2.0 → "Potential" (could go either way)
-- Score ≤ 2.0 → "Lost" (at risk or already gone)
+**RFM Segment Labels** (`rfm_segment` column, from the composite score in `_rfm_segment_label`):
+- Score ≥ 4.5 → "Champions"
+- Score ≥ 4.0 → "Loyal"
+- Score ≥ 3.5 → "Potential Loyalist"
+- Score ≥ 3.0 → "Promising"
+- Score ≥ 2.5 → "Needs Attention"
+- Score ≥ 2.0 → "At Risk"
+- Score < 2.0 → "Lost"
+
+This is distinct from `segment_name` (the LLM/fallback cluster label, see §4.3) — `rfm_segment` is a fixed score bucket, `segment_name` is the behavioral cluster.
 
 ---
 
@@ -936,12 +900,13 @@ Since we need 6-12 segments, we need to decide the exact K. Three methods:
 3. Add the new tree's predictions (weighted by learning rate) to the ensemble
 4. Repeat for N trees
 
-**Key Features Used in Our Implementation**:
-- `max_depth=4`: Trees are shallow to prevent overfitting
-- `learning_rate=0.1`: Each tree contributes a small update
-- `n_estimators=100`: 100 sequential trees
-- `subsample=0.8`: Each tree sees 80% of data (reduces overfitting)
-- `scale_pos_weight`: Handles class imbalance (if churners are rare)
+**Key Features Used in Our Churn Implementation**:
+- `max_depth=5`: Shallow trees to limit overfitting
+- `learning_rate=0.05`: Each tree contributes a small update
+- `n_estimators=200`: More trees to compensate for the small learning rate
+- `subsample=0.8`, `colsample_bytree=0.8`: Each tree sees 80% of rows/columns (reduces overfitting)
+- `min_child_weight=3`, `gamma=0.1`: Extra regularization for the small sample
+- `scale_pos_weight`: Handles class imbalance (set automatically from the class ratio)
 
 **Why XGBoost for Churn?**
 - Handles tabular data extremely well (consistently wins Kaggle competitions)
@@ -959,10 +924,11 @@ Since we need 6-12 segments, we need to decide the exact K. Three methods:
 
 2. **Exclusive Feature Bundling (EFB)**: Bundles mutually exclusive features together, reducing dimensionality.
 
-**Our Implementation**:
+**Our Engagement Implementation**:
 - `num_leaves=31`: Controls tree complexity (leaf-based growth instead of depth-based)
-- `learning_rate=0.05`: Smaller steps for finer optimization
-- `n_estimators=200`: More trees to compensate for smaller learning rate
+- `max_depth=4`: Caps tree depth
+- `learning_rate=0.1`: Step size per tree
+- `n_estimators=100`: Number of boosting rounds
 - `early_stopping_rounds=10`: Stops training if validation loss doesn't improve for 10 rounds
 
 **Why LightGBM for Engagement?**
@@ -1207,7 +1173,7 @@ This is computationally elegant — no complex integrals needed. Just add observ
 - **Pocock**: Spends alpha equally across all checks. Easier to stop early but slightly less powerful.
   - Formula: α_k = α (constant at each check)
 
-**In Our System**: Sequential testing is used for ongoing experiments where we want to stop testing underperforming templates early without waiting for full sample size.
+**In Our System**: Sequential testing is *implemented* (`StatisticalTestingFramework.sequential_test`) and available for ongoing experiments where you'd want to stop testing underperforming templates early. Note: the iteration-1 demo pipeline runs single-shot Bayesian + frequentist analysis per template rather than interim sequential checks, so this path is not exercised by the sample run.
 
 ---
 
@@ -1272,7 +1238,7 @@ communication:
 ### Iteration 0 Data Flow
 
 ```
-Input: user_data_sample.csv (500 users) + pdf_content.txt (Knowledge Bank)
+Input: user_data_sample.csv (1000 users) + knowledge_bank.pdf (Knowledge Bank)
                               │
     ┌─────────────────────────┼───────────────────────────────┐
     │ KnowledgeBankEngine     │                               │
@@ -1292,7 +1258,7 @@ Input: user_data_sample.csv (500 users) + pdf_content.txt (Knowledge Bank)
     │ • Engineers 6 propensity scores                   │       │
     │ • Normalizes all scores to [0,1]                  │       │
     └──────┬──────────────────────────────────────────┘       │
-           │ Engineered user data (500 users × 20+ features)  │
+           │ Engineered user data (1000 users × 20+ features)  │
            ▼                                                   │
     ┌──────────────────────────────┐                           │
     │ SegmentationEngine           │                           │
@@ -1301,7 +1267,7 @@ Input: user_data_sample.csv (500 users) + pdf_content.txt (Knowledge Bank)
     │ • Hierarchical clustering    │                           │
     │ • Segment naming             │                           │
     └──────┬───────────────────────┘                           │
-           │ user_segments.csv (500 users × segment_id)        │
+           │ user_segments.csv (1000 users × segment_id)        │
            ▼                                                   │
     ┌──────────────────────────────┐                           │
     │ PropensityModelEngine        │                           │
@@ -1447,7 +1413,6 @@ Input: experiment_results_sample.csv + all Iteration 0 outputs
 
 | File | Purpose |
 |------|---------|
-| `communication_themes_improved.csv` | Themes after learning |
 | `message_templates_improved.csv` | Templates after suppression/promotion |
 | `timing_recommendations_improved.csv` | Timing after experiment-based optimization |
 | `frequency_recommendations.csv` | Base frequency recommendations |
@@ -1516,14 +1481,14 @@ Input: experiment_results_sample.csv + all Iteration 0 outputs
 - PS evaluators can easily verify our thresholds match requirements
 - Prevents magic numbers scattered across 17 files
 
-### 7. Why Not Use an LLM for Template Generation?
+### 7. LLM-First Template Generation with Fallback
 
-**Decision**: Rule-based template generation with predefined content patterns  
+**Decision**: LLM-first template generation (via Groq API) with deterministic regex fallback  
 **Why**:
-- PS requires "explainable & reproducible" — LLM outputs vary between runs
-- No API key dependency — system runs fully offline
-- "Hardcoded outputs" isn't a problem when the hardcoding is in the *generation rules*, not the outputs
-- A real production system would use an LLM, but for this evaluation, determinism > creativity
+- When an LLM API key is available, templates are generated with genuine language variation and domain awareness
+- All LLM calls go through `call_llm_with_retry` with circuit breaker protection (trips after 3 consecutive 429 errors) and exponential backoff
+- When rate-limited or keyless, the system gracefully falls back to a deterministic, rule-based template generator
+- This dual approach ensures both creativity (LLM) and reliability (fallback) — the pipeline never crashes regardless of API availability
 
 ---
 
@@ -1545,9 +1510,11 @@ Works fine. The segmentation engine enforces `min_segment_size: 0.05` (5%), so w
 ### Q: "What makes this 'domain-agnostic'?"
 
 Three things:
-1. **Knowledge Bank**: All domain-specific intelligence comes from the KB text. Change the text from "SpeakX English Learning" to "HealthTrack Fitness App" and the system auto-adapts
-2. **Config-driven**: Thresholds are in YAML, not code
-3. **Feature engineering**: The `DataIngestionEngine` dynamically finds `feature_*_used` columns — add new features to the CSV and they're automatically incorporated
+1. **RAG-lite Knowledge Bank**: All domain intelligence comes from parsing the actual `knowledge_bank.pdf` using an LLM pipeline (with circuit breaker + retry). Change the text from "EdTech" to "Fitness App" and the LLM detects the new features and automatically generates templates tailored to that domain.
+2. **Config-driven**: Thresholds and structure are in YAML, not code.
+3. **LLM Schema Mapping**: The `DataIngestionEngine` uses an LLM to dynamically map CSV column names to semantic roles (`user_id`, `lifecycle_stage`, `activeness_metrics`, `value_metrics`, `feature_flags`). Falls back to heuristic column matching when LLM is unavailable.
+4. **KB-Driven Goals & Features**: `GoalBuilder` reads feature names from `kb_data['feature_goal_map']`, not hardcoded strings. `Segmentation` resolves columns via `schema_map`. No module references EdTech-specific column names directly.
+5. **Behavioral Churn Target**: ML churn model uses `lifecycle_stage` (an actual behavioral label) instead of a derived `churn_risk` score — eliminating circular target leakage.
 
 ### Q: "How do we know the learning is real and not mock?"
 
@@ -1562,13 +1529,16 @@ The Delta Report proves it:
 
 They're safely ignored. The bandit engine only processes template IDs that match its internal state. Unknown template IDs are skipped during update.
 
-### Q: "Why do we need both LearningEngine and MultiArmedBanditEngine?"
+### Q: "Where does the learning logic actually live in iteration 1?"
 
-They serve different purposes:
-- **LearningEngine**: Applies broad, rule-based improvements (suppress BAD, promote GOOD, adjust timing/themes/frequency) — makes system-wide decisions
-- **MultiArmedBanditEngine**: Does fine-grained, probabilistic template ranking — optimizes which individual template to send next
+There is no separate `LearningEngine` in the pipeline — the learning is split across a few focused components that `main.py` runs in sequence:
 
-The `main.py` iteration1 pipeline uses both in sequence: the bandit identifies winners/losers, then the filtering logic applies those decisions.
+- **MultiArmedBanditEngine**: probabilistic template ranking (Thompson Sampling) and `identify_winners_losers()` — winners have a 95% CI lower bound above the good-CTR threshold, losers an upper bound below the bad-CTR threshold.
+- **Inline filtering (iteration-1 Step 6)**: applies those decisions — drops losers and sets `weight = 2.0` on winners.
+- **StatisticalTestingFramework / NLPTemplateOptimizer / TimingOptimizer**: provide the supporting analysis (significance, copy recommendations, re-optimized timing).
+- **DeltaReporter**: records every change with its causal explanation.
+
+(An older `src/learning/learning_engine.py` rule-based class was refactored out and removed; if you find references to it elsewhere, they are stale.)
 
 ### Q: "What's the difference between timing_recommendations.csv and timing_recommendations_improved.csv?"
 

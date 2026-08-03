@@ -1,9 +1,10 @@
 ﻿"""
 Project Aurora - ML-POWERED Orchestrator
-World-Class Self-Learning Notification System
+Domain-Generic Self-Learning Notification System
 
 This version integrates:
--  RFM + Hierarchical Segmentation
+- RAG-lite Knowledge Bank Engine (PDF -> LLM -> TF-IDF Cosine Ranking)
+- RFM + Hierarchical Segmentation
 - XGBoost/LightGBM Propensity Models
 - Multi-Armed Bandit Learning (Thompson Sampling)
 - Survival Analysis for Timing
@@ -11,19 +12,30 @@ This version integrates:
 - Bayesian Statistical Testing
 
 Usage:
-    python main.py --mode iteration0 --user-data data/sample/user_data_sample.csv
-    python main.py --mode iteration1 --user-data data/sample/user_data_sample.csv --experiment-results data/sample/experiment_results_sample.csv
+    python main.py --mode iteration0 --user-data user_data.csv --kb-pdf knowledge_bank.pdf
+    python main.py --mode iteration1 --user-data user_data.csv --experiment-results experiment_results.csv
 """
 
 import sys
 import os
+import json
 
-# Force UTF-8 encoding for Windows console
+# Force UTF-8 encoding for Windows console (line-buffered for live output)
 if sys.platform == 'win32':
-    import codecs
-    sys.stdout = codecs.getwriter('utf-8')(sys.stdout.buffer, 'strict')
-    sys.stderr = codecs.getwriter('utf-8')(sys.stderr.buffer, 'strict')
+    import io
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='strict', line_buffering=True)
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='strict', line_buffering=True)
     os.environ['PYTHONIOENCODING'] = 'utf-8'
+
+# Load .env file if present (for GROQ_API_KEY etc.)
+_env_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '.env')
+if os.path.exists(_env_path):
+    with open(_env_path, 'r') as _f:
+        for _line in _f:
+            _line = _line.strip()
+            if _line and not _line.startswith('#') and '=' in _line:
+                _key, _val = _line.split('=', 1)
+                os.environ.setdefault(_key.strip(), _val.strip().strip("'").strip('"'))
 
 import argparse
 from pathlib import Path
@@ -61,25 +73,28 @@ from src.learning.delta_reporter import DeltaReporter
 def display_banner():
     """Display system banner"""
     print("\n" + "=" * 80)
-    print("  PROJECT AURORA - ML-POWERED ORCHESTRATOR")
+    print("  PROJECT AURORA - DOMAIN-GENERIC ML-POWERED ORCHESTRATOR")
     print("=" * 80)
     print("  Features:")
-    print("  * RFM Analysis + Hierarchical Clustering")
+    print("  * RAG-lite Knowledge Bank (PDF -> LLM -> TF-IDF Cosine Ranking)")
+    print("  * RFM Analysis + Hierarchical Clustering (6-12 MECE segments)")
     print("  * XGBoost Churn Prediction + LightGBM Engagement Models")
     print("  * Multi-Armed Bandit (Thompson Sampling)")
     print("  * Survival Analysis for Timing Optimization")
     print("  * NLP-Powered Template Analysis")
-    print("  * Bayesian A/B Testing")
+    print("  * Bayesian + Frequentist A/B Testing")
+    print("  * Domain-Generic Template Generation (Bilingual EN+HI)")
     print("=" * 80 + "\n")
 
 
-def run_iteration_0(user_data_path: str, kb_text: str = None):
+def run_iteration_0(user_data_path: str, kb_text: str = None, kb_pdf: str = None):
     """
     Run Iteration 0 with ML models
     
     Args:
         user_data_path: Path to user data CSV
         kb_text: Knowledge bank text (optional)
+        kb_pdf: Path to knowledge bank PDF (optional, overrides kb_text)
     """
     display_banner()
     
@@ -95,17 +110,37 @@ def run_iteration_0(user_data_path: str, kb_text: str = None):
     print("=" * 80)
     
     kb_engine = KnowledgeBankEngine()
-    if kb_text is None:
-        # Read from file if available
-        pdf_path = Path("pdf_content.txt")
-        if pdf_path.exists():
-            with open(pdf_path, 'r', encoding='utf-8') as f:
-                kb_text = f.read()
-        else:
-            kb_text = "SpeakX English Learning Platform"
     
-    kb_data = kb_engine.process_knowledge_bank(kb_text)
+    # Determine KB source: PDF > text file > minimal fallback
+    kb_source = None
+    if kb_pdf and Path(kb_pdf).exists():
+        kb_source = kb_pdf  # Use PDF path directly — engine will handle it
+        print(f"   Using PDF knowledge bank: {kb_pdf}")
+    elif kb_text:
+        kb_source = kb_text
+    else:
+        # Try config-defined PDF path, then text file, then minimal fallback
+        config_pdf = kb_engine.config.get('knowledge_bank', {}).get('pdf_path', '')
+        if config_pdf and Path(config_pdf).exists():
+            kb_source = config_pdf
+            print(f"   Using PDF from config: {config_pdf}")
+        else:
+            # Try legacy text file
+            for text_path in ['pdf_content.txt', 'data/input/knowledge_bank.txt']:
+                if Path(text_path).exists():
+                    with open(text_path, 'r', encoding='utf-8') as f:
+                        kb_source = f.read()
+                    print(f"   Using text KB: {text_path}")
+                    break
+            if kb_source is None:
+                kb_source = "Company platform for user engagement and productivity"
+                print("   Using minimal fallback KB text")
+    
+    kb_data = kb_engine.process_knowledge_bank(kb_source)
     kb_engine.save_outputs(output_dir)
+    
+    # --- Rich KB Terminal Output ---
+    _display_kb_intelligence(kb_data)
     
     # Step 2: Data Ingestion
     print("\n" + "=" * 80)
@@ -114,6 +149,14 @@ def run_iteration_0(user_data_path: str, kb_text: str = None):
     
     ingestion_engine = DataIngestionEngine(knowledge_bank=kb_data)
     user_data = ingestion_engine.load_and_validate(user_data_path)
+    
+    # Display identified mapping if available
+    if ingestion_engine.schema_map:
+        print("\n[Brain] Identified Schema Mapping:")
+        for role, col in ingestion_engine.schema_map.items():
+            if col:
+                print(f"   - {role:20}: {col}")
+
     user_data = ingestion_engine.engineer_features(user_data)
     
     stats = ingestion_engine.get_summary_stats(user_data)
@@ -121,12 +164,22 @@ def run_iteration_0(user_data_path: str, kb_text: str = None):
           f"Avg Active: {stats['avg_activeness']:.2f} | "
           f"Avg Churn Risk: {stats['avg_churn_risk']:.2f}")
     
+    # Enrich KB features from data columns (feature_* columns + behavioral signals)
+    kb_engine.enrich_features_from_data(list(user_data.columns))
+    kb_data = {
+        'north_star': kb_engine.north_star,
+        'feature_goal_map': kb_engine.feature_goal_map,
+        'tone_hook_matrix': kb_engine.tone_hook_matrix,
+        'detected_domain': kb_engine.detected_domain
+    }
+    kb_engine.save_outputs(output_dir)
+    
     # Step 3: ML-POWERED Segmentation
     print("\n" + "=" * 80)
     print("STEP 3:  SEGMENTATION (RFM + Hierarchical)")
     print("=" * 80)
     
-    seg_engine = SegmentationEngine()
+    seg_engine = SegmentationEngine(kb_data=kb_data, schema_map=ingestion_engine.schema_map)
     user_data = seg_engine.create_segments(user_data)
     seg_engine.save_segments(user_data, output_dir)
     
@@ -135,7 +188,7 @@ def run_iteration_0(user_data_path: str, kb_text: str = None):
     print("STEP 4: TRAINING ML PROPENSITY MODELS")
     print("=" * 80)
     
-    ml_engine = PropensityModelEngine()
+    ml_engine = PropensityModelEngine(schema_map=ingestion_engine.schema_map)
     
     # Train churn model
     ml_engine.train_churn_model(user_data)
@@ -154,7 +207,7 @@ def run_iteration_0(user_data_path: str, kb_text: str = None):
     print("STEP 5: INTELLIGENT GOAL BUILDING")
     print("=" * 80)
     
-    goal_builder = GoalBuilder()
+    goal_builder = GoalBuilder(kb_data=kb_data)
     segment_goals = goal_builder.build_goals(seg_engine.segment_profiles)
     goal_builder.save_goals(output_dir)
     
@@ -163,7 +216,7 @@ def run_iteration_0(user_data_path: str, kb_text: str = None):
     print("STEP 6: BEHAVIORAL THEME MAPPING")
     print("=" * 80)
     
-    theme_engine = ThemeEngine(kb_data['tone_hook_matrix'])
+    theme_engine = ThemeEngine(kb_data['tone_hook_matrix'], kb_data=kb_data)
     themes = theme_engine.generate_themes(seg_engine.segment_profiles)
     theme_engine.save_themes(output_dir)
     
@@ -224,11 +277,79 @@ def run_iteration_0(user_data_path: str, kb_text: str = None):
     bandit_engine.initialize_bandits(templates)
     bandit_engine.save_bandit_state(output_dir)
     
+    # Step 11: Auto-generate experiment results for demo/testing
+    print("\n" + "=" * 80)
+    print("STEP 11: GENERATING SYNTHETIC EXPERIMENT RESULTS")
+    print("=" * 80)
+    
+    from src.utils.experiment_generator import generate_experiment_results
+    generate_experiment_results(output_dir=output_dir, sample_dir="data/sample")
+    
     print("\n" + "=" * 80)
     print("ITERATION 0 COMPLETE - ML MODELS TRAINED")
     print("=" * 80)
     print(f"\nOutputs saved to: {output_dir}/")
+    print(f"\nExperiment results generated: data/sample/experiment_results_sample.csv")
     print("\nNext: Run Iteration 1 with experiment results for learning")
+
+    # Export to PS submission folder structure
+    _export_iteration_0(output_dir)
+
+
+def _display_kb_intelligence(kb_data: dict):
+    """Display extracted KB intelligence in the terminal."""
+    print("\n   +" + "=" * 70 + "+")
+    print("   |  KNOWLEDGE BANK -- EXTRACTED INTELLIGENCE                          |")
+    print("   +" + "=" * 70 + "+")
+
+    # Domain
+    domain = kb_data.get('detected_domain', 'unknown')
+    print(f"   |  Domain: {domain.upper()}")
+
+    # North Star Metric
+    ns = kb_data.get('north_star', {})
+    nsm_name = ns.get('north_star_metric', 'N/A')
+    nsm_def = ns.get('definition', 'N/A')
+    nsm_evidence = ns.get('evidence', 'N/A')
+    print(f"   |")
+    print(f"   |  [NS] North Star Metric: {nsm_name}")
+    print(f"   |     Definition: {nsm_def[:100]}")
+    if nsm_evidence and nsm_evidence != 'N/A':
+        print(f"   |     Evidence: {nsm_evidence[:100]}")
+
+    # Feature-Goal Mappings
+    fgm = kb_data.get('feature_goal_map', {})
+    features = fgm.get('features', [])
+    print(f"   |")
+    print(f"   |  [FG] Feature -> Goal Mappings ({len(features)} features):")
+    for f in features[:6]:
+        fname = f.get('feature_name', 'N/A')
+        fgoal = f.get('primary_goal', 'N/A')
+        print(f"   |     - {fname} -> {fgoal[:80]}")
+    if len(features) > 6:
+        print(f"   |     ... and {len(features) - 6} more")
+
+    # Allowed Tones
+    thm = kb_data.get('tone_hook_matrix', {})
+    tones = thm.get('allowed_tones', [])
+    print(f"   |")
+    print(f"   |  [T] Allowed Tones: {', '.join(tones) if tones else 'N/A'}")
+
+    # Octalysis Hooks
+    hooks = thm.get('octalysis_hooks', {})
+    print(f"   |")
+    print(f"   |  [H] Behavioral Hooks (Octalysis):")
+    for drive, info in hooks.items():
+        if isinstance(info, dict) and 'hooks' in info:
+            hook_list = info['hooks']
+            if hook_list:
+                triggers = [h.get('trigger', '?') for h in hook_list[:2]]
+                print(f"   |     {drive}: {', '.join(triggers)}")
+        elif isinstance(info, str):
+            print(f"   |     {drive}: {info[:60]}")
+
+    print(f"   |")
+    print("   +" + "=" * 70 + "+")
 
 
 def run_iteration_1(user_data_path: str, experiment_results_path: str):
@@ -246,18 +367,41 @@ def run_iteration_1(user_data_path: str, experiment_results_path: str):
     
     output_dir = "data/output"
     
+    # Validate iter0 outputs exist
+    required_files = ['message_templates.csv', 'communication_themes.csv', 'user_segments.csv']
+    for rf in required_files:
+        if not Path(f"{output_dir}/{rf}").exists():
+            print(f"\n[ERROR] Missing iter0 output: {output_dir}/{rf}")
+            print("Run iteration0 first.")
+            sys.exit(1)
+
     # Load previous iteration outputs
     print("\nLoading Iteration 0 outputs...")
     templates = pd.read_csv(f"{output_dir}/message_templates.csv")
-    timing_recs = pd.read_csv(f"{output_dir}/timing_recommendations_improved.csv")
+    # Try improved timing first, fall back to base
+    timing_path = f"{output_dir}/timing_recommendations_improved.csv"
+    if not Path(timing_path).exists():
+        timing_path = f"{output_dir}/timing_recommendations.csv"
+    timing_recs = pd.read_csv(timing_path)
     themes = pd.read_csv(f"{output_dir}/communication_themes.csv")
     user_data = pd.read_csv(f"{output_dir}/user_segments.csv")
 
     # Load Knowledge Bank from saved outputs
     import json
-    with open(f"{output_dir}/feature_goal_map.json", 'r') as f:
-        feature_goal_map = json.load(f)
-    kb_data = {'feature_goal_map': feature_goal_map}
+    kb_data = {}
+    for kb_file, kb_key in [('feature_goal_map.json', 'feature_goal_map'),
+                             ('company_north_star.json', 'north_star'),
+                             ('allowed_tone_hook_matrix.json', 'tone_hook_matrix'),
+                             ('kb_metadata.json', '_meta')]:
+        kb_path = f"{output_dir}/{kb_file}"
+        try:
+            with open(kb_path, 'r') as f:
+                kb_data[kb_key] = json.load(f)
+        except FileNotFoundError:
+            kb_data[kb_key] = {}
+    # Flatten metadata
+    meta = kb_data.pop('_meta', {})
+    kb_data['detected_domain'] = meta.get('detected_domain', 'generic')
     
     # Load experiment results
     print(f"\nLoading experiment results from: {experiment_results_path}")
@@ -276,7 +420,7 @@ def run_iteration_1(user_data_path: str, experiment_results_path: str):
     
     # Step 2: Statistical Testing
     print("\n" + "=" * 80)
-    print("STEP 2: BAYESIAN STATISTICAL ANALYSIS")
+    print("STEP 2: BAYESIAN AND FREQUENTIST STATISTICAL ANALYSIS")
     print("=" * 80)
     
     stats_framework = StatisticalTestingFramework()
@@ -384,7 +528,8 @@ def run_iteration_1(user_data_path: str, experiment_results_path: str):
     # Log template suppressions
     for loser in winners_losers['losers']:
         perf = experiment_results[experiment_results['template_id'] == loser].iloc[0]
-        ci = bandit_engine.template_bandits.get(loser, {}).get('confidence_interval', 'N/A')
+        ci = bandit_engine.template_bandits.get(loser, {}).get('confidence_interval', (0, 0))
+        ci_str = f"({float(ci[0]):.3f}, {float(ci[1]):.3f})" if isinstance(ci, (tuple, list)) else str(ci)
         changes_log.append({
             'entity_type': 'template',
             'entity_id': loser,
@@ -392,7 +537,7 @@ def run_iteration_1(user_data_path: str, experiment_results_path: str):
             'metric_trigger': f"CTR={perf['ctr']:.3f}, Engagement={perf['engagement_rate']:.3f}",
             'before_value': 'active',
             'after_value': 'suppressed',
-            'explanation': f"Bandit analysis: Consistently underperformed (CTR < 5% or Engagement < 20%). Statistical confidence: {ci}"
+            'explanation': f"Bandit analysis: Consistently underperformed (CTR < 5% or Engagement < 20%). Statistical confidence: {ci_str}"
         })
     
     # Log template promotions
@@ -422,11 +567,29 @@ def run_iteration_1(user_data_path: str, experiment_results_path: str):
     
     # Generate and save delta report
     delta_reporter = DeltaReporter()
-    iter0_stats = {'total_templates': len(templates), 'avg_ctr': 0.0}
-    iter1_stats = classifier.get_summary_stats(experiment_results)
+    # Use raw experiment stats as iter0 baseline (not zeros)
+    iter0_stats = {
+        'total_templates': len(templates),
+        'avg_ctr': experiment_results['ctr'].mean(),
+        'avg_engagement': experiment_results['engagement_rate'].mean(),
+        'avg_uninstall_rate': experiment_results['uninstall_rate'].mean() if 'uninstall_rate' in experiment_results.columns else 0.0,
+        'good_count': len(experiment_results[experiment_results.get('performance_status', pd.Series()) == 'GOOD']) if 'performance_status' in experiment_results.columns else 0,
+        'bad_count': len(experiment_results[experiment_results.get('performance_status', pd.Series()) == 'BAD']) if 'performance_status' in experiment_results.columns else 0,
+    }
+    # iter1 stats: only surviving (non-suppressed) templates
+    surviving = experiment_results[~experiment_results['template_id'].isin(winners_losers['losers'])]
+    iter1_stats = {
+        'total_templates': len(templates_improved),
+        'avg_ctr': surviving['ctr'].mean() if not surviving.empty else 0.0,
+        'avg_engagement': surviving['engagement_rate'].mean() if not surviving.empty else 0.0,
+        'avg_uninstall_rate': surviving['uninstall_rate'].mean() if 'uninstall_rate' in surviving.columns and not surviving.empty else 0.0,
+        'good_count': len(surviving[surviving.get('performance_status', pd.Series()) == 'GOOD']) if 'performance_status' in surviving.columns else 0,
+        'bad_count': len(surviving[surviving.get('performance_status', pd.Series()) == 'BAD']) if 'performance_status' in surviving.columns else 0,
+    }
     
     delta_report = delta_reporter.generate_delta_report(changes_log, iter0_stats, iter1_stats)
     delta_reporter.save_delta_report(output_dir)
+    delta_reporter.print_detailed_summary(iter0_stats, iter1_stats)
     
     # Step 8: Generate Improved Schedule
     print("\n" + "=" * 80)
@@ -473,6 +636,54 @@ def run_iteration_1(user_data_path: str, experiment_results_path: str):
     print(f"\nImproved outputs saved to: {output_dir}/")
     print("\nSystem is now optimized for maximum engagement!")
 
+    # Export to PS submission folder structure
+    _export_iteration_1(output_dir, experiment_results_path)
+
+
+def _export_iteration_0(output_dir: str):
+    """Copy iter0 outputs to PS-required folder structure."""
+    import shutil
+    dest = "iteration_0_before_learning"
+    os.makedirs(dest, exist_ok=True)
+    files = [
+        "company_north_star.json", "feature_goal_map.json",
+        "allowed_tone_hook_matrix.json", "user_segments.csv",
+        "segment_goals.csv", "communication_themes.csv",
+        "message_templates.csv", "timing_recommendations.csv",
+        "user_notification_schedule.csv"
+    ]
+    for f in files:
+        src = os.path.join(output_dir, f)
+        if os.path.exists(src):
+            shutil.copy2(src, os.path.join(dest, f))
+    print(f"\n[Export] Iteration 0 files -> {dest}/")
+
+
+def _export_iteration_1(output_dir: str, experiment_results_path: str):
+    """Copy iter1 outputs to PS-required folder structure."""
+    import shutil
+    dest = "iteration_1_after_learning"
+    os.makedirs(dest, exist_ok=True)
+    mapping = {
+        "user_segments.csv": "user_segments.csv",
+        "message_templates_improved.csv": "message_templates.csv",
+        "timing_recommendations_improved.csv": "timing_recommendations.csv",
+        "user_notification_schedule_improved.csv": "user_notification_schedule.csv",
+    }
+    for src_name, dest_name in mapping.items():
+        src = os.path.join(output_dir, src_name)
+        if os.path.exists(src):
+            shutil.copy2(src, os.path.join(dest, dest_name))
+    # Copy experiment_results and learning_delta_report to root
+    if os.path.exists(experiment_results_path):
+        shutil.copy2(experiment_results_path, "experiment_results.csv")
+    delta_src = os.path.join(output_dir, "learning_delta_report.csv")
+    if os.path.exists(delta_src):
+        shutil.copy2(delta_src, "learning_delta_report.csv")
+    print(f"\n[Export] Iteration 1 files -> {dest}/")
+    print(f"[Export] experiment_results.csv -> ./")
+    print(f"[Export] learning_delta_report.csv -> ./")
+
 
 def main():
     parser = argparse.ArgumentParser(
@@ -500,6 +711,12 @@ def main():
         help='Path to experiment results CSV (required for iteration1)'
     )
     
+    parser.add_argument(
+        '--kb-pdf',
+        type=str,
+        help='Path to knowledge bank PDF file (optional, enables RAG-lite)'
+    )
+    
     args = parser.parse_args()
     
     # Validate arguments
@@ -509,7 +726,7 @@ def main():
     # Run appropriate mode
     try:
         if args.mode == 'iteration0':
-            run_iteration_0(args.user_data)
+            run_iteration_0(args.user_data, kb_pdf=args.kb_pdf)
         else:
             run_iteration_1(args.user_data, args.experiment_results)
             

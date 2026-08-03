@@ -17,6 +17,7 @@ class ScheduleGenerator:
         with open(config_path, 'r') as f:
             self.config = yaml.safe_load(f)
         
+        random.seed(self.config.get('segmentation', {}).get('random_state', 42))
         self.schedules = None
     
     def generate_schedules(self, user_data: pd.DataFrame, segments: pd.DataFrame = None,
@@ -37,7 +38,7 @@ class ScheduleGenerator:
         Returns:
             pd.DataFrame: User notification schedules
         """
-        print(f"\n📅 Generating notification schedules for {min(max_users, len(user_data))} users...")
+        print(f"\n[Schedule] Generating notification schedules for {min(max_users, len(user_data))} users...")
         
         # Check if segment info already in user_data
         if 'segment_id' not in user_data.columns and segments is not None:
@@ -57,7 +58,12 @@ class ScheduleGenerator:
             
             # Generate schedule for next 7 days
             for day in range(7):
-                lifecycle_day = f"D{user.get('days_since_signup', 0) + day}"
+                user_signup_days = user.get('days_since_signup')
+                if user_signup_days is None:
+                     # Heuristic: look for other date-related columns or just use 0
+                     user_signup_days = 0
+                
+                lifecycle_day = f"D{int(user_signup_days) + day}"
                 
                 # Get goal for this day
                 goal = self._get_goal_for_day(user, day, segment_goals)
@@ -79,9 +85,10 @@ class ScheduleGenerator:
                 if available_templates.empty:
                     continue
                 
-                # Select templates based on frequency
-                num_notifs = min(frequency, len(available_templates))
-                selected = available_templates.sample(n=num_notifs, replace=False)
+                # Select templates based on frequency (up to 9 per PS)
+                num_notifs = min(frequency, 9)
+                need_replace = num_notifs > len(available_templates)
+                selected = available_templates.sample(n=num_notifs, replace=need_replace)
                 
                 # Get timing windows
                 timing = timing_recs[timing_recs['segment_id'] == user['segment_id']]
@@ -90,10 +97,13 @@ class ScheduleGenerator:
                 schedule_row = {
                     'user_id': user['user_id'],
                     'segment_id': user['segment_id'],
-                    'segment_name': user['segment_name'],
+                    'segment_name': user.get('segment_name', f"Segment {user['segment_id']}"),
                     'lifecycle_stage': user['lifecycle_stage'],
                     'lifecycle_day': lifecycle_day,
-                    'day_offset': day
+                    'day_offset': day,
+                    'goal': goal,
+                    'journey_stage': self._get_journey_stage(user['lifecycle_stage'], day),
+                    'daily_frequency': frequency
                 }
                 
                 # Add notifications
@@ -117,7 +127,7 @@ class ScheduleGenerator:
         self.schedules = pd.DataFrame(schedules)
         
         print(f"   [OK] Generated {len(schedules)} schedule entries")
-        print(f"   [OK] Covering {df['user_id'].nunique()} users × 7 days")
+        print(f"   [OK] Covering {df['user_id'].nunique()} users x 7 days")
         
         return self.schedules
     
@@ -192,6 +202,31 @@ class ScheduleGenerator:
         minute = random.choice([0, 15, 30, 45])
         
         return f"{hour:02d}:{minute:02d}"
+
+    def _get_journey_stage(self, lifecycle: str, day: int) -> str:
+        """Map lifecycle + day to a numbered journey stage."""
+        if lifecycle == 'trial':
+            stages = [
+                (0, '1_activation'),
+                (2, '2_habit_formation'),
+                (5, '3_feature_discovery'),
+                (7, '4_conversion_readiness'),
+            ]
+        elif lifecycle == 'paid':
+            stages = [
+                (0, '5_early_retention'),
+                (7, '6_deep_engagement'),
+                (14, '7_loyalty_building'),
+                (21, '8_advocacy'),
+            ]
+        elif lifecycle == 'churned':
+            stages = [(0, '9_win_back'), (3, '10_re_activation')]
+        else:  # inactive
+            stages = [(0, '11_gentle_nudge'), (3, '12_last_chance')]
+        for threshold, name in reversed(stages):
+            if day >= threshold:
+                return name
+        return stages[0][1]
     
     def save_schedules(self, output_dir: str):
         """Save schedules to CSV"""

@@ -1,4 +1,4 @@
-# Project Aurora Configuration
+﻿# Project Aurora Configuration
 
 # Segmentation Settings
 segmentation:
@@ -60,6 +60,16 @@ communication:
     paid: [celebratory, friendly, aspirational, motivational]
     churned: [friendly, urgent, aspirational, curious]
     inactive: [curious, friendly, inviting]
+
+# Knowledge Bank / RAG-lite Settings
+knowledge_bank:
+  mode: "auto"               # auto | rag | regex
+  pdf_path: "data/input/knowledge_bank.pdf"
+  llm_provider: "groq"
+  llm_model: "llama-3.3-70b-versatile"
+  rag_top_chunks: 8
+  rag_vocab_size: 25
+  secondary_language: "hi"   # Language code for second language column
 
 # Paths
 paths:

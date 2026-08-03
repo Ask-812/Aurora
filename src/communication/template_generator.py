@@ -1,422 +1,342 @@
 ﻿"""
-Template Generator - Creates personalized, bilingual message templates
+Template Generator — LLM-Powered Bilingual Message Templates
 
-Per PS requirement: Each template row has BOTH languages in separate columns:
-- message_title_en, message_title_hi
-- message_body_en, message_body_hi  
-- cta_text_en, cta_text_hi
+Generates exactly 5 templates per Segment × Lifecycle × Goal × Theme
+using LLM calls for domain-customized bilingual content.
 
-Hindi columns use Hinglish (natural for SpeakX's Tier 2/3 India audience).
+Each template row has BOTH languages in separate columns:
+  - message_title_en, message_title_hi
+  - message_body_en, message_body_hi
+  - cta_text_en, cta_text_hi
+
+Hindi columns use Hinglish (default secondary language).
 """
 
 import pandas as pd
+import json
 from pathlib import Path
 from typing import Dict, List, Tuple
 import random
 
+import sys
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+from src.llm_utils import call_llm_with_retry, parse_json_response
+
 
 class TemplateGenerator:
-    """Generates personalized message templates with bilingual content"""
-    
+    """Generates personalized message templates with LLM-powered bilingual content."""
+
     def __init__(self, knowledge_bank: Dict, themes: pd.DataFrame):
         self.kb = knowledge_bank
         self.themes = themes
         self.templates = None
-    
+
+        # Extract domain and features
+        self.domain = knowledge_bank.get('detected_domain', 'generic')
+        self.feature_names = self._extract_feature_names()
+        self.north_star = knowledge_bank.get('north_star', {})
+        self.allowed_tones = knowledge_bank.get('tone_hook_matrix', {}).get('allowed_tones', [])
+        self.hooks = knowledge_bank.get('tone_hook_matrix', {}).get('octalysis_hooks', {})
+
+    def _extract_feature_names(self) -> List[str]:
+        """Extract feature names from the knowledge bank."""
+        features = []
+        fgm = self.kb.get('feature_goal_map', {})
+        for f in fgm.get('features', []):
+            features.append(f.get('feature_name', 'Core Feature'))
+        if not features:
+            features = ['Core Feature']
+        return features
+
     def generate_templates(self, segment_goals: pd.DataFrame) -> pd.DataFrame:
+        """Generate exactly 5 message templates per segment × lifecycle × goal × theme.
+
+        Uses LLM for domain-customized bilingual content with fallback.
         """
-        Generate 5 message templates for each segment × lifecycle × goal × theme
-        
-        Each template row contains BOTH English and Hindi (Hinglish) in separate columns.
-        
-        Args:
-            segment_goals: DataFrame with segment goals
-            
-        Returns:
-            pd.DataFrame: Message templates with bilingual columns
-        """
-        print("\n[Edit]  Generating message templates...")
-        
+        print("\n[Edit] LLM-Powered Template Generation...")
+
         templates = []
         template_id = 1
-        
-        # Group by segment, lifecycle, goal
-        for (seg_id, lifecycle, goal), group in segment_goals.groupby(
-            ['segment_id', 'lifecycle_stage', 'primary_goal']
-        ):
+
+        # Group by segment + lifecycle + goal
+        groups = segment_goals.groupby(['segment_id', 'lifecycle_stage', 'primary_goal'])
+
+        total_groups = 0
+        llm_success = 0
+        fallback_used = 0
+
+        for (seg_id, lifecycle, goal), group in groups:
             seg_name = group['segment_name'].iloc[0]
-            
+
             # Get themes for this segment × lifecycle
             theme_row = self.themes[
                 (self.themes['segment_id'] == seg_id) &
                 (self.themes['lifecycle_stage'] == lifecycle)
             ]
-            
+
             if theme_row.empty:
                 continue
-            
+
             primary_theme = theme_row['primary_theme'].iloc[0]
-            secondary_theme = None
-            if 'secondary_theme' in theme_row.columns:
-                secondary_theme = theme_row['secondary_theme'].iloc[0]
+            secondary_theme = theme_row['secondary_theme'].iloc[0] if 'secondary_theme' in theme_row.columns else None
 
             theme_values = [primary_theme]
             if pd.notna(secondary_theme) and secondary_theme != primary_theme:
                 theme_values.append(secondary_theme)
 
-            # Generate 5 variants per theme
             for theme in theme_values:
-                for variant in range(5):
-                    # Generate bilingual content (title, body, CTA)
-                    title_en, title_hi = self._generate_title(theme, variant)
-                    body_en, body_hi = self._generate_body(seg_name, lifecycle, goal, theme, variant)
-                    cta_en, cta_hi = self._generate_cta(goal, theme, variant)
-                    
-                    # Determine tone
-                    tone = self._select_tone(lifecycle, theme)
-                    
-                    # Determine feature reference
-                    feature = self._select_feature(goal, theme)
-                    
-                    # Single row with both languages
-                    templates.append({
-                        'template_id': f'TPL_{template_id:04d}',
-                        'segment_id': seg_id,
-                        'segment_name': seg_name,
-                        'lifecycle_stage': lifecycle,
-                        'goal': goal,
-                        'theme': theme,
-                        'variant': variant + 1,
-                        'message_title_en': title_en,
-                        'message_title_hi': title_hi,
-                        'message_body_en': body_en,
-                        'message_body_hi': body_hi,
-                        'cta_text_en': cta_en,
-                        'cta_text_hi': cta_hi,
-                        'tone': tone,
-                        'hook': theme,
-                        'feature_reference': feature
-                    })
-                    
-                    template_id += 1
-        
+                total_groups += 1
+
+                # Try LLM generation
+                llm_templates = self._generate_5_templates_llm(
+                    seg_name, lifecycle, goal, theme
+                )
+
+                if llm_templates and len(llm_templates) >= 5:
+                    llm_success += 1
+                    for i, t in enumerate(llm_templates[:5]):
+                        templates.append({
+                            'template_id': f'TPL_{template_id:04d}',
+                            'segment_id': seg_id,
+                            'segment_name': seg_name,
+                            'lifecycle_stage': lifecycle,
+                            'goal': goal,
+                            'theme': theme,
+                            'variant': i + 1,
+                            'message_title_en': t.get('title_en', ''),
+                            'message_title_hi': t.get('title_hi', ''),
+                            'message_body_en': t.get('body_en', ''),
+                            'message_body_hi': t.get('body_hi', ''),
+                            'cta_text_en': t.get('cta_en', ''),
+                            'cta_text_hi': t.get('cta_hi', ''),
+                            'tone': t.get('tone', 'friendly'),
+                            'hook': theme,
+                            'feature_reference': t.get('feature_reference', self.feature_names[0]),
+                        })
+                        template_id += 1
+                else:
+                    # Fallback: generate 5 simple templates
+                    fallback_used += 1
+                    for variant in range(5):
+                        title_en, title_hi = self._fallback_title(theme, variant)
+                        body_en, body_hi = self._fallback_body(seg_name, lifecycle, goal, theme, variant)
+                        cta_en, cta_hi = self._fallback_cta(theme, variant)
+
+                        templates.append({
+                            'template_id': f'TPL_{template_id:04d}',
+                            'segment_id': seg_id,
+                            'segment_name': seg_name,
+                            'lifecycle_stage': lifecycle,
+                            'goal': goal,
+                            'theme': theme,
+                            'variant': variant + 1,
+                            'message_title_en': title_en,
+                            'message_title_hi': title_hi,
+                            'message_body_en': body_en,
+                            'message_body_hi': body_hi,
+                            'cta_text_en': cta_en,
+                            'cta_text_hi': cta_hi,
+                            'tone': 'friendly',
+                            'hook': theme,
+                            'feature_reference': self.feature_names[variant % len(self.feature_names)],
+                        })
+                        template_id += 1
+
         self.templates = pd.DataFrame(templates)
-        
+
         print(f"   [OK] Generated {len(templates)} bilingual templates")
+        print(f"   [OK] LLM-generated: {llm_success}/{total_groups} groups | Fallback: {fallback_used}/{total_groups} groups")
         print(f"   [OK] Each template has English + Hinglish columns")
-        
+
+        # Display top templates
+        self._display_top_templates()
+
         return self.templates
-    
-    def _generate_title(self, theme: str, variant: int) -> Tuple[str, str]:
-        """Generate notification title in English and Hinglish"""
-        
+
+    def _generate_5_templates_llm(self, seg_name: str, lifecycle: str,
+                                   goal: str, theme: str) -> List[Dict]:
+        """Generate exactly 5 bilingual templates via LLM."""
+
+        features_str = ", ".join(self.feature_names[:5])
+        tones_str = ", ".join(self.allowed_tones[:5]) if self.allowed_tones else "friendly, encouraging"
+        nsm = self.north_star.get('north_star_metric', 'engagement')
+
+        system_prompt = (
+            f"You are an Elite Behavioral Copywriter and Cultural Linguist for a {self.domain} product. "
+            f"The company's North Star Metric is '{nsm}'.\n\n"
+            f"THE PERSONIFICATION FRAMEWORK (User-Centric Thinking):\n"
+            f"Before writing, inhabit the Target User:\n"
+            f"1. Embody the State: Feel the user's situation ({lifecycle} lifecycle in {self.domain}).\n"
+            f"2. Identify the Friction: What is the between-the-lines pain point?\n"
+            f"3. Filter the Jargon: 100% RULE: Never use words like Octalysis, Retention, Drive, or Metric.\n\n"
+            f"INVISIBLE PSYCHOLOGY (Between-the-Lines Encoding):\n"
+            f"Encode the '{theme}' drive into grammar and tone:\n"
+            f"- Loss Avoidance: Tense, urgent. Encode the pain of losing progress.\n"
+            f"- Social Influence: Peer-pulse language. Encode community warmth.\n"
+            f"- Accomplishment: Celebratory. Encode pride of mastery.\n"
+            f"- Epic Meaning: High-vision. Encode purpose.\n\n"
+            f"LINGUISTIC PRECISION:\n"
+            f"- English: Premium, benefit-first.\n"
+            f"- Hinglish: Natural Urban-Hindi (Roman script). Avoid robot-translations.\n\n"
+            f"Allowed tones: {tones_str}. "
+            f"Keep titles under 50 chars, bodies under 150 chars, CTAs under 25 chars. "
+            f"Reference real product features."
+        )
+
+        user_prompt = (
+            f"Segment: {seg_name}\n"
+            f"Lifecycle: {lifecycle}\n"
+            f"Goal: {goal}\n"
+            f"Octalysis Drive: {theme}\n"
+            f"Product features: {features_str}\n\n"
+            f"Generate exactly 5 notification templates as a JSON array:\n"
+            f"[{{\n"
+            f'  "title_en": "...", "title_hi": "...",\n'
+            f'  "body_en": "...", "body_hi": "...",\n'
+            f'  "cta_en": "...", "cta_hi": "...",\n'
+            f'  "tone": "...", "feature_reference": "..."\n'
+            f"}}]\n\n"
+            f"Return ONLY the JSON array with exactly 5 items."
+        )
+
+        raw = call_llm_with_retry(system_prompt, user_prompt)
+        parsed = parse_json_response(raw) if raw else None
+
+        if parsed and isinstance(parsed, list) and len(parsed) >= 5:
+            return parsed[:5]
+        return None
+
+    # ------------------------------------------------------------------ #
+    #  Fallback templates (minimal, domain-aware)
+    # ------------------------------------------------------------------ #
+
+    def _fallback_title(self, theme: str, variant: int) -> Tuple[str, str]:
+        """Minimal fallback titles per Octalysis drive."""
         titles = {
             'accomplishment': [
-                ("🎯 Keep the momentum!", "🎯 Momentum banaye rakho!"),
-                ("🏆 You're doing great!", "🏆 Bahut badiya chal raha hai!"),
-                ("⭐ Keep up the progress!", "⭐ Progress jaari rakho!"),
-                ("🔥 You're on fire!", "🔥 Aag laga di tumne!"),
-                ("💪 Keep crushing it!", "💪 Aise hi karo!")
+                ("🎯 Keep going!", "🎯 Aage badho!"),
+                ("🏆 Great progress!", "🏆 Badiya progress!"),
+                ("⭐ You're on track!", "⭐ Sahi track pe ho!"),
+                ("🔥 Keep it up!", "🔥 Aise hi karo!"),
+                ("💪 Almost there!", "💪 Bas thoda aur!"),
             ],
             'loss_avoidance': [
-                ("⚠️ Don't lose your streak!", "⚠️ Apna streak mat todo!"),
-                ("🔔 Streak at risk!", "🔔 Streak khatrey mein hai!"),
-                ("⏰ Time is running out!", "⏰ Time khatam ho raha hai!"),
+                ("⚠️ Don't miss out!", "⚠️ Miss mat karo!"),
+                ("🔔 Time is running out!", "🔔 Time khatam ho raha!"),
+                ("⏰ Act before it's late!", "⏰ Der se pehle karo!"),
                 ("❗ Your progress is at risk!", "❗ Progress khatrey mein!"),
-                ("🚨 Act now!", "🚨 Abhi action lo!")
+                ("🚨 Last chance!", "🚨 Aakhri mauka!"),
             ],
             'social_influence': [
-                ("👥 See what others are doing!", "👥 Dekho baaki kya kar rahe!"),
-                ("🏅 Leaderboard update!", "🏅 Leaderboard update!"),
-                ("📊 You vs others", "📊 Tum vs Baaki log"),
-                ("🌟 Join top learners!", "🌟 Top learners mein shamil ho!"),
-                ("👋 Your friends are practicing!", "👋 Dost practice kar rahe!")
+                ("👥 See what's trending!", "👥 Dekho kya trend hai!"),
+                ("🏅 Compare with others!", "🏅 Auron se compare karo!"),
+                ("📊 You vs the community", "📊 Tum vs community"),
+                ("🌟 Join top users!", "🌟 Top users mein shamil ho!"),
+                ("👋 Others are active!", "👋 Baaki active hain!"),
             ],
             'unpredictability': [
-                ("🎁 Surprise waiting!", "🎁 Surprise wait kar raha!"),
-                ("✨ Something new for you!", "✨ Tumhare liye kuch naya!"),
-                ("🎲 Mystery reward!", "🎲 Mystery reward!"),
-                ("🔓 Unlock something special!", "🔓 Special cheez unlock karo!"),
-                ("🎉 Discover today's bonus!", "🎉 Aaj ka bonus dekho!")
+                ("🎁 Surprise for you!", "🎁 Tumhare liye surprise!"),
+                ("✨ Something new!", "✨ Kuch naya hai!"),
+                ("🎲 Discover today!", "🎲 Aaj discover karo!"),
+                ("🔓 Unlock something!", "🔓 Kuch unlock karo!"),
+                ("🎉 Check this out!", "🎉 Ye dekho!"),
             ],
             'empowerment': [
-                ("🎮 Your choice, your pace!", "🎮 Tumhari choice, tumhari speed!"),
+                ("🎮 Your choice!", "🎮 Tumhari choice!"),
                 ("⚡ Take control!", "⚡ Control lo!"),
-                ("🛠️ Customize your learning!", "🛠️ Apna learning customize karo!"),
-                ("🎯 Practice what you want!", "🎯 Jo chaaho practice karo!"),
-                ("💡 Learn your way!", "💡 Apne tarike se seekho!")
+                ("🛠️ Customize it!", "🛠️ Customize karo!"),
+                ("🎯 Your way!", "🎯 Apne tarike se!"),
+                ("💡 You decide!", "💡 Tum decide karo!"),
             ],
             'ownership': [
-                ("👑 Your achievements!", "👑 Tumhari achievements!"),
-                ("💎 Your coins are waiting!", "💎 Tumhare coins wait kar rahe!"),
-                ("🏠 Check your progress!", "🏠 Apna progress dekho!"),
-                ("📈 Your stats update!", "📈 Tumhare stats ka update!"),
-                ("🎖️ Your badges!", "🎖️ Tumhare badges!")
+                ("👑 Your rewards!", "👑 Tumhare rewards!"),
+                ("💎 Check your progress!", "💎 Progress dekho!"),
+                ("🏠 Your dashboard!", "🏠 Tumhara dashboard!"),
+                ("📈 Your stats!", "📈 Tumhare stats!"),
+                ("🎖️ You earned this!", "🎖️ Ye tumne kamaya!"),
             ],
             'epic_meaning': [
-                ("🚀 Join the movement!", "🚀 Movement mein shamil ho!"),
-                ("🌍 Be part of something big!", "🌍 Kuch bada karo!"),
-                ("💫 Transform your future!", "💫 Future transform karo!"),
-                ("🎓 Your journey to fluency!", "🎓 Fluency ka safar!"),
-                ("✨ Make a difference!", "✨ Fark daalo!")
+                ("🚀 Be part of it!", "🚀 Iska hissa bano!"),
+                ("🌍 Make an impact!", "🌍 Impact daalo!"),
+                ("💫 Transform today!", "💫 Aaj transform karo!"),
+                ("🎓 Your journey!", "🎓 Tumhara safar!"),
+                ("✨ Something bigger!", "✨ Kuch bada karo!"),
             ],
             'scarcity': [
-                ("⏳ Limited time!", "⏳ Limited time!"),
-                ("🔥 Offer ends soon!", "🔥 Offer jaldi khatam!"),
-                ("⚡ Last chance today!", "⚡ Aaj ka last chance!"),
-                ("🎯 Don't miss out!", "🎯 Miss mat karo!"),
-                ("⏰ Today only!", "⏰ Sirf aaj!")
-            ]
+                ("⏳ Limited time!", "⏳ Simit samay!"),
+                ("🔥 Ending soon!", "🔥 Jaldi khatam!"),
+                ("⚡ Today only!", "⚡ Sirf aaj!"),
+                ("🎯 Don't wait!", "🎯 Wait mat karo!"),
+                ("⏰ Hurry!", "⏰ Jaldi karo!"),
+            ],
         }
-        
-        theme_titles = titles.get(theme, titles['accomplishment'])
-        return theme_titles[variant % len(theme_titles)]
-    
-    def _generate_body(self, seg_name: str, lifecycle: str, goal: str, 
+        items = titles.get(theme, titles['accomplishment'])
+        return items[variant % len(items)]
+
+    def _fallback_body(self, seg_name: str, lifecycle: str, goal: str,
                        theme: str, variant: int) -> Tuple[str, str]:
-        """Generate notification body in English and Hinglish"""
-        
-        bodies = {
-            'accomplishment': [
-                ("You've completed {exercises_completed_7d} exercises this week. Just 3 more for your badge!",
-                 "Is hafte {exercises_completed_7d} exercises complete! Sirf 3 aur karo badge ke liye!"),
-                ("Day {streak_current} of your streak! Complete today's exercise to keep going.",
-                 "Streak ka din {streak_current}! Aaj ka exercise karo streak continue karne ke liye."),
-                ("{exercises_completed_7d} exercises done—you're making amazing progress!",
-                 "{exercises_completed_7d} exercises ho gaye—amazing progress ho raha hai!"),
-                ("You've earned {coins_balance} coins! Complete another exercise to earn more.",
-                 "Tumne {coins_balance} coins kamaye! Ek aur exercise karo aur coins badao."),
-                ("Your {streak_current}-day streak is impressive! Maintain it with today's practice.",
-                 "Tumhara {streak_current}-day streak amazing hai! Aaj practice karke maintain karo.")
-            ],
-            'loss_avoidance': [
-                ("Your streak will break in {hours_left} hours! Complete one exercise to save it.",
-                 "Tumhara streak {hours_left} ghante mein toot jayega! Ek exercise karo bachane ke liye."),
-                ("Don't lose your {streak_current}-day streak! A quick practice session will save it.",
-                 "Apna {streak_current}-day streak mat khoo! Ek chhoti practice se bach jayega."),
-                ("Your hard-earned progress is at risk. Complete today's exercise to protect it.",
-                 "Tumhari mehnat khatrey mein hai. Aaj ka exercise karo protect karne ke liye."),
-                ("Only {hours_left} hours left! Don't let your streak break.",
-                 "Sirf {hours_left} ghante bache! Streak tootne mat do."),
-                ("Your {coins_balance} coins will expire soon! Use them before it's too late.",
-                 "Tumhare {coins_balance} coins expire hone wale! Jaldi use karo.")
-            ],
-            'social_influence': [
-                ("{peer_name} from {location} just completed 5 exercises. Can you match that?",
-                 "{peer_name} {location} se 5 exercises kar chuke. Tum bhi kar sakte ho?"),
-                ("Join {active_users}+ users practicing right now!",
-                 "{active_users}+ users abhi practice kar rahe—tum bhi join karo!"),
-                ("{peer_name} completed {peer_exercises} exercises today. Beat their score!",
-                 "{peer_name} ne aaj {peer_exercises} exercises kiye. Unhe beat karo!"),
-                ("You're #{rank} on the leaderboard. One exercise could push you higher!",
-                 "Tum leaderboard par #{rank} ho. Ek exercise se aur upar jao!"),
-                ("{active_users} learners are online now—don't get left behind!",
-                 "{active_users} learners abhi online—peeche mat raho!")
-            ],
-            'unpredictability': [
-                ("A new speaking exercise has been unlocked just for you. Try it now!",
-                 "Ek naya speaking exercise sirf tumhare liye unlock hua. Abhi try karo!"),
-                ("The AI tutor has a surprise lesson today. See what's waiting!",
-                 "AI tutor ka aaj surprise lesson hai. Dekho kya wait kar raha!"),
-                ("Complete your next exercise to unlock a mystery reward!",
-                 "Next exercise complete karo aur mystery reward unlock karo!"),
-                ("Your speaking score might surprise you today. Find out!",
-                 "Tumhara speaking score aaj surprise kar sakta hai. Dekho!"),
-                ("New practice scenarios just added! Explore them now.",
-                 "Naye practice scenarios add hue! Abhi explore karo.")
-            ],
-            'empowerment': [
-                ("Choose your practice topic for today—we have 20+ options!",
-                 "Aaj ka topic tum choose karo—20+ options hai!"),
-                ("Practice at your own pace. No pressure, just progress.",
-                 "Apni speed se practice karo. Pressure nahi, sirf progress."),
-                ("Customize your learning path. Pick what interests you most!",
-                 "Apna learning path customize karo. Jo pasand ho wo choose karo!"),
-                ("You control your progress. Start when you're ready.",
-                 "Progress tumhare haath mein hai. Jab ready ho tab start karo."),
-                ("Pick any exercise that interests you—it's your choice!",
-                 "Koi bhi exercise choose karo—tumhari marzi!")
-            ],
-            'ownership': [
-                ("Your {coins_balance} coins are ready to use! See what you can unlock.",
-                 "Tumhare {coins_balance} coins ready hai! Dekho kya unlock kar sakte ho."),
-                ("You've built a {streak_current}-day streak! That's YOUR achievement.",
-                 "Tumne {streak_current}-day streak banaya! Ye TUMHARI achievement hai."),
-                ("Your progress dashboard has updates. Check out YOUR stats!",
-                 "Tumhare progress dashboard mein updates. APNE stats dekho!"),
-                ("You've earned {coins_balance} coins—use them to unlock premium content!",
-                 "Tumne {coins_balance} coins kamaye—premium content unlock karo!"),
-                ("Your learning journey has been impressive. Keep building YOUR story!",
-                 "Tumhara learning journey impressive raha. APNI kahani banao!")
-            ],
-            'epic_meaning': [
-                ("Join 1M+ Indians who are becoming confident English speakers!",
-                 "10 lakh+ Indians join karo jo confident English speakers ban rahe!"),
-                ("Be part of the English learning revolution in India!",
-                 "India ki English learning revolution ka hissa bano!"),
-                ("Transform your career with better communication skills. Start today!",
-                 "Apna career transform karo better communication se. Aaj start karo!"),
-                ("Join thousands who improved their English this month!",
-                 "Hazaron logon ke saath judo jinhone is mahine English improve ki!"),
-                ("Your journey to English fluency starts with one exercise today.",
-                 "English fluency ka safar aaj ek exercise se shuru karo.")
-            ],
-            'scarcity': [
-                ("Only 3 hours left to complete today's goal. Don't wait!",
-                 "Aaj ka goal complete karne ke liye sirf 3 ghante bache. Jaldi karo!"),
-                ("Limited time offer: Double coins on your next exercise!",
-                 "Limited time offer: Next exercise par double coins!"),
-                ("Today's special exercise expires in 2 hours. Try it now!",
-                 "Aaj ka special exercise 2 ghante mein expire. Abhi try karo!"),
-                ("Last chance to maintain your streak today. Act now!",
-                 "Aaj streak maintain karne ka last chance. Abhi action lo!"),
-                ("This practice opportunity expires at midnight. Don't miss it!",
-                 "Ye practice opportunity midnight ko expire. Miss mat karo!")
-            ]
-        }
-        
-        theme_bodies = bodies.get(theme, bodies['accomplishment'])
-        return theme_bodies[variant % len(theme_bodies)]
-    
-    def _generate_cta(self, goal: str, theme: str, variant: int) -> Tuple[str, str]:
-        """Generate CTA button text in English and Hinglish"""
-        
-        ctas = {
-            'accomplishment': [
-                ("Continue Learning", "Learning Continue Karo"),
-                ("Practice Now", "Abhi Practice Karo"),
-                ("Keep Going", "Aage Badho"),
-                ("Complete Exercise", "Exercise Complete Karo"),
-                ("Earn More Coins", "Aur Coins Kamao")
-            ],
-            'loss_avoidance': [
-                ("Save My Streak", "Mera Streak Bachao"),
-                ("Practice Now", "Abhi Practice Karo"),
-                ("Don't Lose It", "Kho Mat"),
-                ("Protect Progress", "Progress Protect Karo"),
-                ("Act Now", "Abhi Karo")
-            ],
-            'social_influence': [
-                ("Join Now", "Abhi Join Karo"),
-                ("Beat Them", "Unhe Harao"),
-                ("See Leaderboard", "Leaderboard Dekho"),
-                ("Compete Now", "Abhi Compete Karo"),
-                ("Climb Higher", "Upar Jao")
-            ],
-            'unpredictability': [
-                ("Discover Now", "Abhi Discover Karo"),
-                ("See Surprise", "Surprise Dekho"),
-                ("Unlock It", "Unlock Karo"),
-                ("Try It", "Try Karo"),
-                ("Find Out", "Pata Karo")
-            ],
-            'empowerment': [
-                ("Choose Topic", "Topic Choose Karo"),
-                ("Start My Way", "Apne Tarike Se Start"),
-                ("Customize", "Customize Karo"),
-                ("Pick Exercise", "Exercise Choose Karo"),
-                ("My Choice", "Meri Choice")
-            ],
-            'ownership': [
-                ("View My Stats", "Mere Stats Dekho"),
-                ("Use My Coins", "Mere Coins Use Karo"),
-                ("See Progress", "Progress Dekho"),
-                ("My Dashboard", "Mera Dashboard"),
-                ("Check Rewards", "Rewards Check Karo")
-            ],
-            'epic_meaning': [
-                ("Join Movement", "Movement Join Karo"),
-                ("Start Journey", "Safar Shuru Karo"),
-                ("Transform Now", "Abhi Transform Karo"),
-                ("Be Part Of It", "Iska Hissa Bano"),
-                ("Begin Today", "Aaj Shuru Karo")
-            ],
-            'scarcity': [
-                ("Grab Now", "Abhi Pakdo"),
-                ("Don't Wait", "Wait Mat Karo"),
-                ("Hurry Up", "Jaldi Karo"),
-                ("Claim Offer", "Offer Claim Karo"),
-                ("Last Chance", "Last Chance")
-            ]
-        }
-        
-        theme_ctas = ctas.get(theme, ctas['accomplishment'])
-        return theme_ctas[variant % len(theme_ctas)]
-    
-    def _generate_content(self, seg_name: str, lifecycle: str, goal: str, 
-                         theme: str, variant: int) -> str:
-        """Generate template content based on parameters (legacy support)"""
-        _, body_en = self._generate_body(seg_name, lifecycle, goal, theme, variant)
-        return body_en
-    
-    def _select_tone(self, lifecycle: str, theme: str) -> str:
-        """Select appropriate tone"""
-        tone_map = {
-            'trial': {
-                'accomplishment': 'encouraging',
-                'loss_avoidance': 'urgent',
-                'social_influence': 'motivational',
-                'unpredictability': 'inviting',
-                'empowerment': 'supportive',
-                'ownership': 'celebratory',
-                'epic_meaning': 'aspirational',
-                'scarcity': 'urgent'
-            },
-            'paid': {
-                'accomplishment': 'celebratory',
-                'loss_avoidance': 'friendly',
-                'social_influence': 'motivational',
-                'unpredictability': 'inviting',
-                'empowerment': 'supportive',
-                'ownership': 'celebratory',
-                'epic_meaning': 'aspirational',
-                'scarcity': 'friendly'
-            },
-            'churned': {
-                'accomplishment': 'encouraging',
-                'loss_avoidance': 'urgent',
-                'social_influence': 'motivational',
-                'unpredictability': 'curious',
-                'empowerment': 'supportive',
-                'ownership': 'friendly',
-                'epic_meaning': 'aspirational',
-                'scarcity': 'urgent'
-            },
-            'inactive': {
-                'accomplishment': 'encouraging',
-                'loss_avoidance': 'friendly',
-                'social_influence': 'inviting',
-                'unpredictability': 'curious',
-                'empowerment': 'supportive',
-                'ownership': 'friendly',
-                'epic_meaning': 'aspirational',
-                'scarcity': 'friendly'
-            }
-        }
-        
-        return tone_map.get(lifecycle, {}).get(theme, 'friendly')
-    
-    def _select_feature(self, goal: str, theme: str) -> str:
-        """Select relevant feature reference"""
-        feature_map = {
-            'activation': 'exercises',
-            'habit_formation': 'streak',
-            'feature_discovery': 'ai_tutor',
-            'conversion_readiness': 'exercises',
-            'retention': 'exercises',
-            'expansion': 'leaderboard',
-            'advocacy': 'exercises',
-            're_engagement': 'exercises'
-        }
-        
-        return feature_map.get(goal, 'exercises')
-    
+        """Minimal fallback bodies."""
+        feature = self.feature_names[variant % len(self.feature_names)]
+        domain = self.domain
+
+        bodies = [
+            (f"Explore {feature} and take the next step in your {domain} journey!",
+             f"{feature} explore karo aur apne {domain} journey mein aage badho!"),
+            (f"Your {feature} experience is waiting. Check it out now!",
+             f"Tumhara {feature} experience wait kar raha. Abhi dekho!"),
+            (f"Make the most of {feature} today. You're doing great!",
+             f"Aaj {feature} ka best use karo. Bahut accha chal raha!"),
+            (f"Don't miss what's new in {feature}. Open and see!",
+             f"{feature} mein naya kya hai miss mat karo. Khol ke dekho!"),
+            (f"Your {domain} progress is impressive. Keep using {feature}!",
+             f"Tumhara {domain} progress impressive hai. {feature} use karte raho!"),
+        ]
+        return bodies[variant % len(bodies)]
+
+    def _fallback_cta(self, theme: str, variant: int) -> Tuple[str, str]:
+        """Minimal fallback CTAs."""
+        ctas = [
+            ("Open Now", "Abhi Kholo"),
+            ("Check It Out", "Dekho"),
+            ("Get Started", "Shuru Karo"),
+            ("Explore", "Explore Karo"),
+            ("Try Now", "Abhi Try Karo"),
+        ]
+        return ctas[variant % len(ctas)]
+
+    def _display_top_templates(self):
+        """Display top templates in terminal for verification."""
+        if self.templates is None or self.templates.empty:
+            return
+
+        print("\n   +" + "-" * 70 + "+")
+        print("   |  TOP GENERATED TEMPLATES (Sample)                                    |")
+        print("   +" + "-" * 70 + "+")
+
+        # Show one template per segment (first variant only)
+        shown = set()
+        count = 0
+        for _, t in self.templates.iterrows():
+            seg_key = t['segment_id']
+            if seg_key in shown or count >= 6:
+                continue
+            shown.add(seg_key)
+            count += 1
+
+            print(f"   |")
+            print(f"   |  [{t['template_id']}] Segment: {t['segment_name']} | {t['lifecycle_stage']} | {t['theme']}")
+            print(f"   |  EN: {t['message_title_en']}")
+            print(f"   |      {t['message_body_en'][:80]}...")
+            print(f"   |  HI: {t['message_title_hi']}")
+            print(f"   |      {t['message_body_hi'][:80]}...")
+            print(f"   |  CTA: {t['cta_text_en']} / {t['cta_text_hi']}")
+
+        print(f"   |")
+        print("   +" + "-" * 70 + "+")
+
     def save_templates(self, output_dir: str):
         """Save templates to CSV"""
         output_path = Path(output_dir)
         output_path.mkdir(parents=True, exist_ok=True)
-        
         self.templates.to_csv(output_path / 'message_templates.csv', index=False)
-        
         print(f"[OK] Templates saved to {output_dir}/message_templates.csv")
-

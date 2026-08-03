@@ -1,4 +1,4 @@
-﻿"""
+﻿﻿"""
 NLP-Based Template Optimization
 - TF-IDF and semantic similarity analysis
 - Sentiment scoring
@@ -98,7 +98,7 @@ class NLPTemplateOptimizer:
         Returns:
             DataFrame with NLP features and scores
         """
-        print("\n📝 NLP Template Analysis...")
+        print("\n[NLP] NLP Template Analysis...")
         
         templates = templates.copy()
         
@@ -271,7 +271,7 @@ class NLPTemplateOptimizer:
             ).flatten()
             
         except Exception as e:
-            print(f"   ⚠️  TF-IDF analysis failed: {e}")
+            print(f"   [WARN] TF-IDF analysis failed: {e}")
             templates['avg_tfidf_score'] = 0.0
         
         return templates
@@ -360,7 +360,7 @@ class NLPTemplateOptimizer:
         Returns:
             DataFrame with recommendations
         """
-        print("\n💡 Generating Optimization Recommendations...")
+        print("\n[Recommend] Generating Optimization Recommendations...")
         
         # Merge with performance
         merged = templates.merge(

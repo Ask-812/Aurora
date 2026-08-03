@@ -1,4 +1,4 @@
-﻿"""
+﻿﻿"""
 Performance Classifier - Classifies template performance
 """
 
@@ -51,9 +51,9 @@ class PerformanceClassifier:
         # Summary
         status_counts = df['performance_status'].value_counts()
         print(f"   [OK] Classified {len(df)} templates:")
-        print(f"      • GOOD: {status_counts.get('GOOD', 0)} ({status_counts.get('GOOD', 0)/len(df)*100:.1f}%)")
-        print(f"      • NEUTRAL: {status_counts.get('NEUTRAL', 0)} ({status_counts.get('NEUTRAL', 0)/len(df)*100:.1f}%)")
-        print(f"      • BAD: {status_counts.get('BAD', 0)} ({status_counts.get('BAD', 0)/len(df)*100:.1f}%)")
+        print(f"      - GOOD: {status_counts.get('GOOD', 0)} ({status_counts.get('GOOD', 0)/len(df)*100:.1f}%)")
+        print(f"      - NEUTRAL: {status_counts.get('NEUTRAL', 0)} ({status_counts.get('NEUTRAL', 0)/len(df)*100:.1f}%)")
+        print(f"      - BAD: {status_counts.get('BAD', 0)} ({status_counts.get('BAD', 0)/len(df)*100:.1f}%)")
         
         # Statistical significance
         sig_count = df['statistically_significant'].sum()

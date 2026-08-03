@@ -1,22 +1,22 @@
-﻿# Project Aurora - Self-Learning Notification Orchestrator
+﻿# Project Aurora — Self-Learning Notification Orchestrator
 
-**Advanced ML-Powered Communication System**  
-*SpeakX EdTech Case Study*
+**Domain-Generic ML-Powered Communication System**  
+*(Dynamically adaptable to any business domain via RAG-lite Knowledge Bank)*
 
 ---
 
-## Executive Summary
+## Overview
 
-Project Aurora is a **production-grade, self-learning notification orchestrator** that intelligently optimizes user communication through:
+Project Aurora is a **prototype self-learning notification orchestrator** built to intelligently optimize user communication through a two-iteration pipeline. It is designed to be domain-agnostic — swap the Knowledge Bank PDF and it adapts to any B2C product.
 
+Core capabilities:
+- **Domain Adaptability**: RAG-lite Knowledge Bank (PDF → LLM → TF-IDF) learns product context
 - **Machine Learning Models**: XGBoost churn prediction, LightGBM engagement forecasting
-- **Multi-Armed Bandit Learning**: Thompson Sampling for continuous template optimization  
+- **Multi-Armed Bandit Learning**: Thompson Sampling for continuous template optimization
 - **Advanced Segmentation**: RFM-based hierarchical clustering with automatic K selection
-- **Statistical Rigor**: Bayesian + Frequentist A/B testing with sequential analysis
-- **NLP Intelligence**: Sentiment analysis, TF-IDF vectorization, engagement scoring
-- **Survival Analysis**: Time-to-event modeling for optimal notification timing
-
-**Key Achievement**: A system that learns from every interaction and continuously improves engagement outcomes.
+- **Statistical Testing**: Bayesian + Frequentist A/B testing (Cohen's h effect size)
+- **NLP**: Sentiment analysis, TF-IDF vectorization, engagement scoring
+- **Survival Analysis**: Kaplan-Meier time-to-event modeling for timing optimization
 
 ---
 
@@ -25,21 +25,26 @@ Project Aurora is a **production-grade, self-learning notification orchestrator*
 ### Installation
 
 ```bash
-# Clone repository
-git clone <repository-url>
-cd Arora
-
-# Install dependencies
+git clone https://github.com/Aizen0003/Aurora_f.git
+cd Aurora_f
 pip install -r requirements.txt
 ```
 
-### Run System
+### Run the System
 
 ```bash
-# Iteration 0: Initial Training & Intelligence Generation
-python main.py --mode iteration0 --user-data data/sample/user_data_sample.csv
+# 1. Create a .env file with your Groq API key(s)
+#    Supports round-robin rotation — add multiple keys to avoid rate limits
+echo "GROQ_API_KEY_1=gsk_your_key_here" > .env
+echo "GROQ_API_KEY_2=gsk_second_key_here" >> .env  # optional
+echo "GROQ_API_KEY_3=gsk_third_key_here" >> .env   # optional
 
-# Iteration 1: Learning from Experiments & Optimization
+# 2. Iteration 0: Initial Training & Intelligence Generation (reads PDF)
+python main.py --mode iteration0 \
+  --user-data data/sample/user_data_sample.csv \
+  --kb-pdf data/input/knowledge_bank.pdf
+
+# 3. Iteration 1: Learning from Experiments & Optimization
 python main.py --mode iteration1 \
   --user-data data/sample/user_data_sample.csv \
   --experiment-results data/sample/experiment_results_sample.csv
@@ -47,39 +52,11 @@ python main.py --mode iteration1 \
 
 ---
 
-## System Performance
-
-### Machine Learning Models (Iteration 0)
-
-| Model | Metric | Score | Interpretation |
-|-------|--------|-------|----------------|
-| **Churn Prediction** | AUC | 1.0000 | Perfect classification on training data |
-| **Engagement Forecast** | R2 | 0.8673 | 87% variance explained |
-| **Segmentation** | Silhouette | 0.192 | 9 distinct, cohesive segments |
-
-### Learning Results (Iteration 1)
-
-| Metric | Value | Impact |
-|--------|-------|--------|
-| **Templates Analyzed** | Per segment x lifecycle x goal x theme | Full bilingual coverage |
-| **Winners Identified** | ~15-20% | Statistical confidence >95% |
-| **Losers Suppressed** | ~10-15% | CTR < 5% or Engagement < 20% |
-| **Convergence Speed** | 50% faster | vs. traditional A/B testing |
-
-### Expected Production Improvements
-
-- **CTR Improvement**: +40-50% over rule-based systems
-- **Engagement Rate**: +33-50% through personalization  
-- **Churn Reduction**: 20-30% via ML prediction
-- **Time to Optimal**: 50-60 sends (vs. 100+ traditional)
-
----
-
 ## System Architecture
 
 ```
 INPUT LAYER
-- Knowledge Bank (company intel, features, tones)
+- Knowledge Bank (.pdf or .txt) processed by RAG-lite engine
 - User Data (behavioral, demographic, engagement)
 - Experiment Results (performance feedback)
 
@@ -98,9 +75,9 @@ COMMUNICATION LAYER
 - Frequency tuning -> dynamic with uninstall guardrails
 
 LEARNING LAYER
-- Multi-armed bandit -> Thompson sampling (Beta priors)
+- Multi-armed bandit -> Thompson Sampling (Beta priors)
 - Statistical testing -> Bayesian + Frequentist dual
-- Winner detection -> P(better) > 0.95
+- Winner detection -> 95% credible-interval bounds vs CTR thresholds
 - Template filtering -> suppress bad, promote good
 - Delta reporting -> explainable changes with causality
 
@@ -117,15 +94,17 @@ OUTPUT LAYER
 ## Project Structure
 
 ```
-Arora/
-|-- main.py                      # Advanced ML orchestrator
+Aurora_f/
+|-- main.py                      # ML orchestrator (iteration0 + iteration1)
 |-- requirements.txt             # Python dependencies
-|-- README.md                    # Submission document
-|-- SYSTEM_ARCHITECTURE_GUIDE.md # Technical architecture guide
+|-- README.md                    # Project documentation
+|-- SOLUTION_GUIDE.md            # Technical architecture guide
+|-- PRESENTATION_GUIDE.md        # Demo & presentation script
+|-- walkthrough.md               # Quick walkthrough
 |-- config/
 |   `-- config.yaml              # System configuration
 |-- data/
-|   |-- input/                   # User uploads
+|   |-- input/                   # User uploads (knowledge_bank.pdf)
 |   |-- sample/                  # Sample datasets
 |   |   |-- user_data_sample.csv
 |   |   `-- experiment_results_sample.csv
@@ -133,7 +112,8 @@ Arora/
 |       |-- [Knowledge Bank]
 |       |   |-- company_north_star.json
 |       |   |-- feature_goal_map.json
-|       |   `-- allowed_tone_hook_matrix.json
+|       |   |-- allowed_tone_hook_matrix.json
+|       |   `-- kb_metadata.json
 |       |-- [Intelligence]
 |       |   |-- user_segments.csv
 |       |   |-- segment_goals.csv
@@ -145,34 +125,45 @@ Arora/
 |       |   |-- communication_themes.csv
 |       |   |-- message_templates.csv
 |       |   |-- timing_recommendations.csv
-|       |   |-- timing_recommendations_improved.csv
+|       |   |-- frequency_recommendations.csv
 |       |   `-- user_notification_schedule.csv
 |       `-- [Learning Outputs]
 |           |-- bandit_state.json
 |           |-- statistical_analysis.csv
 |           |-- template_rankings_bandit.csv
+|           |-- bandit_learning_report.csv
 |           |-- templates_nlp_analysis.csv
+|           |-- nlp_recommendations.csv
 |           |-- message_templates_improved.csv
+|           |-- timing_recommendations_improved.csv
+|           |-- frequency_recommendations_improved.csv
+|           |-- user_notification_schedule_improved.csv
+|           |-- experiment_results.csv
 |           `-- learning_delta_report.csv
 `-- src/
+  |-- llm_utils.py               # LLM retry, circuit breaker, rate-limit handling
   |-- knowledge_bank/
-  |   `-- kb_engine.py          # Extract company intelligence
+  |   `-- kb_engine.py           # RAG-lite KB (PDF → LLM → TF-IDF)
   |-- intelligence/
-  |   |-- data_ingestion.py      # Validation & feature engineering
-  |   |-- segmentation.py        # RFM + clustering
-  |   `-- goal_builder.py        # Journey mapping
+  |   |-- data_ingestion.py      # Dynamic schema mapping (LLM + fallback)
+  |   |-- segmentation.py        # RFM + hierarchical clustering
+  |   |-- goal_builder.py        # KB-driven goal building
+  |   `-- ml_propensity_models.py # XGBoost churn + LightGBM engagement
   |-- communication/
   |   |-- theme_engine.py        # Octalysis theme mapping
-  |   |-- template_generator.py  # Bilingual messages
-  |   |-- timing_optimizer.py    # Timing optimization
-  |   `-- schedule_generator.py  # User schedules
+  |   |-- template_generator.py  # Bilingual template generation (LLM + fallback)
+  |   |-- nlp_template_optimizer.py # NLP analysis & optimization
+  |   |-- timing_optimizer.py    # Survival analysis timing optimization
+  |   `-- schedule_generator.py  # User schedule generation
   |-- learning/
-  |   |-- learning_engine.py     # Learning loop
-  |   |-- performance_classifier.py # GOOD/NEUTRAL/BAD
-  |   `-- delta_reporter.py      # Explainable changes
+  |   |-- multi_armed_bandit.py  # Thompson Sampling MAB
+  |   |-- statistical_testing.py # Bayesian + Frequentist A/B testing
+  |   |-- performance_classifier.py # GOOD/NEUTRAL/BAD classification
+  |   `-- delta_reporter.py      # Explainable delta reporting
   `-- utils/
-    |-- metrics.py             # Scoring functions
-    `-- validation.py          # Data quality checks
+    |-- metrics.py               # Scoring functions
+    |-- validation.py            # Data quality checks
+    `-- experiment_generator.py  # Synthetic experiment generation
 ```
 
 ---
@@ -182,31 +173,30 @@ Arora/
 ### Machine Learning Stack
 
 - **XGBoost 2.0**: Gradient boosting for churn prediction
-  - Perfect AUC (1.0) on sample data
-  - Feature importance tracking
-  - Cross-validation ready
+  - Behavioral churn target derived from `lifecycle_stage` (no circular leakage)
+  - `scale_pos_weight` for class imbalance handling
+  - Feature importance tracking and cross-validation support
 
-- **LightGBM 4.0**: Fast gradient boosting for engagement
-  - R2 score: 0.8673
-  - Early stopping optimization
-  - Lightweight, production-ready
+- **LightGBM 4.0**: Fast gradient boosting for engagement forecasting
+  - Early stopping to prevent overfitting
+  - Trained and evaluated on synthetic sample data *(see Limitations)*
 
 - **scikit-learn 1.3**: Clustering, preprocessing, metrics
   - Hierarchical clustering (Ward linkage)
   - StandardScaler normalization
-  - Silhouette score evaluation
+  - Silhouette score + Davies-Bouldin + elbow for K selection
 
 ### Statistical Framework
 
-- **SciPy 1.11**: Advanced statistical functions
+- **SciPy 1.11**: Statistical functions
   - Beta distributions for Bayesian inference
   - Two-proportion z-tests
   - Confidence interval calculations
 
 - **Thompson Sampling**: Multi-Armed Bandit algorithm
-  - Beta(alpha, beta) posteriors per template
-  - 95% credible intervals
-  - Automatic exploration-exploitation balance
+  - Beta(α, β) posteriors per template, updated incrementally
+  - 95% credible intervals per template
+  - Balances exploration and exploitation automatically
 
 ### NLP & Text Analytics
 
@@ -216,17 +206,19 @@ Arora/
 
 ---
 
-## Key Innovations
+## Key Design Decisions
 
-### 1. EdTech RFM Adaptation
+### 1. Domain-Generic RFM Adaptation
 
-Traditional RFM focuses on monetary value. We adapted it for EdTech:
+Traditional RFM focuses on monetary value. Aurora adapts it for any engagement domain:
 
-- **Recency**: Days since signup (fresher = higher engagement potential)
-- **Frequency**: Weekly session count (quintile-based scoring)
-- **Monetary**: Engagement value = exercises x 2 + sessions + streak x 0.5 + coins x 0.01
+- **Recency**: How recently the user was active (dynamically resolved via schema mapping)
+- **Frequency**: Engagement frequency metric (resolved from dataset columns)
+- **Monetary**: Engagement value composite (activeness × open rate × motivation)
 
-**Result**: Business-aligned segments (Champions, Loyal, At-Risk, Lost)
+Schema mapping is done via LLM — no hardcoded column names. Falls back to heuristic column matching when LLM is unavailable.
+
+**Result**: Business-aligned segments whose names are generated dynamically. When the LLM is available it assigns domain-aware names (e.g., a recent sample run produced *Social Gamifiers*, *Engaged Socialites*, *Core Feature Fans*); the deterministic fallback labels segments by behavioral profile (*Power Users*, *Active Users*, *Social Engagers*, *At-Risk Users*, *Needs Attention*). A separate `rfm_segment` column holds the classic RFM bucket (Champions / Loyal / … / Lost).
 
 ### 2. Multi-Armed Bandit with Thompson Sampling
 
@@ -244,25 +236,25 @@ reward_sample = Beta(alpha, beta).sample()
 best_template = argmax(samples)
 ```
 
-**Advantage**: 50% faster convergence, automatic winner detection
+**Why**: Reduces regret during exploration; no fixed sample-size commitment needed upfront.
 
 ### 3. Composite Timing Score
 
-Novel scoring function for timing optimization:
+Scoring function for timing optimization:
 
 ```
-score = CTR x 0.5 + Engagement x 0.4 - Uninstall x 5.0
+score = CTR × 0.5 + Engagement × 0.4 - Uninstall × 5.0
 ```
 
-**Key**: Heavy penalty for uninstalls ensures sustainable growth
+Heavy uninstall penalty ensures sustainable growth over short-term CTR maximization.
 
 ### 4. Dual Statistical Validation
 
-Every template is evaluated by BOTH:
+Every template is evaluated by both:
 - **Bayesian**: P(treatment > control) with credible intervals
 - **Frequentist**: p-value, effect size (Cohen's h)
 
-**Decision**: "STRONG_WINNER" only if both agree (p<0.05 AND P>0.95)
+A template is marked `STRONG_WINNER` only if both agree (p < 0.05 AND P > 0.95).
 
 ### 5. Individual-Level Personalization
 
@@ -271,83 +263,69 @@ Beyond segment-level rules:
 - Churn risk: P(churn | user_features)
 - Engagement forecast: E[activity | user_history]
 
-**Impact**: True 1-to-1 personalization, not just segment averages
-
----
-
-## Evaluation Criteria Alignment
-
-| Dimension | Implementation | Score |
-|-----------|---------------|-------|
-| **System Completeness (15%)** | Fully functional end-to-end system, runnable locally, accepts new datasets | 5/5 |
-| **Segmentation Quality (15%)** | RFM + Hierarchical + Optimal K + MECE validation + Business context | 5/5 |
-| **Messaging Intelligence (25%)** | NLP analysis + MAB learning + Statistical tests + Bilingual + Octalysis | 5/5 |
-| **Timing & Frequency (10%)** | Survival analysis + Experiments + Dynamic frequency + Uninstall guards | 5/5 |
-| **Learning & Evolution (25%)** | Thompson Sampling + Bayesian stats + Delta reports + Model persistence | 5/5 |
-| **Extensibility (5%)** | Domain-agnostic core, configurable via YAML, swap KB easily | 5/5 |
-| **Presentation (5%)** | Clear outputs, explainable AI, comprehensive documentation | 5/5 |
-
-**Total**: 100/100 - Production-grade ML system with industry-leading techniques
-
 ---
 
 ## Deliverables Checklist
 
-### Task 1: System Architecture & Intelligence (Complete)
+### Task 1: System Architecture & Intelligence
 
-- [x] `company_north_star.json` - North Star metric with drivers
-- [x] `feature_goal_map.json` - Feature -> goal mappings
-- [x] `allowed_tone_hook_matrix.json` - Tones x Octalysis hooks
-- [x] `user_segments.csv` - 9 segments with RFM scores
-- [x] `segment_goals.csv` - 117 goal definitions
-- [x] **BONUS**: `ml_model_performance.csv` - XGBoost/LightGBM metrics
-- [x] **BONUS**: Trained ML models (churn_model.pkl, engagement_model.pkl)
+- [x] `company_north_star.json` — North Star metric with drivers
+- [x] `feature_goal_map.json` — Feature → goal mappings
+- [x] `allowed_tone_hook_matrix.json` — Tones x Octalysis hooks
+- [x] `user_segments.csv` — MECE segments with RFM scores
+- [x] `segment_goals.csv` — Goal definitions per segment × lifecycle × day
+- [x] **BONUS**: `ml_model_performance.csv` — XGBoost/LightGBM metrics
+- [x] **BONUS**: Trained ML models (`churn_model.pkl`, `engagement_model.pkl`)
 
-### Task 2: Communication & Timing (Complete)
+### Task 2: Communication & Timing
 
-- [x] `communication_themes.csv` - Theme mappings (36 entries)
-- [x] `message_templates.csv` - Bilingual templates
-- [x] `timing_recommendations.csv` - 6 time window rules
-- [x] `timing_recommendations_improved.csv` - 18 timing rules
-- [x] `user_notification_schedule.csv` - 100 user schedules
-- [x] **BONUS**: `frequency_recommendations.csv` - Dynamic frequency per segment
-- [x] **BONUS**: `templates_nlp_analysis.csv` - Sentiment, engagement scores
+- [x] `communication_themes.csv` — Theme mappings per segment × lifecycle (≈24 rows on the sample run)
+- [x] `message_templates.csv` — Bilingual templates (EN + HI)
+- [x] `timing_recommendations.csv` — Ranked time windows per segment × lifecycle
+- [x] `timing_recommendations_improved.csv` — Re-ranked time windows (post-learning)
+- [x] `user_notification_schedule.csv` — Per-user schedules (first 100 users, via `max_users`)
+- [x] **BONUS**: `frequency_recommendations.csv` — Dynamic frequency per segment
+- [x] **BONUS**: `templates_nlp_analysis.csv` — Sentiment, engagement scores
 
-### Task 3: Execution & Learning (Complete)
+### Task 3: Execution & Learning
 
-- [x] `experiment_results_sample.csv` - Template performance data
-- [x] `learning_delta_report.csv` - Explainable changes
-- [x] `message_templates_improved.csv` - Post-learning templates
-- [x] `timing_recommendations_improved.csv` - Re-optimized timing
-- [x] Complete runnable codebase (main.py)
-- [x] `README.md` - This submission document
-- [x] **BONUS**: `statistical_analysis.csv` - Bayesian + Frequentist tests
-- [x] **BONUS**: `template_rankings_bandit.csv` - MAB rankings with CI
-- [x] **BONUS**: `bandit_state.json` - Persistent learning state
-- [x] **BONUS**: `nlp_recommendations.csv` - Actionable template improvements
+- [x] `experiment_results_sample.csv` — Template performance data
+- [x] `learning_delta_report.csv` — Explainable changes
+- [x] `message_templates_improved.csv` — Post-learning templates
+- [x] `timing_recommendations_improved.csv` — Re-optimized timing
+- [x] Complete runnable codebase (`main.py`)
+- [x] `README.md` — This document
+- [x] **BONUS**: `statistical_analysis.csv` — Bayesian + Frequentist tests
+- [x] **BONUS**: `template_rankings_bandit.csv` — MAB rankings with CI
+- [x] **BONUS**: `bandit_state.json` — Persistent learning state
+- [x] **BONUS**: `nlp_recommendations.csv` — Actionable template improvements
 
 ---
 
 ## Demo Flow
 
-### Phase 1: Iteration 0 (15 seconds)
+### Phase 1: Iteration 0
 
 ```bash
-python main.py --mode iteration0 --user-data data/sample/user_data_sample.csv
+python main.py --mode iteration0 --user-data data/sample/user_data_sample.csv --kb-pdf data/input/knowledge_bank.pdf
 ```
 
 **System demonstrates**:
-1. RFM Analysis with 7-tier segmentation (Champions -> Lost)
-2. Optimal K selection: Tests 6-12 clusters, selects K=9 via Silhouette
-3. XGBoost churn model training (AUC: 1.0)
-4. LightGBM engagement model training (R2: 0.867)
-5. 810 bilingual templates generated
-6. NLP analysis: Sentiment 0.051, Engagement 0.123
-7. Multi-Armed Bandit initialization: 810 Beta(1,1) priors
+1. RAG-lite KB extraction (PDF → LLM → TF-IDF, ~25 domain terms)
+2. LLM-based dynamic schema mapping with heuristic fallback
+3. RFM Analysis + Hierarchical Clustering (6–12 MECE segments)
+4. XGBoost churn model training on behavioral target
+5. LightGBM engagement model training
+6. KB-driven goal building per segment × lifecycle
+7. Bilingual template generation (EN + HI)
+8. NLP analysis: sentiment, engagement scoring
+9. Kaplan-Meier survival analysis for timing optimization
+10. Schedule generation (100 users × 7 days)
+11. Auto-generated experiment results for iteration 1
 
-**Outputs**: 15+ files in data/output/
+**Outputs**: 15+ files in `data/output/`
 
-### Phase 2: Iteration 1 (10 seconds)
+### Phase 2: Iteration 1
 
 ```bash
 python main.py --mode iteration1 \
@@ -356,62 +334,60 @@ python main.py --mode iteration1 \
 ```
 
 **System demonstrates**:
-1. Performance classification (GOOD/NEUTRAL/BAD)
+1. Performance classification (GOOD / NEUTRAL / BAD)
 2. Bayesian A/B tests with credible intervals
 3. MAB update: Beta posteriors from experiment data
-4. Winner identification: P(better) > 0.95
-5. Loser suppression: P(better) < 0.05
-6. Timing re-optimization: Composite scoring
-7. NLP recommendations: "Shorten message", "Add urgency", etc.
-8. Delta report: 50+ explained changes
-
-**Key Observation**: System identifies 15-20% winners, suppresses 10-15% losers, all with statistical confidence.
+4. Winner identification: 95% CI lower bound > 15% CTR threshold
+5. Loser suppression: 95% CI upper bound < 5% CTR threshold
+6. Timing re-optimization via composite scoring
+7. NLP recommendations (shorten, add urgency, etc.)
+8. Delta report: explained changes per template
 
 ---
 
-## Why This Solution Wins
+## Sample Outputs
 
-### 1. Production-Grade ML (Not Toy Examples)
+### Segment Distribution
 
-- **Real models**: XGBoost, LightGBM with proper train/test splits
-- **Cross-validation**: 5-fold CV for robustness
-- **Model persistence**: Pickle serialization for production deployment
-- **Feature importance**: Explainable AI, not black box
+```
+MECE segments identified via optimal-K Silhouette selection.
+Segment names are generated dynamically, so they vary per dataset/run:
 
-### 2. Rigorous Statistical Foundation
+  With LLM (domain-aware), a sample run produced:
+    Social Gamifiers, Engaged Socialites, Core Feature Fans,
+    Passive Explorers, Casual Solo Users, Low Activity Risks
+  Deterministic fallback (no LLM) labels by behavioral profile:
+    Power Users, Active Users, Social Engagers, At-Risk Users, Needs Attention
+```
 
-- **Dual validation**: Bayesian + Frequentist agreement required
-- **Multiple testing correction**: Bonferroni for multi-variant
-- **Sequential testing**: O'Brien-Fleming boundaries for early stopping
-- **Effect sizes**: Cohen's h, not just p-values
+Exact segment count (K=6–12) is auto-selected to maximize Silhouette score, so both
+the number of segments and their names change with the input data.
 
-### 3. Continuous Learning (Not Batch)
+### Template Rankings (Post-Learning)
 
-- **Real MAB**: Thompson Sampling, not simulated
-- **Per-interaction updates**: Beta posteriors updated incrementally
-- **Confidence intervals**: 95% credible intervals per template
-- **Automatic decisions**: Winner/loser detection without manual review
+```
+Template TPL_0042: "Day 5 streak! Complete today's exercise"
+  CTR: 18.7% (95% CI: [16.5%, 21.0%])   # lower bound > 15% good threshold
+  Status: WINNER
+  Action: PROMOTE (weight = 2.0)
 
-### 4. Novel Combinations
+Template TPL_0089: "Practice now"
+  CTR: 3.2% (95% CI: [1.8%, 4.6%])       # upper bound < 5% bad threshold
+  Status: LOSER
+  Action: SUPPRESS
+```
 
-- **RFM + ML**: Business intuition meets predictive power
-- **MAB + NLP**: Content intelligence guides exploration
-- **Survival + Experiments**: Theory meets empirical learning
-- **Individual + Segment**: Hierarchical personalization
+### Learning Delta Example
 
-### 5. Extensibility & Maintainability
-
-- **Domain-agnostic core**: Swap KB, works for any B2C app
-- **Configuration-driven**: YAML for all hyperparameters
-- **Modular architecture**: Each component independently testable
-- **Clear interfaces**: DataFrames in/out, standard contracts
-
----
-
-## Technical Documentation
-
-For in-depth understanding of algorithms, theory, and implementation:
-
+```
+Entity: Template TPL_0042
+Type: Promotion
+Metric: CTR=0.187, Engagement=0.423
+Change: weight: 1.0 -> 2.0
+Reason: Bayesian analysis shows P(better than average) = 0.97.
+        Frequentist test: p=0.001 (significant).
+        Promotes habit formation through streak reinforcement.
+```
 
 ---
 
@@ -421,26 +397,18 @@ Edit `config/config.yaml` to customize:
 
 ```yaml
 segmentation:
-  n_clusters: 8              # Initial K (will optimize to best)
-  min_segment_size: 50
+  n_clusters: 8              # Initial K (auto-optimized within the range below)
+  min_clusters: 6            # Minimum K considered
+  max_clusters: 12           # Maximum K considered
+  min_segment_size: 0.05     # Fraction of users (5%), not an absolute count
   random_state: 42
 
-ml_models:
-  churn:
-    n_estimators: 100
-    max_depth: 4
-    learning_rate: 0.1
-  engagement:
-    n_estimators: 100
-    max_depth: 4
-    learning_rate: 0.1
-
-bandit:
-  exploration_factor: 1.0    # Higher = more exploration
-
-statistical_testing:
-  alpha: 0.05                # Significance level
-  power: 0.8                 # Statistical power
+performance:
+  good_ctr: 0.15             # CTR threshold for GOOD
+  good_engagement: 0.40
+  bad_ctr: 0.05              # CTR threshold for BAD
+  bad_engagement: 0.20
+  min_sends_significance: 100
 
 time_windows:
   early_morning: [6, 9]
@@ -450,6 +418,11 @@ time_windows:
   evening: [18, 21]
   night: [21, 24]
 ```
+
+> See `config/config.yaml` for the full set (frequency rules, tone matrices, knowledge-bank
+> settings). ML hyperparameters live in `src/intelligence/ml_propensity_models.py` and the
+> statistical-test defaults (`alpha=0.05`, `power=0.8`) in `src/learning/statistical_testing.py`;
+> they are not read from `config.yaml`.
 
 ---
 
@@ -467,111 +440,30 @@ python main.py --mode iteration0 --user-data your_data.csv
 ```
 
 **Requirements**:
-- User data CSV/XLSX with required columns (see schema in SYSTEM_ARCHITECTURE_GUIDE.md)
-  - Missing required columns are auto-filled with safe defaults for demo runs
-- Experiment results CSV for iteration 1 (see schema in SYSTEM_ARCHITECTURE_GUIDE.md)
+- User data CSV/XLSX (missing required columns are auto-filled with safe defaults for demo runs)
+- Experiment results CSV for iteration 1 (see schema in `SOLUTION_GUIDE.md`)
 
 ---
 
-## Sample Outputs
+## Limitations
 
-### Segment Distribution
-
-```
-Champions (RFM 4.5-5.0):      22 users  (2.2%)  - Power users
-Loyal (RFM 4.0-4.5):          65 users  (6.5%)  - High value
-Potential Loyalist (3.5-4.0): 116 users (11.6%) - Rising stars
-Promising (3.0-3.5):          202 users (20.2%) - Engaged
-Needs Attention (2.5-3.0):    195 users (19.5%) - Declining
-At Risk (2.0-2.5):            183 users (18.3%) - Churn risk
-Lost (< 2.0):                 217 users (21.7%) - Re-engage
-```
-
-### Template Rankings (Post-Learning)
-
-```
-Template T0042: "Day 5 streak! Complete today's exercise"
-  CTR: 18.7% (95% CI: [16.5%, 21.0%])
-  Status: WINNER
-  Action: PROMOTE (weight = 2.0)
-
-Template T0089: "Practice now"
-  CTR: 3.2% (95% CI: [1.8%, 5.1%])
-  Status: LOSER
-  Action: SUPPRESS
-```
-
-### Learning Delta Example
-
-```
-Entity: Template T0042
-Type: Promotion
-Metric: CTR=0.187, Engagement=0.423
-Change: weight: 1.0 -> 2.0
-Reason: Bayesian analysis shows P(better than average) = 0.97.
-        Frequentist test: p=0.001 (significant).
-        Promotes habit formation through streak reinforcement.
-```
+- **Churn model**: Trained on a small synthetic dataset where churn signal is near-random. Evaluation therefore focuses on the engagement model and the learning loop rather than the churn AUC. On real behavioral data with sufficient volume and a meaningful churn signal, XGBoost is expected to produce discriminative predictions.
+- **Engagement model**: R² on the synthetic sample appears high, which is likely a synthetic-data artifact. Real-world performance will differ.
+- **All ML metrics** reported are from a small synthetic sample and should not be extrapolated to production estimates.
+- **Prototype status**: This is a functional prototype, not a hardened production system. It lacks authentication, persistent databases, horizontal scaling, and production monitoring.
 
 ---
 
-## Competitive Advantages
+## Technical Documentation
 
-### vs. Rule-Based Systems (Braze, OneSignal)
-
-- **Learning**: Continuous vs. Manual updates
-- **Personalization**: Individual ML scores vs. Segment rules
-- **Optimization**: Automatic vs. Manual A/B tests
-- **Speed**: 50% faster convergence vs. Fixed sample sizes
-
-### vs. Basic ML Systems (Iterable, Customer.io)
-
-- **Segmentation**: RFM + Hierarchical vs. Simple K-means
-- **Learning**: Multi-Armed Bandit vs. Batch retraining
-- **Statistics**: Bayesian + Frequentist vs. p-values only
-- **NLP**: Sentiment + TF-IDF vs. None
-
-### vs. Manual Optimization
-
-- **Scale**: 810 templates tested vs. 10-20 manually
-- **Speed**: Hours vs. Weeks
-- **Rigor**: Statistical confidence vs. Gut feeling
-- **Explainability**: Delta reports vs. "We changed it"
-
----
-
-## Academic Foundations
-
-This system implements cutting-edge research:
-
-1. **Multi-Armed Bandits**: Chapelle & Li (2011) - Contextual bandits for personalization
-2. **Thompson Sampling**: Agrawal & Goyal (2012) - Analysis of Thompson Sampling for MAB problem
-3. **Bayesian A/B Testing**: VWO/Optimizely whitepapers - Industry best practices
-4. **RFM Analysis**: Hughes (1994) - Customer lifetime value modeling
-5. **Survival Analysis**: Kaplan-Meier (1958), Cox (1972) - Time-to-event modeling
-6. **Hierarchical Clustering**: Ward (1963) - Minimum variance method
-
----
-
-## Contact & Support
-
-For questions or technical issues:
-
-1. Review [SYSTEM_ARCHITECTURE_GUIDE.md](SYSTEM_ARCHITECTURE_GUIDE.md) for detailed explanations
-2. Check output CSVs for data formats and examples
-3. Examine code comments for implementation details
+For in-depth understanding of algorithms, theory, and implementation details, see [SOLUTION_GUIDE.md](SOLUTION_GUIDE.md).
 
 ---
 
 ## License & Usage
 
-This project is submitted as part of the Kriti Mid-Year Assessment 2026 for SpeakX Project Aurora.
+This project is submitted as part of the Kriti Assessment 2026 for SpeakX Project Aurora.
 
-**Implementation**: February 2026  
-**Technology Stack**: Python 3.11, XGBoost 2.0, LightGBM 4.0, scikit-learn 1.3  
-**Status**: Production-ready with comprehensive test coverage
-
----
-
-**Built with cutting-edge ML/AI to win this competition.**
-
+**Implementation**: February–March 2026  
+**Technology Stack**: Python 3.13, XGBoost 2.0, LightGBM 4.0, scikit-learn 1.3, lifelines (Kaplan-Meier), Groq LLM (llama-3.3-70b)  
+**Status**: Functional prototype with circuit breaker, graceful LLM degradation, and domain-agnostic design
