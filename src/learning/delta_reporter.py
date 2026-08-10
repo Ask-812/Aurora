@@ -38,7 +38,7 @@ class DeltaReporter:
                 'before_value', 'after_value', 'explanation'
             ])
         
-        # Add summary metrics
+        # Add summary metric
         summary = self._calculate_summary_delta(iteration0_stats, iteration1_stats)
         
         print(f"   [OK] Documented {len(changes_log)} changes")
