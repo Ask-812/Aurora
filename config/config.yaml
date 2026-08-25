@@ -8,6 +8,14 @@ segmentation:
   min_segment_size: 0.05  # 5% of total users
   random_state: 42
 
+# Machine Learning Settings
+ml:
+  # A forward-looking column describing the period *after* the feature window.
+  # When present it becomes the engagement model's target and is excluded from
+  # every feature matrix, including the churn model's (it would be time-travel
+  # leakage there). Set to null to fall back to the value-metrics proxy target.
+  forecast_target_column: engagement_next_7d
+
 # Performance Thresholds
 performance:
   good_ctr: 0.15

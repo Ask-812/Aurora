@@ -1,5 +1,9 @@
 # Project Aurora — Self-Learning Notification Orchestrator
 
+[![CI](https://github.com/Ask-812/Aurora/actions/workflows/ci.yml/badge.svg)](https://github.com/Ask-812/Aurora/actions/workflows/ci.yml)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
+[![Tests](https://img.shields.io/badge/tests-67%20passing-brightgreen.svg)](tests/)
+
 **Domain-Generic ML-Powered Communication System**  
 *(Dynamically adaptable to any business domain via RAG-lite Knowledge Bank)*
 
@@ -7,7 +11,10 @@
 
 ## Overview
 
-Project Aurora is a **prototype self-learning notification orchestrator** built to intelligently optimize user communication through a two-iteration pipeline. It is designed to be domain-agnostic — swap the Knowledge Bank PDF and it adapts to any B2C product.
+Project Aurora is a **prototype self-learning notification orchestrator** that optimises who
+gets messaged, when, with what copy, and how often — then learns from the outcome and
+re-optimises. It is domain-agnostic: swap the Knowledge Bank PDF and it re-targets to another
+B2C product without a code change.
 
 Core capabilities:
 - **Domain Adaptability**: RAG-lite Knowledge Bank (PDF → LLM → TF-IDF) learns product context
@@ -17,6 +24,30 @@ Core capabilities:
 - **Statistical Testing**: Bayesian + Frequentist A/B testing (Cohen's h effect size)
 - **NLP**: Sentiment analysis, TF-IDF vectorization, engagement scoring
 - **Survival Analysis**: Kaplan-Meier time-to-event modeling for timing optimization
+
+### How the models are validated
+
+Model quality is reported against a **synthetic benchmark with a written-down data generating
+process** (`src/utils/data_generator.py`), so every score can be compared to the best score
+that is theoretically attainable:
+
+| Dataset | Churn AUC | Engagement R² | What it shows |
+|---|---|---|---|
+| `user_data_sample.csv` (bundled sample) | 0.403 | −0.000 | Labels are independent of behaviour — **no signal exists**, and the models correctly find none |
+| `user_data_benchmark.csv` (known DGP) | **0.817** | **0.268** | The same code recovers the planted structure |
+| *Oracle ceiling for that DGP* | *0.854* | *0.534* | Best possible score given the latent traits |
+
+The churn model reaches **96% of the oracle ceiling**. Running both datasets is what makes
+either number meaningful: near-chance on the first *and* strong on the second is the signature
+of a correct, leakage-free pipeline. Strong scores on both would mean the leakage guard has a
+hole.
+
+```bash
+python scripts/benchmark_models.py   # reproduces the table above
+```
+
+> An earlier revision of this README reported engagement `R² = 0.94`. That number was
+> **target leakage** and has been removed. See [Model Validation](#model-validation--honest-metrics).
 
 ---
 
@@ -105,7 +136,8 @@ Aurora/
 |-- data/
 |   |-- input/                   # User uploads (knowledge_bank.pdf)
 |   |-- sample/                  # Sample datasets
-|   |   |-- user_data_sample.csv
+|   |   |-- user_data_sample.csv        # original sample (no learnable signal)
+|   |   |-- user_data_benchmark.csv     # generated from a known DGP
 |   |   `-- experiment_results_sample.csv
 |   `-- output/                  # Generated outputs
 |       |-- [Knowledge Bank]
@@ -162,7 +194,20 @@ Aurora/
   `-- utils/
     |-- metrics.py               # Scoring functions
     |-- validation.py            # Data quality checks
+    |-- data_generator.py        # Ground-truth DGP + oracle ceilings
     `-- experiment_generator.py  # Synthetic experiment generation
+
+scripts/
+`-- benchmark_models.py          # Signal-free vs known-signal comparison
+
+tests/                           # 67 pytest tests
+|-- test_data_generator.py
+|-- test_bandit.py
+|-- test_statistical_testing.py
+`-- test_ml_leakage.py
+
+.github/workflows/
+`-- ci.yml                       # pytest + full pipeline + benchmark on every push
 ```
 
 ---
@@ -432,18 +477,28 @@ pip install -r requirements.txt
 pytest -q
 ```
 
-**46 tests, no API key or network required.** The suite deliberately targets the parts of the
-system where a silent bug would be most expensive:
+**67 tests, no API key or network required.** The suite targets the parts of the system where
+a silent bug would be most expensive:
 
 | File | Tests | What it pins down |
 |---|---|---|
-| `tests/test_ml_leakage.py` | 11 | Leakage guard flags target-derived features; the model recovers a *planted* signal but scores ~0 on a random target |
+| `tests/test_data_generator.py` | 21 | The DGP emits the claimed structure, hides its latents, is seed-reproducible; the pipeline recovers planted signal but cannot exceed the oracle ceiling; the bundled sample really is signal-free |
 | `tests/test_bandit.py` | 18 | Beta-posterior arithmetic, incremental updates, credible intervals tightening with evidence, exploration vs exploitation, state round-trip |
 | `tests/test_statistical_testing.py` | 17 | Bayesian decisions, two-proportion z-test, Cohen's h against its closed form, sample-size monotonicity, cross-method agreement |
+| `tests/test_ml_leakage.py` | 11 | Leakage guard flags target-derived features; a random target scores ~0 while a planted signal still scores well |
 
-The leakage tests are the important ones: they assert that a random target scores `R² < 0.3`
-*and* that a genuine relationship still scores `R² > 0.75`. Together those two bounds are what
-make the honest metrics above trustworthy rather than just pessimistic.
+The leakage and ceiling tests are the important ones. They bound the models from **both**
+sides: a random target must score `R² < 0.3`, a planted signal must score `R² > 0.75`, and a
+churn AUC above 0.95 fails the suite as implausible for sampled labels. Together those bounds
+are what make the reported metrics trustworthy rather than merely flattering or merely
+pessimistic.
+
+### Benchmarking the models
+
+```bash
+python scripts/benchmark_models.py                 # both datasets + oracle ceilings
+python -m src.utils.data_generator --n-users 5000  # regenerate the benchmark dataset
+```
 
 ### Running the pipeline
 
@@ -490,41 +545,63 @@ target's own source columns, and drops it before training:
 [Guard] Excluded 1 leakage-prone feature(s): gamification_propensity
 ```
 
-### Metrics after the guard (1,000-row synthetic sample, seed 42)
+### Metrics after the guard
 
-Reproduced from the committed `data/output/ml_model_performance.csv`:
+Reproduced by `python scripts/benchmark_models.py` and committed to
+`data/output/model_benchmark.csv`:
 
-| Model | Metric | Value | Interpretation |
-|---|---|---|---|
-| Churn (XGBoost) | Test AUC | 0.429 | No signal — labels are near-random vs behaviour |
-| Churn (XGBoost) | 5-fold CV AUC | 0.474 ± 0.039 | Confirms no signal |
-| Engagement (LightGBM) | R² | -0.005 | No signal — no better than predicting the mean |
-| Engagement (LightGBM) | RMSE | 278.3 | On a target ranging 0–1000 |
+| Dataset | Churn AUC | Churn CV AUC | Engagement R² | Engagement RMSE |
+|---|---|---|---|---|
+| Original sample (no signal by construction) | 0.403 | 0.484 | −0.000 | 277.6 |
+| Ground-truth benchmark (known DGP) | **0.817** | 0.740 | **0.268** | 3.74 |
+| *Oracle ceiling* | *0.854* | — | *0.534* | — |
 
-These numbers are **the honest result of removing leakage**, and they are expected: in
-`data/sample/user_data_sample.csv`, `lifecycle_stage` is drawn independently of the
-behavioural columns, so there is no learnable relationship for either model to find. A model
-that scored well here would be evidence of a bug, not of skill.
+**Why the first row is near chance, and why that is correct.** In
+`data/sample/user_data_sample.csv`, `lifecycle_stage` is drawn independently of every
+behavioural column. There is no relationship to learn, so a model scoring well there would be
+evidence of a bug. `tests/test_data_generator.py::TestOriginalSampleHasNoSignal` pins this
+claim, so it cannot quietly become false.
 
-The ML layer should therefore be read as **validated plumbing** — correct feature assembly,
-class-imbalance handling, early stopping, cross-validation, persistence and a leakage guard —
-that is ready for a dataset with real signal. `tests/test_ml_leakage.py` proves the pipeline
-*does* recover a relationship when one genuinely exists.
+**Why the second row is the real evidence.** `src/utils/data_generator.py` builds users from
+two latent traits (`engagement`, `diligence`) that drive every observable, then *samples*
+churn from a logistic model on those latents. Because churn is sampled rather than computed,
+even an oracle holding the true probabilities tops out at AUC 0.854 — so 0.817 is **96% of
+what is attainable**, and anything near 1.0 would prove leakage rather than skill.
 
-The substantive contributions of this project are in the **learning loop** (Thompson-sampling
-bandit, dual Bayesian/frequentist gating, delta reporting) and the **domain-agnostic
-ingestion layer**, not in the propensity scores.
+The engagement target, `engagement_next_7d`, is drawn for the *following* week and is excluded
+from every feature matrix — including the churn model's, where using it would be time-travel
+leakage. Its R² ceiling is only 0.534 because the target is a Poisson count whose variance is
+mostly irreducible noise; the model uses a Poisson objective to match that noise structure.
+
+### Reproducibility
+
+Feature columns are assembled with `sorted(set(...))` rather than `list(set(...))`. Python
+randomises string hashing per process, so the unsorted version silently reordered the feature
+matrix between runs and produced different AUCs from the same seed. Repeated runs of
+`scripts/benchmark_models.py` are now byte-identical.
+
+### What the ML layer is, honestly
+
+Correct, leakage-guarded, reproducible plumbing — feature assembly, class-imbalance handling,
+early stopping, cross-validation, Poisson objective for count targets, and persistence — that
+**demonstrably learns when signal is present**. The substantive contributions of this project
+are the **learning loop** (Thompson-sampling bandit, dual Bayesian/frequentist gating, delta
+reporting) and the **domain-agnostic ingestion layer**, not the propensity scores themselves.
 
 ---
 
 ## Limitations
 
-- **No real-world dataset.** Everything ships against a synthetic 1,000-user sample; no
-  production traffic has ever flowed through this system.
-- **Propensity models have no signal on the sample data** (see the table above). Do not
-  extrapolate these metrics.
+- **No real-world dataset.** Everything ships against synthetic data; no production traffic has
+  ever flowed through this system. The benchmark proves the code is correct, not that the
+  product works.
+- **The benchmark is self-authored.** `data_generator.py` defines the process the models are
+  then measured against. That validates implementation correctness, not real-world accuracy.
 - **Bandit and A/B results are computed over synthetic experiment outcomes** generated by
-  `src/utils/experiment_generator.py`, so "winners" reflect that generator's assumptions.
+  `src/utils/experiment_generator.py`, so reported "winners" reflect that generator's
+  assumptions. The ~42% CTR improvement printed by iteration 1 is therefore **circular and
+  should not be quoted as a result.**
+- **Timing model** fits and evaluates on the same behavioural window; it has no holdout.
 - **Prototype status.** No authentication, no persistent database, no horizontal scaling, no
   production monitoring.
 - **LLM-dependent paths degrade, they do not fail.** Without a Groq key the system runs fully

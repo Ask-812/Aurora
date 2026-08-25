@@ -1,3 +1,3 @@
 model,model_type,auc_test,auc_cv_mean,auc_cv_std,n_features,train_size,test_size,rmse,r2_score
-churn,XGBoost Classifier,0.42938234896607647,0.47408315016491087,0.039196462166903236,16,800,200,,
-engagement,LightGBM Regressor,,,,7,800,200,278.2985522182644,-0.0053806599049266435
+churn,XGBoost Classifier,0.4032977429382349,0.48353434437560316,0.029192942647987705,16,800,200,,
+engagement,LightGBM Regressor,,,,9,800,200,277.5842442772596,-0.0002262690895220576

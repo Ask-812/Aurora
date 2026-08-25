@@ -44,6 +44,12 @@ class PropensityModelEngine:
         
         perf_config = self.config.get('performance', {})
         self.churn_risk_threshold = perf_config.get('churn_risk_threshold', 0.7)
+
+        # A forward-looking target column, when the dataset provides one. It must never
+        # appear in any feature matrix: for the engagement model it *is* the label, and
+        # for the churn model it is information from after the prediction point.
+        ml_config = self.config.get('ml', {})
+        self.forecast_target_column = ml_config.get('forecast_target_column', 'engagement_next_7d')
         
         # Schema mapping for dynamic features
         self.schema_map = schema_map or {}
@@ -123,12 +129,19 @@ class PropensityModelEngine:
         for role in ['activeness_metrics', 'retention_metrics', 'value_metrics', 'feature_flags']:
             mapped_features.extend(list(self.schema_map.get(role) or []))
             
-        feature_cols = list(set([f for f in (base_features + mapped_features) if f in df.columns]))
+        feature_cols = sorted({f for f in (base_features + mapped_features) if f in df.columns})
         
         if not feature_cols:
             # Absolute fallback
             feature_cols = df.select_dtypes(include=[np.number]).columns.tolist()
             feature_cols = [c for c in feature_cols if 'id' not in c.lower() and c != 'churn_target']
+
+        # The forecast column describes the week *after* the prediction point, so using
+        # it to predict churn would be time-travel leakage.
+        forecast_col = self.forecast_target_column
+        if forecast_col and forecast_col in feature_cols:
+            feature_cols.remove(forecast_col)
+            print(f"   [Guard] Excluded forward-looking column from churn features: {forecast_col}")
 
         print(f"   [Tool] Using {len(feature_cols)} dynamic features for churn prediction")
         
@@ -154,7 +167,10 @@ class PropensityModelEngine:
             df['engagement_diversity'] = df[propensity_cols].std(axis=1)
             feature_cols.append('engagement_diversity')
 
-        feature_cols = list(set(feature_cols))
+        # Sorted, not set-ordered: Python randomises str hashing per process, so an
+        # unsorted set would reorder the feature matrix between runs and make results
+        # irreproducible even with a fixed seed.
+        feature_cols = sorted(set(feature_cols))
 
         X = df[feature_cols]
         y = df['churn_target']
@@ -257,7 +273,14 @@ class PropensityModelEngine:
         # target_source_cols records exactly which raw columns built the target, so that
         # they (and any composite derived from them) can be excluded from the features.
         target_source_cols: List[str] = []
-        if val_metrics:
+        forecast_col = self.forecast_target_column
+        if forecast_col and forecast_col in df.columns:
+            # Preferred: a genuine forward-looking target. Predicting it from this
+            # week's behaviour is real forecasting rather than same-period inference.
+            df['engagement_target'] = pd.to_numeric(df[forecast_col], errors='coerce').fillna(0)
+            target_source_cols = [forecast_col]
+            print(f"   [Target] Forecasting '{forecast_col}' (forward-looking)")
+        elif val_metrics:
             existing_val = [c for c in val_metrics if c in df.columns]
             df['engagement_target'] = df[existing_val].sum(axis=1) if existing_val else 0
             target_source_cols = existing_val
@@ -283,10 +306,12 @@ class PropensityModelEngine:
             'days_since_signup', 'streak_current', 'activeness',
             'gamification_propensity', 'social_propensity', 'churn_risk'
         ] if f in df.columns]
-        
-        # Add flags
-        feature_cols.extend([f for f in list(self.schema_map.get('feature_flags') or []) if f in df.columns])
-        feature_cols = list(set(feature_cols))
+
+        # Include the mapped behavioural metrics as well. The churn model already uses
+        # these; withholding them from the forecaster left real signal on the table.
+        for role in ('activeness_metrics', 'retention_metrics', 'value_metrics', 'feature_flags'):
+            feature_cols.extend([f for f in list(self.schema_map.get(role) or []) if f in df.columns])
+        feature_cols = sorted(set(feature_cols))
 
         excluded = sorted({c for c in feature_cols if c in target_source_cols or c in leaky_features})
         feature_cols = [c for c in feature_cols if c not in excluded]
@@ -301,18 +326,32 @@ class PropensityModelEngine:
 
         X = df[feature_cols]
         y = df['engagement_target']
-        
+
         # Train-test split
         X_train, X_test, y_train, y_test = train_test_split(
             X, y, test_size=0.2, random_state=self.random_state
         )
-        
-        # Train LightGBM
+
+        # A forward-looking engagement target is a count of future actions. When it
+        # really is a non-negative integer, a Poisson objective matches the noise
+        # structure far better than squared error, which assumes constant variance.
+        is_count_target = bool(
+            (y >= 0).all() and np.allclose(y, np.round(y), equal_nan=False)
+        )
+        objective = 'poisson' if is_count_target else 'regression'
+        if is_count_target:
+            print("   [Model] Count target detected -> Poisson objective")
+
         self.engagement_model = lgb.LGBMRegressor(
-            n_estimators=100,
-            max_depth=4,
-            learning_rate=0.1,
+            objective=objective,
+            n_estimators=400,
+            max_depth=5,
+            learning_rate=0.05,
             num_leaves=31,
+            min_child_samples=20,
+            subsample=0.9,
+            subsample_freq=1,
+            colsample_bytree=0.9,
             random_state=self.random_state,
             verbose=-1
         )
@@ -320,7 +359,7 @@ class PropensityModelEngine:
         self.engagement_model.fit(
             X_train, y_train,
             eval_set=[(X_test, y_test)],
-            callbacks=[lgb.early_stopping(stopping_rounds=10, verbose=False)]
+            callbacks=[lgb.early_stopping(stopping_rounds=30, verbose=False)]
         )
         
         # Predictions

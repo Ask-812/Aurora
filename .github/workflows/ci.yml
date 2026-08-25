@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Tests (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run test suite
+        run: pytest -q
+
+      - name: Verify the pipeline runs end to end
+        run: |
+          python main.py --mode iteration0 --user-data data/sample/user_data_sample.csv
+          python main.py --mode iteration1 \
+            --user-data data/sample/user_data_sample.csv \
+            --experiment-results data/sample/experiment_results_sample.csv
+
+      - name: Benchmark models against the ground-truth dataset
+        run: python scripts/benchmark_models.py
+
+      - name: Upload benchmark results
+        if: matrix.python-version == '3.12'
+        uses: actions/upload-artifact@v4
+        with:
+          name: model-benchmark
+          path: data/output/model_benchmark.csv
