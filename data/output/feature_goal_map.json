@@ -1,9 +1,9 @@
 {
   "features": [
     {
-      "feature_name": "Daily guided speaking practice",
-      "feature_id": "daily_guided_speaking_practice",
-      "primary_goal": "skill_mastery",
+      "feature_name": "Core Feature",
+      "feature_id": "core_feature",
+      "primary_goal": "user_engagement",
       "secondary_goals": [
         "engagement",
         "retention",
@@ -13,11 +13,101 @@
         "all"
       ],
       "engagement_driver_score": 0.75,
-      "description": "Feature enabling daily guided speaking practice functionality"
+      "description": "Feature enabling core feature functionality"
     },
     {
-      "feature_name": "AI tutor conversations",
-      "feature_id": "ai_tutor_conversations",
+      "feature_name": "User Dashboard",
+      "feature_id": "user_dashboard",
+      "primary_goal": "information_access",
+      "secondary_goals": [
+        "engagement",
+        "retention",
+        "satisfaction"
+      ],
+      "user_segments_most_relevant": [
+        "all"
+      ],
+      "engagement_driver_score": 0.78,
+      "description": "Feature enabling user dashboard functionality"
+    },
+    {
+      "feature_name": "Notifications",
+      "feature_id": "notifications",
+      "primary_goal": "engagement",
+      "secondary_goals": [
+        "engagement",
+        "retention",
+        "satisfaction"
+      ],
+      "user_segments_most_relevant": [
+        "all"
+      ],
+      "engagement_driver_score": 0.81,
+      "description": "Feature enabling notifications functionality"
+    },
+    {
+      "feature_name": "Ai Tutor",
+      "feature_id": "ai_tutor",
+      "primary_goal": "skill_development",
+      "secondary_goals": [
+        "engagement",
+        "retention",
+        "satisfaction"
+      ],
+      "user_segments_most_relevant": [
+        "all"
+      ],
+      "engagement_driver_score": 0.8,
+      "description": "AI-powered tutoring for personalized learning"
+    },
+    {
+      "feature_name": "Leaderboard",
+      "feature_id": "leaderboard",
+      "primary_goal": "competitive_engagement",
+      "secondary_goals": [
+        "engagement",
+        "retention",
+        "satisfaction"
+      ],
+      "user_segments_most_relevant": [
+        "all"
+      ],
+      "engagement_driver_score": 0.8,
+      "description": "Competitive ranking to motivate users"
+    },
+    {
+      "feature_name": "Streak System",
+      "feature_id": "streak_system",
+      "primary_goal": "habit_formation",
+      "secondary_goals": [
+        "engagement",
+        "retention",
+        "satisfaction"
+      ],
+      "user_segments_most_relevant": [
+        "all"
+      ],
+      "engagement_driver_score": 0.78,
+      "description": "Daily engagement tracking to build habits"
+    },
+    {
+      "feature_name": "Rewards System",
+      "feature_id": "rewards_system",
+      "primary_goal": "gamification_engagement",
+      "secondary_goals": [
+        "engagement",
+        "retention",
+        "satisfaction"
+      ],
+      "user_segments_most_relevant": [
+        "all"
+      ],
+      "engagement_driver_score": 0.78,
+      "description": "Incentive system to drive engagement"
+    },
+    {
+      "feature_name": "Practice Exercises",
+      "feature_id": "practice_exercises",
       "primary_goal": "skill_development",
       "secondary_goals": [
         "engagement",
@@ -28,11 +118,11 @@
         "all"
       ],
       "engagement_driver_score": 0.78,
-      "description": "AI-powered tutoring for personalized learning"
+      "description": "Feature enabling practice exercises functionality"
     },
     {
-      "feature_name": "Gamification (coins, streaks, leaderboards)",
-      "feature_id": "gamification_coins_streaks_leaderboards",
+      "feature_name": "Gamification",
+      "feature_id": "gamification",
       "primary_goal": "competitive_engagement",
       "secondary_goals": [
         "engagement",
@@ -42,83 +132,8 @@
       "user_segments_most_relevant": [
         "all"
       ],
-      "engagement_driver_score": 0.81,
-      "description": "Daily engagement tracking to build habits"
-    },
-    {
-      "feature_name": "Progress reports",
-      "feature_id": "progress_reports",
-      "primary_goal": "self_improvement",
-      "secondary_goals": [
-        "engagement",
-        "retention",
-        "satisfaction"
-      ],
-      "user_segments_most_relevant": [
-        "all"
-      ],
-      "engagement_driver_score": 0.84,
-      "description": "Feature enabling progress reports functionality"
-    },
-    {
-      "feature_name": "Role-based practice scenarios",
-      "feature_id": "rolebased_practice_scenarios",
-      "primary_goal": "skill_mastery",
-      "secondary_goals": [
-        "engagement",
-        "retention",
-        "satisfaction"
-      ],
-      "user_segments_most_relevant": [
-        "all"
-      ],
-      "engagement_driver_score": 0.87,
-      "description": "Feature enabling role-based practice scenarios functionality"
-    },
-    {
-      "feature_name": "Pan-India (Tier 1, 2, 3)",
-      "feature_id": "panindia_tier_1_2_3",
-      "primary_goal": "user_engagement",
-      "secondary_goals": [
-        "engagement",
-        "retention",
-        "satisfaction"
-      ],
-      "user_segments_most_relevant": [
-        "all"
-      ],
-      "engagement_driver_score": 0.9,
-      "description": "Feature enabling pan-india (tier 1, 2, 3) functionality"
-    },
-    {
-      "feature_name": "Primary: Tier 2 & 3",
-      "feature_id": "primary_tier_2__3",
-      "primary_goal": "user_engagement",
-      "secondary_goals": [
-        "engagement",
-        "retention",
-        "satisfaction"
-      ],
-      "user_segments_most_relevant": [
-        "all"
-      ],
-      "engagement_driver_score": 0.93,
-      "description": "Feature enabling primary: tier 2 & 3 functionality"
-    },
-    {
-      "feature_name": "Age group:",
-      "feature_id": "age_group",
-      "primary_goal": "user_engagement",
-      "secondary_goals": [
-        "engagement",
-        "retention",
-        "satisfaction"
-      ],
-      "user_segments_most_relevant": [
-        "all"
-      ],
-      "engagement_driver_score": 0.96,
-      "description": "Feature enabling age group: functionality"
+      "engagement_driver_score": 0.78,
+      "description": "Feature enabling gamification functionality"
     }
   ]
 }

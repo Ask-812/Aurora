@@ -1,4 +1,4 @@
-﻿"""
+"""
 Timing Optimization with Survival Analysis
 - Survival analysis for optimal send times
 - Time-to-event modeling

@@ -1,4 +1,4 @@
-﻿"""
+"""
 Experiment Results Generator — Synthesizes realistic experiment data
 from Iteration 0 outputs for demo and testing.
 

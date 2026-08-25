@@ -1,4 +1,4 @@
-﻿"""Learning layer for performance analysis and improvement"""
+"""Learning layer for performance analysis and improvement"""
 
 from .performance_classifier import PerformanceClassifier
 from .learning_engine import LearningEngine

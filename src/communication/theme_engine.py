@@ -1,4 +1,4 @@
-﻿"""
+"""
 Theme Engine — LLM-Powered Octalysis 8 Core Drives Mapping
 
 Dynamically assigns primary and secondary Octalysis drives to each

@@ -41,14 +41,14 @@
       "inviting"
     ]
   },
-  "detected_domain": "edtech",
+  "detected_domain": "generic",
   "octalysis_hooks": {
     "epic_meaning": {
       "description": "Be part of something bigger",
       "examples": [
-        "Join 1M+ learners",
-        "Transform your skills",
-        "Unlock your potential"
+        "Join millions",
+        "Be part of something big",
+        "Transform your experience"
       ],
       "best_for_segments": [
         "aspirational",
@@ -58,9 +58,9 @@
     "accomplishment": {
       "description": "Make progress and achieve",
       "examples": [
-        "Complete 10 lessons",
-        "Reach 7-day streak",
-        "Earn 100 coins"
+        "Complete goals",
+        "Earn rewards",
+        "Level up"
       ],
       "best_for_segments": [
         "achievers",
@@ -70,9 +70,9 @@
     "empowerment": {
       "description": "Have control and experiment",
       "examples": [
-        "Choose your topic",
-        "Learn at your pace",
-        "Customize your path"
+        "Your way",
+        "Your choice",
+        "Customize"
       ],
       "best_for_segments": [
         "casual",
@@ -82,9 +82,9 @@
     "ownership": {
       "description": "Build something valuable",
       "examples": [
-        "Your 500 coins",
-        "Your 30-day streak",
-        "Your certificates"
+        "Your progress",
+        "Your achievements",
+        "Your journey"
       ],
       "best_for_segments": [
         "achievers",
@@ -94,9 +94,9 @@
     "social_influence": {
       "description": "Others are doing it",
       "examples": [
-        "Beat the leaderboard",
-        "Join top learners",
-        "Compete with friends"
+        "Others are here",
+        "Join top users",
+        "Trending"
       ],
       "best_for_segments": [
         "social",
@@ -106,9 +106,9 @@
     "scarcity": {
       "description": "Limited time or availability",
       "examples": [
-        "Only 3 hours left",
-        "Limited seats",
-        "Today's bonus expires"
+        "Limited time",
+        "Act now",
+        "Ends soon"
       ],
       "best_for_segments": [
         "achievers",
@@ -118,9 +118,9 @@
     "unpredictability": {
       "description": "What will happen next",
       "examples": [
-        "Unlock surprise reward",
-        "Daily bonus waiting",
-        "New content unlocked"
+        "Surprise waiting",
+        "Discover more",
+        "What's next"
       ],
       "best_for_segments": [
         "explorers",
@@ -130,9 +130,9 @@
     "loss_avoidance": {
       "description": "Don't lose what you have",
       "examples": [
-        "Streak will break",
-        "Don't lose progress",
-        "Maintain your rank"
+        "Don't miss out",
+        "Keep going",
+        "Stay active"
       ],
       "best_for_segments": [
         "achievers",

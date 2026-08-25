@@ -1,10 +1,11 @@
 {
-  "north_star_metric": "Trial → Monthly Conversion",
-  "definition": "Rate at which trial users convert to paying customers",
-  "why_it_matters": "Drives daily engagement and habit formation",
-  "measurement": "Metric tracking for Trial → Monthly Conversion",
+  "north_star_metric": "Daily Active Users",
+  "definition": "Primary success metric measuring product-market fit",
+  "why_it_matters": "Core indicator of product success and user satisfaction",
+  "measurement": "Metric tracking for Daily Active Users",
   "key_drivers": [
-    "Feature → goal mappings",
-    "Octalysis-inspired hooks"
+    "User engagement",
+    "Feature adoption",
+    "Retention"
   ]
 }

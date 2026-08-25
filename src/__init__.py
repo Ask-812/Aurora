@@ -1,4 +1,4 @@
-﻿"""
+"""
 Project Aurora - Self-Learning Notification Orchestrator
 """
 

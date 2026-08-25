@@ -1,4 +1,4 @@
-﻿"""
+"""
 LLM Utility Helpers — shared across all dynamic pipeline stages.
 
 Provides a retry-aware Groq LLM call with round-robin API key rotation

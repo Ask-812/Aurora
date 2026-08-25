@@ -1,4 +1,4 @@
-﻿"""Utility functions for Project Aurora"""
+"""Utility functions for Project Aurora"""
 
 from .validation import DataValidator
 from .metrics import MetricsCalculator

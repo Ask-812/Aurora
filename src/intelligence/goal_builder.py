@@ -1,4 +1,4 @@
-﻿"""
+"""
 Goal Builder - Defines goals and journeys for each segment
 """
 

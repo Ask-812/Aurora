@@ -1,4 +1,4 @@
-﻿"""
+"""
 Learning Engine - Applies learning from experiment results
 """
 

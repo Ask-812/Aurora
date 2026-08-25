@@ -1,4 +1,4 @@
-﻿"""
+"""
 Template Generator — LLM-Powered Bilingual Message Templates
 
 Generates exactly 5 templates per Segment × Lifecycle × Goal × Theme

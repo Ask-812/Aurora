@@ -1,4 +1,4 @@
-﻿"""
+"""
 Data Ingestion Engine - Validates and prepares user data
 """
 

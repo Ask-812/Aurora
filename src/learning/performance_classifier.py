@@ -1,4 +1,4 @@
-﻿﻿"""
+"""
 Performance Classifier - Classifies template performance
 """
 

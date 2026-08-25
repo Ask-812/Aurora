@@ -1,4 +1,4 @@
-﻿﻿"""
+"""
 Statistical Experimentation Framework
 - Bayesian A/B Testing
 - Sequential analysis with early stopping

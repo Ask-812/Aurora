@@ -1,4 +1,4 @@
-﻿# Project Aurora — Self-Learning Notification Orchestrator
+# Project Aurora — Self-Learning Notification Orchestrator
 
 **Domain-Generic ML-Powered Communication System**  
 *(Dynamically adaptable to any business domain via RAG-lite Knowledge Bank)*
@@ -25,8 +25,8 @@ Core capabilities:
 ### Installation
 
 ```bash
-git clone https://github.com/Aizen0003/Aurora_f.git
-cd Aurora_f
+git clone https://github.com/Ask-812/Aurora.git
+cd Aurora
 pip install -r requirements.txt
 ```
 
@@ -94,12 +94,11 @@ OUTPUT LAYER
 ## Project Structure
 
 ```
-Aurora_f/
+Aurora/
 |-- main.py                      # ML orchestrator (iteration0 + iteration1)
 |-- requirements.txt             # Python dependencies
 |-- README.md                    # Project documentation
 |-- SOLUTION_GUIDE.md            # Technical architecture guide
-|-- PRESENTATION_GUIDE.md        # Demo & presentation script
 |-- walkthrough.md               # Quick walkthrough
 |-- config/
 |   `-- config.yaml              # System configuration
@@ -429,28 +428,109 @@ time_windows:
 ## Testing
 
 ```bash
-# Run on sample data (included)
+pip install -r requirements.txt
+pytest -q
+```
+
+**46 tests, no API key or network required.** The suite deliberately targets the parts of the
+system where a silent bug would be most expensive:
+
+| File | Tests | What it pins down |
+|---|---|---|
+| `tests/test_ml_leakage.py` | 11 | Leakage guard flags target-derived features; the model recovers a *planted* signal but scores ~0 on a random target |
+| `tests/test_bandit.py` | 18 | Beta-posterior arithmetic, incremental updates, credible intervals tightening with evidence, exploration vs exploitation, state round-trip |
+| `tests/test_statistical_testing.py` | 17 | Bayesian decisions, two-proportion z-test, Cohen's h against its closed form, sample-size monotonicity, cross-method agreement |
+
+The leakage tests are the important ones: they assert that a random target scores `R² < 0.3`
+*and* that a genuine relationship still scores `R² > 0.75`. Together those two bounds are what
+make the honest metrics above trustworthy rather than just pessimistic.
+
+### Running the pipeline
+
+```bash
+# Iteration 0 — train models and generate intelligence (also writes the experiment sample)
 python main.py --mode iteration0 --user-data data/sample/user_data_sample.csv
+
+# Iteration 1 — learn from experiment outcomes and re-optimise
 python main.py --mode iteration1 \
   --user-data data/sample/user_data_sample.csv \
   --experiment-results data/sample/experiment_results_sample.csv
-
-# Run on your own data
-python main.py --mode iteration0 --user-data your_data.csv
 ```
+
+Both modes run fully offline. With a `GROQ_API_KEY` present, schema mapping, segment naming
+and template copy become domain-aware; without one they fall back to deterministic rules.
 
 **Requirements**:
 - User data CSV/XLSX (missing required columns are auto-filled with safe defaults for demo runs)
-- Experiment results CSV for iteration 1 (see schema in `SOLUTION_GUIDE.md`)
+- Experiment results CSV for iteration 1 — produced by iteration 0, or see the schema in `SOLUTION_GUIDE.md`
+
+---
+
+## Model Validation & Honest Metrics
+
+The two propensity models are **structurally complete but have no predictive signal on the
+bundled synthetic sample**, and the README reports that openly rather than quoting a
+flattering number.
+
+### Target leakage was found and fixed
+
+An earlier revision reported engagement `R² = 0.94`. That figure was **target leakage**, not
+performance:
+
+- the engagement target is `sum(value_metrics)`, which resolves to `coins_balance`
+- the feature `gamification_propensity` is a normalised blend of `value_metrics + feature_flags`
+
+so the model was predicting `coins_balance` from a rescaled copy of `coins_balance`.
+
+`PropensityModelEngine._derived_features_using()` now walks a
+feature-to-schema-role dependency map, detects any engineered feature computed from the
+target's own source columns, and drops it before training:
+
+```
+[Guard] Excluded 1 leakage-prone feature(s): gamification_propensity
+```
+
+### Metrics after the guard (1,000-row synthetic sample, seed 42)
+
+Reproduced from the committed `data/output/ml_model_performance.csv`:
+
+| Model | Metric | Value | Interpretation |
+|---|---|---|---|
+| Churn (XGBoost) | Test AUC | 0.429 | No signal — labels are near-random vs behaviour |
+| Churn (XGBoost) | 5-fold CV AUC | 0.474 ± 0.039 | Confirms no signal |
+| Engagement (LightGBM) | R² | -0.005 | No signal — no better than predicting the mean |
+| Engagement (LightGBM) | RMSE | 278.3 | On a target ranging 0–1000 |
+
+These numbers are **the honest result of removing leakage**, and they are expected: in
+`data/sample/user_data_sample.csv`, `lifecycle_stage` is drawn independently of the
+behavioural columns, so there is no learnable relationship for either model to find. A model
+that scored well here would be evidence of a bug, not of skill.
+
+The ML layer should therefore be read as **validated plumbing** — correct feature assembly,
+class-imbalance handling, early stopping, cross-validation, persistence and a leakage guard —
+that is ready for a dataset with real signal. `tests/test_ml_leakage.py` proves the pipeline
+*does* recover a relationship when one genuinely exists.
+
+The substantive contributions of this project are in the **learning loop** (Thompson-sampling
+bandit, dual Bayesian/frequentist gating, delta reporting) and the **domain-agnostic
+ingestion layer**, not in the propensity scores.
 
 ---
 
 ## Limitations
 
-- **Churn model**: Trained on a small synthetic dataset where churn signal is near-random. Evaluation therefore focuses on the engagement model and the learning loop rather than the churn AUC. On real behavioral data with sufficient volume and a meaningful churn signal, XGBoost is expected to produce discriminative predictions.
-- **Engagement model**: R² on the synthetic sample appears high, which is likely a synthetic-data artifact. Real-world performance will differ.
-- **All ML metrics** reported are from a small synthetic sample and should not be extrapolated to production estimates.
-- **Prototype status**: This is a functional prototype, not a hardened production system. It lacks authentication, persistent databases, horizontal scaling, and production monitoring.
+- **No real-world dataset.** Everything ships against a synthetic 1,000-user sample; no
+  production traffic has ever flowed through this system.
+- **Propensity models have no signal on the sample data** (see the table above). Do not
+  extrapolate these metrics.
+- **Bandit and A/B results are computed over synthetic experiment outcomes** generated by
+  `src/utils/experiment_generator.py`, so "winners" reflect that generator's assumptions.
+- **Prototype status.** No authentication, no persistent database, no horizontal scaling, no
+  production monitoring.
+- **LLM-dependent paths degrade, they do not fail.** Without a Groq key the system runs fully
+  offline on deterministic fallbacks; segment names and templates are then rule-based rather
+  than domain-aware.
+
 
 ---
 

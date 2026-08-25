@@ -1,33 +1,25 @@
 segment_id,segment_name,lifecycle_stage,primary_theme,secondary_theme,theme_rationale
-0,Segment 0,trial,unpredictability,accomplishment,Low activeness (0.47) needs discovery and exploration; Secondary theme 'accomplishment' provides complementary motivation
-0,Segment 0,paid,accomplishment,ownership,High gamification propensity (0.32) indicates strong response to achievement; Secondary theme 'ownership' provides complementary motivation
-0,Segment 0,churned,loss_avoidance,unpredictability,High churn risk (0.48) requires urgency and retention focus; Secondary theme 'unpredictability' provides complementary motivation
-0,Segment 0,inactive,unpredictability,epic_meaning,Low activeness (0.47) needs discovery and exploration; Secondary theme 'epic_meaning' provides complementary motivation
-1,Segment 1,trial,unpredictability,accomplishment,Low activeness (0.43) needs discovery and exploration; Secondary theme 'accomplishment' provides complementary motivation
-1,Segment 1,paid,accomplishment,ownership,High gamification propensity (0.30) indicates strong response to achievement; Secondary theme 'ownership' provides complementary motivation
-1,Segment 1,churned,loss_avoidance,unpredictability,High churn risk (0.52) requires urgency and retention focus; Secondary theme 'unpredictability' provides complementary motivation
-1,Segment 1,inactive,unpredictability,epic_meaning,Low activeness (0.43) needs discovery and exploration; Secondary theme 'epic_meaning' provides complementary motivation
-2,Segment 2,trial,unpredictability,accomplishment,Low activeness (0.41) needs discovery and exploration; Secondary theme 'accomplishment' provides complementary motivation
-2,Segment 2,paid,accomplishment,ownership,High gamification propensity (0.27) indicates strong response to achievement; Secondary theme 'ownership' provides complementary motivation
-2,Segment 2,churned,loss_avoidance,unpredictability,High churn risk (0.53) requires urgency and retention focus; Secondary theme 'unpredictability' provides complementary motivation
-2,Segment 2,inactive,unpredictability,epic_meaning,Low activeness (0.41) needs discovery and exploration; Secondary theme 'epic_meaning' provides complementary motivation
-3,Segment 3,trial,unpredictability,accomplishment,Low activeness (0.48) needs discovery and exploration; Secondary theme 'accomplishment' provides complementary motivation
-3,Segment 3,paid,accomplishment,ownership,High gamification propensity (0.29) indicates strong response to achievement; Secondary theme 'ownership' provides complementary motivation
-3,Segment 3,churned,loss_avoidance,unpredictability,High churn risk (0.46) requires urgency and retention focus; Secondary theme 'unpredictability' provides complementary motivation
-3,Segment 3,inactive,unpredictability,epic_meaning,Low activeness (0.48) needs discovery and exploration; Secondary theme 'epic_meaning' provides complementary motivation
-4,Segment 4,trial,loss_avoidance,scarcity,High churn risk (0.78) requires urgency and retention focus; Secondary theme 'scarcity' provides complementary motivation
-4,Segment 4,paid,loss_avoidance,social_influence,High churn risk (0.78) requires urgency and retention focus; Secondary theme 'social_influence' provides complementary motivation
-4,Segment 4,churned,loss_avoidance,social_influence,High churn risk (0.78) requires urgency and retention focus; Secondary theme 'social_influence' provides complementary motivation
-4,Segment 4,inactive,loss_avoidance,social_influence,High churn risk (0.78) requires urgency and retention focus; Secondary theme 'social_influence' provides complementary motivation
-5,Segment 5,trial,unpredictability,accomplishment,Low activeness (0.54) needs discovery and exploration; Secondary theme 'accomplishment' provides complementary motivation
-5,Segment 5,paid,accomplishment,ownership,High gamification propensity (0.26) indicates strong response to achievement; Secondary theme 'ownership' provides complementary motivation
-5,Segment 5,churned,loss_avoidance,unpredictability,High churn risk (0.38) requires urgency and retention focus; Secondary theme 'unpredictability' provides complementary motivation
-5,Segment 5,inactive,unpredictability,epic_meaning,Low activeness (0.54) needs discovery and exploration; Secondary theme 'epic_meaning' provides complementary motivation
-6,Segment 6,trial,unpredictability,accomplishment,Low activeness (0.53) needs discovery and exploration; Secondary theme 'accomplishment' provides complementary motivation
-6,Segment 6,paid,accomplishment,ownership,High gamification propensity (0.27) indicates strong response to achievement; Secondary theme 'ownership' provides complementary motivation
-6,Segment 6,churned,loss_avoidance,unpredictability,High churn risk (0.40) requires urgency and retention focus; Secondary theme 'unpredictability' provides complementary motivation
-6,Segment 6,inactive,unpredictability,epic_meaning,Low activeness (0.53) needs discovery and exploration; Secondary theme 'epic_meaning' provides complementary motivation
-7,Segment 7,trial,unpredictability,accomplishment,Low activeness (0.59) needs discovery and exploration; Secondary theme 'accomplishment' provides complementary motivation
-7,Segment 7,paid,accomplishment,ownership,High gamification propensity (0.36) indicates strong response to achievement; Secondary theme 'ownership' provides complementary motivation
-7,Segment 7,churned,loss_avoidance,unpredictability,High churn risk (0.35) requires urgency and retention focus; Secondary theme 'unpredictability' provides complementary motivation
-7,Segment 7,inactive,unpredictability,epic_meaning,Low activeness (0.59) needs discovery and exploration; Secondary theme 'epic_meaning' provides complementary motivation
+0,Needs Attention,trial,unpredictability,epic_meaning,Activeness=0.27 → needs discovery triggers; Secondary 'epic_meaning' for complementary motivation
+0,Needs Attention,paid,unpredictability,epic_meaning,Activeness=0.27 → needs discovery triggers; Secondary 'epic_meaning' for complementary motivation
+0,Needs Attention,churned,unpredictability,epic_meaning,Activeness=0.27 → needs discovery triggers; Secondary 'epic_meaning' for complementary motivation
+0,Needs Attention,inactive,unpredictability,epic_meaning,Activeness=0.27 → needs discovery triggers; Secondary 'epic_meaning' for complementary motivation
+1,At-Risk Users,trial,loss_avoidance,scarcity,Churn=0.77 → retention urgency; Secondary 'scarcity' for complementary motivation
+1,At-Risk Users,paid,loss_avoidance,scarcity,Churn=0.77 → retention urgency; Secondary 'scarcity' for complementary motivation
+1,At-Risk Users,churned,loss_avoidance,scarcity,Churn=0.77 → retention urgency; Secondary 'scarcity' for complementary motivation
+1,At-Risk Users,inactive,loss_avoidance,scarcity,Churn=0.77 → retention urgency; Secondary 'scarcity' for complementary motivation
+2,Social Engagers,trial,accomplishment,ownership,Gamification=0.68 → achievement drive; Secondary 'ownership' for complementary motivation
+2,Social Engagers,paid,accomplishment,ownership,Gamification=0.68 → achievement drive; Secondary 'ownership' for complementary motivation
+2,Social Engagers,churned,accomplishment,ownership,Gamification=0.68 → achievement drive; Secondary 'ownership' for complementary motivation
+2,Social Engagers,inactive,accomplishment,ownership,Gamification=0.68 → achievement drive; Secondary 'ownership' for complementary motivation
+3,Segment 3,trial,accomplishment,unpredictability,Gamification=0.32 → achievement drive; Secondary 'unpredictability' for complementary motivation
+3,Segment 3,paid,accomplishment,ownership,Gamification=0.32 → achievement drive; Secondary 'ownership' for complementary motivation
+3,Segment 3,churned,loss_avoidance,unpredictability,Churn=0.49 → retention urgency; Secondary 'unpredictability' for complementary motivation
+3,Segment 3,inactive,unpredictability,empowerment,Activeness=0.46 → needs discovery triggers; Secondary 'empowerment' for complementary motivation
+4,Active Users,trial,accomplishment,unpredictability,Gamification=0.54 → achievement drive; Secondary 'unpredictability' for complementary motivation
+4,Active Users,paid,accomplishment,ownership,Gamification=0.54 → achievement drive; Secondary 'ownership' for complementary motivation
+4,Active Users,churned,loss_avoidance,unpredictability,Churn=0.67 → retention urgency; Secondary 'unpredictability' for complementary motivation
+4,Active Users,inactive,unpredictability,empowerment,Activeness=0.53 → needs discovery triggers; Secondary 'empowerment' for complementary motivation
+5,Social Engagers,trial,accomplishment,ownership,Gamification=0.74 → achievement drive; Secondary 'ownership' for complementary motivation
+5,Social Engagers,paid,accomplishment,ownership,Gamification=0.74 → achievement drive; Secondary 'ownership' for complementary motivation
+5,Social Engagers,churned,accomplishment,ownership,Gamification=0.74 → achievement drive; Secondary 'ownership' for complementary motivation
+5,Social Engagers,inactive,accomplishment,ownership,Gamification=0.74 → achievement drive; Secondary 'ownership' for complementary motivation

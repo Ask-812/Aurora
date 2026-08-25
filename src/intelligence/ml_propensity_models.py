@@ -1,4 +1,4 @@
-﻿"""
+"""
 ML-Powered Propensity Models
 - Churn Prediction (XGBoost)
 - Engagement Propensity (LightGBM)
@@ -12,7 +12,7 @@ from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.metrics import roc_auc_score, mean_squared_error, r2_score
 import xgboost as xgb
 import lightgbm as lgb
-from typing import Dict, Tuple
+from typing import Dict, List, Set, Tuple
 import yaml
 import warnings
 warnings.filterwarnings('ignore')
@@ -22,6 +22,19 @@ class PropensityModelEngine:
     """
     Machine Learning models for user propensity prediction
     """
+
+    # Maps each engineered feature to the schema roles its formula consumes.
+    # Used to detect when a feature is a rescaled view of the model target.
+    _DERIVED_FEATURE_SOURCES = {
+        'activeness': ('activeness_metrics',),
+        'gamification_propensity': ('value_metrics', 'feature_flags'),
+        'social_propensity': ('feature_flags',),
+        'ai_tutor_propensity': ('feature_flags',),
+        'leaderboard_propensity': ('feature_flags', 'retention_metrics'),
+        'churn_risk': ('activeness_metrics', 'retention_metrics'),
+    }
+
+    _SCHEMA_ROLES = ('activeness_metrics', 'value_metrics', 'retention_metrics', 'feature_flags')
     
     def __init__(self, random_state: int = 42, config_path: str = 'config/config.yaml', schema_map: Dict = None):
         self.random_state = random_state
@@ -45,6 +58,31 @@ class PropensityModelEngine:
         
         # Model performance
         self.model_metrics = {}
+
+    def _derived_features_using(self, target_source_cols: List[str]) -> Set[str]:
+        """
+        Return engineered features that are computed from the same raw columns as the
+        model target, and therefore leak it.
+
+        Example: when the target is sum(value_metrics) = coins_balance, the feature
+        gamification_propensity is a normalised blend of value_metrics + feature_flags,
+        so it carries a rescaled copy of the target and must be dropped.
+        """
+        if not target_source_cols:
+            return set()
+
+        targets = set(target_source_cols)
+        tainted_roles = {
+            role for role in self._SCHEMA_ROLES
+            if targets & set(self.schema_map.get(role) or [])
+        }
+        if not tainted_roles:
+            return set()
+
+        return {
+            feature for feature, roles in self._DERIVED_FEATURE_SOURCES.items()
+            if tainted_roles & set(roles)
+        }
     
     def train_churn_model(self, df: pd.DataFrame) -> Tuple[xgb.XGBClassifier, Dict]:
         """
@@ -216,18 +254,30 @@ class PropensityModelEngine:
         # Use value metrics or activeness metrics as proxy
         val_metrics = list(self.schema_map.get('value_metrics') or [])
         act_metrics = list(self.schema_map.get('activeness_metrics') or [])
+        # target_source_cols records exactly which raw columns built the target, so that
+        # they (and any composite derived from them) can be excluded from the features.
+        target_source_cols: List[str] = []
         if val_metrics:
             existing_val = [c for c in val_metrics if c in df.columns]
             df['engagement_target'] = df[existing_val].sum(axis=1) if existing_val else 0
+            target_source_cols = existing_val
         elif act_metrics:
             existing_act = [c for c in act_metrics if c in df.columns]
             df['engagement_target'] = df[existing_act].sum(axis=1) if existing_act else 0
+            target_source_cols = existing_act
         else:
             df['engagement_target'] = (
                 (df['sessions_last_7d'] if 'sessions_last_7d' in df.columns else 0) * 0.3 +
                 (df['notif_open_rate_30d'] if 'notif_open_rate_30d' in df.columns else 0) * 100 * 0.3
             )
-        
+            target_source_cols = [c for c in ['sessions_last_7d', 'notif_open_rate_30d'] if c in df.columns]
+
+        # Leakage guard: drop any engineered feature whose own definition consumes a
+        # target source column. Without this the model simply rediscovers a rescaled
+        # copy of the target (e.g. gamification_propensity normalises value_metrics,
+        # which is also the target) and reports an inflated R2.
+        leaky_features = self._derived_features_using(target_source_cols)
+
         # Dynamic features
         feature_cols = [f for f in [
             'days_since_signup', 'streak_current', 'activeness',
@@ -237,10 +287,17 @@ class PropensityModelEngine:
         # Add flags
         feature_cols.extend([f for f in list(self.schema_map.get('feature_flags') or []) if f in df.columns])
         feature_cols = list(set(feature_cols))
-        
+
+        excluded = sorted({c for c in feature_cols if c in target_source_cols or c in leaky_features})
+        feature_cols = [c for c in feature_cols if c not in excluded]
+        if excluded:
+            print(f"   [Guard] Excluded {len(excluded)} leakage-prone feature(s): {', '.join(excluded)}")
+
         if not feature_cols:
              feature_cols = df.select_dtypes(include=[np.number]).columns.tolist()
              feature_cols = [c for c in feature_cols if 'id' not in c.lower() and c != 'engagement_target']
+             feature_cols = [c for c in feature_cols
+                             if c not in target_source_cols and c not in leaky_features]
 
         X = df[feature_cols]
         y = df['engagement_target']

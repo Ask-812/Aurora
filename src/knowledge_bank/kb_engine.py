@@ -1,4 +1,4 @@
-﻿"""
+"""
 Knowledge Bank Engine - Extracts company intelligence from documents
 
 This engine is domain-agnostic and adaptively extracts intelligence from

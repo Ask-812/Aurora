@@ -1,4 +1,4 @@
-﻿﻿"""
+"""
 Multi-Armed Bandit Learning Engine
 - Thompson Sampling for template selection
 - Contextual Bandits for personalization

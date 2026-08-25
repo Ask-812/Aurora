@@ -1,4 +1,4 @@
-﻿# Project Aurora — Complete Solution Guide
+# Project Aurora — Complete Solution Guide
 
 ## A Comprehensive Reference for Understanding Every Aspect of the System
 

@@ -1,4 +1,4 @@
-﻿﻿"""
+"""
 Delta Reporter - Documents learning improvements with causal reasoning
 """
 

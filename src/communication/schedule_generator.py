@@ -1,4 +1,4 @@
-﻿"""
+"""
 Schedule Generator - Creates user-wise notification schedules
 """
 

@@ -1,4 +1,4 @@
-﻿"""Communication layer for messaging and timing"""
+"""Communication layer for messaging and timing"""
 
 from .theme_engine import ThemeEngine
 from .template_generator import TemplateGenerator

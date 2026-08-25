@@ -1,4 +1,4 @@
-﻿# Project Aurora: Final Presentation & Demo Guide
+# Project Aurora: Final Presentation & Demo Guide
 
 This guide will help you structure your final presentation and successfully demonstrate the end-to-end capabilities of the newly unified, domain-generic Project Aurora.
 
