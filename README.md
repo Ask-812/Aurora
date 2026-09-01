@@ -10,7 +10,7 @@
 
 ---
 
-# Overview
+## Overview
 
 Project Aurora is a **prototype self-learning notification orchestrator** that optimises who
 gets messaged, when, with what copy, and how often — then learns from the outcome and
