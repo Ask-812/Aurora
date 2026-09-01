@@ -536,7 +536,7 @@ performance:
 - the engagement target is `sum(value_metrics)`, which resolves to `coins_balance`
 - the feature `gamification_propensity` is a normalised blend of `value_metrics + feature_flags`
 
-so the model was predicting `coins_balance` from a rescaled copy of `coins_balance`.
+so  model was predicting `coins_balance` from a rescaled copy of `coins_balance`.
 
 `PropensityModelEngine._derived_features_using()` now walks a
 feature-to-schema-role dependency map, detects any engineered feature computed from the
