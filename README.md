@@ -26,7 +26,7 @@ Core capabilities:
 - **NLP**: Sentiment analysis, TF-IDF vectorization, engagement scoring
 - **Survival Analysis**: Kaplan-Meier time-to-event modeling for timing optimization
 
-### How the models are validated
+### How the models are validated.
 
 Model quality is reported against a **synthetic benchmark with a written-down data generating
 process** (`src/utils/data_generator.py`), so every score can be compared to the best score
