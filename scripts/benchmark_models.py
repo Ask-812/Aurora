@@ -39,7 +39,7 @@ from src.utils.data_generator import (  # noqa: E402
 
 
 BENCHMARK_PATH = "data/sample/user_data_benchmark.csv"
-SAMPLE_PATH = "data/sample/user_data_sample.csv"
+SAMPLE_PATH =   "data/sample/user_data_sample.csv"
 
 
 def _evaluate(path: str, label: str) -> dict:
